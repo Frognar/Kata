@@ -4,6 +4,13 @@ public class PrimeFactors {
   public IEnumerable<int> Of(int n) {
     List<int> factors = new();
     if (n > 1) {
+      if (n % 2 == 0) {
+        factors.Add(2);
+        n /= 2;
+      }
+    }
+    
+    if (n > 1) {
       factors.Add(n);
     }
 
