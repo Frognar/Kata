@@ -2,6 +2,11 @@
 
 public class PrimeFactors {
   public IEnumerable<int> Of(int n) {
-    return new List<int>();
+    List<int> factors = new();
+    if (n > 1) {
+      factors.Add(2);
+    }
+
+    return factors;
   }
 }
