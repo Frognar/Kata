@@ -2,6 +2,12 @@
 
 public class PrimeFactorsTest {
   [Fact]
+  public void GetPrimesUpToTest() {
+    Sieve generator = new();
+    _ = Assert.IsAssignableFrom<PrimeGenerator>(generator);
+  }
+
+  [Fact]
   public void FactorsOfTest() {
     PrimeGenerator generator = new TestPrimeGenerator();
     PrimeFactors primeFactors = new(generator);
