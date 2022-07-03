@@ -2,7 +2,12 @@
 
 public class Sieve : PrimeGenerator {
   public IEnumerable<int> GetPrimesUpTo(int n) {
-    return new List<int>();
+    List<int> primes = new();
+    if (n > 1) {
+      primes.Add(2);
+    }
+
+    return primes;
   }
 
   public static IEnumerable<int> RemoveMultiplesOfFirst(IEnumerable<int> list) {
