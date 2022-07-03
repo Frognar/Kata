@@ -2,9 +2,13 @@
 
 public class PrimeFactorsTest {
   [Fact]
-  public void RemoveMultiplesOfFirstTest() {
+  public void SieveIsPrimeGeneratorTest() {
     Sieve generator = new();
     _ = Assert.IsAssignableFrom<PrimeGenerator>(generator);
+  }
+
+  [Fact]
+  public void RemoveMultiplesOfFirstTest() {
     Assert.Equal(Enumerable.Empty<int>(), Sieve.RemoveMultiplesOfFirst(Enumerable.Empty<int>()));
     Assert.Equal(Enumerable.Empty<int>(), Sieve.RemoveMultiplesOfFirst(new List<int> { 2 }));
     Assert.Equal(new List<int> { 3 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 2, 3 }));
