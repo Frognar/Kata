@@ -3,8 +3,8 @@
 public class Sieve : PrimeGenerator {
   public IEnumerable<int> GetPrimesUpTo(int n) {
     List<int> primes = new();
-    if (n > 1) {
-      primes.Add(2);
+    for(int i = 2; i <= n; i++) {
+      primes.Add(i);
     }
 
     return primes;
