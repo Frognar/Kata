@@ -1,16 +1,24 @@
 ﻿namespace PrimeFactors;
 
 public class PrimeFactors {
-  readonly PrimeGenerator generator;
+   readonly PrimeGenerator generator;
 
   public PrimeFactors(PrimeGenerator generator) {
     this.generator = generator;
   }
 
   public IEnumerable<int> Of(int n) {
+    List<int> primes = generator.GetPrimesUpTo(n).ToList();
+    int primeIndex = 0;
     List<int> factors = new();
-    if (n > 1) {
-      factors.Add(n);
+    while (n > 1) {
+      if (n % primes[primeIndex] == 0) {
+        factors.Add(n);
+        n /= primes[primeIndex];
+      }
+      else {
+        primeIndex++;
+      }
     }
 
     return factors;

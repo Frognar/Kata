@@ -12,6 +12,8 @@ public class PrimeFactorsTest {
   }
 
   class TestPrimeGenerator : PrimeGenerator {
-
+    public IEnumerable<int> GetPrimesUpTo(int n) {
+      return new List<int> { 2, 3 };
+    }
   }
 }
