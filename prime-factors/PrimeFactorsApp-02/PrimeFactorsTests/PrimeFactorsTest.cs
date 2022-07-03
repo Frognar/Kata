@@ -5,6 +5,7 @@ public class PrimeFactorsTest {
   public void GetPrimesUpToTest() {
     Sieve generator = new();
     _ = Assert.IsAssignableFrom<PrimeGenerator>(generator);
+    Assert.Equal(Enumerable.Empty<int>(), generator.RemoveMultiplesOfFirst(Enumerable.Empty<int>()));
     Assert.Equal(Enumerable.Empty<int>(), generator.RemoveMultiplesOfFirst(new List<int> { 2 }));
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3 }));
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4 }));
