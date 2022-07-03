@@ -8,12 +8,20 @@ public class PrimeFactors {
   }
 
   public IEnumerable<int> Of(int n) {
-    List<int> primes = generator.GetPrimesUpTo(n).ToList();
+    if (n < 2) {
+      return Enumerable.Empty<int>();
+    }
+
+    int limit = (int)Math.Sqrt(n) + 1;
     List<int> factors = new();
-    for (int primeIndex = 0; n > 1; primeIndex++) {
-      for (;  n % primes[primeIndex] == 0; n /= primes[primeIndex]) {
-        factors.Add(primes[primeIndex]);
+    foreach (int prime in generator.GetPrimesUpTo(limit)) {
+      for (; n % prime == 0; n /= prime) {
+        factors.Add(prime);
       }
+    }
+
+    if (factors.Count == 0) {
+      factors.Add(n);
     }
 
     return factors;

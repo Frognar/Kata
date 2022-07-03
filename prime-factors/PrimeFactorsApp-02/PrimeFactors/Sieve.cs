@@ -1,25 +1,22 @@
 ﻿namespace PrimeFactors;
 
 public class Sieve : PrimeGenerator {
-  public IEnumerable<int> GetPrimesUpTo(int n) {
-    HashSet<int> noPrimes = GetNoPrimesUpTo(n);
-    for (int i = 2; i <= n; i++) {
-      if (noPrimes.Contains(i) == false) {
-        yield return i;
-      }
-    }
-  }
+  public IEnumerable<int> GetPrimesUpTo(int n)
+    => n < 2 ? Enumerable.Empty<int>() : PrimesUpTo(n);
 
-  static HashSet<int> GetNoPrimesUpTo(int n) {
-    HashSet<int> noPrimes = new();
-    for (int i = 2; i <= n; i++) {
-      for (int j = i * 2; j <= n; j += i) {
-        if (noPrimes.Contains(j) == false) {
-          noPrimes.Add(j);
+  static IEnumerable<int> PrimesUpTo(int n) {
+    List<int> primes = new();
+    bool[] composites = new bool[n + 1];
+
+    for (int candidate = 2; candidate <= n; candidate++) {
+      if (composites[candidate] == false) {
+        primes.Add(candidate);
+        for (int multiple = 2 * candidate; multiple <= n; multiple += candidate) {
+          composites[multiple] = true;
         }
       }
     }
 
-    return noPrimes;
+    return primes;
   }
 }
