@@ -2,20 +2,27 @@
 
 public class Sieve : PrimeGenerator {
   public IEnumerable<int> GetPrimesUpTo(int n) {
-    List<int> candidates = new();
-    for(int i = 2; i <= n; i++) {
-      candidates.Add(i);
-    }
-
     List<int> primes = new();
-    int first = candidates.FirstOrDefault();
-    while (first > 0 && first <= n) {
-      primes.Add(first);
-      candidates = RemoveMultiplesOfFirst(candidates).ToList();
-      first = candidates.FirstOrDefault();
+    IEnumerable<int> candidates = GetCandidatesUpTo(n);
+    if (candidates.Any()) {
+      for (int first = candidates.First();
+        first > 0 && first <= n;
+        candidates = RemoveMultiplesOfFirst(candidates),
+        first = candidates.FirstOrDefault()) {
+        primes.Add(first);
+      }
     }
 
     return primes;
+  }
+
+  static IEnumerable<int> GetCandidatesUpTo(int n) {
+    List<int> candidates = new();
+    for (int i = 2; i <= n; i++) {
+      candidates.Add(i);
+    }
+
+    return candidates;
   }
 
   public static IEnumerable<int> RemoveMultiplesOfFirst(IEnumerable<int> list) {
