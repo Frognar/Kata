@@ -2,23 +2,6 @@
 
 public class PrimeFactorsTest {
   [Fact]
-  public void SieveIsPrimeGeneratorTest() {
-    Sieve generator = new();
-    _ = Assert.IsAssignableFrom<PrimeGenerator>(generator);
-  }
-
-  [Fact]
-  public void RemoveMultiplesOfFirstTest() {
-    Assert.Equal(Enumerable.Empty<int>(), Sieve.RemoveMultiplesOfFirst(Enumerable.Empty<int>()));
-    Assert.Equal(Enumerable.Empty<int>(), Sieve.RemoveMultiplesOfFirst(new List<int> { 2 }));
-    Assert.Equal(new List<int> { 3 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 2, 3 }));
-    Assert.Equal(new List<int> { 3 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4 }));
-    Assert.Equal(new List<int> { 3, 5 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4, 5 }));
-    Assert.Equal(new List<int> { 4, 5 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 3, 4, 5, 6 }));
-    Assert.Equal(new List<int> { 1, 2, 3 }, Sieve.RemoveMultiplesOfFirst(new List<int> { 0, 1, 2, 3 }));
-  }
-
-  [Fact]
   public void GetPrimesUpToTest() {
     PrimeGenerator generator = new Sieve();
     Assert.Equal(Enumerable.Empty<int>(), generator.GetPrimesUpTo(1));
@@ -41,5 +24,6 @@ public class PrimeFactorsTest {
     Assert.Equal(new List<int> { 7 }, primeFactors.Of(7));
     Assert.Equal(new List<int> { 2, 2, 2 }, primeFactors.Of(8));
     Assert.Equal(new List<int> { 3, 3 }, primeFactors.Of(9));
+    Assert.Equal(new List<int> { 2, 2, 3, 5, 7, 11 }, primeFactors.Of(2 * 2 * 3 * 5 * 7 * 11));
   }
 }
