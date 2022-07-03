@@ -8,6 +8,6 @@ public class Sieve : PrimeGenerator {
       return new List<int>();
     }
 
-    return list.Where(element => element % 2 != 0);
+    return list.Where(element => element % list.First() != 0);
   }
 }

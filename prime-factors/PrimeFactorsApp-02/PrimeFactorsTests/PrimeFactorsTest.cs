@@ -8,6 +8,8 @@ public class PrimeFactorsTest {
     Assert.Equal(Enumerable.Empty<int>(), generator.RemoveMultiplesOfFirst(new List<int> { 2 }));
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3 }));
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4 }));
+    Assert.Equal(new List<int> { 3, 5 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4, 5 }));
+    Assert.Equal(new List<int> { 4, 5 }, generator.RemoveMultiplesOfFirst(new List<int> { 3, 4, 5, 6 }));
   }
 
   [Fact]
