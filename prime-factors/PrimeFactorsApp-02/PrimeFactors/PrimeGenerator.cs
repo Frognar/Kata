@@ -1,5 +1,5 @@
 ﻿namespace PrimeFactors;
 
 public interface PrimeGenerator {
-  IEnumerable<int> GetPrimesUpTo(int n);
+  IEnumerable<long> GetPrimesUpTo(long n);
 }

@@ -7,14 +7,14 @@ public class PrimeFactors {
     this.generator = generator;
   }
 
-  public IEnumerable<int> Of(int n) {
+  public IEnumerable<long> Of(long n) {
     if (n < 2) {
-      return Enumerable.Empty<int>();
+      return Enumerable.Empty<long>();
     }
 
-    int limit = (int)Math.Sqrt(n) + 1;
-    List<int> factors = new();
-    foreach (int prime in generator.GetPrimesUpTo(limit)) {
+    long limit = (long)Math.Sqrt(n) + 1;
+    List<long> factors = new();
+    foreach (long prime in generator.GetPrimesUpTo(limit)) {
       for (; n % prime == 0; n /= prime) {
         factors.Add(prime);
       }
