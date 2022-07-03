@@ -19,6 +19,12 @@ public class PrimeFactorsTest {
   }
 
   [Fact]
+  public void GetPrimesUpToTest() {
+    PrimeGenerator generator = new Sieve();
+    Assert.Equal(Enumerable.Empty<int>(), generator.GetPrimesUpTo(1));
+  }
+
+  [Fact]
   public void FactorsOfTest() {
     PrimeGenerator generator = new TestPrimeGenerator();
     PrimeFactors primeFactors = new(generator);
