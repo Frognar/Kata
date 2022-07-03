@@ -4,10 +4,11 @@ public class Sieve : PrimeGenerator {
   public IEnumerable<int> GetPrimesUpTo(int n)
     => throw new NotImplementedException();
   public IEnumerable<int> RemoveMultiplesOfFirst(IEnumerable<int> list) {
-    if (list.Any()) {
-      return list.Where(element => element % list.First() != 0);
+    int first = list.FirstOrDefault();
+    if (first == 0) {
+      return list.Skip(1);
     }
-    
-    return new List<int>();
+
+    return list.Where(element => element % first != 0);
   }
 }

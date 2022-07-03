@@ -11,6 +11,7 @@ public class PrimeFactorsTest {
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4 }));
     Assert.Equal(new List<int> { 3, 5 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4, 5 }));
     Assert.Equal(new List<int> { 4, 5 }, generator.RemoveMultiplesOfFirst(new List<int> { 3, 4, 5, 6 }));
+    Assert.Equal(new List<int> { 1, 2, 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 0, 1, 2, 3 }));
   }
 
   [Fact]
