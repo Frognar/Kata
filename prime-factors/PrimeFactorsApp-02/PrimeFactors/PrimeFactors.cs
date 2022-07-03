@@ -12,13 +12,12 @@ public class PrimeFactors {
     int primeIndex = 0;
     List<int> factors = new();
     while (n > 1) {
-      if (n % primes[primeIndex] == 0) {
-        factors.Add(n);
+      while (n % primes[primeIndex] == 0) {
+        factors.Add(primes[primeIndex]);
         n /= primes[primeIndex];
       }
-      else {
-        primeIndex++;
-      }
+      
+      primeIndex++;
     }
 
     return factors;
