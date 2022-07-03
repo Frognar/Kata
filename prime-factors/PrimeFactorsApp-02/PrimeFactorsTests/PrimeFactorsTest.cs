@@ -7,6 +7,7 @@ public class PrimeFactorsTest {
     _ = Assert.IsAssignableFrom<PrimeGenerator>(generator);
     Assert.Equal(Enumerable.Empty<int>(), generator.RemoveMultiplesOfFirst(new List<int> { 2 }));
     Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3 }));
+    Assert.Equal(new List<int> { 3 }, generator.RemoveMultiplesOfFirst(new List<int> { 2, 3, 4 }));
   }
 
   [Fact]
