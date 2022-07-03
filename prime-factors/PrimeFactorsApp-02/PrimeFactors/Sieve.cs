@@ -7,7 +7,15 @@ public class Sieve : PrimeGenerator {
       candidates.Add(i);
     }
 
-    return candidates;
+    List<int> primes = new();
+    int first = candidates.FirstOrDefault();
+    while (first > 0 && first <= n) {
+      primes.Add(first);
+      candidates = RemoveMultiplesOfFirst(candidates).ToList();
+      first = candidates.FirstOrDefault();
+    }
+
+    return primes;
   }
 
   public static IEnumerable<int> RemoveMultiplesOfFirst(IEnumerable<int> list) {
