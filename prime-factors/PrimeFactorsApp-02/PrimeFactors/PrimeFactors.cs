@@ -9,15 +9,11 @@ public class PrimeFactors {
 
   public IEnumerable<int> Of(int n) {
     List<int> primes = generator.GetPrimesUpTo(n).ToList();
-    int primeIndex = 0;
     List<int> factors = new();
-    while (n > 1) {
-      while (n % primes[primeIndex] == 0) {
+    for (int primeIndex = 0; n > 1; primeIndex++) {
+      for (;  n % primes[primeIndex] == 0; n /= primes[primeIndex]) {
         factors.Add(primes[primeIndex]);
-        n /= primes[primeIndex];
       }
-      
-      primeIndex++;
     }
 
     return factors;
