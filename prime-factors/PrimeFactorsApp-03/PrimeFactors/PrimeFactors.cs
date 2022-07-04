@@ -8,10 +8,10 @@ public class PrimeFactors {
         factors.Add(2);
         n /= 2;
       }
+    }
 
-      if (n > 1) {
-        factors.Add(n);
-      }
+    if (n > 1) {
+      factors.Add(n);
     }
 
     return factors;
