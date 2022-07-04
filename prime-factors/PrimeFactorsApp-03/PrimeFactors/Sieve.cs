@@ -6,6 +6,11 @@ public class Sieve : PrimeGenerator {
       return Enumerable.Empty<long>();
     }
 
-    return new HashSet<long> { 2 };
+    HashSet<long> primes = new();
+    for (int i = 2; i <= n; i++) {
+      primes.Add(i);
+    }
+
+    return primes;
   }
 }
