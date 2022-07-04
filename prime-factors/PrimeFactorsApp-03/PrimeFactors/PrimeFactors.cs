@@ -3,11 +3,14 @@
 public class PrimeFactors {
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
-    if (n > 1) {
-      while (n % 2 == 0) {
-        factors.Add(2);
-        n /= 2;
+    long divisior = 2;
+    while (n > 1) {
+      while (n % divisior == 0) {
+        factors.Add(divisior);
+        n /= divisior;
       }
+
+      divisior++;
     }
 
     if (n > 1) {
