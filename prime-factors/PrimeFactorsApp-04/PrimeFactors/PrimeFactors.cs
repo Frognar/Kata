@@ -14,11 +14,9 @@ public class PrimeFactors {
 
     List<long> factors = new();
     long prime = sieve.PrimesUpTo(n).First();
-    if (n > 1) {
-      while (n % prime == 0) {
-        factors.Add(prime);
-        n /= prime;
-      }
+    while (n % prime == 0) {
+      factors.Add(prime);
+      n /= prime;
     }
     
     if (n > 1) {
