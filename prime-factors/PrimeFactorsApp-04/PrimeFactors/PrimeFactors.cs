@@ -13,10 +13,11 @@ public class PrimeFactors {
     }
 
     List<long> factors = new();
-    long prime = sieve.PrimesUpTo(n).First();
-    while (n % prime == 0) {
-      factors.Add(prime);
-      n /= prime;
+    foreach (long prime in sieve.PrimesUpTo(n)) {
+      while (n % prime == 0) {
+        factors.Add(prime);
+        n /= prime;
+      }
     }
     
     if (n > 1) {
