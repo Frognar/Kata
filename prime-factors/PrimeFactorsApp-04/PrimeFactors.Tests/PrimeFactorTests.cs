@@ -3,7 +3,7 @@
 public class PrimeFactorTests {
   [Fact]
   public void PrimeFactorsOfTest() {
-    PrimeFactors primeFactors = new();
+    PrimeFactors primeFactors = new(new Sieve());
     Assert.Empty(primeFactors.Of(1));
     Assert.Equal(new List<long> { 2 }, primeFactors.Of(2));
     Assert.Equal(new List<long> { 3 }, primeFactors.Of(3));
