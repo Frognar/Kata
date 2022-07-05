@@ -5,7 +5,7 @@ public class PrimeFactors {
     List<long> factors = new();
     long prime = 2;
     if (n > 1) {
-      if (n % prime == 0) {
+      while (n % prime == 0) {
         factors.Add(prime);
         n /= prime;
       }
