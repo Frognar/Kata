@@ -12,6 +12,8 @@ public class PrimeFactorTests {
     Assert.Equal(new List<long> { 2, 3 }, primeFactors.Of(6));
     Assert.Equal(new List<long> { 7 }, primeFactors.Of(7));
     Assert.Equal(new List<long> { 2, 2, 2 }, primeFactors.Of(8));
-    //Assert.Equal(new List<long> { 3, 3 }, primeFactors.Of(9));
+    Assert.Equal(new List<long> { 3, 3 }, primeFactors.Of(9));
+    Assert.Equal(new List<long> { 2, 5 }, primeFactors.Of(10));
+    Assert.Equal(new List<long> { 11 }, primeFactors.Of(11));
   }
 }
