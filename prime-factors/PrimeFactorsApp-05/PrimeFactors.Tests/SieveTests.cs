@@ -4,6 +4,7 @@ public class SieveTests {
   [Fact]
   public void GetPrimesUpToTest() {
     Sieve sieve = new();
-    Assert.Empty(sieve.GetPrimesUpTo(1L));
+    Assert.Empty(sieve.GetPrimesUpTo(1));
+    Assert.Equal(new List<long> { 2 }, sieve.GetPrimesUpTo(2));
   }
 }
