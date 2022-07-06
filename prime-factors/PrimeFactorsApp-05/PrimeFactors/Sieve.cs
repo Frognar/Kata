@@ -3,8 +3,8 @@
 public class Sieve {
   public IEnumerable<long> GetPrimesUpTo(long n) {
     List<long> primes = new();
-    if (n > 1) {
-      primes.Add(n);
+    for (long candidate = 2; candidate <= n; candidate++) {
+      primes.Add(candidate);
     }
 
     return primes;
