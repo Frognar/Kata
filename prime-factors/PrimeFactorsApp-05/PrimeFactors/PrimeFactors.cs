@@ -8,13 +8,15 @@ public class PrimeFactors {
   }
 
   public IEnumerable<long> Of(long n) {
+    if (n < 2) {
+      return Enumerable.Empty<long>();
+    }
+
     List<long> factors = new();
-    foreach (long prime in sieve.GetPrimesUpTo(n)) {
-      if (n > 1) {
-        while (n % prime == 0) {
-          factors.Add(prime);
-          n /= prime;
-        }
+    long limit = (long)Math.Sqrt(n) + 1;
+    foreach (long prime in sieve.GetPrimesUpTo(limit)) {
+      for (; n % prime == 0; n /= prime) {
+        factors.Add(prime);
       }
     }
 
