@@ -5,7 +5,7 @@ public class PrimeFactors {
     List<long> factors = new();
 
     if (n > 1) {
-      factors.Add(2);
+      factors.Add(n);
     }
 
     return factors;
