@@ -10,7 +10,7 @@ public class PrimeFactors {
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
 
-    foreach(long prime in sieve.PrimesUpTo(2)) {
+    foreach(long prime in sieve.PrimesUpTo(n)) {
       while (n % prime == 0) {
         factors.Add(prime);
         n /= prime;
