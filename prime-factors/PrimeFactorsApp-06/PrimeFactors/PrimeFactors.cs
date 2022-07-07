@@ -1,6 +1,9 @@
 ﻿namespace PrimeFactors;
 
 public class PrimeFactors {
+  public PrimeFactors(Sieve sieve) {
+  }
+
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
 
