@@ -9,11 +9,10 @@ public class PrimeFactors {
 
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
-
-    foreach(long prime in sieve.PrimesUpTo(n)) {
-      while (n % prime == 0) {
+    long limit = (long)Math.Sqrt(n) + 1;
+    foreach(long prime in sieve.PrimesUpTo(limit)) {
+      for (; n % prime == 0; n /= prime) {
         factors.Add(prime);
-        n /= prime;
       }
     }
 
