@@ -2,6 +2,10 @@
 
 public class Sieve {
   public IEnumerable<long> PrimesUpTo(long n) {
-    return new List<long>();
+    if (n < 2) {
+      return Enumerable.Empty<long>();
+    }
+
+    return new List<long> { 2 };
   }
 }
