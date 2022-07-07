@@ -6,6 +6,11 @@ public class Sieve {
       return Enumerable.Empty<long>();
     }
 
-    return new List<long> { 2 };
+    List<long> primes = new();
+    for (long candidate = 2; candidate <= n; candidate++) {
+      primes.Add(candidate);
+    }
+
+    return primes;
   }
 }
