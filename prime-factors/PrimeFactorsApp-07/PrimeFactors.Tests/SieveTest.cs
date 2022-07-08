@@ -4,5 +4,6 @@ public class SieveTest {
   [Fact]
   public void PrimesUpToTest() {
     Sieve sieve = new();
+    Assert.Empty(sieve.PrimesUpTo(1L));
   }
 }
