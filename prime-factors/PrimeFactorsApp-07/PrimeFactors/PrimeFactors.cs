@@ -1,11 +1,14 @@
 ﻿namespace PrimeFactors;
 public class PrimeFactors {
+  private readonly Sieve sieve;
+
   public PrimeFactors(Sieve sieve) {
+    this.sieve = sieve;
   }
 
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
-    long prime = 2;
+    long prime = sieve.PrimesUpTo(2).First();
     if (n > 1) {
       while (n % prime == 0) {
         factors.Add(prime);
