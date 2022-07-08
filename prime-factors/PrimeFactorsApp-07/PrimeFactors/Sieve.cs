@@ -2,6 +2,11 @@
 
 public class Sieve {
   public IEnumerable<long> PrimesUpTo(long limit) {
-    return new List<long>();
+    List<long> primes = new();
+    if (limit > 1) {
+      primes.Add(limit);
+    }
+
+    return primes;
   }
 }
