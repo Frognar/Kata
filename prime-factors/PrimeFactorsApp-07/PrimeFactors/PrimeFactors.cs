@@ -4,10 +4,11 @@ namespace PrimeFactors;
 public class PrimeFactors {
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
+    long prime = 2;
     if (n > 1) {
-      while (n % 2 == 0) {
-        factors.Add(2);
-        n /= 2;
+      while (n % prime == 0) {
+        factors.Add(prime);
+        n /= prime;
       }
     }
     
