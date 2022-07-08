@@ -8,8 +8,7 @@ public class PrimeFactors {
 
   public IEnumerable<long> Of(long n) {
     List<long> factors = new();
-    long prime = sieve.PrimesUpTo(2).First();
-    if (n > 1) {
+    foreach (long prime in sieve.PrimesUpTo(2)) {
       while (n % prime == 0) {
         factors.Add(prime);
         n /= prime;
