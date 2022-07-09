@@ -16,11 +16,9 @@ def factors_of(n):
 
 
 def primes_up_to(n):
-    composites = [False for _ in range(n + 1)]
-    primes = []
+    primes = [True for _ in range(n + 1)]
     for candidate in range(2, n + 1):
-        if not composites[candidate]:
-            primes.append(candidate)
+        if primes[candidate]:
             for multiply in range(2 * candidate, n + 1, candidate):
-                composites[multiply] = True
-    return primes
+                primes[multiply] = False
+            yield candidate
