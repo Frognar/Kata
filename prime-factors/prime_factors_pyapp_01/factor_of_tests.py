@@ -17,6 +17,8 @@ class FactorOfTestCase(unittest.TestCase):
         self.assertEqual([2, 5], factors_of(10))
         self.assertEqual([11], factors_of(11))
         self.assertEqual([2, 2, 3, 5, 7, 11, 11, 11], factors_of(2*2*3*5*7*11*11*11))
+        self.assertEqual([2**31-1], factors_of(2**31-1))
+        #self.assertEqual([2**61-1], factors_of(2**61-1))
 
 
 if __name__ == '__main__':
