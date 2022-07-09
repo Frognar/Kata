@@ -1,9 +1,16 @@
+import math
+
+
 def factors_of(n):
     factors = []
-    for prime in primes_up_to(n):
+    limit = int(math.sqrt(n))
+    for prime in primes_up_to(limit):
         while n % prime == 0:
             factors.append(prime)
             n /= prime
+
+    if n > 1:
+        factors.append(n)
 
     return factors
 
