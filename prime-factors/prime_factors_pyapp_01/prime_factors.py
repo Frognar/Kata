@@ -1,9 +1,10 @@
 def factors_of(n):
     factors = []
     if n > 1:
-        while n % 2 == 0:
-            factors.append(2)
-            n /= 2
+        prime = 2
+        while n % prime == 0:
+            factors.append(prime)
+            n /= prime
 
     if n > 1:
         factors.append(n)
