@@ -9,6 +9,9 @@ class FactorOfTestCase(unittest.TestCase):
         self.assertEqual([2], factors_of(2))
         self.assertEqual([3], factors_of(3))
         self.assertEqual([2, 2], factors_of(4))
+        self.assertEqual([5], factors_of(5))
+        self.assertEqual([2, 3], factors_of(6))
+        self.assertEqual([7], factors_of(7))
 
 
 if __name__ == '__main__':
