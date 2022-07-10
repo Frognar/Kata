@@ -17,9 +17,8 @@ def factors_of(n):
 
 def primes_up_to(limit):
     primes = []
-    if limit > 1:
-        for candidate in range(2, limit + 1):
-            primes.append(candidate)
+    for candidate in range(2, limit + 1):
+        primes.append(candidate)
 
     return primes
 
