@@ -4,7 +4,7 @@ import unittest
 def factors_of(n):
     factors = []
     if n > 1:
-        prime = 2
+        prime = primes_up_to(n)[0]
         while n % prime == 0:
             factors.append(prime)
             n //= prime
