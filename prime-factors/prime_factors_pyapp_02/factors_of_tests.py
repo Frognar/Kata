@@ -43,6 +43,16 @@ class FactorsOfTestCase(unittest.TestCase):
         self.assertEqual([2], primes_up_to(2))
         self.assertEqual([2, 3], primes_up_to(3))
         self.assertEqual([2, 3], primes_up_to(4))
+        self.assertEqual([2, 3, 5], primes_up_to(5))
+        self.assertEqual([2, 3, 5], primes_up_to(6))
+        self.assertEqual([2, 3, 5, 7], primes_up_to(7))
+        self.assertEqual([2, 3, 5, 7], primes_up_to(8))
+        self.assertEqual([2, 3, 5, 7], primes_up_to(9))
+        self.assertEqual([2, 3, 5, 7], primes_up_to(10))
+        self.assertEqual([2, 3, 5, 7, 11], primes_up_to(11))
+        self.assertEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+                          31, 37, 41, 43, 47, 53, 59, 61, 67,
+                          71, 73, 79, 83, 89, 97], primes_up_to(100))
 
 
 if __name__ == '__main__':
