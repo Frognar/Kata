@@ -15,7 +15,8 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
-    return []
+    if limit > 1:
+        yield 2
 
 
 class FactorsOfTestCase(unittest.TestCase):
@@ -32,6 +33,7 @@ class FactorsOfTestCase(unittest.TestCase):
 
     def test_primes_up_to(self):
         self.assertEqual([], list(primes_up_to(1)))
+        self.assertEqual([2], list(primes_up_to(2)))
 
 
 if __name__ == '__main__':
