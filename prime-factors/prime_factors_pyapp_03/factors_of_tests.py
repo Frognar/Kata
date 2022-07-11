@@ -4,7 +4,7 @@ import unittest
 def factors_of(n):
     factors = []
 
-    prime = 2
+    prime = list(primes_up_to(2))[0]
     if n > 1:
         while n % prime == 0:
             factors.append(prime)
