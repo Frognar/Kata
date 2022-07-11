@@ -1,10 +1,12 @@
+import math
 import unittest
 
 
 def factors_of(n):
     factors = []
 
-    for prime in primes_up_to(n):
+    limit = int(math.sqrt(n))
+    for prime in primes_up_to(limit):
         while n % prime == 0:
             factors.append(prime)
             n //= prime
@@ -37,6 +39,7 @@ class FactorsOfTestCase(unittest.TestCase):
         self.assertEqual([2, 5], factors_of(10))
         self.assertEqual([11], factors_of(11))
         self.assertEqual([2, 2, 3, 5, 7, 11, 11, 11], factors_of(2*2*3*5*7*11*11*11))
+        self.assertEqual([2**31-1], factors_of(2**31-1))
 
     def test_primes_up_to(self):
         self.assertEqual([], list(primes_up_to(1)))
