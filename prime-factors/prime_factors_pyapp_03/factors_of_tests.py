@@ -4,7 +4,7 @@ import unittest
 def factors_of(n):
     factors = []
 
-    for prime in primes_up_to(2):
+    for prime in primes_up_to(n):
         while n % prime == 0:
             factors.append(prime)
             n //= prime
@@ -33,7 +33,7 @@ class FactorsOfTestCase(unittest.TestCase):
         self.assertEqual([2, 3], factors_of(6))
         self.assertEqual([7], factors_of(7))
         self.assertEqual([2, 2, 2], factors_of(8))
-        # self.assertEqual([3, 3], factors_of(9))
+        self.assertEqual([3, 3], factors_of(9))
 
     def test_primes_up_to(self):
         self.assertEqual([], list(primes_up_to(1)))
