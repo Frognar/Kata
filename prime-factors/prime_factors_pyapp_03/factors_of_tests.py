@@ -15,8 +15,11 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
+    primes = [True for _ in range(limit + 1)]
     for candidate in range(2, limit + 1):
-        if candidate == 2 or candidate % 2 != 0:
+        if primes[candidate]:
+            for multiply in range(2 * candidate, limit + 1, candidate):
+                primes[multiply] = False
             yield candidate
 
 
@@ -37,6 +40,11 @@ class FactorsOfTestCase(unittest.TestCase):
         self.assertEqual([2], list(primes_up_to(2)))
         self.assertEqual([2, 3], list(primes_up_to(3)))
         self.assertEqual([2, 3], list(primes_up_to(4)))
+        self.assertEqual([2, 3, 5], list(primes_up_to(5)))
+        self.assertEqual([2, 3, 5], list(primes_up_to(6)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(7)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(8)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(9)))
 
 
 if __name__ == '__main__':
