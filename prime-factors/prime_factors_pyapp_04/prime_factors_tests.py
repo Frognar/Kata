@@ -16,15 +16,12 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
-    primes = []
-    composites = [False for _ in range(limit + 1)]
+    primes = [True for _ in range(limit + 1)]
     for candidate in range(2, limit + 1):
-        if not composites[candidate]:
+        if primes[candidate]:
             for multiply in range(2 * candidate, limit + 1, candidate):
-                composites[multiply] = True
-            primes.append(candidate)
-
-    return primes
+                primes[multiply] = False
+            yield candidate
 
 
 class PrimeFactorsTestCase(unittest.TestCase):
