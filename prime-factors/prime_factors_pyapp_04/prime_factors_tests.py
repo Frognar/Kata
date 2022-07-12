@@ -17,8 +17,12 @@ def factors_of(n):
 
 def primes_up_to(limit):
     primes = []
+    composites = [False for _ in range(limit + 1)]
     for candidate in range(2, limit + 1):
-        primes.append(candidate)
+        if not composites[candidate]:
+            for multiply in range(2 * candidate, limit + 1, candidate):
+                composites[multiply] = True
+            primes.append(candidate)
 
     return primes
 
@@ -39,6 +43,7 @@ class PrimeFactorsTestCase(unittest.TestCase):
         self.assertEqual([], list(primes_up_to(1)))
         self.assertEqual([2], list(primes_up_to(2)))
         self.assertEqual([2, 3], list(primes_up_to(3)))
+        self.assertEqual([2, 3], list(primes_up_to(4)))
 
 
 if __name__ == '__main__':
