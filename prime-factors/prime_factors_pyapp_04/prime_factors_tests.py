@@ -1,4 +1,3 @@
-import math
 import unittest
 
 from prime_factors import factors_of, primes_up_to
