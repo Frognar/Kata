@@ -17,8 +17,8 @@ def factors_of(n):
 
 def primes_up_to(limit):
     primes = []
-    if limit > 1:
-        primes.append(2)
+    for candidate in range(2, limit + 1):
+        primes.append(candidate)
 
     return primes
 
@@ -38,6 +38,7 @@ class PrimeFactorsTestCase(unittest.TestCase):
     def test_primes_up_to(self):
         self.assertEqual([], list(primes_up_to(1)))
         self.assertEqual([2], list(primes_up_to(2)))
+        self.assertEqual([2, 3], list(primes_up_to(3)))
 
 
 if __name__ == '__main__':
