@@ -13,4 +13,5 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
-    return []
+    if limit > 1:
+        yield 2
