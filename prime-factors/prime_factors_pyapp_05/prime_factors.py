@@ -8,4 +8,9 @@ def factors_of(n):
 
     if n > 1:
         factors.append(n)
+
     return factors
+
+
+def primes_up_to(limit):
+    return []
