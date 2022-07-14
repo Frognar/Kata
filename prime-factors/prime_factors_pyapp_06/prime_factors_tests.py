@@ -19,6 +19,11 @@ class PrimeFactorsTestCase(unittest.TestCase):
         self.assertEqual([2], list(primes_up_to(2)))
         self.assertEqual([2, 3], list(primes_up_to(3)))
         self.assertEqual([2, 3], list(primes_up_to(4)))
+        self.assertEqual([2, 3, 5], list(primes_up_to(5)))
+        self.assertEqual([2, 3, 5], list(primes_up_to(6)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(7)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(8)))
+        self.assertEqual([2, 3, 5, 7], list(primes_up_to(9)))
 
 
 if __name__ == '__main__':
