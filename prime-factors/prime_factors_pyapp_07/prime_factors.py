@@ -9,3 +9,7 @@ def factors_of(n):
         factors.append(n)
 
     return factors
+
+
+def primes_up_to(limit):
+    return []
