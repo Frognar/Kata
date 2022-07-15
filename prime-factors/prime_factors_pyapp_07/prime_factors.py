@@ -1,6 +1,6 @@
 def factors_of(n):
     factors = []
-    for prime in primes_up_to(2):
+    for prime in primes_up_to(n):
         while n % prime == 0:
             factors.append(prime)
             n //= prime
