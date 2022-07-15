@@ -1,6 +1,6 @@
 def factors_of(n):
     factors = []
-    if n % 2 == 0:
+    while n % 2 == 0:
         factors.append(2)
         n //= 2
 
