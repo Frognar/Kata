@@ -13,4 +13,5 @@ def factors_of(n):
 
 def primes_up_to(limit):
     for candidate in range(2, limit + 1):
-        yield candidate
+        if candidate == 2 or candidate % 2 != 0:
+            yield candidate
