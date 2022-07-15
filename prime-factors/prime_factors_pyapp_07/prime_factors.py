@@ -12,5 +12,5 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
-    if limit > 1:
-        yield 2
+    for candidate in range(2, limit + 1):
+        yield candidate
