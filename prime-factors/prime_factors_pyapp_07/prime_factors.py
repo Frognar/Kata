@@ -12,6 +12,9 @@ def factors_of(n):
 
 
 def primes_up_to(limit):
+    primes = [True for _ in range(limit + 1)]
     for candidate in range(2, limit + 1):
-        if candidate == 2 or candidate % 2 != 0:
+        if primes[candidate]:
+            for multiply in range(2 * candidate, limit + 1, candidate):
+                primes[multiply] = False
             yield candidate
