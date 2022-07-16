@@ -4,9 +4,13 @@
 (defn factors-of [n]
   (loop [div 2 n n factors []]
     (if (> n 1)
-    (if (zero? (mod n div))
-      (recur div
-             (/ n div)
-             (conj factors div))
-      (recur (inc div) n factors))
-    factors)))
+      (cond
+        (> div (Math/sqrt n))
+        (conj factors n)
+        (zero? (mod n div))
+        (recur div
+               (/ n div)
+               (conj factors div))
+        :else
+        (recur (inc div) n factors))
+      factors)))

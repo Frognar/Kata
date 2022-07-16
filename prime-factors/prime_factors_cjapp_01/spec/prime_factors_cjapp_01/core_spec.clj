@@ -28,6 +28,8 @@
               (should= [11] (factors-of 11)))
           (it "2*2*3*3*5*5*7*7*11*11 -> [2 2 3 3 5 5 7 7 11 11]"
               (should= [2 2 3 3 5 5 7 7 11 11] (factors-of (* 2 2 3 3 5 5 7 7 11 11))))
+          (it "2^31-1 -> [2^31-1]"
+              (should= [2147483647] (factors-of (dec (apply * (repeat 31 2))))))
           )
 
 (run-specs)
