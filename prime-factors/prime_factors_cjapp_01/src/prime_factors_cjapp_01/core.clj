@@ -16,4 +16,6 @@
       factors)))
 
 (defn primes-up-to [limit]
-  [])
+  (if (> limit 1)
+    [2]
+    []))
