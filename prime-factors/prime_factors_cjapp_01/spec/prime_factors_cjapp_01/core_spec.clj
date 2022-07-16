@@ -42,6 +42,8 @@
               (should= [2] (primes-up-to 2)))
           (it "3 -> [2 3]"
               (should= [2 3] (primes-up-to 3)))
+          (it "4 -> [2 3]"
+              (should= [2 3] (primes-up-to 4)))
           )
 
 (run-specs)
