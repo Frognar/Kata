@@ -16,6 +16,7 @@
       factors)))
 
 (defn primes-up-to [limit]
-  (if (> limit 1)
-    [2]
-    []))
+  (loop [candidate 2 primes []]
+    (if (<= candidate limit)
+      (recur (inc candidate) (conj primes candidate))
+      primes)))
