@@ -35,4 +35,7 @@
                 (should= [m61] (factors-of m61))))
           )
 
+(describe "primes up to"
+          (it "1 -> []"
+              (should= [] (primes-up-to 1))))
 (run-specs)
