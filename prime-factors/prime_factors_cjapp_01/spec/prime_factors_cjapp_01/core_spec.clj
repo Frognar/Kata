@@ -7,6 +7,7 @@
           (it "should be [] for 1"
               (should= [] (factors-of 1))
               (should= [2] (factors-of 2))
+              (should= [3] (factors-of 3))
               )
           )
 
