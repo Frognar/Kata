@@ -1,12 +1,13 @@
 (ns prime-factors-cjapp-02.core)
 
 (defn factors-of [n]
-  (if (> n 1)
-    (cond
-      (zero? (mod n 2))
-      (concat [2] (factors-of (/ n 2)))
-      (zero? (mod n 3))
-      (concat [3] (factors-of (/ n 3)))
-      :else
-      [n])
-    []))
+  (loop [div 2 n n factors []]
+    (if (> n 1)
+      (if (zero? (mod n div))
+        (recur div
+               (/ n div)
+               (conj factors div))
+        (recur (inc div)
+               n
+               factors))
+      factors)))
