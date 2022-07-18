@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="1 -&gt; []">
+    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="2 -&gt; [2]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" beforeDir="false" afterPath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,19 +17,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2C75Q1m4PmPVerISXXDOjQIbu2m" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1658140992618">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1658141019965">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658140962404</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2 -&gt; [2]">
+      <created>1658141009077</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141009077</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,8 +130,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init project" />
     <MESSAGE value="1 -&gt; []" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 -&gt; []" />
+    <MESSAGE value="2 -&gt; [2]" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 -&gt; [2]" />
   </component>
 </project>
