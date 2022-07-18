@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="2 -&gt; [2]">
+    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="3 -&gt; [3]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" beforeDir="false" afterPath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1658141019965">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1658141108289">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -115,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658141009077</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2 -&gt; [2]">
+      <created>1658141026031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141026031</updated>
+    </task>
+    <task id="LOCAL-00005" summary="3 -&gt; [3]">
+      <created>1658141044895</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141044895</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +149,7 @@
     <MESSAGE value="Init project" />
     <MESSAGE value="1 -&gt; []" />
     <MESSAGE value="2 -&gt; [2]" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 -&gt; [2]" />
+    <MESSAGE value="3 -&gt; [3]" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 -&gt; [3]" />
   </component>
 </project>
