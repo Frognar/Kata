@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="3 -&gt; [3]">
+    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="8 -&gt; [2 2 2]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" beforeDir="false" afterPath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" afterDir="false" />
@@ -33,7 +33,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1658141108289">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1658141243257">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -130,7 +130,42 @@
       <option name="project" value="LOCAL" />
       <updated>1658141044895</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="4 -&gt; [2 2]">
+      <created>1658141119416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141119416</updated>
+    </task>
+    <task id="LOCAL-00007" summary="5 -&gt; [5]">
+      <created>1658141139555</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141139555</updated>
+    </task>
+    <task id="LOCAL-00008" summary="6 -&gt; [2 3]">
+      <created>1658141159338</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141159338</updated>
+    </task>
+    <task id="LOCAL-00009" summary="7 -&gt; [7]">
+      <created>1658141177723</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141177723</updated>
+    </task>
+    <task id="LOCAL-00010" summary="8 -&gt; [2 2 2]">
+      <created>1658141196486</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658141196486</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +185,11 @@
     <MESSAGE value="1 -&gt; []" />
     <MESSAGE value="2 -&gt; [2]" />
     <MESSAGE value="3 -&gt; [3]" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 -&gt; [3]" />
+    <MESSAGE value="4 -&gt; [2 2]" />
+    <MESSAGE value="5 -&gt; [5]" />
+    <MESSAGE value="6 -&gt; [2 3]" />
+    <MESSAGE value="7 -&gt; [7]" />
+    <MESSAGE value="8 -&gt; [2 2 2]" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 -&gt; [2 2 2]" />
   </component>
 </project>
