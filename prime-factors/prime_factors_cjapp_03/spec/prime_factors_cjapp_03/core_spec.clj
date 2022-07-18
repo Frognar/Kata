@@ -3,7 +3,10 @@
             [prime-factors-cjapp-03.core :refer :all]))
 
 (describe "factors of"
-  (it "1 -> []"
-    (should= [] (factors-of 1))))
+          (it "1 -> []"
+              (should= [] (factors-of 1)))
+          (it "2 -> [2]"
+              (should= [2] (factors-of 2)))
+          )
 
 (run-specs)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="Init project">
+    <list default="true" id="08060924-0434-43c2-ad34-aad1462c7b2c" name="Changes" comment="1 -&gt; []">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" beforeDir="false" afterPath="$PROJECT_DIR$/spec/prime_factors_cjapp_03/core_spec.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/prime_factors_cjapp_03/core.clj" afterDir="false" />
@@ -30,7 +30,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1658140954663">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1658140992618">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -99,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658140898641</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1 -&gt; []">
+      <created>1658140962404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658140962404</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project" />
+    <MESSAGE value="1 -&gt; []" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 -&gt; []" />
   </component>
 </project>
