@@ -2,8 +2,8 @@
   (:require [speclj.core :refer :all]
             [prime-factors-cjapp-05.core :refer :all]))
 
-(describe "a test"
-          (it "FIXME, I fail."
-              (should= 0 1)))
+(describe "factors-of"
+          (it "1 -> []"
+              (should= [] (factors-of 1))))
 
 (run-specs)
