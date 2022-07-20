@@ -26,6 +26,9 @@
           (let [m31 (dec (apply * (repeat 31 2)))]
             (it "2^31-1 -> [2^31-1]"
                 (should= [m31] (factors-of m31))))
+          (let [m61 (dec (apply * (repeat 61 2)))]
+            (it "2^61-1 -> [2^61-1]"
+                (should= [m61] (factors-of m61))))
           )
 
 (run-specs)
