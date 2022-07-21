@@ -11,6 +11,8 @@
               (should= [3] (factors-of 3)))
           (it "4->[2 2]"
               (should= [2 2] (factors-of 4)))
+          (it "5->[5]"
+              (should= [5] (factors-of 5)))
           )
 
 (run-specs)
