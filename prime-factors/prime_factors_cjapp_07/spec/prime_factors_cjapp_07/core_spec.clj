@@ -23,6 +23,9 @@
               (should= [3 3] (factors-of 9)))
           (it "(* 2 2 5 7 11 17 23)->[2 2 5 7 11 17 23]"
               (should= [2 2 5 7 11 17 23] (factors-of (* 2 2 5 7 11 17 23))))
+          (it "2^31-1->[2^31-1]"
+              (let [m31 (dec (apply * (repeat 31 2)))]
+                (should= [m31] (factors-of m31))))
           )
 
 (run-specs)

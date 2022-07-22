@@ -4,6 +4,8 @@
   (loop [div 2 n n factors []]
     (if (> n 1)
     (cond
+      (> div (Math/sqrt n))
+      (conj factors n)
       (zero? (mod n div))
       (recur div (/ n div) (conj factors div))
       :else
