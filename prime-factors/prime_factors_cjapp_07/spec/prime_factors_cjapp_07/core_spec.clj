@@ -21,6 +21,8 @@
               (should= [2 2 2] (factors-of 8)))
           (it "9->[3 3]"
               (should= [3 3] (factors-of 9)))
+          (it "(* 2 2 5 7 11 17 23)->[2 2 5 7 11 17 23]"
+              (should= [2 2 5 7 11 17 23] (factors-of (* 2 2 5 7 11 17 23))))
           )
 
 (run-specs)
