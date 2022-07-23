@@ -2,7 +2,7 @@
 
 public class RendererTests {
   int displayedCount = 0;
-  List<string> displayed = new();
+  readonly List<string> displayed = new();
 
   [Fact]
   public void ShowNumbers_ShouldDisplayEachNumber() {
@@ -38,8 +38,5 @@ public class RendererTests {
     displayed.Add(text);
   }
 
-  string TestRender(int number) {
-    return "x" + number.ToString();
-
-  }
+  string TestRender(int number) => "x" + number.ToString();
 }
