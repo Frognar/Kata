@@ -7,6 +7,10 @@ public class FizzBuzz {
       result = "Fizz";
     }
 
+    if (number == 5) {
+      result = "Buzz";
+    }
+
     if (string.IsNullOrEmpty(result)) {
       result = number.ToString();
     }
