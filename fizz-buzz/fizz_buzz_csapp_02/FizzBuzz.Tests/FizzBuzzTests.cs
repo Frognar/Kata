@@ -13,5 +13,6 @@ public class FizzBuzzTests {
     Assert.Equal("7", fizzBuzz.Render(7));
     Assert.Equal("8", fizzBuzz.Render(8));
     Assert.Equal("Fizz", fizzBuzz.Render(9));
+    Assert.Equal("Buzz", fizzBuzz.Render(10));
   }
 }
