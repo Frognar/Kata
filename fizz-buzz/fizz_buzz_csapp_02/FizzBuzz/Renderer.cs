@@ -7,9 +7,9 @@ public class Renderer {
     this.display = display;
   }
 
-  public void ShowNumbers(int count) {
+  public void ShowNumbers(int count, Func<int, string> render) {
     for (int i = 1; i <= count; i++) {
-      display("txt");
+      display(render(i));
     }
   }
 }
