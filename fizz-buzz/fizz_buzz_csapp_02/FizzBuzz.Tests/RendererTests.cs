@@ -20,6 +20,21 @@ public class RendererTests {
     Assert.Equal("x1", displayed[0]);
   }
 
+  [Fact]
+  public void FizzBuzz_Test() {
+    FizzBuzz fizzBuzz = new();
+    Renderer renderer = new(TestDisplay);
+    renderer.ShowNumbers(100, fizzBuzz.Render);
+    Assert.Equal("1", displayed[0]);
+    Assert.Equal("2", displayed[1]);
+    Assert.Equal("Fizz", displayed[2]);
+    Assert.Equal("4", displayed[3]);
+    Assert.Equal("Buzz", displayed[4]);
+    Assert.Equal("Fizz", displayed[5]);
+    Assert.Equal("FizzBuzz", displayed[14]);
+    Assert.Equal("Buzz", displayed[99]);
+  }
+
   void TestDisplay(string text) {
     displayedCount++;
     displayed.Add(text);
