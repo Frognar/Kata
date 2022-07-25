@@ -3,7 +3,7 @@
 public class FizzBuzz {
   public static string Render(int number) {
     string result = string.Empty;
-    if (number == 3) {
+    if (number % 3 == 0) {
       result += "Fizz";
     }
 
