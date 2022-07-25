@@ -1,7 +1,7 @@
 ﻿namespace FizzBuzz;
 
 public class Renderer {
-  private Action<string> display;
+  readonly Action<string> display;
 
   public Renderer(Action<string> display) {
     this.display = display;
