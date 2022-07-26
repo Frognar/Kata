@@ -4,11 +4,11 @@ public class FizzBuzz {
   public string Render(int number) {
     string result = string.Empty;
     if (number % 3 == 0) {
-      result = "Fizz";
+      result += "Fizz";
     }
 
     if (number % 5 == 0) {
-      result = "Buzz";
+      result += "Buzz";
     }
 
     if (string.IsNullOrEmpty(result)) {
