@@ -21,8 +21,7 @@ public class RendererTests {
   [Fact]
   public void FizzBuzz_Test() {
     Renderer renderer = new(TestDisplay);
-    FizzBuzz fizzBuzz = new();
-    renderer.ShowNumbers(100, fizzBuzz.Render);
+    renderer.ShowNumbers(100, FizzBuzz.Render);
 
     Assert.Equal("1", displayed[0]);
     Assert.Equal("Fizz", displayed[2]);
