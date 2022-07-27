@@ -18,6 +18,16 @@ public class RendererTests {
     Assert.Equal("x1", displayed[0]);
   }
 
+  [Fact]
+  public void FizzBuzz_Test() {
+    Renderer renderer = new(TestDisplay);
+    renderer.ShowNumbers(100, FizzBuzz.Render);
+    Assert.Equal("Buzz", displayed[99]);
+    Assert.Equal("Fizz", displayed[98]);
+    Assert.Equal("98", displayed[97]);
+    Assert.Equal("FizzBuzz", displayed[89]);
+  }
+
   void TestDisplay(string text) {
     displayedCount++;
     displayed.Add(text);
