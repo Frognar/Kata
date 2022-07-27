@@ -8,6 +8,10 @@ public class FizzBuzz {
       result = "Fizz";
     }
 
+    if (number == 5) {
+      result = "Buzz";
+    }
+
     result ??= number.ToString();
     return result;
   }
