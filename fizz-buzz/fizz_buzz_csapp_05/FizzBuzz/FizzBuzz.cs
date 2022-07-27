@@ -5,11 +5,11 @@ public class FizzBuzz {
     string? result = null;
 
     if (number % 3 == 0) {
-      result = "Fizz";
+      result += "Fizz";
     }
 
     if (number % 5 == 0) {
-      result = "Buzz";
+      result += "Buzz";
     }
 
     result ??= number.ToString();
