@@ -2,6 +2,7 @@
 
 public class FizzBuzz {
   public static string Render(int number) {
-    return "1";
+    string result = number.ToString();
+    return result;
   }
 }
