@@ -1,7 +1,7 @@
 ﻿namespace FizzBuzz;
 
 public class FizzBuzz {
-  public string Render(int number) {
+  public static string Render(int number) {
     string? result = null;
     if (number % 3 == 0) {
       result += "Fizz";
