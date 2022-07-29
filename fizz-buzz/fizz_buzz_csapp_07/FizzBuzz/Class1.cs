@@ -2,6 +2,12 @@
 
 public class FizzBuzz {
   public string Render(int number) {
-    return number.ToString();
+    string? result = null;
+    if (number == 3) {
+      result = "Fizz";
+    }
+
+    result ??= number.ToString();
+    return result;
   }
 }
