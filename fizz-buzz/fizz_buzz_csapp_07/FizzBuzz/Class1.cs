@@ -1,5 +1,7 @@
 ﻿namespace FizzBuzz;
 
-public class Class1 {
-
+public class FizzBuzz {
+  public string Render(int number) {
+    return "1";
+  }
 }
