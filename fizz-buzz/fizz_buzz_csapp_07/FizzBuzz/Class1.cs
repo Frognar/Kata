@@ -3,7 +3,7 @@
 public class FizzBuzz {
   public string Render(int number) {
     string? result = null;
-    if (number == 3) {
+    if (number % 3 == 0) {
       result = "Fizz";
     }
 
