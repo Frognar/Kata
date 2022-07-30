@@ -1,7 +1,7 @@
 class FizzBuzz:
     def render(self, number):
         result = None
-        if number == 3:
+        if number % 3 == 0:
             result = "Fizz"
 
         if number == 5:
