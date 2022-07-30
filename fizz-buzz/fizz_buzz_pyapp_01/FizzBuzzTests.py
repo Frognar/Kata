@@ -1,19 +1,18 @@
 import unittest
 
-from FizzBuzz import FizzBuzz
+from FizzBuzz import fizz_buzz
 
 
 class MyTestCase(unittest.TestCase):
     def test_FizzBuzz(self):
-        fizz_buzz = FizzBuzz()
-        self.assertEqual("1", fizz_buzz.render(1))
-        self.assertEqual("2", fizz_buzz.render(2))
-        self.assertEqual("Fizz", fizz_buzz.render(3))
-        self.assertEqual("4", fizz_buzz.render(4))
-        self.assertEqual("Buzz", fizz_buzz.render(5))
-        self.assertEqual("Fizz", fizz_buzz.render(6))
-        self.assertEqual("Buzz", fizz_buzz.render(10))
-        self.assertEqual("FizzBuzz", fizz_buzz.render(15))
+        self.assertEqual("1", fizz_buzz(1))
+        self.assertEqual("2", fizz_buzz(2))
+        self.assertEqual("Fizz", fizz_buzz(3))
+        self.assertEqual("4", fizz_buzz(4))
+        self.assertEqual("Buzz", fizz_buzz(5))
+        self.assertEqual("Fizz", fizz_buzz(6))
+        self.assertEqual("Buzz", fizz_buzz(10))
+        self.assertEqual("FizzBuzz", fizz_buzz(15))
 
 
 if __name__ == '__main__':
