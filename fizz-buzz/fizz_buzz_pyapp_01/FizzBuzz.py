@@ -1,13 +1,13 @@
 class FizzBuzz:
     def render(self, number):
-        result = None
+        result = ""
         if number % 3 == 0:
-            result = "Fizz"
+            result += "Fizz"
 
         if number % 5 == 0:
-            result = "Buzz"
+            result += "Buzz"
 
-        if result is None:
+        if result is "":
             result = str(number)
 
         return result
