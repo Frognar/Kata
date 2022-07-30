@@ -8,8 +8,8 @@ class MyTestCase(unittest.TestCase):
         self.displayedCount = 0
         self.renderer = Renderer(self.display)
 
-    def test_render_should_display_each_number(self):
-        self.renderer.render(2)
+    def test_show_numbers_should_display_each_number(self):
+        self.renderer.show_numbers(2)
         self.assertEqual(2, self.displayedCount)
 
     def display(self, text):
