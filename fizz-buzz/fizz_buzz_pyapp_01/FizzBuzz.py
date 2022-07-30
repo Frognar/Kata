@@ -4,7 +4,7 @@ class FizzBuzz:
         if number % 3 == 0:
             result = "Fizz"
 
-        if number == 5:
+        if number % 5 == 0:
             result = "Buzz"
 
         if result is None:
