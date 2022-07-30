@@ -1,4 +1,4 @@
 
 class FizzBuzz:
     def render(self, number):
-        return "1"
+        return str(number)
