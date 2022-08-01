@@ -1,2 +1,2 @@
-def fizz_buzz(param):
-    return '1'
+def fizz_buzz(number):
+    return str(number)
