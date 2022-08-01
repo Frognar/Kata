@@ -1,5 +1,6 @@
 import unittest
 
+from FizzBuzz import fizz_buzz
 from Renderer import Renderer
 
 
@@ -16,6 +17,10 @@ class RendererTestCase(unittest.TestCase):
     def test_renderer_show_numbers_should_render_number(self):
         self.renderer.show_numbers(1, self.render)
         self.assertEqual('p1', self.displayed[0])
+
+    def test_fizz_buzz(self):
+        self.renderer = Renderer(print)
+        self.renderer.show_numbers(100, fizz_buzz)
 
     def display(self, text):
         self.displayedCount += 1
