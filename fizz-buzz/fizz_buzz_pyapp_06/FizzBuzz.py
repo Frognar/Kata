@@ -1,6 +1,9 @@
 def fizz_buzz(number):
+    result = ''
     if number % 3 == 0:
-        return 'Fizz'
+        result += 'Fizz'
     if number % 5 == 0:
-        return 'Buzz'
-    return str(number)
+        result += 'Buzz'
+    if result == '':
+        result = str(number)
+    return result
