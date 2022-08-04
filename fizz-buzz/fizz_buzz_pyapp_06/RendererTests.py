@@ -26,6 +26,10 @@ class RendererTestCase(unittest.TestCase):
         self.renderer.show_numbers(1, self.render)
         self.assertEqual('_x1x_', self.displayed[0])
 
+    def test_fizz_buzz(self):
+        self.renderer = Renderer(print)
+        self.renderer.show_numbers(100, fizz_buzz)
+
 
 if __name__ == '__main__':
     unittest.main()
