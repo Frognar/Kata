@@ -12,6 +12,7 @@ class FizzBuzzTestCase(unittest.TestCase):
         self.assertEqual("Buzz", fizz_buzz(5))
         self.assertEqual("Fizz", fizz_buzz(6))
         self.assertEqual("7", fizz_buzz(7))
+        self.assertEqual("8", fizz_buzz(8))
 
 
 if __name__ == '__main__':
