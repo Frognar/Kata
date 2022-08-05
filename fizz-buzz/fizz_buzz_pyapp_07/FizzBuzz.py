@@ -1,2 +1,2 @@
 def fizz_buzz(number):
-    return '1'
+    return str(number)
