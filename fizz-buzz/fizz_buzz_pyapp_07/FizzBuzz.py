@@ -1,2 +1,5 @@
 def fizz_buzz(number):
-    return str(number)
+    result = str(number)
+    if number == 3:
+        result = "Fizz"
+    return result
