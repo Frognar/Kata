@@ -1,6 +1,6 @@
 def fizz_buzz(number):
     result = ''
-    if number == 3:
+    if number % 3 == 0:
         result = "Fizz"
     if number == 5:
         result = "Buzz"
