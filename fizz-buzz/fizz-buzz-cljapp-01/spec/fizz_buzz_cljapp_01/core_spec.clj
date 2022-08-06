@@ -21,4 +21,14 @@
               (should= "FizzBuzz" (fizz-buzz 15)))
           )
 
+(defn test-renderer
+  [n]
+  (str "__" n "__"))
+
+(describe "renderer"
+          (it "display each number"
+              (should= ["__1__"] (render 1 test-renderer)))
+          )
+
+
 (run-specs)

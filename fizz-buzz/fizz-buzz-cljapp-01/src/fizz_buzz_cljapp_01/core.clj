@@ -11,3 +11,7 @@
     "Buzz"
     :else
     (str number)))
+
+(defn render
+  [count renderer]
+  [(renderer 1)])
