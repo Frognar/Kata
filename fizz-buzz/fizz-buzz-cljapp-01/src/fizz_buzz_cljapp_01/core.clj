@@ -3,6 +3,8 @@
 (defn fizz-buzz
   [number]
   (cond
+    (zero? (mod number 15))
+    "FizzBuzz"
     (zero? (mod number 3))
     "Fizz"
     (zero? (mod number 5))
