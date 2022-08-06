@@ -2,4 +2,4 @@
 
 (defn fizz-buzz
   [number]
-  "1")
+  (str number))
