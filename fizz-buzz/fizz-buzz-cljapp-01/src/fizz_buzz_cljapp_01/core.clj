@@ -5,7 +5,7 @@
   (cond
     (zero? (mod number 3))
     "Fizz"
-    (= number 5)
+    (zero? (mod number 5))
     "Buzz"
     :else
     (str number)))
