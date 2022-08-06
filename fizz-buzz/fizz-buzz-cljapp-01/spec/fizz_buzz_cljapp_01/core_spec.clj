@@ -27,7 +27,9 @@
 
 (describe "renderer"
           (it "display each number"
-              (should= ["__1__"] (render 1 test-renderer)))
+              (should= ["__1__"] (render 1 test-renderer))
+              (should= ["__1__", "__2__"] (render 2 test-renderer))
+              )
           )
 
 
