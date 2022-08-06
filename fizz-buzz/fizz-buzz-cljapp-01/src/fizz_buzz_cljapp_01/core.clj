@@ -1,5 +1,5 @@
 (ns fizz-buzz-cljapp-01.core)
 
-(defn -main
-  [& args]
-  (println "Hello World"))
+(defn fizz-buzz
+  [number]
+  "1")
