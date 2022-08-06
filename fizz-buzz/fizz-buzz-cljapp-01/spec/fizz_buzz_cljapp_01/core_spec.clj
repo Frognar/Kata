@@ -9,6 +9,8 @@
               (should= "2" (fizz-buzz 2)))
           (it "3 -> 'Fizz'"
               (should= "Fizz" (fizz-buzz 3)))
+          (it "4 -> '4'"
+              (should= "4" (fizz-buzz 4)))
           )
 
 (run-specs)
