@@ -2,6 +2,10 @@
 
 (defn fizz-buzz
   [number]
-  (if (= number 3)
+  (cond
+    (= number 3)
     "Fizz"
+    (= number 5)
+    "Buzz"
+    :else
     (str number)))
