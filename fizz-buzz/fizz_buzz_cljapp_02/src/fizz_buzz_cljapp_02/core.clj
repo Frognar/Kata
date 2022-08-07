@@ -17,6 +17,9 @@
     :else (str number)
     ))
 
+(defn render [count renderer]
+  [(renderer count)])
+
 (defn -main
   [& args]
   (println "Hello World"))
