@@ -35,6 +35,8 @@
               (should= false (fizzbuzz? 5)))
           (it "15 -> true"
               (should= true (fizzbuzz? 15)))
+          (it "25 -> false"
+              (should= false (fizzbuzz? 25)))
           )
 
 (run-specs)
