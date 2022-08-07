@@ -9,6 +9,9 @@
 (defn fizzbuzz? [number]
   (and (fizz? number) (buzz? number)))
 
+(defn fizzbuzz [number]
+  "1")
+
 (defn -main
   [& args]
   (println "Hello World"))

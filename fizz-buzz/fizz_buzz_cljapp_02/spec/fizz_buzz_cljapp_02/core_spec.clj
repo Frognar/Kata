@@ -41,4 +41,8 @@
               (should= true (fizzbuzz? 30)))
           )
 
+(describe "fizzbuzz"
+          (it "1 -> '1'"
+              (should= "1" (fizzbuzz 1))))
+
 (run-specs)
