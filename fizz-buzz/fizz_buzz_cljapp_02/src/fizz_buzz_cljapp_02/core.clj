@@ -10,7 +10,7 @@
   (and (fizz? number) (buzz? number)))
 
 (defn fizzbuzz [number]
-  (if (= number 3)
+  (if (fizz? number)
     "Fizz"
     (str number)))
 
