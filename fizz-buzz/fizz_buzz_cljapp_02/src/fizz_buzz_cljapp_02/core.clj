@@ -1,7 +1,7 @@
 (ns fizz-buzz-cljapp-02.core)
 
 (defn fizz? [number]
-  (= number 3))
+  (zero? (mod number 3)))
 
 (defn -main
   [& args]

@@ -13,6 +13,8 @@
               (should= false (fizz? 4)))
           (it "5 -> false"
               (should= false (fizz? 5)))
+          (it "6 -> true"
+              (should= true (fizz? 6)))
           )
 
 (run-specs)
