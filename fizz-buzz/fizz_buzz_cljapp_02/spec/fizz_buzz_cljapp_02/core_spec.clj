@@ -22,6 +22,8 @@
               (should= false (buzz? 1)))
           (it "5 -> true"
               (should= true (buzz? 5)))
+          (it "6 -> false"
+              (should= false (buzz? 6)))
           )
 
 (run-specs)
