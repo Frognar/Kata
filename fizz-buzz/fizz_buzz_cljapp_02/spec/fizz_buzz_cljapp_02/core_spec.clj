@@ -31,6 +31,8 @@
 (describe "fizzbuzz?"
           (it "3 -> false"
               (should= false (fizzbuzz? 3)))
+          (it "5 -> false"
+              (should= false (fizzbuzz? 5)))
           )
 
 (run-specs)
