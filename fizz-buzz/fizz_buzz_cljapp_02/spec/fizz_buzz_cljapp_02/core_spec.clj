@@ -17,4 +17,8 @@
               (should= true (fizz? 6)))
           )
 
+(describe "buzz?"
+          (it "1 -> false"
+              (should= false (buzz? 1))))
+
 (run-specs)
