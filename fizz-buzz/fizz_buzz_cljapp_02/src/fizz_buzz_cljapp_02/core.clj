@@ -10,7 +10,9 @@
   (and (fizz? number) (buzz? number)))
 
 (defn fizzbuzz [number]
-  (str number))
+  (if (= number 3)
+    "Fizz"
+    (str number)))
 
 (defn -main
   [& args]
