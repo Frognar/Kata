@@ -2,8 +2,9 @@
   (:require [speclj.core :refer :all]
             [fizz-buzz-cljapp-02.core :refer :all]))
 
-(describe "a test"
-  (it "FIXME, I fail."
-    (should= 0 1)))
+(describe "fizz?"
+          (it "1 -> false"
+              (should= false (fizz? 1)))
+          )
 
 (run-specs)
