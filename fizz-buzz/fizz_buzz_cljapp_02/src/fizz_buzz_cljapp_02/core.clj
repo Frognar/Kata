@@ -18,7 +18,11 @@
     ))
 
 (defn render [count renderer]
-  [(renderer count)])
+  (loop [n 1 rendered []]
+    (if (> n count)
+      rendered
+      (recur (inc n) (conj rendered (renderer n))))
+    ))
 
 (defn -main
   [& args]

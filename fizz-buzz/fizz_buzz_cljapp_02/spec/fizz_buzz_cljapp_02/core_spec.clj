@@ -63,7 +63,10 @@
 (describe "render"
           (let [r (fn [n] (str "_" n "_"))]
             (it "1 -> ['_1_']"
-                (should= ["_1_"] (render 1 r))))
+                (should= ["_1_"] (render 1 r)))
+            (it "2 -> ['_1_', '_2_']"
+                (should= ["_1_", "_2_"] (render 2 r)))
+            )
           )
 
 (run-specs)
