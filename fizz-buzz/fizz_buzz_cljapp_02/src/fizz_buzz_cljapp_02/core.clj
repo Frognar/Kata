@@ -7,7 +7,7 @@
   (zero? (mod number 5)))
 
 (defn fizzbuzz? [number]
-  (= number 15))
+  (and (fizz? number) (buzz? number)))
 
 (defn -main
   [& args]
