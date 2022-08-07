@@ -10,7 +10,7 @@
   (and (fizz? number) (buzz? number)))
 
 (defn fizzbuzz [number]
-  "1")
+  (str number))
 
 (defn -main
   [& args]
