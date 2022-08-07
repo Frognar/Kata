@@ -19,6 +19,9 @@
 
 (describe "buzz?"
           (it "1 -> false"
-              (should= false (buzz? 1))))
+              (should= false (buzz? 1)))
+          (it "5 -> true"
+              (should= true (buzz? 5)))
+          )
 
 (run-specs)

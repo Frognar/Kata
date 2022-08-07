@@ -4,7 +4,7 @@
   (zero? (mod number 3)))
 
 (defn buzz? [number]
-  false)
+  (= number 5))
 
 (defn -main
   [& args]
