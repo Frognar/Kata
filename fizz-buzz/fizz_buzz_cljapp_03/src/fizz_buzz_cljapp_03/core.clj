@@ -17,4 +17,8 @@
     :else (str number)))
 
 (defn render [count renderer]
-  ["-1-"])
+  (loop [n 1 rendered []]
+    (if (> n count)
+      rendered
+      (recur (inc n) (conj rendered (renderer n))))
+    ))
