@@ -8,7 +8,7 @@
 
 (defn fizz-buzz [number]
   (cond
-    (= number 15) "FizzBuzz"
+    (and (fizz? number) (buzz? number)) "FizzBuzz"
     (fizz? number) "Fizz"
     (buzz? number) "Buzz"
     :else (str number)))
