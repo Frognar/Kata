@@ -15,3 +15,6 @@
     (fizz? number) "Fizz"
     (buzz? number) "Buzz"
     :else (str number)))
+
+(defn render [count renderer]
+  ["-1-"])
