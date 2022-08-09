@@ -17,3 +17,7 @@
     :else (str number)
     )
   )
+
+(defn render [count rend]
+  [(rend count)]
+  )

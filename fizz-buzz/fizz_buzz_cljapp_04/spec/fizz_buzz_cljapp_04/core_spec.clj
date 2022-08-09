@@ -23,4 +23,10 @@
               (should= "FizzBuzz" (fizz-buzz 30)))
           )
 
+(describe "render"
+          (let [r (fn [n] (str "-" n))]
+            (it "1 -> ['-1']"
+                (should= ["-1"] (render 1 r))))
+            )
+
 (run-specs)
