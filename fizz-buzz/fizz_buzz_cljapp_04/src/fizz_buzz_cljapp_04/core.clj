@@ -3,11 +3,13 @@
 (defn fizz? [number]
   (zero? (mod number 3)))
 
+(defn buzz? [number]
+  (zero? (mod number 5)))
 
 (defn fizz-buzz [number]
   (cond
     (fizz? number) "Fizz"
-    (zero? (mod number 5)) "Buzz"
+    (buzz? number) "Buzz"
     :else (str number)
     )
   )
