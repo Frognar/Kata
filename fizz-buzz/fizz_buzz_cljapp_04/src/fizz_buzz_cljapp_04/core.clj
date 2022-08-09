@@ -19,5 +19,9 @@
   )
 
 (defn render [count rend]
-  [(rend count)]
+  (loop [n 1 rendered []]
+    (if (> n count)
+      rendered
+      (recur (inc n) (conj rendered (rend n))))
+    )
   )

@@ -26,7 +26,10 @@
 (describe "render"
           (let [r (fn [n] (str "-" n))]
             (it "1 -> ['-1']"
-                (should= ["-1"] (render 1 r))))
+                (should= ["-1"] (render 1 r)))
+            (it "2 -> ['-1' '-2']"
+                (should= ["-1" "-2"] (render 2 r)))
             )
+          )
 
 (run-specs)
