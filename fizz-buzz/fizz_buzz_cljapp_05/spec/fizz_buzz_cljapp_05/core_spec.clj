@@ -17,6 +17,8 @@
               (should= "Fizz" (fizz-buzz 6)))
           (it "10 -> 'Buzz'"
               (should= "Buzz" (fizz-buzz 10)))
+          (it "15 -> 'FizzBuzz'"
+              (should= "FizzBuzz" (fizz-buzz 15)))
           )
 
 (run-specs)

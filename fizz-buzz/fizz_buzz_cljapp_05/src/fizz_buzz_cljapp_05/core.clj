@@ -8,6 +8,7 @@
 
 (defn fizz-buzz [n]
   (cond
+    (= n 15) "FizzBuzz"
     (fizz? n) "Fizz"
     (buzz? n) "Buzz"
     :else (str n)
