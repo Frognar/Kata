@@ -19,4 +19,4 @@
   )
 
 (defn render [count rend]
-  ["x1"])
+  [(rend count)])
