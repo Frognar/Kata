@@ -24,6 +24,10 @@
 (describe "render"
           (let [r (fn [n] (str "x" n))]
             (it "1 -> ['x1']"
-                (should= ["x1"] (render 1 r)))))
+                (should= ["x1"] (render 1 r)))
+            (it "2 -> ['x1' 'x2']"
+                (should= ["x1" "x2"] (render 2 r)))
+            )
+          )
 
 (run-specs)
