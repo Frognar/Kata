@@ -6,9 +6,12 @@
 (defn buzz? [n]
   (zero? (mod n 5)))
 
+(defn fizzbuzz? [n]
+  (and (fizz? n) (buzz? n)))
+
 (defn fizz-buzz [n]
   (cond
-    (and (fizz? n) (buzz? n)) "FizzBuzz"
+    (fizzbuzz? n)"FizzBuzz"
     (fizz? n) "Fizz"
     (buzz? n) "Buzz"
     :else (str n)
