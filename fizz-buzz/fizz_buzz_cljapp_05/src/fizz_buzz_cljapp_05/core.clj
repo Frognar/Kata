@@ -23,3 +23,5 @@
     (if (> n count)
       rendered
       (recur (inc n) (conj rendered (rend n))))))
+
+(map println (render 100 fizz-buzz))
