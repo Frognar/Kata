@@ -18,4 +18,4 @@
   )
 
 (defn render [count r]
-  ["1p"])
+  [(r count)])
