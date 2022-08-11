@@ -27,6 +27,8 @@
           (let [r (fn [n] (str n "p"))]
             (it "1 -> ['1p']"
                 (should= ["1p"] (render 1 r)))
+            (it "2 -> ['1p' '2p']"
+                (should= ["1p" "2p"] (render 2 r)))
             )
           )
 
