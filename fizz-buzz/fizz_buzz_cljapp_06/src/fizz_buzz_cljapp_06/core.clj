@@ -16,3 +16,6 @@
     (buzz? n) "Buzz"
     :else (str n))
   )
+
+(defn render [count r]
+  ["1p"])
