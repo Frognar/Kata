@@ -5,7 +5,7 @@
 
 (defn fizz-buzz [n]
   (cond
-    (= n 15) "FizzBuzz"
+    (and (fizz? n) (buzz? n)) "FizzBuzz"
     (fizz? n) "Fizz"
     (buzz? n) "Buzz"
     :else (str n))
