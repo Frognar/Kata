@@ -13,4 +13,4 @@
   )
 
 (defn render [count r]
-  ["l1"])
+  [(r count)])
