@@ -23,4 +23,11 @@
               (should= "FizzBuzz" (fizz-buzz 30)))
           )
 
+(describe "render"
+          (let [r (fn [n] (str "l" n))]
+            (it "1 -> ['l1']"
+                (should= ["l1"] (render 1 r)))
+            )
+          )
+
 (run-specs)
