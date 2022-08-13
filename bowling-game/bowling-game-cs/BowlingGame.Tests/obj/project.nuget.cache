@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fLpWsYmGDlzpjCZXijnqFo4MkwOGhg98EVNc2HUuoeVR5rmnVlNw0VBWyS1sH0EzLHagNi9bxUozlE9oxU+skQ==",
+  "dgSpecHash": "Vlr0G1wpYBdZtn4loWndei6NfTrAHLHCAzmPlH7QNPJCvtuax2hu9zu3sTVClTZC+VT7y5PvclVb+OhAFNBdNQ==",
   "success": true,
   "projectFilePath": "E:\\Kata\\bowling-game\\bowling-game-cs\\BowlingGame.Tests\\BowlingGame.Tests.csproj",
   "expectedPackageFiles": [
