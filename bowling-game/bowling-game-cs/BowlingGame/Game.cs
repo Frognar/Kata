@@ -42,7 +42,7 @@ public class Game
 
     private int NextBallForSpare(int firstInFrame)
     {
-        return rolls[firstInFrame + 1];
+        return rolls[firstInFrame + 2];
     }
 
     private int TwoBallsInFrame(int firstInFrame)
