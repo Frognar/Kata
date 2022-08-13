@@ -60,4 +60,11 @@ public class BowlingGameTests
         RollMany(16, 0);
         Assert.Equal(26, game.Score());
     }
+
+    [Fact]
+    public void PerfectGame()
+    {
+        RollMany(12, 10);
+        Assert.Equal(300, game.Score());
+    }
 }
