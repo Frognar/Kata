@@ -13,9 +13,11 @@ public class Game
     public int Score()
     {
         int score = 0;
-        for (int i = 0; i < 20; i++)
+        int firstInFrame = 0;
+        for (int frame = 0; frame < 10; frame++)
         {
-            score += rolls[i];
+            score += rolls[firstInFrame] + rolls[firstInFrame + 1];
+            firstInFrame += 2;
         }
         return score;
     }
