@@ -23,6 +23,11 @@ public class BowlingGameTests
         game.Roll(5);
     }
 
+    private void RollStrike()
+    {
+        game.Roll(10);
+    }
+    
     [Fact]
     public void RollAllZeros_ScoreShouldBeZero()
     {
@@ -49,7 +54,7 @@ public class BowlingGameTests
     [Fact]
     public void OneStrike()
     {
-        game.Roll(10);
+        RollStrike();
         game.Roll(6);
         game.Roll(2);
         RollMany(16, 0);
