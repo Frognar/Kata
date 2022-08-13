@@ -2,16 +2,16 @@ namespace BowlingGame.Tests;
 
 public class BowlingGameTests
 {
-    [Fact]
-    public void CanCreateGame()
+    private readonly Game game;
+
+    public BowlingGameTests()
     {
-        Game game = new();
+        game = new Game();
     }
 
     [Fact]
     public void CanRoll()
     {
-        Game game = new();
         game.Roll(0);
     }
 }
