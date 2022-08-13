@@ -17,6 +17,12 @@ public class BowlingGameTests
         }
     }
 
+    private void RollSpare()
+    {
+        game.Roll(5);
+        game.Roll(5);
+    }
+
     [Fact]
     public void RollAllZeros_ScoreShouldBeZero()
     {
@@ -34,8 +40,7 @@ public class BowlingGameTests
     [Fact]
     public void OneSpare()
     {
-        game.Roll(5);
-        game.Roll(5);
+        RollSpare();
         game.Roll(3);
         RollMany(17, 0);
         Assert.Equal(16, game.Score());
