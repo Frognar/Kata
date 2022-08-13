@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame", "BowlingGame\BowlingGame.csproj", "{F613E799-BDBF-46B8-B3D3-654406AB0C26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.Tests", "BowlingGame.Tests\BowlingGame.Tests.csproj", "{90E9564A-D46D-48B0-9709-095A27A69FB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F613E799-BDBF-46B8-B3D3-654406AB0C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F613E799-BDBF-46B8-B3D3-654406AB0C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F613E799-BDBF-46B8-B3D3-654406AB0C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F613E799-BDBF-46B8-B3D3-654406AB0C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E9564A-D46D-48B0-9709-095A27A69FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E9564A-D46D-48B0-9709-095A27A69FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E9564A-D46D-48B0-9709-095A27A69FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E9564A-D46D-48B0-9709-095A27A69FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
