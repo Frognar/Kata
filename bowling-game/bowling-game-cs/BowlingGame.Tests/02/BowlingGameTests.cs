@@ -10,10 +10,6 @@ public class BowlingGameTests {
     }
 
     [Fact]
-    public void CanCreateGame() {
-    }
-
-    [Fact]
     public void CanRoll() {
         game.Roll(0);
     }
