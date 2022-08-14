@@ -1,50 +1,41 @@
-namespace BowlingGame.Tests;
+using BowlingGame._01;
 
-public class BowlingGameTests
-{
-    private readonly Game game;
+namespace BowlingGame.Tests._01;
 
-    public BowlingGameTests()
-    {
+public class BowlingGameTests {
+    readonly Game game;
+
+    public BowlingGameTests() {
         game = new Game();
     }
 
-    private void RollMany(int n, int pins)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            game.Roll(pins);
-        }
+    void RollMany(int n, int pins) {
+        for (var i = 0; i < n; i++) game.Roll(pins);
     }
 
-    private void RollSpare()
-    {
+    void RollSpare() {
         game.Roll(5);
         game.Roll(5);
     }
 
-    private void RollStrike()
-    {
+    void RollStrike() {
         game.Roll(10);
     }
-    
+
     [Fact]
-    public void RollAllZeros_ScoreShouldBeZero()
-    {
+    public void RollAllZeros_ScoreShouldBeZero() {
         RollMany(20, 0);
         Assert.Equal(0, game.Score());
     }
 
     [Fact]
-    public void RollAllOnes_ScoreShouldBeTwenty()
-    {
+    public void RollAllOnes_ScoreShouldBeTwenty() {
         RollMany(20, 1);
         Assert.Equal(20, game.Score());
     }
 
     [Fact]
-    public void OneSpare()
-    {
+    public void OneSpare() {
         RollSpare();
         game.Roll(3);
         RollMany(17, 0);
@@ -52,8 +43,7 @@ public class BowlingGameTests
     }
 
     [Fact]
-    public void OneStrike()
-    {
+    public void OneStrike() {
         RollStrike();
         game.Roll(6);
         game.Roll(2);
@@ -62,8 +52,7 @@ public class BowlingGameTests
     }
 
     [Fact]
-    public void PerfectGame()
-    {
+    public void PerfectGame() {
         RollMany(12, 10);
         Assert.Equal(300, game.Score());
     }
