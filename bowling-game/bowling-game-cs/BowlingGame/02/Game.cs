@@ -2,7 +2,7 @@
 
 public class Game {
     readonly int[] rolls = new int[21];
-    int currentRoll = 0;
+    int currentRoll;
     
     public void Roll(int pins) {
         rolls[currentRoll++] = pins;
