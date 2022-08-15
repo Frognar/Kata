@@ -9,6 +9,10 @@ public class Game {
   }
 
   public int Score() {
-    return rolls.Sum();
+    int score = 0;
+    for (int i = 0; i < 10; i++) {
+      score += rolls[i] + rolls[i + 1];
+    }
+    return score;
   }
 }
