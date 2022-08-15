@@ -7,4 +7,9 @@ public class BowlingGameTests {
   public void CanCreateGame() {
     Game game = new();
   }
+  [Fact]
+  public void CanRoll() {
+    Game game = new();
+    game.Roll(0);
+  }
 }
