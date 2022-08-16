@@ -6,7 +6,13 @@ public class BowlingGameTests {
   readonly Game game;
 
   public BowlingGameTests() {
-    game = new();
+    game = new Game();
+  }
+
+  void RollMany(int n, int pins) {
+    for (var i = 0; i < n; i++) {
+      game.Roll(pins);
+    }
   }
 
   [Fact]
@@ -24,11 +30,5 @@ public class BowlingGameTests {
   public void AllOnes() {
     RollMany(20, 1);
     Assert.Equal(20, game.Score());
-  }
-
-  void RollMany(int n, int pins) {
-    for (int i = 0; i < n; i++) {
-      game.Roll(pins);
-    }
   }
 }
