@@ -9,6 +9,12 @@ public class Game {
   }
 
   public int Score() {
-    return rolls.Sum();
+    int score = 0;
+    int firstInFrame = 0;
+    for (int frame = 0; frame < 10; frame++) {
+      score += rolls[firstInFrame] + rolls[firstInFrame + 1];
+      firstInFrame += 2;
+    }
+    return score;
   }
 }
