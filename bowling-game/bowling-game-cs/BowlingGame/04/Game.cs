@@ -12,9 +12,11 @@ public class Game {
     int score = 0;
     int firstInFrame = 0;
     for (int frame = 0; frame < 10; frame++) {
-      score += rolls[firstInFrame] + rolls[firstInFrame + 1];
+      score += TwoBallsInFrame(firstInFrame);
       firstInFrame += 2;
     }
     return score;
   }
+
+  int TwoBallsInFrame(int firstInFrame) => rolls[firstInFrame] + rolls[firstInFrame + 1];
 }
