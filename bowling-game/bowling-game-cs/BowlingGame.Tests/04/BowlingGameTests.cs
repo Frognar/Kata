@@ -15,9 +15,9 @@ public class BowlingGameTests {
     }
   }
 
-  [Fact]
-  public void CanRoll() {
-    game.Roll(0);
+  void RollSpare() {
+    game.Roll(5);
+    game.Roll(5);
   }
 
   [Fact]
@@ -34,8 +34,7 @@ public class BowlingGameTests {
 
   [Fact]
   public void OneSpare() {
-    game.Roll(5);
-    game.Roll(5);
+    RollSpare();
     game.Roll(8);
     RollMany(17, 0);
     Assert.Equal(26, game.Score());
