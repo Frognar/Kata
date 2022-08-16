@@ -20,6 +20,10 @@ public class BowlingGameTests {
     game.Roll(5);
   }
 
+  void RollStrike() {
+    game.Roll(10);
+  }
+
   [Fact]
   public void AllZeros() {
     RollMany(20, 0);
@@ -42,7 +46,7 @@ public class BowlingGameTests {
 
   [Fact]
   public void OnsStrike() {
-    game.Roll(10);
+    RollStrike();
     game.Roll(4);
     game.Roll(5);
     RollMany(16, 0);
