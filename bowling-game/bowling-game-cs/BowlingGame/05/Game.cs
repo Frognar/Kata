@@ -21,7 +21,7 @@ public class Game {
         firstInFrame += 2;
       }
       else {
-        score += rolls[firstInFrame] + rolls[firstInFrame + 1];
+        score += TwoBallsInFrame(firstInFrame);
         firstInFrame += 2;
       }
     }
@@ -35,4 +35,6 @@ public class Game {
   bool IsSpare(int firstInFrame) => rolls[firstInFrame] + rolls[firstInFrame + 1] == 10;
 
   int NextBallForSpare(int firstInFrame) => rolls[firstInFrame + 2];
+  
+  int TwoBallsInFrame(int firstInFrame) => rolls[firstInFrame] + rolls[firstInFrame + 1];
 }
