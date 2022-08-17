@@ -10,8 +10,10 @@ public class Game {
 
   public int Score() {
     int score = 0;
-    for (int i = 0; i < rolls.Length; i++) {
-      score += rolls[i];
+    int firstInFrame = 0;
+    for (int frame = 0; frame < 10; frame++) {
+      score += rolls[firstInFrame] + rolls[firstInFrame + 1];
+      firstInFrame += 2;
     }
     return score;
   }
