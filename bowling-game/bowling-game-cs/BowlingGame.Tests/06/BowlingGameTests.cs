@@ -26,4 +26,13 @@ public class BowlingGameTests {
     RollMany(20, 1);
     Assert.Equal(20, game.Score());
   }
+
+  [Fact]
+  public void OneSpare() {
+    game.Roll(5);
+    game.Roll(5);
+    game.Roll(6);
+    RollMany(17, 0);
+    Assert.Equal(22, game.Score());
+  }
 }
