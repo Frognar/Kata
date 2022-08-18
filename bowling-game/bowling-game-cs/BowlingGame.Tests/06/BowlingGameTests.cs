@@ -15,6 +15,11 @@ public class BowlingGameTests {
     }
   }
 
+  void RollSpare() {
+    game.Roll(5);
+    game.Roll(5);
+  }
+
   [Fact]
   public void AllZeros() {
     RollMany(20, 0);
@@ -29,8 +34,7 @@ public class BowlingGameTests {
 
   [Fact]
   public void OneSpare() {
-    game.Roll(5);
-    game.Roll(5);
+    RollSpare();
     game.Roll(6);
     RollMany(17, 0);
     Assert.Equal(22, game.Score());
