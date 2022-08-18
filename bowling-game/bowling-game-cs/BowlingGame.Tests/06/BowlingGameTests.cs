@@ -52,4 +52,10 @@ public class BowlingGameTests {
     RollMany(16, 0);
     Assert.Equal(22, game.Score());
   }
+
+  [Fact]
+  public void AllStrikes() {
+    RollMany(12, 10);
+    Assert.Equal(300, game.Score());
+  }
 }
