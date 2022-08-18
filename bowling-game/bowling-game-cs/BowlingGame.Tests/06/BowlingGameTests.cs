@@ -10,11 +10,6 @@ public class BowlingGameTests {
   }
 
   [Fact]
-  public void CanRoll() {
-    game.Roll(0);
-  }
-
-  [Fact]
   public void AllZeros() {
     for (int i = 0; i < 20; i++) {
       game.Roll(0);
