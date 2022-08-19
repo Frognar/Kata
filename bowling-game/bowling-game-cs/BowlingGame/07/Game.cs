@@ -12,7 +12,10 @@ public class Game {
     int score = 0;
     int firstInFrame = 0;
     for (int i = 0; i < 10; i++) {
-      if (IsSpare(firstInFrame)) {
+      if (rolls[firstInFrame] == 10) {
+        score += 10 + TwoBallsInFrame(++firstInFrame);
+      }
+      else if (IsSpare(firstInFrame)) {
         score += 10 + NextBallForSpare(firstInFrame);
         firstInFrame += 2;
       }

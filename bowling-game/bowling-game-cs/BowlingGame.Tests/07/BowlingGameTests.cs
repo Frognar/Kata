@@ -39,4 +39,13 @@ public class BowlingGameTests {
     RollMany(17, 0);
     Assert.Equal(28, game.Score());
   }
+
+  [Fact]
+  public void OneStrike() {
+    game.Roll(10);
+    game.Roll(8);
+    game.Roll(1);
+    RollMany(16, 0);
+    Assert.Equal(28, game.Score());
+  }
 }
