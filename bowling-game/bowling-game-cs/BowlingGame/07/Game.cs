@@ -13,7 +13,8 @@ public class Game {
     int firstInFrame = 0;
     for (int i = 0; i < 10; i++) {
       if (IsStrike(firstInFrame)) {
-        score += 10 + TwoBallsInFrame(++firstInFrame);
+        score += 10 + NextTwoBallsForStrike(firstInFrame);
+        firstInFrame++;
       }
       else if (IsSpare(firstInFrame)) {
         score += 10 + NextBallForSpare(firstInFrame);
@@ -28,6 +29,8 @@ public class Game {
   }
 
   bool IsStrike(int firstInFrame) => rolls[firstInFrame] == 10;
+
+  int NextTwoBallsForStrike(int firstInFrame) => TwoBallsInFrame(firstInFrame + 1);
 
   bool IsSpare(int firstInFrame) => TwoBallsInFrame(firstInFrame) == 10;
 
