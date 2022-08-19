@@ -12,8 +12,14 @@ public class Game {
     int score = 0;
     int firstInFrame = 0;
     for (int i = 0; i < 10; i++) {
-      score += TwoBallsInFrame(firstInFrame);
-      firstInFrame += 2;
+      if (TwoBallsInFrame(firstInFrame) == 10) {
+        score += 10 + rolls[firstInFrame + 2];
+        firstInFrame += 2;
+      }
+      else {
+        score += TwoBallsInFrame(firstInFrame);
+        firstInFrame += 2;
+      }
     }
     return score;
   }
