@@ -1,8 +1,10 @@
 import unittest
+from Game import Game
 
 
 class MyTestCase(unittest.TestCase):
-    pass
+    def test_can_create_game(self):
+        game = Game()
 
 
 if __name__ == '__main__':
