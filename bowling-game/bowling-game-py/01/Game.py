@@ -11,7 +11,10 @@ class Game:
         score = 0
         first_in_frame = 0
         for i in range(10):
-            if self.is_spare(first_in_frame):
+            if self.rolls[first_in_frame] == 10:
+                score += 10 + self.two_balls_in_frame(first_in_frame + 1)
+                first_in_frame += 1
+            elif self.is_spare(first_in_frame):
                 score += 10 + self.next_ball_for_spare(first_in_frame)
                 first_in_frame += 2
             else:
