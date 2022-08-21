@@ -13,6 +13,9 @@ class BowlingGameTestCase(unittest.TestCase):
         self.game.roll(5)
         self.game.roll(5)
 
+    def roll_strike(self):
+        self.game.roll(10)
+
     def test_all_zeros(self):
         self.roll_many(20, 0)
         assert 0 == self.game.score()
@@ -28,7 +31,7 @@ class BowlingGameTestCase(unittest.TestCase):
         assert 28 == self.game.score()
 
     def test_one_strike(self):
-        self.game.roll(10)
+        self.roll_strike()
         self.game.roll(5)
         self.game.roll(4)
         self.roll_many(16, 0)
