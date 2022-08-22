@@ -36,6 +36,10 @@ class BowlingGameTestCase(unittest.TestCase):
         self.roll_many(16, 0)
         assert 26 == self.game.score()
 
+    def test_all_strikes(self):
+        self.roll_many(12, 10)
+        assert 300 == self.game.score()
+
 
 if __name__ == '__main__':
     unittest.main()
