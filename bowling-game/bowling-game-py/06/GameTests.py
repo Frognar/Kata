@@ -1,9 +1,10 @@
 import unittest
+from Game import Game
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+class BowlingGameTestCase(unittest.TestCase):
+    def test_can_create_game(self):
+        game = Game()
 
 
 if __name__ == '__main__':
