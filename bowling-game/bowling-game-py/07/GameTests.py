@@ -17,6 +17,12 @@ class BowlingGameTestCase(unittest.TestCase):
         self.roll_many(20, 1)
         assert 20 == self.game.score()
 
+    def test_spare(self):
+        self.roll_many(2, 5)
+        self.game.roll(8)
+        self.roll_many(17, 0)
+        assert 26 == self.game.score()
+
 
 if __name__ == '__main__':
     unittest.main()
