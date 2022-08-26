@@ -1,2 +1,3 @@
 class Game:
-    pass
+    def roll(self, pins):
+        pass
