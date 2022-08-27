@@ -5,7 +5,7 @@
 
 (defn split-frame [rolls]
   (cond
-    (is-strike? rolls) [(take 3 rolls) (drop 1 rolls)]
+    (is-strike? rolls) [(take 3 rolls) (rest rolls)]
     (is-spare? rolls) [(take 3 rolls) (drop 2 rolls)]
     :else [(take 2 rolls) (drop 2 rolls)])
   )
