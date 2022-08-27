@@ -18,4 +18,4 @@
       (cons frame (->frames remaining)))))
 
 (defn score [rolls]
-  (->> rolls ->frames flatten (apply +)))
+  (->> rolls ->frames (take 10) flatten (apply +)))

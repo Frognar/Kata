@@ -12,6 +12,8 @@
               (should= 20 (score [5 5 3 4])))
           (it "score a strike"
               (should= 26 (score [10 5 3])))
+          (it "score all strikes"
+              (should= 300 (score (repeat 12 10))))
           )
 
 (describe "Frame Partitioning"
