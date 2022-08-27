@@ -13,6 +13,8 @@
 (describe "Frame Partitioning"
           (it "partitions open frames"
               (should= [[1 2] [3 4]] (->frames [1 2 3 4])))
+          (it "partitions spare frames"
+              (should= [[5 5 3] [3 4]] (->frames [5 5 3 4])))
           )
 
 (run-specs)
