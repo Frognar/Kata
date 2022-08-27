@@ -1,9 +1,11 @@
 (ns bowling-game-clj._01.core-spec
   (:require [speclj.core :refer :all]
-            [bowling-game-clj.core :refer :all]))
+            [bowling-game-clj._01.core :refer :all]))
 
-(describe "a test"
-          (it "FIXME, I fail."
-              (should= 0 1)))
+
+(describe "The Bowling Game"
+          (it "score 0 for all zeros"
+              (should= 0 (score (repeat 20 0))))
+          )
 
 (run-specs)
