@@ -10,6 +10,8 @@
               (should= 20 (score (repeat 20 1))))
           (it "score a spare"
               (should= 20 (score [5 5 3 4])))
+          (it "score a strike"
+              (should= 26 (score [10 5 3])))
           )
 
 (describe "Frame Partitioning"
