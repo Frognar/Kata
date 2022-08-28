@@ -16,6 +16,8 @@
               (should= [[1 2] [3 4]] (->frames [1 2 3 4])))
           (it "partition spare frames"
               (should= [[5 5 3] [3 4]] (->frames [5 5 3 4])))
+          (it "partition strike frames"
+              (should= [[10 5 3] [5 3]] (->frames [10 5 3])))
           )
 
 (run-specs)
