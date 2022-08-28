@@ -15,4 +15,4 @@
     ))
 
 (defn score [rolls]
-  (->> rolls (apply +)))
+  (->> rolls ->frames flatten (apply +)))
