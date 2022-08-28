@@ -1,1 +1,4 @@
-(ns bowling-game-clj.-02.core)
+(ns bowling-game-clj._02.core)
+
+(defn score [rolls]
+  0)
