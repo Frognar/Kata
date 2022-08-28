@@ -9,4 +9,8 @@
               (should= 20 (score (repeat 20 1))))
           )
 
+(describe "Frame partitioning"
+          (it "partition open frames"
+              (should= [[1 2] [3 4]] (partition-frames [1 2 3 4]))))
+
 (run-specs)
