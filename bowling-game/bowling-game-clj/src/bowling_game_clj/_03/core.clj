@@ -1,7 +1,9 @@
 (ns bowling-game-clj._03.core)
 
 (defn split-frame [rolls]
-  [(take 2 rolls) (drop 2 rolls)])
+  (if (= 10 (+ (first rolls) (second rolls)))
+    [(take 3 rolls) (drop 2 rolls)]
+    [(take 2 rolls) (drop 2 rolls)]))
 
 (defn ->frames [rolls]
   (if (empty? rolls)
