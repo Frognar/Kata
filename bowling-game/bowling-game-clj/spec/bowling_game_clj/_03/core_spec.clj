@@ -9,8 +9,8 @@
               (should= 20 (score (repeat 20 1))))
           (it "score a spare"
               (should= 18 (score [5 5 4 0])))
-          ;(it "score a strike"
-              ;(should= 28 (score [10 5 4 0])))
+          (it "score a strike"
+              (should= 28 (score [10 5 4 0 0])))
           )
 
 (describe "Partitioning frames"
