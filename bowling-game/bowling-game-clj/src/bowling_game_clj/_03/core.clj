@@ -1,6 +1,6 @@
 (ns bowling-game-clj._03.core)
 
-(defn is-spare? [rolls] (= 10 (+ (first rolls) (second rolls))))
+(defn is-spare? [[first second & rolls]] (= 10 (+ first second)))
 
 (defn split-frame [rolls]
   (if (is-spare? rolls)
