@@ -1,6 +1,6 @@
 (ns bowling-game-clj._04.core)
 
-(defn is-strike? [rolls] (= 10 (first rolls)))
+(defn is-strike? [[first & rolls]] (= 10 first))
 (defn is-spare? [[first second & _]] (= 10 (+ first second)))
 
 (defn split-frame [rolls]
