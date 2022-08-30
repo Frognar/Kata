@@ -4,8 +4,7 @@
   (if
     (empty? rolls)
     []
-    (let [frame (take 2 rolls)
-          remaining (drop 2 rolls)]
+    (let [[frame remaining] [(take 2 rolls) (drop 2 rolls)]]
       (cons frame (->frames remaining)))
     ))
 
