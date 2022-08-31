@@ -3,7 +3,7 @@
 (defn ->frames [rolls]
   (if (empty? rolls)
     []
-    (partition 2 rolls)
+    (cons (take 2 rolls) (->frames (drop 2 rolls)))
     )
   )
 
