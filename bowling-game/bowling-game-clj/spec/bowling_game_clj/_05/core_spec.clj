@@ -9,6 +9,8 @@
               (should= 20 (score (repeat 20 1))))
           (it "should score spare"
               (should= 28 (score [5 5 9 0])))
+          ;(it "should score strike"
+          ;    (should= 28 (score [10 5 4 0])))
           )
 
 (describe "Frame Partitioning"
@@ -16,6 +18,8 @@
               (should= [[1 2] [3 4]] (->frames [1 2 3 4])))
           (it "should partition spare frames"
               (should= [[5 5 9] [9 0]] (->frames [5 5 9 0])))
+          (it "should partition strike frames"
+              (should= [[10 5 4] [5 4] [0 0]] (->frames [10 5 4 0 0])))
           )
 
 (run-specs)
