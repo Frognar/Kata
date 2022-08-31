@@ -1,12 +1,12 @@
 (ns bowling-game-clj._05.core)
 
-(defn is-strike [rolls] (= 10 (first rolls)))
-(defn is-spare [[first second & _]] (= 10 (+ first second)))
+(defn is-strike? [[first & rolls]] (= 10 first))
+(defn is-spare? [[first second & _]] (= 10 (+ first second)))
 
 (defn split-frames [rolls]
   (cond
-    (is-strike rolls) [(take 3 rolls) (drop 1 rolls)]
-    (is-spare rolls) [(take 3 rolls) (drop 2 rolls)]
+    (is-strike? rolls) [(take 3 rolls) (drop 1 rolls)]
+    (is-spare? rolls) [(take 3 rolls) (drop 2 rolls)]
     :else [(take 2 rolls) (drop 2 rolls)]))
 
 (defn ->frames [rolls]
