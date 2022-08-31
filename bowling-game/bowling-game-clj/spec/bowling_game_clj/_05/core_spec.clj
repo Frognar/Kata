@@ -11,6 +11,8 @@
               (should= 28 (score [5 5 9 0])))
           (it "should score strike"
               (should= 28 (score [10 5 4])))
+          (it "should score 300 for perfect game"
+              (should= 300 (score (repeat 12 10))))
           )
 
 (describe "Frame Partitioning"
