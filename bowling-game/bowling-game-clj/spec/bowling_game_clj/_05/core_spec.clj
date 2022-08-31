@@ -7,8 +7,8 @@
               (should= 0 (score (repeat 20 0))))
           (it "should score 20 for all ones"
               (should= 20 (score (repeat 20 1))))
-          ;(it "should score spare"
-          ;    (should= 28 (score [5 5 9 0])))
+          (it "should score spare"
+              (should= 28 (score [5 5 9 0])))
           )
 
 (describe "Frame Partitioning"
