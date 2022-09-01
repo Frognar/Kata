@@ -3,7 +3,9 @@
 (defn ->frames [rolls]
   (if (empty? rolls)
     []
-    (cons (take 2 rolls) (->frames (drop 2 rolls))))
+    (let [frame (take 2 rolls)]
+      (cons frame (->frames (drop 2 rolls))))
+    )
   )
 
 (defn score [rolls]
