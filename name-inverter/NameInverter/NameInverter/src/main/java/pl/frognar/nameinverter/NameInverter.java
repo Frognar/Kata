@@ -1,5 +1,6 @@
 package pl.frognar.nameinverter;
 
+import com.google.common.collect.Lists;
 import java.util.List;
 
 public class NameInverter {
@@ -9,11 +10,17 @@ public class NameInverter {
         if (nameParts.size() < 2)
             return nameParts.get(0);
 
-        return invert(nameParts);
+        return invert(withoutHonorifics(nameParts));
+    }
+
+    private static List<String> withoutHonorifics(List<String> nameParts) {
+        if ("Mr.".equalsIgnoreCase(nameParts.get(0)))
+            nameParts.remove(0);
+        return nameParts;
     }
 
     private static List<String> breakIntoPartsIgnoringWhitespace(String name) {
-        return List.of(name.trim().split(RegularExpressions.anyAmountOfWhitespace()));
+        return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhitespace()));
     }
 
     private static String invert(List<String> nameParts) {
