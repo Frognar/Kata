@@ -1,4 +1,4 @@
-package pl.frognar.nameinverter;
+package pl.frognar.nameinverter._01;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;

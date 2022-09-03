@@ -1,4 +1,4 @@
-package pl.frognar.nameinverter;
+package pl.frognar.nameinverter._01;
 
 import com.google.common.collect.Lists;
 import java.util.List;
