@@ -32,5 +32,6 @@ public class NameInverterTest {
     @Test
     public void invert_honorificsFirstLast_shouldReturnLastComaFirst() {
         assertThat(NameInverter.invert("Mr. John Smith"), is("Smith, John"));
+        assertThat(NameInverter.invert("Mrs. John Smith"), is("Smith, John"));
     }
 }
