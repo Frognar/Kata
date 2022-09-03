@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="Invert ignore Mrs.">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameInverterTest.invert_firstLast_shouldReturnLastComaFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NameInverter" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +130,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="pl.frognar.nameinverter" />
       <option name="MAIN_CLASS_NAME" value="pl.frognar.nameinverter.NameInverterTest" />
-      <option name="METHOD_NAME" value="invert_firstLast_shouldReturnLastComaFirst" />
+      <option name="METHOD_NAME" value="invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,10 +171,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.NameInverterTest" />
+        <item itemvalue="JUnit.NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" />
         <item itemvalue="JUnit.NameInverterTest.invert_empty_shouldReturnEmpty" />
         <item itemvalue="JUnit.NameInverterTest.invert_firstName_shouldReturnFirstName" />
         <item itemvalue="JUnit.NameInverterTest.invert_honorificsFirstLast_shouldReturnLastComaFirst" />
-        <item itemvalue="JUnit.NameInverterTest.invert_firstLast_shouldReturnLastComaFirst" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662193418336</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactor">
+      <created>1662193462642</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1662193462642</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,8 +351,8 @@
     <MESSAGE value="invert first last" />
     <MESSAGE value="invert ignore multiple spaces between name parts" />
     <MESSAGE value="invert ignore Mr." />
-    <MESSAGE value="refactor" />
     <MESSAGE value="Invert ignore Mrs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Invert ignore Mrs." />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>

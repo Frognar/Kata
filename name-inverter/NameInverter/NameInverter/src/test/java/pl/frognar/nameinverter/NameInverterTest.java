@@ -24,14 +24,19 @@ public class NameInverterTest {
     }
 
     @Test
-    public void invert_firstLast_shouldReturnLastComaFirst() {
+    public void invert_firstLast_shouldReturnLastCommaFirst() {
         assertThat(NameInverter.invert("John Smith"), is("Smith, John"));
         assertThat(NameInverter.invert("John   Smith"), is("Smith, John"));
     }
 
     @Test
-    public void invert_honorificsFirstLast_shouldReturnLastComaFirst() {
+    public void invert_honorificsFirstLast_shouldReturnLastCommaFirst() {
         assertThat(NameInverter.invert("Mr. John Smith"), is("Smith, John"));
         assertThat(NameInverter.invert("Mrs. John Smith"), is("Smith, John"));
+    }
+
+    @Test
+    public void invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals() {
+        assertThat(NameInverter.invert("John Smith Sr."), is("Smith, John Sr."));
     }
 }
