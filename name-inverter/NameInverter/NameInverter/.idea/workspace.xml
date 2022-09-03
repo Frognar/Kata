@@ -49,7 +49,7 @@
       <recent name="pl.frognar.nameinverter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.NameInverterTest">
+  <component name="RunManager" selected="JUnit.NameInverterTest.invert_firstName_shouldReturnFirstName">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -151,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NameInverterTest.invert_firstName_shouldReturnFirstName" />
         <item itemvalue="JUnit.NameInverterTest" />
         <item itemvalue="JUnit.NameInverterTest.invert_firstLast_shouldReturnLastComaFirst" />
-        <item itemvalue="JUnit.NameInverterTest.invert_firstName_shouldReturnFirstName" />
         <item itemvalue="JUnit.NameInverterTest.invert_empty_shouldReturnEmpty" />
       </list>
     </recent_temporary>
