@@ -4,7 +4,7 @@ import java.util.List;
 
 public class NameInverter {
     public static String invert(String name) {
-        List<String> nameParts = List.of(name.trim().split(" "));
+        List<String> nameParts = List.of(name.trim().split("\\s+"));
 
         if (nameParts.size() < 2)
             return nameParts.get(0);
