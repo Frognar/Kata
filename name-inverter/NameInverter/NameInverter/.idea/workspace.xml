@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert with one postnominal">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -327,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662193462642</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="invert with one postnominal">
+      <created>1662193679543</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1662193679543</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,6 +358,7 @@
     <MESSAGE value="invert ignore Mr." />
     <MESSAGE value="Invert ignore Mrs." />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="invert with one postnominal" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert with one postnominal" />
   </component>
 </project>
