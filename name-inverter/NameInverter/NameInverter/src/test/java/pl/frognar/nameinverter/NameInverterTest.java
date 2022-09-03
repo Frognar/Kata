@@ -13,7 +13,7 @@ public class NameInverterTest {
 
     @Test
     public void invert_empty_shouldReturnEmpty() {
-        String name = NameInverter.invert("");
-        assertThat(name, is(""));
+        assertThat(NameInverter.invert(""), is(""));
+        assertThat(NameInverter.invert("     "), is(""));
     }
 }

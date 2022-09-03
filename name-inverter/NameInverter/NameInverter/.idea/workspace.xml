@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert null">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" afterDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert empty">
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662190978719</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="invert empty">
+      <created>1662191095939</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662191095939</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +185,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="invert null" />
-    <option name="LAST_COMMIT_MESSAGE" value="invert null" />
+    <MESSAGE value="invert empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert empty" />
   </component>
 </project>
