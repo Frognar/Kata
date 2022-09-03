@@ -3,7 +3,6 @@ package pl.frognar.nameinverter;
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class NameInverterTest {
@@ -39,5 +38,10 @@ public class NameInverterTest {
     public void invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals() {
         assertThat(NameInverter.invert("John Smith Sr."), is("Smith, John Sr."));
         assertThat(NameInverter.invert("John Smith Sr. PhD."), is("Smith, John Sr. PhD."));
+    }
+
+    @Test
+    public void final_test() {
+        assertThat(NameInverter.invert("Mr.  John    Smith       Sr.  PhD.  "), is("Smith, John Sr. PhD."));
     }
 }
