@@ -23,7 +23,6 @@ public class NameInverterTest {
         assertThat(NameInverter.invert("John"), is("John"));
     }
 
-    @Ignore
     @Test
     public void invert_firstLast_shouldReturnLastComaFirst() {
         assertThat(NameInverter.invert("John Smith"), is("Smith, John"));
