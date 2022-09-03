@@ -5,6 +5,6 @@ public class NameInverter {
         if (name == null)
             throw new NullPointerException();
 
-        return "";
+        return name.trim();
     }
 }
