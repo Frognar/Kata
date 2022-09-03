@@ -6,8 +6,8 @@ import static org.hamcrest.MatcherAssert.*;
 import org.junit.Test;
 
 public class NameInverterTest {
-    @Test
-    public void testName(){
-        assertThat(true, is(false));
+    @Test(expected = NullPointerException.class)
+    public void invert_null_shouldThrowNullPointerException(){
+        NameInverter.invert(null);
     }
 }

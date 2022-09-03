@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/spec/bowling_game_clj/_03/core_spec.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/spec/bowling_game_clj/_04/core_spec.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/spec/bowling_game_clj/_05/core_spec.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/spec/bowling_game_clj/_06/core_spec.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/spec/bowling_game_clj/_07/core_spec.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/src/bowling_game_clj/_03/core.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/src/bowling_game_clj/_04/core.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/src/bowling_game_clj/_05/core.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/src/bowling_game_clj/_06/core.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../bowling-game/bowling-game-clj/src/bowling_game_clj/_07/core.clj" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/NameInverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/NameInverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +43,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "E:/Kata/name-inverter/NameInverter/NameInverter/src/test/java"
+    "last_directory_selection": "E:/Kata/name-inverter/NameInverter/NameInverter/src/main/java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.frognar.nameinverter" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -134,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662190320997</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1662190787845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662190787845</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1662190815919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662190815919</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
