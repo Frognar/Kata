@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert ignore multiple spaces">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert first name">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662273097994</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="invert first name">
+      <created>1662273205615</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1662273205615</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -405,7 +410,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="invert empty" />
     <MESSAGE value="refactor tests" />
-    <MESSAGE value="invert first name" />
     <MESSAGE value="invert first last" />
     <MESSAGE value="invert ignore multiple spaces between name parts" />
     <MESSAGE value="invert ignore Mr." />
@@ -418,6 +422,7 @@
     <MESSAGE value="invert null" />
     <MESSAGE value="invert empty string" />
     <MESSAGE value="invert ignore multiple spaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="invert ignore multiple spaces" />
+    <MESSAGE value="invert first name" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert first name" />
   </component>
 </project>
