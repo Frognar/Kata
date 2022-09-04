@@ -11,14 +11,18 @@ public class NameInverter {
         if (nameParts.size() < 2)
             return nameParts.get(0);
 
-        String first = nameParts.get(0);
-        String last = nameParts.get(1);
-
-        return String.format("%s, %s", last, first);
+        return invert(nameParts);
     }
 
     private static List<String> breakIntoPartsIgnoringWhitespace(String name) {
         return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhitespace()));
+    }
+
+    private static String invert(List<String> nameParts) {
+        String first = nameParts.get(0);
+        String last = nameParts.get(1);
+
+        return String.format("%s, %s", last, first);
     }
 }
 
