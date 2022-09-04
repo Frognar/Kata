@@ -26,7 +26,6 @@ public class NameInverterTest {
         assertThat(NameInverter.invert("John"), is("John"));
     }
 
-    @Ignore
     @Test
     public void invert_firstLast_shouldReturnLastCommaFirst() {
         assertThat(NameInverter.invert("John Smith"), is("Smith, John"));
