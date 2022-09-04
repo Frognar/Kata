@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert first last">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
     </list>
@@ -407,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662273490097</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="invert first last">
+      <created>1662273512994</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1662273512994</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,7 +432,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="invert empty" />
     <MESSAGE value="refactor tests" />
-    <MESSAGE value="invert first last" />
     <MESSAGE value="invert ignore multiple spaces between name parts" />
     <MESSAGE value="invert ignore Mr." />
     <MESSAGE value="Invert ignore Mrs." />
@@ -438,6 +444,7 @@
     <MESSAGE value="invert ignore multiple spaces" />
     <MESSAGE value="invert first name" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="invert first last" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert first last" />
   </component>
 </project>
