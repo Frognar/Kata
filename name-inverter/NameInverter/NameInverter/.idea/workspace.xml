@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert with postnominal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
@@ -478,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662274045003</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="invert with postnominal">
+      <created>1662274333032</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1662274333032</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,6 +517,7 @@
     <MESSAGE value="invert first last with multiple spaces between" />
     <MESSAGE value="invert ignore Mr." />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="invert with postnominal" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert with postnominal" />
   </component>
 </project>
