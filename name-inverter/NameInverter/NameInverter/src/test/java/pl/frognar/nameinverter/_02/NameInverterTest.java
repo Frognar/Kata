@@ -42,4 +42,9 @@ public class NameInverterTest {
         assertThat(NameInverter.invert("John Smith Sr."), is("Smith, John Sr."));
         assertThat(NameInverter.invert("John Smith Sr. PhD."), is("Smith, John Sr. PhD."));
     }
+
+    @Test
+    public void final_test() {
+        assertThat(NameInverter.invert("  John    Smith    Sr.   PhD."), is("Smith, John Sr. PhD."));
+    }
 }
