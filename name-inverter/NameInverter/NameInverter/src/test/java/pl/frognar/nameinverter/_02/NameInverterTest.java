@@ -19,4 +19,9 @@ public class NameInverterTest {
     public void invert_multipleSpaces_shouldReturnEmpty() {
         assertThat(NameInverter.invert("    "), is(""));
     }
+
+    @Test
+    public void invert_firstName_shouldReturnFirstName() {
+        assertThat(NameInverter.invert("John"), is("John"));
+    }
 }
