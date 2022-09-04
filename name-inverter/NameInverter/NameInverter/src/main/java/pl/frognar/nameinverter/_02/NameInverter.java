@@ -30,10 +30,10 @@ public class NameInverter {
     }
 
     private static String findAndMergePostnominals(List<String> nameParts) {
-        String postnominals = "";
+        StringBuilder postnominals = new StringBuilder();
         for (String np : nameParts.subList(2, nameParts.size()))
-            postnominals += np + " ";
-        return postnominals;
+            postnominals.append(np).append(" ");
+        return postnominals.toString();
     }
 }
 
