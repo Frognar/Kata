@@ -7,18 +7,19 @@ import java.util.List;
 public class NameInverter {
     public static String invert(String name) {
         List<String> nameParts = breakIntoPartsIgnoringWhitespace(name);
-
         if (nameParts.size() < 2)
             return nameParts.get(0);
-
-        if ("Mr.".equals(nameParts.get(0)))
-            nameParts.remove(0);
-
-        return invert(nameParts);
+        return invert(withoutHonorifics(nameParts));
     }
 
     private static List<String> breakIntoPartsIgnoringWhitespace(String name) {
         return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhitespace()));
+    }
+
+    private static List<String> withoutHonorifics(List<String> nameParts) {
+        if ("Mr.".equals(nameParts.get(0)))
+            nameParts.remove(0);
+        return nameParts;
     }
 
     private static String invert(List<String> nameParts) {
