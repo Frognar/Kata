@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert first name">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_02/NameInverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662273205615</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="refactor">
+      <created>1662273223090</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1662273223090</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -417,12 +426,12 @@
     <MESSAGE value="invert with one postnominal" />
     <MESSAGE value="invert with many postnominals" />
     <MESSAGE value="final test" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="init" />
     <MESSAGE value="invert null" />
     <MESSAGE value="invert empty string" />
     <MESSAGE value="invert ignore multiple spaces" />
     <MESSAGE value="invert first name" />
-    <option name="LAST_COMMIT_MESSAGE" value="invert first name" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
