@@ -14,4 +14,9 @@ public class NameInverterTest {
     public void invert_empty_shouldReturnEmpty() {
         assertThat(NameInverter.invert(""), is(""));
     }
+
+    @Test
+    public void invert_multipleSpaces_shouldReturnEmpty() {
+        assertThat(NameInverter.invert("    "), is(""));
+    }
 }
