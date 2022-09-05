@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert with postnominals">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_03/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_03/NameInverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,20 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662190274378</updated>
-    </task>
-    <task id="LOCAL-00018" summary="refactor">
-      <created>1662193380023</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1662193380023</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Invert ignore Mrs.">
-      <created>1662193418336</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1662193418336</updated>
     </task>
     <task id="LOCAL-00020" summary="refactor">
       <created>1662193462642</created>
@@ -527,7 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662348170915</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="invert with postnominals">
+      <created>1662348335903</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1662348335903</updated>
+    </task>
+    <task id="LOCAL-00068" summary="refactor">
+      <created>1662348349150</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1662348349150</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -560,10 +558,10 @@
     <MESSAGE value="invert name" />
     <MESSAGE value="invert first last with multiple spaces" />
     <MESSAGE value="invert ignore Mr." />
-    <MESSAGE value="refactor" />
     <MESSAGE value="invert ignore Mrs." />
     <MESSAGE value="invert with postnominal" />
     <MESSAGE value="invert with postnominals" />
-    <option name="LAST_COMMIT_MESSAGE" value="invert with postnominals" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
