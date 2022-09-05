@@ -14,7 +14,7 @@ public class NameInverter {
     }
 
     private static ArrayList<String> breakIntoPartsIgnoringWhitespaces(String name) {
-        return Lists.newArrayList(name.trim().split(" "));
+        return Lists.newArrayList(name.trim().split("\\s+"));
     }
 
     private static String invert(List<String> nameParts) {
