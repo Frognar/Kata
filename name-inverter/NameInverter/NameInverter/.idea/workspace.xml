@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "E:/Kata/name-inverter/NameInverter/NameInverter/src/test/java/pl/frognar/nameinverter"
+    "last_directory_selection": "E:/Kata/name-inverter/NameInverter/NameInverter/src/test/java/pl/frognar/nameinverter",
+    "last_opened_file_path": "D:/_PrivateCode_/Kata/name-inverter/NameInverter/NameInverter"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -131,22 +136,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameInverterTest.invert_empty_shouldReturnEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NameInverter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.frognar.nameinverter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.frognar.nameinverter" />
-      <option name="MAIN_CLASS_NAME" value="pl.frognar.nameinverter.NameInverterTest" />
-      <option name="METHOD_NAME" value="invert_empty_shouldReturnEmpty" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NameInverter" />
       <extension name="coverage">
@@ -163,13 +152,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NameInverterTest.invert_multipleSpaces_shouldReturnEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NameInverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.frognar.nameinverter._02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.frognar.nameinverter._02" />
+      <option name="MAIN_CLASS_NAME" value="pl.frognar.nameinverter._02.NameInverterTest" />
+      <option name="METHOD_NAME" value="invert_multipleSpaces_shouldReturnEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.NameInverterTest (1)" />
+        <item itemvalue="JUnit.NameInverterTest.invert_multipleSpaces_shouldReturnEmpty" />
         <item itemvalue="JUnit.NameInverterTest" />
         <item itemvalue="JUnit.NameInverterTest.final_test" />
         <item itemvalue="JUnit.NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" />
-        <item itemvalue="JUnit.NameInverterTest.invert_empty_shouldReturnEmpty" />
       </list>
     </recent_temporary>
   </component>
