@@ -10,4 +10,9 @@ public class NameInverterTest {
     public void invert_null_shouldThrowNullPointerException() {
         NameInverter.invert(null);
     }
+
+    @Test
+    public void invert_empty_shouldReturnEmpty() {
+        assertThat(NameInverter.invert(""), is(""));
+    }
 }
