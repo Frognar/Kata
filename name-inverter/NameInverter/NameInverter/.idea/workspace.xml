@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert ignore Mrs.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_03/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_03/NameInverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" afterDir="false" />
@@ -183,13 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662190274378</updated>
-    </task>
-    <task id="LOCAL-00016" summary="invert ignore Mr.">
-      <created>1662193102343</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1662193102343</updated>
     </task>
     <task id="LOCAL-00017" summary="refactor">
       <created>1662193270795</created>
@@ -527,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662348028727</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="invert ignore Mrs.">
+      <created>1662348050188</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1662348050188</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -563,6 +563,7 @@
     <MESSAGE value="invert first last with multiple spaces" />
     <MESSAGE value="invert ignore Mr." />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="invert ignore Mrs." />
+    <option name="LAST_COMMIT_MESSAGE" value="invert ignore Mrs." />
   </component>
 </project>
