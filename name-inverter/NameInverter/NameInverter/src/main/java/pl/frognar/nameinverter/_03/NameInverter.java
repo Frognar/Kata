@@ -14,12 +14,18 @@ public class NameInverter {
     }
 
     private static ArrayList<String> breakIntoPartsIgnoringWhitespaces(String name) {
-        return Lists.newArrayList(name.trim().split("\\s+"));
+        return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhitespaces()));
     }
 
     private static String invert(List<String> nameParts) {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
         return String.format("%s, %s", last, first);
+    }
+}
+
+class RegularExpressions {
+    public static String anyAmountOfWhitespaces() {
+        return "\\s+";
     }
 }
