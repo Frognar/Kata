@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_02/NameInverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/frognar/nameinverter/NameInverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/frognar/nameinverter/NameInverterTest.class" beforeDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_03/NameInverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_03/NameInverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +50,7 @@
       <recent name="pl.frognar.nameinverter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.NameInverterTest (1)">
+  <component name="RunManager" selected="JUnit.NameInverterTest (2)">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -105,6 +102,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NameInverterTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NameInverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.frognar.nameinverter._03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.frognar.nameinverter._03" />
+      <option name="MAIN_CLASS_NAME" value="pl.frognar.nameinverter._03.NameInverterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NameInverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NameInverter" />
       <extension name="coverage">
@@ -136,22 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NameInverter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.frognar.nameinverter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.frognar.nameinverter" />
-      <option name="MAIN_CLASS_NAME" value="pl.frognar.nameinverter.NameInverterTest" />
-      <option name="METHOD_NAME" value="invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NameInverterTest.invert_multipleSpaces_shouldReturnEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NameInverter" />
       <extension name="coverage">
@@ -170,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NameInverterTest (2)" />
         <item itemvalue="JUnit.NameInverterTest (1)" />
         <item itemvalue="JUnit.NameInverterTest.invert_multipleSpaces_shouldReturnEmpty" />
         <item itemvalue="JUnit.NameInverterTest" />
         <item itemvalue="JUnit.NameInverterTest.final_test" />
-        <item itemvalue="JUnit.NameInverterTest.invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662274547382</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="init">
+      <created>1662346760575</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1662346760575</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -532,7 +535,6 @@
     <MESSAGE value="invert with one postnominal" />
     <MESSAGE value="invert with many postnominals" />
     <MESSAGE value="final test" />
-    <MESSAGE value="init" />
     <MESSAGE value="invert null" />
     <MESSAGE value="invert empty string" />
     <MESSAGE value="invert ignore multiple spaces" />
@@ -543,6 +545,7 @@
     <MESSAGE value="invert with postnominal" />
     <MESSAGE value="invert with postnominals" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
