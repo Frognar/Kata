@@ -9,6 +9,10 @@ public class NameInverter {
         List<String> nameParts = Lists.newArrayList(name.trim().split(" "));
         if (nameParts.size() < 2)
             return nameParts.get(0);
+        return invert(nameParts);
+    }
+
+    private static String invert(List<String> nameParts) {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
         return String.format("%s, %s", last, first);
