@@ -18,13 +18,9 @@ public class NameInverter {
     }
 
     private static List<String> withoutHonorifics(List<String> nameParts) {
-        if (isHonorific(nameParts.get(0)))
+        if (Honorifics.isHonorific(nameParts.get(0)))
             nameParts.remove(0);
         return nameParts;
-    }
-
-    private static boolean isHonorific(String s) {
-        return "Mr.".equals(s);
     }
 
     private static String invert(List<String> nameParts) {
@@ -37,5 +33,11 @@ public class NameInverter {
 class RegularExpressions {
     public static String anyAmountOfWhitespaces() {
         return "\\s+";
+    }
+}
+
+class Honorifics {
+    public static boolean isHonorific(String s) {
+        return "Mr.".equals(s);
     }
 }
