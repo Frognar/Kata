@@ -37,6 +37,7 @@ class RegularExpressions {
 
 class Honorifics {
     public static boolean isHonorific(String s) {
-        return "Mr.".equals(s);
+        List<String> knownHonorifics = List.of("Mr.");
+        return knownHonorifics.contains(s);
     }
 }
