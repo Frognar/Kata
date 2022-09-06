@@ -25,10 +25,15 @@ public class NameInverter {
     private static String invert(List<String> nameParts) {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
+        String postnominal = findAndMergePostnominals(nameParts);
+        return String.format("%s, %s %s", last, first, postnominal).trim();
+    }
+
+    private static String findAndMergePostnominals(List<String> nameParts) {
         String postnominal = "";
         for (String np : nameParts.subList(2, nameParts.size()))
             postnominal += np + " ";
-        return String.format("%s, %s %s", last, first, postnominal).trim();
+        return postnominal;
     }
 }
 
