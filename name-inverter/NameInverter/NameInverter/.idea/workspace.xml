@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert first last -&gt; last, first">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_04/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_04/NameInverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_04/NameInverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/nameinverter/_04/NameInverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,13 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662190274378</updated>
-    </task>
-    <task id="LOCAL-00030" summary="invert first name">
-      <created>1662273205615</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1662273205615</updated>
     </task>
     <task id="LOCAL-00031" summary="refactor">
       <created>1662273223090</created>
@@ -533,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662436195924</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="invert first last -&gt; last, first">
+      <created>1662436256439</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1662436256439</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -549,7 +547,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor tests" />
     <MESSAGE value="invert ignore multiple spaces between name parts" />
     <MESSAGE value="Invert ignore Mrs." />
     <MESSAGE value="invert with one postnominal" />
@@ -574,6 +571,7 @@
     <MESSAGE value="invert whitespaces" />
     <MESSAGE value="invert first" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="invert first last -&gt; last, first" />
+    <option name="LAST_COMMIT_MESSAGE" value="invert first last -&gt; last, first" />
   </component>
 </project>
