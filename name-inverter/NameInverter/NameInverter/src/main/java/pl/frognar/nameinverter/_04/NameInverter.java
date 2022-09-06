@@ -2,7 +2,6 @@ package pl.frognar.nameinverter._04;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NameInverter {
