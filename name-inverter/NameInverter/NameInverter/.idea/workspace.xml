@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="invert first whitespaces last -&gt; last, first">
+    <list default="true" id="4354f85c-6ad7-4422-a24b-e3754ce492cc" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_04/NameInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/nameinverter/_04/NameInverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,13 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662190274378</updated>
-    </task>
-    <task id="LOCAL-00033" summary="invert first last">
-      <created>1662273512994</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1662273512994</updated>
     </task>
     <task id="LOCAL-00034" summary="invert first last with multiple spaces between">
       <created>1662273554085</created>
@@ -531,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662436326481</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="refactor">
+      <created>1662436385827</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1662436385827</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -570,8 +570,8 @@
     <MESSAGE value="invert whitespaces" />
     <MESSAGE value="invert first" />
     <MESSAGE value="invert first last -&gt; last, first" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="invert first whitespaces last -&gt; last, first" />
-    <option name="LAST_COMMIT_MESSAGE" value="invert first whitespaces last -&gt; last, first" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
