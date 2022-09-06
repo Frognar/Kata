@@ -10,13 +10,17 @@ public class NameInverter {
         List<String> nameParts = breakIntoPartsIgnoringWhitespaces(name);
         if (nameParts.size() < 2)
             return nameParts.get(0);
-        if ("Mr.".equals(nameParts.get(0)))
-            nameParts.remove(0);
-        return invert(nameParts);
+        return invert(ignoreHonorifics(nameParts));
     }
 
     private static ArrayList<String> breakIntoPartsIgnoringWhitespaces(String name) {
         return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhiteSpaces()));
+    }
+
+    private static List<String> ignoreHonorifics(List<String> nameParts) {
+        if ("Mr.".equals(nameParts.get(0)))
+            nameParts.remove(0);
+        return nameParts;
     }
 
     private static String invert(List<String> nameParts) {
