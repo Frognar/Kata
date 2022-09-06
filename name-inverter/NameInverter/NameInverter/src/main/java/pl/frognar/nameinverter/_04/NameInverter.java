@@ -13,7 +13,7 @@ public class NameInverter {
         return invert(ignoreHonorifics(nameParts));
     }
 
-    private static ArrayList<String> breakIntoPartsIgnoringWhitespaces(String name) {
+    private static List<String> breakIntoPartsIgnoringWhitespaces(String name) {
         return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhiteSpaces()));
     }
 
