@@ -26,8 +26,8 @@ public class NameInverter {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
         String postnominal = "";
-        if (nameParts.size() > 2)
-            postnominal = nameParts.get(2);
+        for (String np : nameParts.subList(2, nameParts.size()))
+            postnominal += np + " ";
         return String.format("%s, %s %s", last, first, postnominal).trim();
     }
 }
