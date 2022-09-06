@@ -10,6 +10,8 @@ public class NameInverter {
         List<String> nameParts = breakIntoPartsIgnoringWhitespaces(name);
         if (nameParts.size() < 2)
             return nameParts.get(0);
+        if ("Mr.".equals(nameParts.get(0)))
+            nameParts.remove(0);
         return invert(nameParts);
     }
 
