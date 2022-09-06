@@ -18,9 +18,13 @@ public class NameInverter {
     }
 
     private static List<String> ignoreHonorifics(List<String> nameParts) {
-        if ("Mr.".equals(nameParts.get(0)))
+        if (isHonorific(nameParts.get(0)))
             nameParts.remove(0);
         return nameParts;
+    }
+
+    private static boolean isHonorific(String s) {
+        return "Mr.".equals(s);
     }
 
     private static String invert(List<String> nameParts) {
