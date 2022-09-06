@@ -25,7 +25,10 @@ public class NameInverter {
     private static String invert(List<String> nameParts) {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
-        return String.format("%s, %s", last, first);
+        String postnominal = "";
+        if (nameParts.size() > 2)
+            postnominal = nameParts.get(2);
+        return String.format("%s, %s %s", last, first, postnominal).trim();
     }
 }
 
