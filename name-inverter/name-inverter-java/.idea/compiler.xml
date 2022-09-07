@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="NameInverter" />
+        <module name="NameInverter_Java" />
+        <module name="name-inverter-java" />
       </profile>
     </annotationProcessing>
   </component>
