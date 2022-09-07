@@ -20,4 +20,9 @@ public class NameInverterTest {
     public void invert_whitespaces_shouldReturnEmpty() {
         assertThat(NameInverter.invert("   "), is(""));
     }
+
+    @Test
+    public void invert_name_shouldReturnName() {
+        assertThat(NameInverter.invert("John"), is("John"));
+    }
 }
