@@ -35,4 +35,9 @@ public class NameInverterTest {
     public void invert_firstWhitespacesLast_shouldReturnLastCommaFirst() {
         assertThat(NameInverter.invert("John    Smith"), is("Smith, John"));
     }
+
+    @Test
+    public void invert_honorificFirstLast_shouldReturnLastCommaFirst() {
+        assertThat(NameInverter.invert("Mr. John Smith"), is("Smith, John"));
+    }
 }
