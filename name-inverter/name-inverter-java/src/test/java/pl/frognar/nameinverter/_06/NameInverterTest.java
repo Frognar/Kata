@@ -46,4 +46,9 @@ public class NameInverterTest {
     public void invert_firstLastPostnominal_shouldReturnLastCommaFirstPostnominal() {
         assertThat(NameInverter.invert("John Smith Sr."), is("Smith, John Sr."));
     }
+
+    @Test
+    public void invert_firstLastPostnominals_shouldReturnLastCommaFirstPostnominals() {
+        assertThat(NameInverter.invert("John Smith Sr. PhD."), is("Smith, John Sr. PhD."));
+    }
 }
