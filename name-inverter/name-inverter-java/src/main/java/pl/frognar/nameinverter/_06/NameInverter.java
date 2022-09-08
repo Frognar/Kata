@@ -7,7 +7,7 @@ import java.util.List;
 
 public class NameInverter {
     public static String invert(String name) {
-        List<String> nameParts = breakIntoPartsIgnorignWhitespaces(name);
+        List<String> nameParts = breakIntoPartsIgnoringWhitespaces(name);
         if (nameParts.size() < 2)
             return nameParts.get(0);
         if ("Mr.".equals(nameParts.get(0)))
@@ -21,7 +21,7 @@ public class NameInverter {
         return String.format("%s, %s", last, first);
     }
 
-    private static ArrayList<String> breakIntoPartsIgnorignWhitespaces(String name) {
+    private static ArrayList<String> breakIntoPartsIgnoringWhitespaces(String name) {
         return Lists.newArrayList(name.trim().split(RegularExpressions.anyAmountOfWhitespaces()));
     }
 }
