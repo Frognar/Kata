@@ -30,4 +30,9 @@ public class NameInverterTest {
     public void invert_firstLast_shouldReturnLastCommaFirst() {
         assertThat(NameInverter.invert("John Smith"), is("Smith, John"));
     }
+
+    @Test
+    public void invert_firstWhitespacesLast_shouldReturnLastCommaFirst() {
+        assertThat(NameInverter.invert("John   Smith"), is("Smith, John"));
+    }
 }
