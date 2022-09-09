@@ -18,9 +18,13 @@ public class NameInverter {
     }
 
     private static List<String> withoutHonorifics(List<String> nameParts) {
-        if ("Mr.".equals(nameParts.get(0)))
+        if (isHonorific(nameParts.get(0)))
             nameParts.remove(0);
         return nameParts;
+    }
+
+    private static boolean isHonorific(String s) {
+        return "Mr.".equals(s);
     }
 
     private static String invert(List<String> nameParts) {
@@ -28,7 +32,6 @@ public class NameInverter {
         String last = nameParts.get(1);
         return String.format("%s, %s", last, first);
     }
-
 }
 
 class RegularExpressions {
