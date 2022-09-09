@@ -1,5 +1,6 @@
 package pl.frognar.nameinverter._07;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -24,5 +25,11 @@ public class NameInverterTest {
     @Test
     public void invert_first_shouldReturnFirst() {
         assertThat(NameInverter.invert("John"), is("John"));
+    }
+
+    @Ignore
+    @Test
+    public void invert_firstLast_shouldReturnLastCommaFirst() {
+        assertThat(NameInverter.invert("John Smith"), is("Smith, John"));
     }
 }
