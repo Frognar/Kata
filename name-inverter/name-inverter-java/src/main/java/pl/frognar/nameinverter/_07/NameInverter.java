@@ -26,14 +26,14 @@ public class NameInverter {
     private static String invert(List<String> nameParts) {
         String first = nameParts.get(0);
         String last = nameParts.get(1);
-        String postnominals = FindPostnominals(nameParts);
+        String postnominals = FindAndMergePostnominals(nameParts);
         return String.format("%s, %s %s", last, first, postnominals).trim();
     }
 
-    private static String FindPostnominals(List<String> nameParts) {
+    private static String FindAndMergePostnominals(List<String> nameParts) {
         String postnominals = "";
-        if (nameParts.size() > 2)
-            postnominals = nameParts.get(2);
+        for (String np : nameParts.subList(2, nameParts.size()))
+            postnominals += np + " ";
         return postnominals;
     }
 }
