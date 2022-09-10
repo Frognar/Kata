@@ -5,7 +5,7 @@ from NameInverter import invert
 
 class NameInverterTestCase(unittest.TestCase):
     def test_invert_none_should_throw_exception(self):
-        self.assertRaises(TypeError, invert, None)
+        self.assertRaises(AttributeError, invert, None)
 
     def test_invert_empty_should_return_empty(self):
         self.assertEqual(invert(''), '')
