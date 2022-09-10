@@ -23,7 +23,8 @@ def without_honorifics(name_parts):
 
 
 def is_honorific(s):
-    return s == "Mr."
+    known_honorifics = ['Mr.']
+    return s in known_honorifics
 
 
 def invert_parts(name_parts):
