@@ -1,5 +1,8 @@
+import re
+
+
 def invert(name):
-    name_parts = name.strip().split(' ')
+    name_parts = re.split('\\s+', name.strip())
     if len(name_parts) < 2:
         return name_parts[0]
     first = name_parts[0]
