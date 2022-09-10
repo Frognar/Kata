@@ -17,7 +17,6 @@ def any_amount_of_whitespaces():
 
 
 def invert_parts(name_parts):
-    print(name_parts)
     first = name_parts[0]
     last = name_parts[1]
     return f'{last}, {first}'
