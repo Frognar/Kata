@@ -24,6 +24,7 @@ class NameInverterTestCase(unittest.TestCase):
 
     def test_invert_honorific_first_last_should_return_last_comma_first(self):
         self.assertEqual(invert('Mr. Horus Lupercal'), 'Lupercal, Horus')
+        self.assertEqual(invert('Mrs. Horus Lupercal'), 'Lupercal, Horus')
 
 
 if __name__ == '__main__':
