@@ -1,2 +1,4 @@
 def invert(name):
-    raise TypeError
+    if name is None:
+        raise TypeError
+    return ''
