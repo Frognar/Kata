@@ -1,9 +1,11 @@
 import unittest
 
+from NameInverter import invert
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+
+class NameInverterTestCase(unittest.TestCase):
+    def test_invert_none_should_throw_exception(self):
+        self.assertRaises(TypeError, invert, None)
 
 
 if __name__ == '__main__':
