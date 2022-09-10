@@ -1,4 +1,4 @@
 def invert(name):
     if name is None:
         raise TypeError
-    return ''
+    return name.strip()
