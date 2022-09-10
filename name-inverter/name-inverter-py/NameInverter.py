@@ -5,6 +5,8 @@ def invert(name):
     name_parts = break_into_parts_ignoring_whitespaces(name)
     if len(name_parts) < 2:
         return name_parts[0]
+    if name_parts[0] == "Mr.":
+        name_parts.pop(0)
     return invert_parts(name_parts)
 
 
