@@ -1,3 +1,4 @@
 def invert(name):
-    first = name.strip()
+    name_parts = name.split(' ')
+    first = name_parts[0]
     return f'{first}'
