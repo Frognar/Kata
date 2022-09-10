@@ -30,7 +30,12 @@ def is_honorific(s):
 def invert_parts(name_parts):
     first = name_parts[0]
     last = name_parts[1]
+    postnominals = find_postnominals(name_parts)
+    return f'{last}, {first} {postnominals}'.strip()
+
+
+def find_postnominals(name_parts):
     postnominals = ''
     if len(name_parts) > 2:
         postnominals = name_parts[2]
-    return f'{last}, {first} {postnominals}'.strip()
+    return postnominals
