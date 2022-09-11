@@ -1,5 +1,6 @@
 class NameInverter:
     @staticmethod
     def invert(name):
-        first = name.strip()
+        name_parts = name.strip().split(' ')
+        first = name_parts[0]
         return f'{first}'
