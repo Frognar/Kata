@@ -1,4 +1,5 @@
 class NameInverter:
     @staticmethod
     def invert(name):
-        return name.strip()
+        first = name.strip()
+        return f'{first}'
