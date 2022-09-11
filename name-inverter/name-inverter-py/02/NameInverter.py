@@ -3,4 +3,4 @@ class NameInverter:
     def invert(name):
         if name is None:
             raise AttributeError
-        return ''
+        return name.strip()
