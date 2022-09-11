@@ -29,8 +29,8 @@ class NameInverter:
     @staticmethod
     def find_postnominal(name_parts):
         postnominals = ''
-        if len(name_parts) > 2:
-            postnominals = name_parts[2]
+        for np in name_parts[2:]:
+            postnominals += np + ' '
         return postnominals
 
 
