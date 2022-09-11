@@ -23,10 +23,15 @@ class NameInverter:
     def invert_parts(name_parts):
         first = name_parts[0]
         last = name_parts[1]
+        postnominals = NameInverter.find_postnominal(name_parts)
+        return f'{last}, {first} {postnominals}'.strip()
+
+    @staticmethod
+    def find_postnominal(name_parts):
         postnominals = ''
         if len(name_parts) > 2:
             postnominals = name_parts[2]
-        return f'{last}, {first} {postnominals}'.strip()
+        return postnominals
 
 
 class RegularExpressions:
