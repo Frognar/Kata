@@ -23,7 +23,10 @@ class NameInverter:
     def invert_parts(name_parts):
         first = name_parts[0]
         last = name_parts[1]
-        return f'{last}, {first}'
+        postnominals = ''
+        if len(name_parts) > 2:
+            postnominals = name_parts[2]
+        return f'{last}, {first} {postnominals}'.strip()
 
 
 class RegularExpressions:
