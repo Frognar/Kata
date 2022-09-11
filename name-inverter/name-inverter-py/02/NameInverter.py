@@ -4,7 +4,7 @@ import re
 class NameInverter:
     @staticmethod
     def invert(name):
-        name_parts = re.split('\\s+', name.strip())
+        name_parts = re.split(NameInverter.any_amount_of_whitespaces(), name.strip())
         if len(name_parts) < 2:
             return name_parts[0]
         return NameInverter.invert_parts(name_parts)
@@ -14,3 +14,7 @@ class NameInverter:
         first = name_parts[0]
         last = name_parts[1]
         return f'{last}, {first}'
+
+    @staticmethod
+    def any_amount_of_whitespaces():
+        return '\\s+'
