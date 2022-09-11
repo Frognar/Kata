@@ -1,4 +1,6 @@
 class NameInverter:
     @staticmethod
     def invert(name):
-        raise AttributeError
+        if name is None:
+            raise AttributeError
+        return ''
