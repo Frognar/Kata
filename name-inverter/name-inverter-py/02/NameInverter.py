@@ -15,13 +15,9 @@ class NameInverter:
 
     @staticmethod
     def without_honorifics(name_parts):
-        if NameInverter.is_honorific(name_parts[0]):
+        if Honorifics.is_honorific(name_parts[0]):
             name_parts.pop(0)
         return name_parts
-
-    @staticmethod
-    def is_honorific(s):
-        return 'Mr.' == s
 
     @staticmethod
     def invert_parts(name_parts):
@@ -34,3 +30,9 @@ class RegularExpressions:
     @staticmethod
     def any_amount_of_whitespaces():
         return '\\s+'
+
+
+class Honorifics:
+    @staticmethod
+    def is_honorific(s):
+        return 'Mr.' == s
