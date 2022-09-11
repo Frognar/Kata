@@ -4,7 +4,7 @@ import re
 class NameInverter:
     @staticmethod
     def invert(name):
-        name_parts = re.split(RegularExpressions.any_amount_of_whitespaces(), name.strip())
+        name_parts = NameInverter.break_into_parts_ignoring_whitespaces(name)
         if len(name_parts) < 2:
             return name_parts[0]
         return NameInverter.invert_parts(name_parts)
@@ -14,6 +14,10 @@ class NameInverter:
         first = name_parts[0]
         last = name_parts[1]
         return f'{last}, {first}'
+
+    @staticmethod
+    def break_into_parts_ignoring_whitespaces(name):
+        return re.split(RegularExpressions.any_amount_of_whitespaces(), name.strip())
 
 
 class RegularExpressions:
