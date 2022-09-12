@@ -1,3 +1,4 @@
+import re
 from typing import List
 
 
@@ -11,7 +12,7 @@ class NameInverter:
 
     @classmethod
     def break_into_parts(cls, name: str) -> List[str]:
-        return name.strip().split(cls.space())
+        return re.split(cls.space(), name.strip())
 
     @classmethod
     def space(cls) -> str:
