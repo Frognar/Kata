@@ -1,9 +1,13 @@
 class NameInverter:
     @classmethod
     def invert(cls, name):
-        name_parts = name.strip().split(' ')
+        name_parts = name.strip().split(cls.space())
         if len(name_parts) < 2:
             return name_parts[0]
         first = name_parts[0]
         last = name_parts[1]
         return f'{last}, {first}'
+
+    @classmethod
+    def space(cls):
+        return ' '
