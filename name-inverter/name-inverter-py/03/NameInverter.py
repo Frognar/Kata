@@ -5,13 +5,13 @@ from typing import List
 class NameInverter:
     @classmethod
     def invert(cls, name: str) -> str:
-        name_parts = cls.break_into_parts(name)
+        name_parts = cls.break_into_parts_ignoring_whitespaces(name)
         if len(name_parts) < 2:
             return name_parts[0]
         return cls.invert_parts(name_parts)
 
     @classmethod
-    def break_into_parts(cls, name: str) -> List[str]:
+    def break_into_parts_ignoring_whitespaces(cls, name: str) -> List[str]:
         return re.split(RegularExpressions.any_amount_of_whitespaces(), name.strip())
 
     @classmethod
