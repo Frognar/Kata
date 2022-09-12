@@ -1,4 +1,6 @@
 class NameInverter:
     @classmethod
     def invert(cls, name):
-        raise AttributeError
+        if name is None:
+            raise AttributeError
+        return ''
