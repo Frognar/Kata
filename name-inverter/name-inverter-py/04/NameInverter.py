@@ -1,10 +1,11 @@
+import re
 from typing import List
 
 
 class NameInverter:
     @classmethod
     def invert(cls, name: str) -> str:
-        name_parts = name.strip().split(' ')
+        name_parts = re.split(' ', name.strip())
         if len(name_parts) < 2:
             return name_parts[0]
         return cls.invert_parts(name_parts)
