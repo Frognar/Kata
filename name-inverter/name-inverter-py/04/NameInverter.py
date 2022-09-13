@@ -12,14 +12,16 @@ class NameInverter:
 
     @classmethod
     def break_into_parts_ignoring_whitespaces(cls, name: str) -> List[str]:
-        return re.split(cls.any_amount_of_whitespaces(), name.strip())
-
-    @classmethod
-    def any_amount_of_whitespaces(cls) -> str:
-        return '\\s+'
+        return re.split(RegularExpressions.any_amount_of_whitespaces(), name.strip())
 
     @classmethod
     def invert_parts(cls, name_parts: List[str]) -> str:
         first = name_parts[0]
         last = name_parts[1]
         return f'{last}, {first}'
+
+
+class RegularExpressions:
+    @classmethod
+    def any_amount_of_whitespaces(cls) -> str:
+        return '\\s+'
