@@ -30,8 +30,8 @@ class NameInverter:
     @classmethod
     def find_postnominals(cls, name_parts: List[str]) -> str:
         postnominals = ''
-        if len(name_parts) > 2:
-            postnominals = name_parts[2]
+        for np in name_parts[2:]:
+            postnominals += np + ' '
         return postnominals
 
 
