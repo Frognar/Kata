@@ -10,8 +10,8 @@ class NameInverter:
             return name_parts[0]
         return cls.invert_parts(name_parts)
 
-    @classmethod
-    def break_into_parts(cls, name: str) -> List[str]:
+    @staticmethod
+    def break_into_parts(name: str) -> List[str]:
         return re.split(RegularExpressions.any_amount_of_whitespaces(), name.strip())
 
     @classmethod
