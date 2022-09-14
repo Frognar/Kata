@@ -16,9 +16,13 @@ class NameInverter:
 
     @staticmethod
     def without_honorifics(name_parts: List[str]) -> List[str]:
-        if 'Mr.' == name_parts[0]:
+        if NameInverter.is_honorifics(name_parts[0]):
             name_parts.pop(0)
         return name_parts
+
+    @staticmethod
+    def is_honorifics(s: str) -> bool:
+        return 'Mr.' == s
 
     @classmethod
     def invert_parts(cls, name_parts: List[str]) -> str:
