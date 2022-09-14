@@ -28,6 +28,9 @@ class NameInverterTestCase(unittest.TestCase):
     def test_invert_first_last_postnominal_should_return_last_comma_first_postnominal(self):
         self.assertEqual(NameInverter.invert('Horus Lupercal Sr.'), 'Lupercal, Horus Sr.')
 
+    def test_invert_first_last_postnominals_should_return_last_comma_first_postnominals(self):
+        self.assertEqual(NameInverter.invert('Horus Lupercal Sr. PhD.'), 'Lupercal, Horus Sr. PhD.')
+
 
 if __name__ == '__main__':
     unittest.main()
