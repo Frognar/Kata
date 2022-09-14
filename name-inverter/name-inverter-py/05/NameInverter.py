@@ -12,7 +12,11 @@ class NameInverter:
 
     @classmethod
     def break_into_parts(cls, name: str) -> List[str]:
-        return re.split('\\s+', name.strip())
+        return re.split(cls.any_amount_of_whitespaces(), name.strip())
+
+    @staticmethod
+    def any_amount_of_whitespaces() -> str:
+        return '\\s+'
 
     @classmethod
     def invert_parts(cls, name_parts: List[str]) -> str:
