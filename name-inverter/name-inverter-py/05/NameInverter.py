@@ -36,4 +36,5 @@ class RegularExpressions:
 class Honorifics:
     @staticmethod
     def is_honorifics(s: str) -> bool:
-        return 'Mr.' == s
+        known_honorifics = ['Mr.']
+        return s in known_honorifics
