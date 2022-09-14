@@ -31,7 +31,7 @@ class NameInverter:
     def find_postnominal(name_parts: List[str]) -> str:
         postnominals = ''
         for np in name_parts[2:]:
-            postnominals = np
+            postnominals += np + ' '
         return postnominals
 
 
