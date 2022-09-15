@@ -1,3 +1,4 @@
+import re
 from typing import List
 
 
@@ -11,7 +12,7 @@ class NameInverter:
 
     @staticmethod
     def break_into_parts(name: str) -> List[str]:
-        return name.strip().split(' ')
+        return re.split('\\s+', name.strip())
 
     @classmethod
     def invert_parts(cls, name_parts: List[str]) -> str:

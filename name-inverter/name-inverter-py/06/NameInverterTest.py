@@ -18,6 +18,9 @@ class NameInverterTestCase(unittest.TestCase):
     def test_invert_first_last_should_return_last_comma_first(self):
         self.assertEqual('Lupercal, Horus', NameInverter.invert('Horus Lupercal'))
 
+    def test_invert_first_whitespaces_last_should_return_last_comma_first(self):
+        self.assertEqual('Lupercal, Horus', NameInverter.invert('Horus   Lupercal'))
+
 
 if __name__ == '__main__':
     unittest.main()
