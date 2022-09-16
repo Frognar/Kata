@@ -24,14 +24,14 @@ class NameInverter:
     def invert_parts(cls, name_parts: List[str]) -> str:
         first = name_parts[0]
         last = name_parts[1]
-        postnominals = cls.find_postnominal(name_parts)
+        postnominals = cls.find_and_merge_postnominals(name_parts)
         return f'{last}, {first} {postnominals}'.strip()
 
     @staticmethod
-    def find_postnominal(name_parts: List[str]) -> str:
+    def find_and_merge_postnominals(name_parts: List[str]) -> str:
         postnominals = ''
-        if len(name_parts) > 2:
-            postnominals = name_parts[2]
+        for np in name_parts[2:]:
+            postnominals += f'{np} '
         return postnominals
 
 
