@@ -15,7 +15,7 @@ class NameInverterTestCase(unittest.TestCase):
     def test_invert_firstname_should_return_firstname(self):
         self.assertEqual('Horus', NameInverter.invert('Horus'))
 
-    def _test_invert_first_last_should_return_last_comma_first(self):
+    def test_invert_first_last_should_return_last_comma_first(self):
         self.assertEqual('Lupercal, Horus', NameInverter.invert('Horus Lupercal'))
 
 
