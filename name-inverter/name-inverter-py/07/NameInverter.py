@@ -8,6 +8,8 @@ class NameInverter:
         name_parts = cls.break_into_parts_ignoring_whitespaces(name)
         if len(name_parts) < 2:
             return name_parts[0]
+        if name_parts[0] == 'Mr.':
+            name_parts.pop(0)
         return cls.invert_parts(name_parts)
 
     @staticmethod
