@@ -22,4 +22,6 @@
               (should= "Lupercal, Horus Sr." (invert "Horus Lupercal Sr.")))
           (it "Should return 'last, first postnominals' when invert 'first last postnominals'"
               (should= "Lupercal, Horus Sr. PhD." (invert "Horus Lupercal Sr. PhD.")))
+          (it "Should return 'last, first postnominals' when invert '  honorifics  first   last   postnominals  '"
+              (should= "Lupercal, Horus Sr. PhD." (invert "  Mr.  Horus   Lupercal   Sr.   PhD.  ")))
           )
