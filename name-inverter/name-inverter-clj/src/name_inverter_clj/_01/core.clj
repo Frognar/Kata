@@ -6,7 +6,7 @@
 (defn break-into-parts-ignoring-whitespaces [name]
   (str/split (str/trim name) any-amount-of-whitespaces))
 
-(defn find-postnominals [name_parts]
+(defn find-and-merge-postnominals [name_parts]
   (let [postnominals (drop 2 name_parts)]
     (str/join " " postnominals)
     ))
@@ -14,7 +14,7 @@
 (defn invert-parts [name_parts]
   (let [first (first name_parts)
         last (second name_parts)
-        postnominals (find-postnominals name_parts)]
+        postnominals (find-and-merge-postnominals name_parts)]
     (str/trim (str last ", " first " " postnominals))
   ))
 
