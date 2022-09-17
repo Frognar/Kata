@@ -7,4 +7,6 @@
               (should-throw (invert nil)))
           (it "Should return empty when invert empty"
               (should= "" (invert "")))
+          (it "Should return empty when invert whitespaces"
+              (should= "" (invert "   ")))
           )
