@@ -2,9 +2,9 @@
   (:require [clojure.string :as str]))
 
 (defn invert [name]
-    (let [first (first (str/split name #" "))]
-      (if (nil? first)
+    (let [name_parts (str/split name #" ")]
+      (if (< (count name_parts) 1)
         ""
-        first)
+        (first name_parts))
     )
   )
