@@ -7,7 +7,11 @@
   (str/split name any-amount-of-whitespaces))
 
 (defn invert-parts [name_parts]
-  (str (second name_parts) ", " (first name_parts)))
+  (if (< (count name_parts) 3)
+  (str (second name_parts) ", " (first name_parts))
+  (str (second name_parts) ", " (first name_parts) " " (nth name_parts 2))
+  )
+  )
 
 (def known-honorifics #{"Mr.", "Mrs."})
 
