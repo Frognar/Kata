@@ -15,4 +15,6 @@
               (should= "Lupercal, Horus" (invert "Horus Lupercal")))
           (it "Should return 'last, first' when invert 'first   last'"
               (should= "Lupercal, Horus" (invert "Horus   Lupercal")))
+          (it "Should return 'last, first' when invert 'honorific first last'"
+              (should= "Lupercal, Horus" (invert "Mr. Horus Lupercal")))
           )

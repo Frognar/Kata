@@ -15,7 +15,7 @@
       (cond
         (< (count name_parts) 1) ""
         (< (count name_parts) 2) (first name_parts)
-        :else (invert-parts name_parts)
+        :else (invert-parts (remove #(= "Mr." %) name_parts))
         )
       )
   )
