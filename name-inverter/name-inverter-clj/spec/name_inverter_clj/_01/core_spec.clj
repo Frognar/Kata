@@ -9,4 +9,6 @@
               (should= "" (invert "")))
           (it "Should return empty when invert whitespaces"
               (should= "" (invert "   ")))
+          (it "Should return firstname when invert firstname"
+              (should= "Horus" (invert "Horus")))
           )
