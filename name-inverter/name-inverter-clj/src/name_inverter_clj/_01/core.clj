@@ -1,19 +1,13 @@
 (ns name-inverter-clj._01.core
   (:require [clojure.string :as str]))
 
-(def any-amount-of-whitespaces #"\s+")
-
-(defn break-into-parts-ignoring-whitespaces [name]
-  (str/split (str/trim name) any-amount-of-whitespaces))
-
 (defn find-and-merge-postnominals [name_parts]
   (let [postnominals (drop 2 name_parts)]
     (str/join " " postnominals)
     ))
 
 (defn invert-parts [name_parts]
-  (let [first (first name_parts)
-        last (second name_parts)
+  (let [[first last] [(first name_parts) (second name_parts)]
         postnominals (find-and-merge-postnominals name_parts)]
     (str/trim (str last ", " first " " postnominals))
   ))
@@ -26,11 +20,14 @@
 (defn without-honorifics [name_parts]
   (remove #(is-honorific? %) name_parts))
 
+(def any-amount-of-whitespaces #"\s+")
+
+(defn break-into-parts-ignoring-whitespaces [name]
+  (str/split (str/trim name) any-amount-of-whitespaces))
+
 (defn invert [name]
     (let [name_parts (break-into-parts-ignoring-whitespaces name)]
-      (cond
-        (< (count name_parts) 2) (first name_parts)
-        :else (invert-parts (without-honorifics name_parts))
-        )
-      )
-  )
+      (if (< (count name_parts) 2)
+        (first name_parts)
+        (invert-parts (without-honorifics name_parts))
+        )))
