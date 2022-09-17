@@ -7,9 +7,8 @@
   (str/split (str/trim name) any-amount-of-whitespaces))
 
 (defn find-postnominals [name_parts]
-  (if (< (count name_parts) 3)
-    ""
-    (str/join " " (drop 2 name_parts))
+  (let [postnominals (drop 2 name_parts)]
+    (str/join " " postnominals)
     ))
 
 (defn invert-parts [name_parts]
