@@ -9,7 +9,7 @@
 (defn invert-parts [name_parts]
   (str (second name_parts) ", " (first name_parts)))
 
-(def known-honorifics #{"Mr."})
+(def known-honorifics #{"Mr.", "Mrs."})
 
 (defn is-honorific? [s]
     (contains? known-honorifics s))
