@@ -4,7 +4,7 @@
 (def any-amount-of-whitespaces #"\s+")
 
 (defn break-into-parts-ignoring-whitespaces [name]
-  (str/split name any-amount-of-whitespaces))
+  (str/split (str/trim name) any-amount-of-whitespaces))
 
 (defn invert-parts [name_parts]
   (let [first (first name_parts)
@@ -24,7 +24,6 @@
 (defn invert [name]
     (let [name_parts (break-into-parts-ignoring-whitespaces name)]
       (cond
-        (< (count name_parts) 1) ""
         (< (count name_parts) 2) (first name_parts)
         :else (invert-parts (without-honorifics name_parts))
         )
