@@ -11,4 +11,6 @@
               (should= "" (invert "   ")))
           (it "Should return firstname when invert firstname"
               (should= "Horus" (invert "Horus")))
+          (it "Should return 'last, first' when invert 'first last'"
+              (should= "Lupercal, Horus" (invert "Horus Lupercal")))
           )

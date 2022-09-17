@@ -6,8 +6,10 @@
 
 (defn invert [name]
     (let [name_parts (break-into-parts name)]
-      (if (< (count name_parts) 1)
-        ""
-        (first name_parts))
+      (cond
+        (< (count name_parts) 1) ""
+        (< (count name_parts) 2) (first name_parts)
+        :else (str (second name_parts) ", " (first name_parts))
+        )
     )
   )
