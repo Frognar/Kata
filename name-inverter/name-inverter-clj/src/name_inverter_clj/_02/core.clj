@@ -5,7 +5,9 @@
   (let [[first last] [(first name_parts) (second name_parts)]]
   (str last ", " first)))
 
-(defn is-honorific? [s] (= "Mr." s))
+(defn is-honorific? [s]
+  (let [known-honorifics #{"Mr."}]
+    (contains? known-honorifics s)))
 
 (defn without-honorifics [name_parts]
   (if (is-honorific? (first name_parts))
