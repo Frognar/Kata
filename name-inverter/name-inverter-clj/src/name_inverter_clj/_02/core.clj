@@ -1,4 +1,6 @@
 (ns name-inverter-clj._02.core)
 
 (defn invert [name]
-  (throw NullPointerException))
+  (if (nil? name)
+   (throw NullPointerException)
+   ""))
