@@ -1,9 +1,10 @@
 (ns name-inverter-clj._02.core
   (:require [clojure.string :as str]))
 
-(def space #"\s")
+(def any-amount-of-whitespaces #"\s+")
 
-(defn break-into-parts [name] (str/split (str/trim name) space))
+(defn break-into-parts [name]
+  (str/split (str/trim name) any-amount-of-whitespaces))
 
 (defn invert [name]
   (let [name_parts (break-into-parts name)]
