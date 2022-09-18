@@ -9,7 +9,7 @@
 
 (defn without-honorifics [name_parts]
   (if (is-honorific? (first name_parts))
-    (drop 1 name_parts)
+    (rest name_parts)
     name_parts))
 
 (def any-amount-of-whitespaces #"\s+")
