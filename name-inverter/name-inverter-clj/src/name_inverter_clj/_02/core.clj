@@ -1,6 +1,7 @@
-(ns name-inverter-clj._02.core)
+(ns name-inverter-clj._02.core
+  (:require [clojure.string :as str]))
 
 (defn invert [name]
   (if (nil? name)
-   (throw NullPointerException)
-   ""))
+    (throw NullPointerException)
+    (str/trim name)))
