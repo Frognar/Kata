@@ -1,12 +1,14 @@
 (ns name-inverter-clj._02.core
   (:require [clojure.string :as str]))
 
+(defn find-postnominal [name_parts]
+  (if (< (count name_parts) 3)
+    ""
+    (nth name_parts 2)))
+
 (defn invert-parts [name_parts]
   (let [[first last] [(first name_parts) (second name_parts)]
-        postnominal
-        (if (< (count name_parts) 3)
-          ""
-          (nth name_parts 2))]
+        postnominal (find-postnominal name_parts)]
   (str/trim (str last ", " first " " postnominal))))
 
 (def known-honorifics #{"Mr.", "Mrs."})
