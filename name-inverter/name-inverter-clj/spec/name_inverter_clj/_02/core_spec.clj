@@ -15,5 +15,7 @@
               (should= "Lupercal, Horus" (invert "Horus Lupercal")))
           (it "invert 'Horus    Lupercal' -> 'Lupercal, Horus'"
               (should= "Lupercal, Horus" (invert "Horus    Lupercal")))
+          (it "invert 'Mr. Horus Lupercal' -> 'Lupercal, Horus'"
+              (should= "Lupercal, Horus" (invert "Mr. Horus Lupercal")))
           )
 
