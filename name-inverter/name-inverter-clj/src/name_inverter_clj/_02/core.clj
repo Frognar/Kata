@@ -7,6 +7,11 @@
 
 (defn is-honorific? [s] (= "Mr." s))
 
+(defn without-honorifics [name_parts]
+  (if (is-honorific? (first name_parts))
+    (drop 1 name_parts)
+    name_parts))
+
 (def any-amount-of-whitespaces #"\s+")
 
 (defn break-into-parts [name]
@@ -16,7 +21,5 @@
   (let [name_parts (break-into-parts name)]
     (if (< (count name_parts) 2)
       (first name_parts)
-      (if (is-honorific? (first name_parts))
-        (invert-parts (drop 1 name_parts))
-        (invert-parts name_parts))
+      (invert-parts (without-honorifics name_parts))
       )))
