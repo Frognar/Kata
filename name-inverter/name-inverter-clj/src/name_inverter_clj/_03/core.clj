@@ -6,7 +6,8 @@
     (str last ", " first)))
 
 (defn is-honorific? [s]
-  (= s "Mr."))
+  (let [known-honorifics #{"Mr."}]
+    (contains? known-honorifics s)))
 
 (defn without-honorifics [name_parts]
   (if (is-honorific? (first name_parts))
