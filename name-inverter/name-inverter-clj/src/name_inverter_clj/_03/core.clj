@@ -14,4 +14,6 @@
     (let [name_parts (break-into-parts-ignoring-whitespaces name)]
       (if (< (count name_parts) 2)
         (first name_parts)
-        (invert-parts name_parts))))
+        (if (= (first name_parts) "Mr.")
+          (invert-parts (drop 1 name_parts))
+          (invert-parts name_parts)))))
