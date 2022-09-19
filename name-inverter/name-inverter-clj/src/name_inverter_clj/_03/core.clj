@@ -4,7 +4,7 @@
 (defn find-postnominals [name_parts]
   (if (< (count name_parts) 3)
     ""
-    (nth name_parts 2)))
+    (str/join " " (drop 2 name_parts))))
 
 (defn invert-parts [name_parts]
   (let [[first last] [(first name_parts) (second name_parts)]
