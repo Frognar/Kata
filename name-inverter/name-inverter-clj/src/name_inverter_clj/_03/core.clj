@@ -2,7 +2,8 @@
   (:require [clojure.string :as str]))
 
 (defn invert-parts [name_parts]
-  (str (second name_parts) ", " (first name_parts)))
+  (let [first (first name_parts) last (second name_parts)]
+    (str last ", " first)))
 
 (defn break-into-parts [name] (str/split (str/trim name) #" "))
 
