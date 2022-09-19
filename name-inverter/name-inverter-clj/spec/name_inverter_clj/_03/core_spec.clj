@@ -7,4 +7,6 @@
               (should-throw (invert nil)))
           (it "invert '' -> ''"
               (should= "" (invert "")))
+          (it "invert '   ' -> ''"
+              (should= "" (invert "   ")))
           )
