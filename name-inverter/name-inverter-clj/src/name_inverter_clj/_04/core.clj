@@ -1,9 +1,8 @@
 (ns name-inverter-clj._04.core
   (:require [clojure.string :as str]))
 
-(defn invert-parts [name_parts]
-  (let [[first last] [(first name_parts) (second name_parts)]]
-    (str last ", " first)))
+(defn invert-parts [[first last & _]]
+    (str last ", " first))
 
 (def space #" ")
 
