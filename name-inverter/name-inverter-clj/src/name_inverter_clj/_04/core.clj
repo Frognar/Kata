@@ -1,8 +1,11 @@
 (ns name-inverter-clj._04.core
   (:require [clojure.string :as str]))
 
-(defn invert-parts [[first last & name_part]]
-    (let [postnominals (str/join " " name_part)]
+(defn find-and-merge-postnominals [name_parts]
+  (str/join " " name_parts))
+
+(defn invert-parts [[first last & name_parts]]
+    (let [postnominals (find-and-merge-postnominals name_parts)]
       (str/trim (str last ", " first " " postnominals))))
 
 (def known-honorifics #{"Mr.", "Mrs."})
