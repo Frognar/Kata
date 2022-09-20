@@ -4,13 +4,13 @@
 (defn invert-parts [[first last & _]]
     (str last ", " first))
 
-(def space #" ")
+(def any-amount-of-whitespaces #"\s+")
 
-(defn break-into-parts [name]
-  (str/split (str/trim name) space))
+(defn break-into-parts-ignoring-whitespaces [name]
+  (str/split (str/trim name) any-amount-of-whitespaces))
 
 (defn invert [name]
-  (let [name_parts (break-into-parts name)]
+  (let [name_parts (break-into-parts-ignoring-whitespaces name)]
     (if (< (count name_parts) 2)
       (first name_parts)
       (invert-parts name_parts))))
