@@ -4,9 +4,10 @@
 (defn invert-parts [[first last & _]]
     (str last ", " first))
 
+(def known-honorifics #{"Mr."})
+
 (defn is-honorific? [s]
-  (let [known-honorifics #{"Mr."}]
-    (contains? known-honorifics s)))
+    (contains? known-honorifics s))
 
 (defn without-honorifics [name_parts]
   (if (is-honorific? (first name_parts))
