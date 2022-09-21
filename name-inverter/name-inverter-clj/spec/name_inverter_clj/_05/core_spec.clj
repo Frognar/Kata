@@ -2,7 +2,7 @@
   (:require [speclj.core :refer :all]
             [name-inverter-clj._05.core :refer :all]))
 
-(describe "Test"
-          (it "should fail"
-              (should= true false))
+(describe "Name inverter"
+          (it "invert nil should throw exception"
+              (should-throw (invert nil)))
           )
