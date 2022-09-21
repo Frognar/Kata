@@ -5,11 +5,12 @@
   (let [[first last] [(first name_parts) (second name_parts)]]
     (str last ", " first)))
 
+(def known-honorifics #{"Mr."})
+
 (defn without-honorifics [name_parts]
-  (let [known-honorifics #{"Mr."}]
    (if (contains? known-honorifics (first name_parts))
      (rest name_parts)
-     name_parts)))
+     name_parts))
 
 (def any-amount-of-spaces #"\s+")
 
