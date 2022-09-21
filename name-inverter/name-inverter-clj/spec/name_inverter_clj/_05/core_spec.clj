@@ -5,4 +5,6 @@
 (describe "Name inverter"
           (it "invert nil should throw exception"
               (should-throw (invert nil)))
+          (it "invert '' -> ''"
+              (should= "" (invert "")))
           )
