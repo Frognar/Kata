@@ -2,8 +2,9 @@
   (:require [clojure.string :as str]))
 
 (defn invert-parts [name_parts]
-  (let [[first last] [(first name_parts) (second name_parts)]]
-    (str last ", " first)))
+  (let [[first last] [(first name_parts) (second name_parts)]
+        postnominals (if (< (count name_parts) 3) "" (nth name_parts 2))]
+    (str/trim (str last ", " first " " postnominals))))
 
 (def known-honorifics #{"Mr.", "Mrs."})
 
