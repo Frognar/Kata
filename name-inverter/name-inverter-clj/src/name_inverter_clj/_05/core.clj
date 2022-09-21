@@ -6,9 +6,10 @@
     (str last ", " first)))
 
 (defn without-honorifics [name_parts]
-  (if (= "Mr." (first name_parts))
-    (rest name_parts)
-    name_parts))
+  (let [known-honorifics #{"Mr."}]
+   (if (contains? known-honorifics (first name_parts))
+     (rest name_parts)
+     name_parts)))
 
 (def any-amount-of-spaces #"\s+")
 
