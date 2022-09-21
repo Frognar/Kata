@@ -7,7 +7,7 @@
 
 (defn without-honorifics [name_parts]
   (if (= "Mr." (first name_parts))
-    (drop 1 name_parts)
+    (rest name_parts)
     name_parts))
 
 (def any-amount-of-spaces #"\s+")
