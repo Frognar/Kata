@@ -2,7 +2,9 @@
   (:require [clojure.string :as str]))
 
 (defn invert-parts [name_parts]
-  (str (second name_parts) ", " (first name_parts)))
+  (if (< (count name_parts) 3)
+    (str (second name_parts) ", " (first name_parts))
+    (str (second name_parts) ", " (first name_parts) " " (nth name_parts 2))))
 
 (defn is-honorifics? [s]
   (let [known-honorifics #{"Mr.", "Mrs."}]
