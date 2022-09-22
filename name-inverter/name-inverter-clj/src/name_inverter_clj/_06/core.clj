@@ -5,7 +5,7 @@
   (str (second name_parts) ", " (first name_parts)))
 
 (defn is-honorifics? [s]
-  (let [known-honorifics #{"Mr."}]
+  (let [known-honorifics #{"Mr.", "Mrs."}]
     (contains? known-honorifics s)))
 
 (defn without-honorifics [name_parts]
