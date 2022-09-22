@@ -7,8 +7,7 @@
     (nth name_parts 2)))
 
 (defn invert-parts [name_parts]
-  (let [first (first name_parts)
-        last (second name_parts)]
+  (let [[first, last] [(first name_parts) (second name_parts)]]
     (str/trim (str last ", " first " " (find-postnominals name_parts)))))
 
 (defn is-honorifics? [s]
