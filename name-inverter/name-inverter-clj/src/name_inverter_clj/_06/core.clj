@@ -4,8 +4,11 @@
 (defn invert-parts [name_parts]
   (str (second name_parts) ", " (first name_parts)))
 
+(defn is-honorifics? [s]
+  (= "Mr." s))
+
 (defn without-honorifics [name_parts]
-  (if (= "Mr." (first name_parts))
+  (if (is-honorifics? (first name_parts))
     (rest name_parts)
     name_parts))
 
