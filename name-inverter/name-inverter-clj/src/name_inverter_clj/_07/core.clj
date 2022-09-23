@@ -2,11 +2,11 @@
   (:require [clojure.string :as str]))
 
 (defn find-and-merge-postnominals [name_parts]
-  (str/join " " (drop 2 name_parts)))
+  (str/join " " name_parts))
 
 (defn invert-parts [name_parts]
     (let [[first last] [(first name_parts) (second name_parts)]
-          postnominals (find-and-merge-postnominals name_parts)]
+          postnominals (find-and-merge-postnominals (drop 2 name_parts))]
       (str/trim (str last ", " first " " postnominals))))
 
 (defn is-honorific? [s]
