@@ -5,8 +5,7 @@
   (if (< (count name_parts) 3) "" (nth name_parts 2)))
 
 (defn invert-parts [name_parts]
-    (let [first (first name_parts)
-          last (second name_parts)
+    (let [[first last] [(first name_parts) (second name_parts)]
           postnominals (find-postnominals name_parts)]
       (str/trim (str last ", " first " " postnominals))))
 
