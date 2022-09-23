@@ -9,4 +9,6 @@
               (should= "" (invert "")))
           (it "invert '   ' -> ''"
               (should= "" (invert "   ")))
+          (it "invert 'Horus' -> 'Horus'"
+              (should= "Horus" (invert "Horus")))
           )
