@@ -21,15 +21,17 @@ public class StringCalculator {
         return sum;
     }
 
-    private boolean hasCustomDelimiter(String numbers) {
-        return numbers.startsWith("//");
+    private static final String startOfCustomDelimiter = "//";
+    private static boolean hasCustomDelimiter(String numbers) {
+        return numbers.startsWith(startOfCustomDelimiter);
     }
 
-    private String getCustomDelimiter(String numbers) {
-        return "(%s)".formatted(numbers.substring(2, numbers.indexOf('\n')));
+    private static final char endOfCustomDelimiter = '\n';
+    private static String getCustomDelimiter(String numbers) {
+        return "(%s)".formatted(numbers.substring(2, numbers.indexOf(endOfCustomDelimiter)));
     }
 
-    private String skipCustomDelimiter(String numbers) {
-        return numbers.substring(numbers.indexOf('\n') + 1);
+    private static String skipCustomDelimiter(String numbers) {
+        return numbers.substring(numbers.indexOf(endOfCustomDelimiter) + 1);
     }
 }
