@@ -30,4 +30,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertEquals(expectedValue, calculator.add(numbers));
     }
+
+    @Test
+    public void shouldReturnSumOfNumbersSeparatedByCommaInString() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(3, calculator.add("1,2"));
+    }
 }
