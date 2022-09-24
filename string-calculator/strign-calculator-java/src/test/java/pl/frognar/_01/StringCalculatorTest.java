@@ -53,7 +53,8 @@ public class StringCalculatorTest {
 
     static Stream<Arguments> stringWithMultipleNumbersSeparatedByNewLine() {
         return Stream.of(
-                arguments("1\n2", 3)
+                arguments("1\n2", 3),
+                arguments("1\n2,3", 6)
         );
     }
 
