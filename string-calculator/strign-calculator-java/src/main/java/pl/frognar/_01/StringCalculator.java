@@ -8,9 +8,8 @@ public class StringCalculator {
 
         String delimiters = "[,\\n]";
         if (hasCustomDelimiter(numbers)) {
-            int indexOfCustomDelimiterEnd = numbers.indexOf('\n');
             delimiters += "|%s".formatted(getCustomDelimiter(numbers));
-            numbers = numbers.substring(indexOfCustomDelimiterEnd + 1);
+            numbers = skipCustomDelimiter(numbers);
         }
 
         String[] numbersList = numbers.split(delimiters);
@@ -28,5 +27,9 @@ public class StringCalculator {
 
     private String getCustomDelimiter(String numbers) {
         return "(%s)".formatted(numbers.substring(2, numbers.indexOf('\n')));
+    }
+
+    private String skipCustomDelimiter(String numbers) {
+        return numbers.substring(numbers.indexOf('\n') + 1);
     }
 }
