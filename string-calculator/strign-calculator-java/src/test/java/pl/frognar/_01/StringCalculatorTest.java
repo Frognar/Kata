@@ -15,7 +15,7 @@ public class StringCalculatorTest {
     StringCalculator calculator;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         calculator = new StringCalculator();
     }
 
@@ -91,5 +91,18 @@ public class StringCalculatorTest {
         Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add(numbers));
 
         assertEquals(expectedMessage, exception.getMessage());
+    }
+
+
+    static Stream<Arguments> stringWithNumbersOverThousand() {
+        return Stream.of(
+                arguments("1001,2", 2)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithNumbersOverThousand")
+    public void shouldIgnoreNumbersOverThousand(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
     }
 }

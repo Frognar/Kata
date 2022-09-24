@@ -42,7 +42,9 @@ public class StringCalculator {
                 negatives.add(number);
             }
 
-            sum += number;
+            if (number <= 1000) {
+                sum += number;
+            }
         }
 
         if (!negatives.isEmpty()) {
