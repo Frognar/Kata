@@ -96,7 +96,8 @@ public class StringCalculatorTest {
 
     static Stream<Arguments> stringWithNumbersOverThousand() {
         return Stream.of(
-                arguments("1001,2", 2)
+                arguments("1001,2", 2),
+                arguments("1000,1001,2", 1002)
         );
     }
 
