@@ -6,15 +6,15 @@ public class StringCalculator {
             return 0;
         }
 
-        String delimiters = ",\\n";
+        String delimiters = "[,\\n]";
         if (numbers.startsWith("//")) {
             int indexOfCustomDelimiterEnd = numbers.indexOf('\n');
-            String customDelimiter = numbers.substring(2, indexOfCustomDelimiterEnd);
-            delimiters += customDelimiter;
+            String customDelimiter = "(%s)".formatted(numbers.substring(2, indexOfCustomDelimiterEnd));
+            delimiters += "|%s".formatted(customDelimiter);
             numbers = numbers.substring(indexOfCustomDelimiterEnd + 1);
         }
 
-        String[] numbersList = numbers.split("[%s]".formatted(delimiters));
+        String[] numbersList = numbers.split(delimiters);
         int sum = 0;
         for (String n: numbersList) {
             sum += Integer.parseInt(n);

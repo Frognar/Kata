@@ -67,7 +67,8 @@ public class StringCalculatorTest {
     static Stream<Arguments> stringWithMultipleNumbersSeparatedByCustomDelimiter() {
         return Stream.of(
                 arguments("//;\n1;2", 3),
-                arguments("//;\n1;2,3", 6)
+                arguments("//;\n1;2,3", 6),
+                arguments("//;;\n1;;2,3", 6)
         );
     }
 
