@@ -50,4 +50,16 @@ public class StringCalculatorTest {
     public void shouldReturnSumOfNumbersSeparatedByCommaInString(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
+
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByNewLine() {
+        return Stream.of(
+                arguments("1\n2", 3)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByNewLine")
+    public void shouldReturnSumOfNumbersSeparatedByNewLineInString(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
+    }
 }
