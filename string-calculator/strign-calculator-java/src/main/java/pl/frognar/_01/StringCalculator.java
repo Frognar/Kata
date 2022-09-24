@@ -7,7 +7,7 @@ public class StringCalculator {
         }
 
         String delimiters = "[,\\n]";
-        if (numbers.startsWith("//")) {
+        if (hasCustomDelimiter(numbers)) {
             int indexOfCustomDelimiterEnd = numbers.indexOf('\n');
             String customDelimiter = "(%s)".formatted(numbers.substring(2, indexOfCustomDelimiterEnd));
             delimiters += "|%s".formatted(customDelimiter);
@@ -21,5 +21,9 @@ public class StringCalculator {
         }
 
         return sum;
+    }
+
+    private boolean hasCustomDelimiter(String numbers) {
+        return numbers.startsWith("//");
     }
 }
