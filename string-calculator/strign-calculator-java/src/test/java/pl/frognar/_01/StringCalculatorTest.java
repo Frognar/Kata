@@ -37,15 +37,16 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    static Stream<Arguments> stringWithTwoNumbersSeparatedByComma() {
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByComma() {
         return Stream.of(
                 arguments("1,2", 3),
-                arguments("2,3", 5)
+                arguments("2,3", 5),
+                arguments("1,2,3", 6)
         );
     }
 
     @ParameterizedTest
-    @MethodSource("stringWithTwoNumbersSeparatedByComma")
+    @MethodSource("stringWithMultipleNumbersSeparatedByComma")
     public void shouldReturnSumOfNumbersSeparatedByCommaInString(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
