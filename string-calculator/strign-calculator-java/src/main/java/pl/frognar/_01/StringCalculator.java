@@ -2,6 +2,7 @@ package pl.frognar._01;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -45,7 +46,9 @@ public class StringCalculator {
         }
 
         if (!negatives.isEmpty()) {
-            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+            String negativesString = negatives.stream().map(String::valueOf).collect(Collectors.joining(","));
+            throw new NegativeNumbersNotAllowedException(
+                    "negatives not allowed: %s".formatted(negativesString));
         }
 
         return sum;
