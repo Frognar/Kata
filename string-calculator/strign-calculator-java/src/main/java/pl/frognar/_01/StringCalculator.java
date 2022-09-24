@@ -12,13 +12,7 @@ public class StringCalculator {
             numbers = skipCustomDelimiter(numbers);
         }
 
-        String[] numbersList = numbers.split(delimiters);
-        int sum = 0;
-        for (String n: numbersList) {
-            sum += Integer.parseInt(n);
-        }
-
-        return sum;
+        return calculateSumOf(numbers.split(delimiters));
     }
 
     private static final String startOfCustomDelimiter = "//";
@@ -33,5 +27,14 @@ public class StringCalculator {
 
     private static String skipCustomDelimiter(String numbers) {
         return numbers.substring(numbers.indexOf(endOfCustomDelimiter) + 1);
+    }
+
+    private static int calculateSumOf(String[] numbers) {
+        int sum = 0;
+        for (String n : numbers) {
+            sum += Integer.parseInt(n);
+        }
+
+        return sum;
     }
 }
