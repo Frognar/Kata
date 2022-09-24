@@ -1,5 +1,6 @@
 package pl.frognar._01;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,9 +12,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class StringCalculatorTest {
+    StringCalculator calculator;
+
+    @BeforeEach
+    public void setUp(){
+        calculator = new StringCalculator();
+    }
+
     @Test
     public void shouldReturnZeroForEmptyString() {
-        StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
 
@@ -27,13 +34,11 @@ public class StringCalculatorTest {
     @ParameterizedTest
     @MethodSource("stringWithOneNumber")
     public void shouldReturnNumberForStringWithOneNumber(String numbers, int expectedValue) {
-        StringCalculator calculator = new StringCalculator();
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
     @Test
     public void shouldReturnSumOfNumbersSeparatedByCommaInString() {
-        StringCalculator calculator = new StringCalculator();
         assertEquals(3, calculator.add("1,2"));
     }
 }
