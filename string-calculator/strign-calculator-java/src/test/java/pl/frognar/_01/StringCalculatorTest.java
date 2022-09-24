@@ -63,4 +63,16 @@ public class StringCalculatorTest {
     public void shouldReturnSumOfNumbersSeparatedByNewLineInString(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
+
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByCustomDelimiter() {
+        return Stream.of(
+                arguments("//;\n1;2", 3)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByCustomDelimiter")
+    public void shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
+    }
 }

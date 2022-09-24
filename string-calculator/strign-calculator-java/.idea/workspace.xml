@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;1\n2&quot; -&gt; 3">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;1\n2,3&quot; -&gt; 6">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -96,7 +96,7 @@
       <recent name="pl.frognar._01" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StringCalculatorTest">
+  <component name="RunManager" selected="Gradle.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -147,6 +147,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;pl.frognar._01.StringCalculatorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pl.frognar._01.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,10 +233,12 @@
     <list>
       <item itemvalue="Gradle.strign-calculator-java [:test]" />
       <item itemvalue="Gradle.StringCalculatorTest" />
+      <item itemvalue="Gradle.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" />
       <item itemvalue="Gradle.strign-calculator-java [testClasses]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" />
         <item itemvalue="Gradle.StringCalculatorTest" />
         <item itemvalue="Gradle.strign-calculator-java [testClasses]" />
       </list>
@@ -284,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664052388691</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add &quot;1\n2&quot; -&gt; 3">
+      <created>1664052575899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664052575899</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add &quot;1\n2,3&quot; -&gt; 6">
+      <created>1664052596190</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664052596190</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,10 +347,14 @@
     <MESSAGE value="add &quot;2,3&quot; -&gt; 5" />
     <MESSAGE value="add &quot;1,2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;1\n2&quot; -&gt; 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;1\n2&quot; -&gt; 3" />
+    <MESSAGE value="add &quot;1\n2,3&quot; -&gt; 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;1\n2,3&quot; -&gt; 6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/strign_calculator_java$StringCalculatorTest_shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString.ic" NAME="StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString Coverage Results" MODIFIED="1664053035910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
