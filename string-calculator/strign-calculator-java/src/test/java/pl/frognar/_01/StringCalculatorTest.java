@@ -78,11 +78,18 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    @Test
-    public void shouldThrowExceptionWhenPassedNegativeValues() {
-        Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add("-1"));
+    static Stream<Arguments> stringWithNegativeNumbersAndExceptionMessage() {
+        return Stream.of(
+                arguments("-1", "negatives not allowed: -1"),
+                arguments("-1,-2", "negatives not allowed: -1,-2")
+        );
+    }
 
-        String expectedMessage = "negatives not allowed: -1";
+    @ParameterizedTest
+    @MethodSource("stringWithNegativeNumbersAndExceptionMessage")
+    public void shouldThrowExceptionWhenPassedNegativeValues(String numbers, String expectedMessage) {
+        Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add(numbers));
+
         assertEquals(expectedMessage, exception.getMessage());
     }
 }
