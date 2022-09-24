@@ -6,6 +6,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -68,7 +70,7 @@ public class StringCalculatorTest {
         return Stream.of(
                 arguments("//;\n1;2", 3),
                 arguments("//;\n1;2,3", 6),
-                arguments("//;;\n1;;2,3", 6)
+                arguments("//[;;]\n1;;2,3", 6)
         );
     }
 
@@ -105,5 +107,19 @@ public class StringCalculatorTest {
     @MethodSource("stringWithNumbersOverThousand")
     public void shouldIgnoreNumbersOverThousand(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
+    }
+
+    @Test
+    public void regexTests() {
+        String text = "//[;;]\n1;;2//;\n1;2";
+        String regex = "//(.)\n|//\\[(.*)]\n";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(text);
+        assertTrue(matcher.find());
+        assertEquals("//[;;]\n", matcher.group(0));
+        assertEquals(";;", matcher.group(2));
+        assertTrue(matcher.find());
+        assertEquals("//;\n", matcher.group(0));
+        assertEquals(";", matcher.group(1));
     }
 }
