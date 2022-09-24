@@ -1,5 +1,8 @@
 package pl.frognar._01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringCalculator {
     public int add(String numbers) {
         if (numbers.isEmpty()) {
@@ -30,9 +33,19 @@ public class StringCalculator {
     }
 
     private static int calculateSumOf(String[] numbers) {
+        List<Integer> negatives = new ArrayList<>();
         int sum = 0;
         for (String n : numbers) {
-            sum += Integer.parseInt(n);
+            int number = Integer.parseInt(n);
+            if (number < 0) {
+                negatives.add(number);
+            }
+
+            sum += number;
+        }
+
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
         }
 
         return sum;
