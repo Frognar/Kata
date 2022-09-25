@@ -111,15 +111,26 @@ public class StringCalculatorTest {
 
     @Test
     public void regexTests() {
-        String text = "//[;;]\n1;;2//;\n1;2";
-        String regex = "//(.)\n|//\\[(.*)]\n";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(text);
-        assertTrue(matcher.find());
-        assertEquals("//[;;]\n", matcher.group(0));
-        assertEquals(";;", matcher.group(2));
-        assertTrue(matcher.find());
-        assertEquals("//;\n", matcher.group(0));
-        assertEquals(";", matcher.group(1));
+        String text = "//[*][%%]\n1*2%%3";
+
+        String customDelimiterRegex = "//(.+)\n";
+        String extractDelimiterRegex = "\\[?([^]]+)]?";
+        Pattern customDelimitersPattern = Pattern.compile(customDelimiterRegex);
+        Pattern extractDelimiterPattern = Pattern.compile(extractDelimiterRegex);
+
+        Matcher customDelimiterMatcher = customDelimitersPattern.matcher(text);
+        if (customDelimiterMatcher.find()) {
+            String delimitersText = customDelimiterMatcher.group(1);
+            Matcher extractDelimiterMatcher = extractDelimiterPattern.matcher(delimitersText);
+            StringBuilder delimiters = new StringBuilder();
+            while (extractDelimiterMatcher.find()) {
+                delimiters.append("|").append(extractDelimiterMatcher.group(1));
+            }
+
+            assertEquals("|*|%%", delimiters.toString());
+        }
+        else {
+            fail();
+        }
     }
 }
