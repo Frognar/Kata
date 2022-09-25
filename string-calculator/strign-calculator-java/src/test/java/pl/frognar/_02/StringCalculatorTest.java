@@ -31,4 +31,10 @@ public class StringCalculatorTest {
         var calculator = new StringCalculator();
         assertEquals(expectedValue, calculator.add(numbers));
     }
+
+    @Test
+    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByComma() {
+        var calculator = new StringCalculator();
+        assertEquals(3, calculator.add("1,2"));
+    }
 }
