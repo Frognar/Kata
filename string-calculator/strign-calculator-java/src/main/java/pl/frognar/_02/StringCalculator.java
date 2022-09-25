@@ -13,7 +13,7 @@ public class StringCalculator {
             return 0;
         }
         numbers = replaceAllCustomDelimitersToCommas(numbers);
-        var numbersList = splitAndConvertNumbers(numbers);
+        List<Integer> numbersList = splitAndConvertNumbers(numbers);
         AssertDoesNotContainAnyNegativeValue(numbersList);
         return SumNumbers(numbersList);
     }
@@ -24,7 +24,7 @@ public class StringCalculator {
     }
 
     private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
-        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        List<Integer> negatives = numbers.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
             String negativesString = negatives
                     .stream()
