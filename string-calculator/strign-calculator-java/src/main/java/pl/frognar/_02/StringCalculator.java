@@ -55,18 +55,18 @@ public class StringCalculator {
         return numbers;
     }
 
+    private static final String escapedRegex = "\\Q%s\\E";
     private static List<String> getAllCustomDelimiters(String delimitersGroup) {
         delimitersGroup = delimitersGroup.substring(2, delimitersGroup.length() - 1);
-        delimitersGroup = delimitersGroup.replaceAll("\\Q][\\E", " ");
-        delimitersGroup = delimitersGroup.replaceAll("\\Q[\\E", "");
-        delimitersGroup = delimitersGroup.replaceAll("\\Q]\\E", "");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
         return Arrays.stream(delimitersGroup.split(" "))
                 .sorted(Comparator.comparingInt(String::length).reversed())
                 .toList();
     }
 
     private static String replaceAllDelimitersWithComma(String originalNumbers, List<String> delimiters) {
-        final String escapedRegex = "\\Q%s\\E";
         for (var delimiter : delimiters) {
             originalNumbers = originalNumbers.replaceAll(escapedRegex.formatted(delimiter), ",");
         }
