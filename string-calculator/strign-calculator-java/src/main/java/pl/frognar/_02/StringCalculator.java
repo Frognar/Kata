@@ -1,6 +1,7 @@
 package pl.frognar._02;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class StringCalculator {
@@ -10,11 +11,7 @@ public class StringCalculator {
         }
         numbers = numbers.replaceAll("[^0-9-]", ",");
         String delimiters = ",";
-        var numbersList = Arrays.stream(numbers.split(delimiters))
-                .filter(s -> !s.isEmpty())
-                .map(Integer::parseInt)
-                .toList();
-
+        var numbersList = convertToInts(numbers.split(delimiters));
         var negatives = numbersList.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
             String negativesString = negatives
@@ -26,5 +23,12 @@ public class StringCalculator {
         }
 
         return numbersList.stream().reduce(0, Integer::sum);
+    }
+
+    List<Integer> convertToInts(String[] numbers) {
+        return Arrays.stream(numbers)
+                .filter(s -> !s.isEmpty())
+                .map(Integer::parseInt)
+                .toList();
     }
 }
