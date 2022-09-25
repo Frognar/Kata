@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class StringCalculator {
-    private static final String defaultDelimiters = "[,\n]";
     public int add(String numbers) {
         if (numbers.isEmpty()) {
             return 0;
@@ -47,17 +46,14 @@ public class StringCalculator {
         return originalNumbers;
     }
 
+    private static final String defaultDelimiters = "[,\n]";
     private static List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(defaultDelimiters))
-                .map(Integer::parseInt)
-                .toList();
+        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
     }
 
     private static int calculateSumOf(List<Integer> numbers) {
         AssertDoesNotContainAnyNegativeValue(numbers);
-        return numbers.stream()
-                .filter(n -> n <= 1000)
-                .reduce(0, Integer::sum);
+        return numbers.stream().filter(n -> n <= 1000).reduce(0, Integer::sum);
     }
 
     private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
