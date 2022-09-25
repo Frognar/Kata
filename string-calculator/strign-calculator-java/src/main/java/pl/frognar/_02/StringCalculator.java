@@ -7,7 +7,7 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        var numbersList = numbers.split(",");
+        var numbersList = numbers.split("[,\n]");
         return Arrays.stream(numbersList).map(Integer::parseInt).reduce(0, Integer::sum);
     }
 }
