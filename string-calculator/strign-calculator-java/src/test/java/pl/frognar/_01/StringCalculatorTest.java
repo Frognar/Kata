@@ -6,8 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -70,7 +68,8 @@ public class StringCalculatorTest {
         return Stream.of(
                 arguments("//;\n1;2", 3),
                 arguments("//;\n1;2,3", 6),
-                arguments("//[;;]\n1;;2,3", 6)
+                arguments("//[;;]\n1;;2,3", 6),
+                arguments("//[*][;;]\n1;;2*3", 6)
         );
     }
 
@@ -107,30 +106,5 @@ public class StringCalculatorTest {
     @MethodSource("stringWithNumbersOverThousand")
     public void shouldIgnoreNumbersOverThousand(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
-    }
-
-    @Test
-    public void regexTests() {
-        String text = "//[*][%%]\n1*2%%3";
-
-        String customDelimiterRegex = "//(.+)\n";
-        String extractDelimiterRegex = "\\[?([^]]+)]?";
-        Pattern customDelimitersPattern = Pattern.compile(customDelimiterRegex);
-        Pattern extractDelimiterPattern = Pattern.compile(extractDelimiterRegex);
-
-        Matcher customDelimiterMatcher = customDelimitersPattern.matcher(text);
-        if (customDelimiterMatcher.find()) {
-            String delimitersText = customDelimiterMatcher.group(1);
-            Matcher extractDelimiterMatcher = extractDelimiterPattern.matcher(delimitersText);
-            StringBuilder delimiters = new StringBuilder();
-            while (extractDelimiterMatcher.find()) {
-                delimiters.append("|").append(extractDelimiterMatcher.group(1));
-            }
-
-            assertEquals("|*|%%", delimiters.toString());
-        }
-        else {
-            fail();
-        }
     }
 }

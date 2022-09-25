@@ -7,8 +7,10 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class StringCalculator {
-    private final String customDelimiterRegex = "//(.)\n|//\\[(.*)]\n";
+    private final String customDelimiterRegex = "//(.+)\n";
     private final Pattern customDelimiterPattern = Pattern.compile(customDelimiterRegex);
+    private final String extractDelimiterRegex = "\\[?([^]]+)]?";
+    private final Pattern extractDelimiterPattern = Pattern.compile(extractDelimiterRegex);
 
     public int add(String numbers) {
         if (numbers.isEmpty()) {
@@ -16,21 +18,24 @@ public class StringCalculator {
         }
 
         String delimiters = "[,\\n]";
-        Matcher matcher = customDelimiterPattern.matcher(numbers);
-        if (matcher.find()) {
-            delimiters += "|%s".formatted(findCustomDelimiter(matcher));
+        Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
+        if (customDelimiterMatcher.find()) {
+            delimiters += "%s".formatted(mergeCustomDelimiter(customDelimiterMatcher));
             numbers = skipCustomDelimiter(numbers);
         }
 
         return calculateSumOf(numbers.split(delimiters));
     }
 
-    private static String findCustomDelimiter(Matcher matcher) {
-        String customDelimiter = matcher.group(1);
-        if (customDelimiter == null) {
-            customDelimiter = matcher.group(2);
+    private String mergeCustomDelimiter(Matcher customDelimiterMatcher) {
+        String delimitersText = customDelimiterMatcher.group(1);
+        Matcher extractDelimiterMatcher = extractDelimiterPattern.matcher(delimitersText);
+        StringBuilder customDelimiters = new StringBuilder();
+        while (extractDelimiterMatcher.find()) {
+            customDelimiters.append("|").append(extractDelimiterMatcher.group(1));
         }
-        return customDelimiter;
+
+        return customDelimiters.toString();
     }
 
     private String skipCustomDelimiter(String numbers) {
