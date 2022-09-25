@@ -13,21 +13,18 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
+        numbers = replaceAllCustomDelimitersToCommas(numbers);
         var numbersList = convertToInts(splitAndFilterNumbers(numbers));
         AssertDoesNotContainAnyNegativeValue(numbersList);
         return SumNumbers(numbersList);
     }
 
     static Stream<String> splitAndFilterNumbers(String numbers) {
-        return Arrays.stream(numbers.replaceAll("[^0-9-]", ",")
-                .split(","))
-                .filter(s -> !s.isEmpty());
+        return Arrays.stream(numbers.split("[,\n]"));
     }
 
     static List<Integer> convertToInts(Stream<String> numbers) {
-        return numbers
-                .map(Integer::parseInt)
-                .toList();
+        return numbers.map(Integer::parseInt).toList();
     }
 
     static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
