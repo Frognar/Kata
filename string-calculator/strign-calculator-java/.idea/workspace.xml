@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//;\n1;2;3&quot; -&gt; 6">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;-1&quot; throws exception with -1 in message">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/NegativeNumbersNotAllowedException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" afterDir="false" />
@@ -414,7 +415,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664103819391</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add &quot;//;\n1;2;3&quot; -&gt; 6">
+      <created>1664104108632</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664104108632</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add &quot;//!\n1!2!3&quot; -&gt; 6">
+      <created>1664104159203</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664104159203</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6">
+      <created>1664104274210</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664104274210</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,7 +472,10 @@
     <MESSAGE value="add &quot;1\n2,3&quot; -&gt; 6" />
     <MESSAGE value="refactor tests" />
     <MESSAGE value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;//!\n1!2!3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;-1&quot; throws exception with -1 in message" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;-1&quot; throws exception with -1 in message" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

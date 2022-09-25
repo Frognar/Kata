@@ -7,9 +7,19 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        numbers = numbers.replaceAll("[^0-9]", ",");
+
+        numbers = numbers.replaceAll("[^0-9-]", ",");
         String delimiters = ",";
-        var numbersList = Arrays.stream(numbers.split(delimiters)).filter(s -> !s.isEmpty());
-        return numbersList.map(Integer::parseInt).reduce(0, Integer::sum);
+        var numbersList = Arrays.stream(numbers.split(delimiters))
+                .filter(s -> !s.isEmpty())
+                .map(Integer::parseInt)
+                .toList();
+
+        var negatives = numbersList.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
+
+        return numbersList.stream().reduce(0, Integer::sum);
     }
 }
