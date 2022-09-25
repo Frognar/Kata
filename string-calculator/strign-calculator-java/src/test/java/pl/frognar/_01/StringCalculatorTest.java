@@ -69,7 +69,7 @@ public class StringCalculatorTest {
                 arguments("//;\n1;2", 3),
                 arguments("//;\n1;2,3", 6),
                 arguments("//[;;]\n1;;2,3", 6),
-                arguments("//[*][;;]\n1;;2*3", 6)
+                arguments("//[g][;;]\n1;;2g3", 6)
         );
     }
 
