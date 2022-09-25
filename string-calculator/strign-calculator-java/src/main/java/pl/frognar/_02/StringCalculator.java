@@ -48,10 +48,7 @@ public class StringCalculator {
         Matcher multipleMatcher = customDelimitersPattern.matcher(numbers);
         if (multipleMatcher.find()) {
             List<String> delimiters = getAllCustomDelimiters(multipleMatcher.group(0));
-            for (var delimiter : delimiters) {
-                numbers = numbers.replaceAll("\\Q%s\\E".formatted(delimiter), ",");
-            }
-
+            numbers = replaceAllDelimitersWithComma(numbers, delimiters);
             return customDelimitersPattern.split(numbers)[1];
         }
 
@@ -66,5 +63,13 @@ public class StringCalculator {
         return Arrays.stream(delimitersGroup.split(" "))
                 .sorted(Comparator.comparingInt(String::length).reversed())
                 .toList();
+    }
+
+    private static String replaceAllDelimitersWithComma(String originalNumbers, List<String> delimiters) {
+        String escapedRegex = "\\Q%s\\E";
+        for (var delimiter : delimiters) {
+            originalNumbers = originalNumbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+        }
+        return originalNumbers;
     }
 }
