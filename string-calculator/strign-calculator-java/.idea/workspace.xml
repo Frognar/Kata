@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[g][;;]\n1;;2g3&quot; 6">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_01/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_01/StringCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_01/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_01/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <recent name="pl.frognar._01" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StringCalculatorTest.regexTests">
+  <component name="RunManager">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -127,75 +127,6 @@
       <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="StringCalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;pl.frognar._01.StringCalculatorTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringCalculatorTest.regexTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;pl.frognar._01.StringCalculatorTest.regexTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;pl.frognar._01.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="strign-calculator-java [:test]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -217,27 +148,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="strign-calculator-java [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -247,21 +157,6 @@
       <option name="AUTO_RESTART" value="false" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Gradle.strign-calculator-java [:test]" />
-      <item itemvalue="Gradle.StringCalculatorTest.regexTests" />
-      <item itemvalue="Gradle.StringCalculatorTest" />
-      <item itemvalue="Gradle.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" />
-      <item itemvalue="Gradle.strign-calculator-java [testClasses]" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.StringCalculatorTest.regexTests" />
-        <item itemvalue="Gradle.StringCalculatorTest" />
-        <item itemvalue="Gradle.StringCalculatorTest.shouldReturnSumOfNumbersSeparatedByCustomDelimiterInString" />
-        <item itemvalue="Gradle.strign-calculator-java [testClasses]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -447,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664098471797</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10">
+      <created>1664100622978</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664100622978</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,7 +382,8 @@
     <MESSAGE value="add &quot;//[;;]\n1;;2,3&quot; -&gt; 6" />
     <MESSAGE value="revert last" />
     <MESSAGE value="add .gradle to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .gradle to .gitignore" />
+    <MESSAGE value="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
