@@ -12,7 +12,7 @@ public class StringCalculator {
         }
         var numbersList = convertToInts(splitAndFilterNumbers(numbers));
         AssertDoesNotContainAnyNegativeValue(numbersList);
-        return numbersList.stream().reduce(0, Integer::sum);
+        return SumNumbers(numbersList);
     }
 
     Stream<String> splitAndFilterNumbers(String numbers) {
@@ -37,5 +37,9 @@ public class StringCalculator {
             throw new NegativeNumbersNotAllowedException(
                     "negatives not allowed: %s".formatted(negativesString));
         }
+    }
+
+    int SumNumbers(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
     }
 }
