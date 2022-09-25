@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StringCalculator {
     private static final String defaultDelimiters = "[,\n]";
@@ -15,29 +14,7 @@ public class StringCalculator {
             return 0;
         }
         numbers = replaceAllCustomDelimitersToCommas(numbers);
-        Stream<Integer> streamOfNumbers =
-                Arrays.stream(numbers.split(defaultDelimiters))
-                        .map(Integer::parseInt);
-        return calculateSumOf(streamOfNumbers.toList());
-    }
-
-    private static int calculateSumOf(List<Integer> numbers) {
-        AssertDoesNotContainAnyNegativeValue(numbers);
-        return numbers.stream()
-                .filter(n -> n <= 1000)
-                .reduce(0, Integer::sum);
-    }
-
-    private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
-        var negatives = numbers.stream().filter(n -> n < 0).toList();
-        if (!negatives.isEmpty()) {
-            String negativesString = negatives
-                    .stream()
-                    .map(String::valueOf)
-                    .collect(Collectors.joining(","));
-            throw new NegativeNumbersNotAllowedException(
-                    "negatives not allowed: %s".formatted(negativesString));
-        }
+        return calculateSumOf(splitAndConvertNumbers(numbers));
     }
 
     private static final Pattern customDelimitersPattern = Pattern.compile("//(\\[?.+]?)+\n");
@@ -68,5 +45,30 @@ public class StringCalculator {
             originalNumbers = originalNumbers.replaceAll(escapedRegex.formatted(delimiter), ",");
         }
         return originalNumbers;
+    }
+
+    private static List<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(defaultDelimiters))
+                .map(Integer::parseInt)
+                .toList();
+    }
+
+    private static int calculateSumOf(List<Integer> numbers) {
+        AssertDoesNotContainAnyNegativeValue(numbers);
+        return numbers.stream()
+                .filter(n -> n <= 1000)
+                .reduce(0, Integer::sum);
+    }
+
+    private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
+        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            String negativesString = negatives
+                    .stream()
+                    .map(String::valueOf)
+                    .collect(Collectors.joining(","));
+            throw new NegativeNumbersNotAllowedException(
+                    "negatives not allowed: %s".formatted(negativesString));
+        }
     }
 }
