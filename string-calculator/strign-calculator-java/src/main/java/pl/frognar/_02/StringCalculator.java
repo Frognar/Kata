@@ -15,19 +15,19 @@ public class StringCalculator {
         return SumNumbers(numbersList);
     }
 
-    Stream<String> splitAndFilterNumbers(String numbers) {
+    static Stream<String> splitAndFilterNumbers(String numbers) {
         return Arrays.stream(numbers.replaceAll("[^0-9-]", ",")
                 .split(","))
                 .filter(s -> !s.isEmpty());
     }
 
-    List<Integer> convertToInts(Stream<String> numbers) {
+    static List<Integer> convertToInts(Stream<String> numbers) {
         return numbers
                 .map(Integer::parseInt)
                 .toList();
     }
 
-    void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
+    static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
         var negatives = numbers.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
             String negativesString = negatives
@@ -39,7 +39,7 @@ public class StringCalculator {
         }
     }
 
-    int SumNumbers(List<Integer> numbers) {
+    static int SumNumbers(List<Integer> numbers) {
         return numbers.stream().reduce(0, Integer::sum);
     }
 }
