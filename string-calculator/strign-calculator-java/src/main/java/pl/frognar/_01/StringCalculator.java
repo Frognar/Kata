@@ -9,18 +9,26 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StringCalculator {
+    private static final String defaultDelimiters = "[,\n]";
     public int add(String numbers) {
         if (numbers.isEmpty()) {
             return 0;
         }
         numbers = replaceAllCustomDelimitersToCommas(numbers);
         Stream<Integer> streamOfNumbers =
-                Arrays.stream(numbers.split("[,\n]"))
+                Arrays.stream(numbers.split(defaultDelimiters))
                         .map(Integer::parseInt);
         return calculateSumOf(streamOfNumbers.toList());
     }
 
     private static int calculateSumOf(List<Integer> numbers) {
+        AssertDoesNotContainAnyNegativeValue(numbers);
+        return numbers.stream()
+                .filter(n -> n <= 1000)
+                .reduce(0, Integer::sum);
+    }
+
+    private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
         var negatives = numbers.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
             String negativesString = negatives
@@ -30,14 +38,10 @@ public class StringCalculator {
             throw new NegativeNumbersNotAllowedException(
                     "negatives not allowed: %s".formatted(negativesString));
         }
-
-        return numbers.stream()
-                .filter(n -> n <= 1000)
-                .reduce(0, Integer::sum);
     }
 
     private static final Pattern customDelimitersPattern = Pattern.compile("//(\\[?.+]?)+\n");
-    static String replaceAllCustomDelimitersToCommas(String numbers) {
+    private static String replaceAllCustomDelimitersToCommas(String numbers) {
         Matcher multipleMatcher = customDelimitersPattern.matcher(numbers);
         if (multipleMatcher.find()) {
             List<String> delimiters = getAllCustomDelimiters(multipleMatcher.group(0));
