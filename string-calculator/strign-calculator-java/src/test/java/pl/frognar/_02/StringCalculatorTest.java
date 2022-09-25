@@ -91,25 +91,4 @@ public class StringCalculatorTest {
     public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByMultipleCustomDelimiter(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
-
-    static Stream<Arguments> customDelimiters() {
-        return Stream.of(
-                arguments("1,2,3", "1,2,3"),
-                arguments("//;\n1;2,3", "1,2,3"),
-                arguments("//;\n1;2\n3", "1,2\n3"),
-                arguments("//[;]\n1;2\n3", "1,2\n3"),
-                arguments("//[;;]\n1;;2;;3", "1,2,3"),
-                arguments("//[;][+]\n1;2+3", "1,2,3"),
-                arguments("//[;;][+]\n1;;2+3", "1,2,3"),
-                arguments("//[;;][g][***]\n1;;2g3***4","1,2,3,4"),
-                arguments("//[;;][g][***]\n1;;2g3****4", "1,2,3,*4"),
-                arguments("//[;;][g][***][***+]\n1;;2g3***+4", "1,2,3,4")
-        );
-    }
-
-    @ParameterizedTest
-    @MethodSource("customDelimiters")
-    public void replaceCustomDelimitersWithCommas(String numbers, String expectedNumbers) {
-        assertEquals(expectedNumbers, StringCalculator.replaceAllCustomDelimitersToCommas(numbers));
-    }
 }

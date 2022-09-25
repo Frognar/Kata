@@ -18,29 +18,8 @@ public class StringCalculator {
         return SumNumbers(numbersList);
     }
 
-    private static final String defaultDelimiters = "[,\n]";
-    private static List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
-    }
-
-    private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
-        List<Integer> negatives = numbers.stream().filter(n -> n < 0).toList();
-        if (!negatives.isEmpty()) {
-            String negativesString = negatives
-                    .stream()
-                    .map(String::valueOf)
-                    .collect(Collectors.joining(","));
-            throw new NegativeNumbersNotAllowedException(
-                    "negatives not allowed: %s".formatted(negativesString));
-        }
-    }
-
-    private static int SumNumbers(List<Integer> numbers) {
-        return numbers.stream().reduce(0, Integer::sum);
-    }
-
     private static final Pattern customDelimitersPattern = Pattern.compile("//(\\[?.+]?)+\n");
-    static String replaceAllCustomDelimitersToCommas(String numbers) {
+    private static String replaceAllCustomDelimitersToCommas(String numbers) {
         Matcher multipleMatcher = customDelimitersPattern.matcher(numbers);
         if (multipleMatcher.find()) {
             List<String> delimiters = getAllCustomDelimiters(multipleMatcher.group(0));
@@ -67,5 +46,26 @@ public class StringCalculator {
             originalNumbers = originalNumbers.replaceAll(escapedRegex.formatted(delimiter), ",");
         }
         return originalNumbers;
+    }
+
+    private static final String defaultDelimiters = "[,\n]";
+    private static List<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
+    }
+
+    private static void AssertDoesNotContainAnyNegativeValue(List<Integer> numbers) {
+        List<Integer> negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            String negativesString = negatives
+                    .stream()
+                    .map(String::valueOf)
+                    .collect(Collectors.joining(","));
+            throw new NegativeNumbersNotAllowedException(
+                    "negatives not allowed: %s".formatted(negativesString));
+        }
+    }
+
+    private static int SumNumbers(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
     }
 }
