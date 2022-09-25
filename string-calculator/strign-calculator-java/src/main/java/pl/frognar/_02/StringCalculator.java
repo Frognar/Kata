@@ -66,7 +66,7 @@ public class StringCalculator {
     }
 
     private static String replaceAllDelimitersWithComma(String originalNumbers, List<String> delimiters) {
-        String escapedRegex = "\\Q%s\\E";
+        final String escapedRegex = "\\Q%s\\E";
         for (var delimiter : delimiters) {
             originalNumbers = originalNumbers.replaceAll(escapedRegex.formatted(delimiter), ",");
         }
