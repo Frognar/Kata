@@ -51,8 +51,16 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    @Test
-    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter() {
-        assertEquals(6, calculator.add("//;\n1;2;3"));
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByCustomDelimiter() {
+        return Stream.of(
+                arguments("//;\n1;2;3", 6),
+                arguments("//!\n1!2!3", 6)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByCustomDelimiter")
+    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
     }
 }
