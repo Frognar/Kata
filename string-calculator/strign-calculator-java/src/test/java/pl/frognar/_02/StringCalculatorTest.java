@@ -79,4 +79,18 @@ public class StringCalculatorTest {
         Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add(numbers));
         assertEquals(expectedMessage, exception.getMessage());
     }
+
+
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByMultipleCustomDelimiter() {
+        return Stream.of(
+                arguments("//[;][+]\n1;2+3", 6)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByMultipleCustomDelimiter")
+    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByMultipleCustomDelimiter(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
+    }
+
 }
