@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;2&quot; -&gt; 2">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" afterDir="false" />
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;1,2&quot; -&gt; 3">
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -378,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664103459852</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add &quot;1,2&quot; -&gt; 3">
+      <created>1664103634235</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664103634235</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,7 +400,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add &quot;1&quot; -&gt; 1" />
-    <MESSAGE value="add &quot;1,2&quot; -&gt; 3" />
     <MESSAGE value="add &quot;2,3&quot; -&gt; 5" />
     <MESSAGE value="add &quot;1,2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;1\n2&quot; -&gt; 3" />
@@ -412,7 +417,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="add &quot;&quot; -&gt; 0" />
     <MESSAGE value="add &quot;2&quot; -&gt; 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;2&quot; -&gt; 2" />
+    <MESSAGE value="add &quot;1,2&quot; -&gt; 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;1,2&quot; -&gt; 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

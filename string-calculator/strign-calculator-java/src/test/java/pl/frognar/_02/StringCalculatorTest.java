@@ -32,9 +32,16 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    @Test
-    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByComma() {
-        var calculator = new StringCalculator();
-        assertEquals(3, calculator.add("1,2"));
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByComma() {
+        return Stream.of(
+                arguments("1,2", 3),
+                arguments("1,2,3", 6)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByComma")
+    public void shouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByComma(String numbers, int expectedValue) {
+        var calculator = new StringCalculator();assertEquals(expectedValue, calculator.add(numbers));
     }
 }
