@@ -8,8 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class StringCalculatorTest {
@@ -80,7 +79,6 @@ public class StringCalculatorTest {
         assertEquals(expectedMessage, exception.getMessage());
     }
 
-
     static Stream<Arguments> stringWithMultipleNumbersSeparatedByMultipleCustomDelimiter() {
         return Stream.of(
                 arguments("//[;][+]\n1;2+3", 6),
@@ -94,4 +92,24 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
+    static Stream<Arguments> customDelimiters() {
+        return Stream.of(
+                arguments("1,2,3", "1,2,3"),
+                arguments("//;\n1;2,3", "1,2,3"),
+                arguments("//;\n1;2\n3", "1,2\n3"),
+                arguments("//[;]\n1;2\n3", "1,2\n3"),
+                arguments("//[;;]\n1;;2;;3", "1,2,3"),
+                arguments("//[;][+]\n1;2+3", "1,2,3"),
+                arguments("//[;;][+]\n1;;2+3", "1,2,3"),
+                arguments("//[;;][g][***]\n1;;2g3***4","1,2,3,4"),
+                arguments("//[;;][g][***]\n1;;2g3****4", "1,2,3,*4"),
+                arguments("//[;;][g][***][***+]\n1;;2g3***+4", "1,2,3,4")
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("customDelimiters")
+    public void replaceCustomDelimitersWithCommas(String numbers, String expectedNumbers) {
+        assertEquals(expectedNumbers, StringCalculator.replaceAllCustomDelimitersToCommas(numbers));
+    }
 }

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="replace custom delimiters tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_02/StringCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_02/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +83,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "D:/Kata/string-calculator/strign-calculator-java/src/main/java/pl/frognar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "trusted.hosts"
   }
 }]]></component>
@@ -91,7 +95,7 @@
       <recent name="pl.frognar._01" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.strign-calculator-java [:test]">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -128,6 +132,29 @@
       <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="StringCalculatorTest.testMultiple" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pl.frognar._02.StringCalculatorTest.testMultiple&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="strign-calculator-java [:test]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -158,6 +185,15 @@
       <option name="AUTO_RESTART" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.strign-calculator-java [:test]" />
+      <item itemvalue="Gradle.StringCalculatorTest.testMultiple" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.StringCalculatorTest.testMultiple" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -484,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add &quot;1&quot; -&gt; 1" />
     <MESSAGE value="add &quot;2,3&quot; -&gt; 5" />
     <MESSAGE value="add &quot;1\n2&quot; -&gt; 3" />
     <MESSAGE value="add &quot;//;\n1;2&quot; -&gt; 3" />
@@ -509,7 +544,8 @@
     <MESSAGE value="add &quot;-1&quot; throws exception with -1 in message" />
     <MESSAGE value="add &quot;-1-2&quot; throws exception with -1 and -2 in message" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="replace custom delimiters tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace custom delimiters tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
