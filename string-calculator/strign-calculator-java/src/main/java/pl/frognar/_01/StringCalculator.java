@@ -17,6 +17,7 @@ public class StringCalculator {
             return 0;
         }
 
+        numbers = numbers.replaceAll("[*+]", "A");
         String delimiters = "[,\\n]";
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
