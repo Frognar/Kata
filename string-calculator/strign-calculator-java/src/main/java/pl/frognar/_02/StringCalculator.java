@@ -7,12 +7,9 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-        String delimiters = "[,\n]";
-        if (numbers.startsWith("//")) {
-            delimiters += "|" + numbers.charAt(2);
-            numbers = numbers.substring(numbers.indexOf("\n") + 1);
-        }
-        var numbersList = numbers.split(delimiters);
-        return Arrays.stream(numbersList).map(Integer::parseInt).reduce(0, Integer::sum);
+        numbers = numbers.replaceAll("[^0-9]", ",");
+        String delimiters = ",";
+        var numbersList = Arrays.stream(numbers.split(delimiters)).filter(s -> !s.isEmpty());
+        return numbersList.map(Integer::parseInt).reduce(0, Integer::sum);
     }
 }
