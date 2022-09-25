@@ -47,14 +47,7 @@ public class StringCalculator {
     static String replaceAllCustomDelimitersToCommas(String numbers) {
         Matcher multipleMatcher = customDelimitersPattern.matcher(numbers);
         if (multipleMatcher.find()) {
-            String allDelimiters = multipleMatcher.group(0);
-            allDelimiters = allDelimiters.substring(2, allDelimiters.length() - 1);
-            allDelimiters = allDelimiters.replaceAll("\\Q][\\E", " ");
-            allDelimiters = allDelimiters.replaceAll("\\Q[\\E", "");
-            allDelimiters = allDelimiters.replaceAll("\\Q]\\E", "");
-            List<String> delimiters = Arrays.stream(allDelimiters.split(" "))
-                    .sorted(Comparator.comparingInt(String::length).reversed())
-                    .toList();
+            List<String> delimiters = getAllCustomDelimiters(multipleMatcher.group(0));
             for (var delimiter : delimiters) {
                 numbers = numbers.replaceAll("\\Q%s\\E".formatted(delimiter), ",");
             }
@@ -63,5 +56,15 @@ public class StringCalculator {
         }
 
         return numbers;
+    }
+
+    private static List<String> getAllCustomDelimiters(String delimitersGroup) {
+        delimitersGroup = delimitersGroup.substring(2, delimitersGroup.length() - 1);
+        delimitersGroup = delimitersGroup.replaceAll("\\Q][\\E", " ");
+        delimitersGroup = delimitersGroup.replaceAll("\\Q[\\E", "");
+        delimitersGroup = delimitersGroup.replaceAll("\\Q]\\E", "");
+        return Arrays.stream(delimitersGroup.split(" "))
+                .sorted(Comparator.comparingInt(String::length).reversed())
+                .toList();
     }
 }
