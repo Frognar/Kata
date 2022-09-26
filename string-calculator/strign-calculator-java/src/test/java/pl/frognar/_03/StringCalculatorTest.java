@@ -29,7 +29,7 @@ public class StringCalculatorTest {
         assertEquals(0, calculator.add(null));
     }
 
-    static Stream<Arguments> stringWithOneNumber() {
+    private static Stream<Arguments> stringWithOneNumber() {
         return Stream.of(
                 arguments("1", 1),
                 arguments("2", 2)
@@ -42,8 +42,16 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    @Test
-    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByComma() {
-        assertEquals(3, calculator.add("1,2"));
+    static Stream<Arguments> stringWithMultipleNumbersSeparatedByComma() {
+        return Stream.of(
+                arguments("1,2", 3),
+                arguments("1,2,3", 6)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByComma")
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByComma(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
     }
 }
