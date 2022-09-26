@@ -23,7 +23,12 @@ public class StringCalculator {
     private void AssertDoesNotContainsNegativeValues(List<Integer> numbers) {
         var negatives = numbers.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
-            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+            String negativesString = negatives
+                    .stream()
+                    .map(String::valueOf)
+                    .collect(Collectors.joining(","));
+            throw new NegativeNumbersNotAllowedException(
+                    "negatives not allowed: %s".formatted(negativesString));
         }
     }
 
