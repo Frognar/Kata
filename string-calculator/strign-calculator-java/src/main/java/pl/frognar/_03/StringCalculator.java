@@ -10,6 +10,13 @@ public class StringCalculator {
             return 0;
         }
 
+        if (numbers.startsWith("//")) {
+            char customDelimiter = numbers.charAt(2);
+            String delimiter = "%s".formatted(customDelimiter);
+            numbers = numbers.replaceAll(delimiter, ",");
+            numbers = numbers.substring(4);
+        }
+
         var numberList = splitAndConvertNumbers(numbers);
         AssertDoesNotContainsNegativeValues(numberList);
         return calculateSumOf(numberList);

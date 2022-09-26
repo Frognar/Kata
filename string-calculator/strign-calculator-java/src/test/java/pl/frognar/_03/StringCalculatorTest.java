@@ -70,4 +70,9 @@ public class StringCalculatorTest {
         Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add(numbers));
         assertEquals(expectedMessage, exception.getMessage());
     }
+
+    @Test
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter() {
+        assertEquals(6, calculator.add("//;\n1;2;3"));
+    }
 }
