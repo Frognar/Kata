@@ -2,7 +2,7 @@ package pl.frognar._03;
 
 public class StringCalculator {
     public int add(String numbers) {
-        if (numbers.isEmpty()) {
+        if (numbers == null || numbers.isEmpty()) {
             return 0;
         }
 
