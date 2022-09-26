@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,20 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00030" summary="add &quot;2&quot; -&gt; 2">
-      <created>1664103459852</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1664103459852</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add &quot;1,2&quot; -&gt; 3">
-      <created>1664103634235</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1664103634235</updated>
     </task>
     <task id="LOCAL-00032" summary="add &quot;1,2,3&quot; -&gt; 6">
       <created>1664103696204</created>
@@ -576,7 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664163904773</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="add &quot;//[+][++]\n1+2++3&quot; -&gt; 6">
+      <created>1664163974018</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163974018</updated>
+    </task>
+    <task id="LOCAL-00080" summary="refactor">
+      <created>1664164069556</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1664164069556</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -591,7 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add &quot;//[;;]\n1;;2,3&quot; -&gt; 6" />
     <MESSAGE value="revert last" />
     <MESSAGE value="add .gradle to .gitignore" />
     <MESSAGE value="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10" />
@@ -613,10 +612,11 @@
     <MESSAGE value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//!\n1!2!3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add &quot;//[;][+]\n1;2+3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;//[+][++]\n1+2++3&quot; -&gt; 6" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
