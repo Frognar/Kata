@@ -11,12 +11,20 @@ public class StringCalculator {
         }
 
         var numberList = splitAndConvertNumbers(numbers);
+        AssertDoesNotContainsNegativeValues(numberList);
         return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
     private List<Integer> splitAndConvertNumbers(String numbers) {
         return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).collect(Collectors.toList());
+    }
+
+    private void AssertDoesNotContainsNegativeValues(List<Integer> numbers) {
+        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
     }
 
     private int calculateSumOf(List<Integer> numbers) {
