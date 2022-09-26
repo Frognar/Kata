@@ -18,13 +18,14 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
+    private static final String escapedRegex = "\\Q%s\\E";
     private String replaceCustomDelimitersWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var customDelimiter = customDelimiterMatcher.group(1);
-            customDelimiter = customDelimiter.replaceAll("\\Q[\\E", "");
-            customDelimiter = customDelimiter.replaceAll("\\Q]\\E", "");
-            numbers = numbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
+            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("["), "");
+            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]"), "");
+            numbers = numbers.replaceAll(escapedRegex.formatted(customDelimiter), ",");
             return customDelimiterPattern.split(numbers)[1];
         }
         return numbers;
