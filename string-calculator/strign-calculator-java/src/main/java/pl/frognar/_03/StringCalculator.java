@@ -1,7 +1,8 @@
 package pl.frognar._03;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -10,11 +11,15 @@ public class StringCalculator {
         }
 
         var numberList = splitAndConvertNumbers(numbers);
-        return numberList.reduce(0, Integer::sum);
+        return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
-    private Stream<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt);
+    private List<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).collect(Collectors.toList());
+    }
+
+    private int calculateSumOf(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
     }
 }

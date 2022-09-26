@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add null -&gt; 0">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/NegativeNumbersNotAllowedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +96,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.frognar._03" />
       <recent name="pl.frognar._02" />
       <recent name="pl.frognar._01" />
     </key>
@@ -205,55 +209,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add &quot;//;\n1;2&quot; -&gt; 3">
-      <created>1664053184636</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053184636</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add &quot;//;\n1;2,3&quot; -&gt; 6">
-      <created>1664053202178</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053202178</updated>
-    </task>
-    <task id="LOCAL-00013" summary="refactor">
-      <created>1664053357117</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053357117</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add &quot;//;;\n1;;2,3&quot; -&gt; 6">
-      <created>1664053715199</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053715199</updated>
-    </task>
-    <task id="LOCAL-00015" summary="refactor">
-      <created>1664053783670</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053783670</updated>
-    </task>
-    <task id="LOCAL-00016" summary="refactor">
-      <created>1664053850451</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053850451</updated>
-    </task>
-    <task id="LOCAL-00017" summary="refactor">
-      <created>1664053906428</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1664053906428</updated>
     </task>
     <task id="LOCAL-00018" summary="refactor">
       <created>1664054186672</created>
@@ -549,7 +504,56 @@
       <option name="project" value="LOCAL" />
       <updated>1664161528069</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="add &quot;2&quot; -&gt; 2">
+      <created>1664161572755</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161572755</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add &quot;1,2&quot; -&gt; 3">
+      <created>1664161703438</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161703438</updated>
+    </task>
+    <task id="LOCAL-00062" summary="add &quot;1,2,3&quot; -&gt; 6">
+      <created>1664161750001</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161750001</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add &quot;1,2,3&quot; -&gt; 6">
+      <created>1664161851567</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161851567</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add &quot;1,2\n3&quot; -&gt; 6">
+      <created>1664161888540</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161888540</updated>
+    </task>
+    <task id="LOCAL-00065" summary="refactor">
+      <created>1664161941865</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161941866</updated>
+    </task>
+    <task id="LOCAL-00066" summary="refactor">
+      <created>1664162023796</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1664162023796</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -564,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add &quot;//;\n1;2&quot; -&gt; 3" />
     <MESSAGE value="add &quot;//;\n1;2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//;;\n1;;2,3&quot; -&gt; 6" />
     <MESSAGE value="throw on negatives" />
@@ -573,9 +576,6 @@
     <MESSAGE value="revert last" />
     <MESSAGE value="add .gradle to .gitignore" />
     <MESSAGE value="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10" />
-    <MESSAGE value="add &quot;2&quot; -&gt; 2" />
-    <MESSAGE value="add &quot;1,2&quot; -&gt; 3" />
-    <MESSAGE value="add &quot;1,2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;1\n2,3&quot; -&gt; 6" />
     <MESSAGE value="refactor tests" />
     <MESSAGE value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
@@ -584,12 +584,16 @@
     <MESSAGE value="add &quot;-1&quot; throws exception with -1 in message" />
     <MESSAGE value="add &quot;-1-2&quot; throws exception with -1 and -2 in message" />
     <MESSAGE value="replace custom delimiters tests" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="init" />
     <MESSAGE value="add &quot;&quot; -&gt; 0" />
     <MESSAGE value="add &quot;1&quot; -&gt; 1" />
     <MESSAGE value="add null -&gt; 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="add null -&gt; 0" />
+    <MESSAGE value="add &quot;2&quot; -&gt; 2" />
+    <MESSAGE value="add &quot;1,2&quot; -&gt; 3" />
+    <MESSAGE value="add &quot;1,2,3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;1,2\n3&quot; -&gt; 6" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
