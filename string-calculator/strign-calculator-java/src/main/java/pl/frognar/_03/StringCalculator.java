@@ -1,6 +1,7 @@
 package pl.frognar._03;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,7 +27,7 @@ public class StringCalculator {
             customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("]["), " ");
             customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("["), "");
             customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("]"), "");
-            var allCustomDelimiters = customDelimiters.split(" ");
+            var allCustomDelimiters = Arrays.stream(customDelimiters.split(" ")).sorted(Comparator.comparingInt(String::length).reversed()).toList();
             for (var delimiter: allCustomDelimiters) {
                 numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
             }

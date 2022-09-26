@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,7 @@
       <recent name="pl.frognar._01" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StringCalculatorTest.addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter">
+  <component name="RunManager" selected="Gradle.strign-calculator-java [:test]">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -231,20 +232,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00028" summary="init">
-      <created>1664103252839</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1664103252839</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add &quot;&quot; -&gt; 0">
-      <created>1664103398171</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1664103398171</updated>
     </task>
     <task id="LOCAL-00030" summary="add &quot;2&quot; -&gt; 2">
       <created>1664103459852</created>
@@ -575,7 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664163742634</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="add &quot;//[;][+]\n1;2+3&quot; -&gt; 6">
+      <created>1664163861621</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163861621</updated>
+    </task>
+    <task id="LOCAL-00078" summary="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6">
+      <created>1664163904773</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163904773</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -590,8 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="throw on negatives" />
-    <MESSAGE value="add &quot;-1,-2&quot; throws &quot;negatives not allowed: -1,-2&quot;" />
     <MESSAGE value="add &quot;//[;;]\n1;;2,3&quot; -&gt; 6" />
     <MESSAGE value="revert last" />
     <MESSAGE value="add .gradle to .gitignore" />
@@ -615,18 +614,9 @@
     <MESSAGE value="add &quot;//!\n1!2!3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add &quot;//[;][+]\n1;2+3&quot; -&gt; 6" />
+    <MESSAGE value="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//[;][++]\n1;2++3&quot; -&gt; 6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
