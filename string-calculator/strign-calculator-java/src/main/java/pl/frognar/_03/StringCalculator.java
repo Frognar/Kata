@@ -17,15 +17,19 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
+    private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)+\n");
     private static final String escapedRegex = "\\Q%s\\E";
     private String replaceCustomDelimitersWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
-            var customDelimiter = customDelimiterMatcher.group(1);
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("["), "");
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]"), "");
-            numbers = numbers.replaceAll(escapedRegex.formatted(customDelimiter), ",");
+            var customDelimiters = customDelimiterMatcher.group(1);
+            customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("]["), " ");
+            customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("["), "");
+            customDelimiters = customDelimiters.replaceAll(escapedRegex.formatted("]"), "");
+            var allCustomDelimiters = customDelimiters.split(" ");
+            for (var delimiter: allCustomDelimiters) {
+                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+            }
             return customDelimiterPattern.split(numbers)[1];
         }
         return numbers;

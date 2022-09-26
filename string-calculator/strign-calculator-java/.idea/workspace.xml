@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java" afterDir="false" />
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_03/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,27 +231,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00025" summary="add .gradle to .gitignore">
-      <created>1664098471797</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1664098471797</updated>
-    </task>
-    <task id="LOCAL-00026" summary="add &quot;//[**][+][;;;]\n1**2+3;;;4&quot; 10">
-      <created>1664100622978</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1664100622978</updated>
-    </task>
-    <task id="LOCAL-00027" summary="refactor">
-      <created>1664102561616</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1664102561616</updated>
     </task>
     <task id="LOCAL-00028" summary="init">
       <created>1664103252839</created>
@@ -575,7 +554,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664162982881</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="refactor">
+      <created>1664163411797</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163411797</updated>
+    </task>
+    <task id="LOCAL-00075" summary="refactor">
+      <created>1664163697819</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163697819</updated>
+    </task>
+    <task id="LOCAL-00076" summary="refactor">
+      <created>1664163742634</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1664163742634</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,10 +612,21 @@
     <MESSAGE value="add &quot;-1&quot; throw exception with -1 in message" />
     <MESSAGE value="add &quot;-1,-2&quot; throw exception with -1 and -2 in message" />
     <MESSAGE value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add &quot;//!\n1!2!3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pl/frognar/_03/StringCalculator.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
