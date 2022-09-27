@@ -56,9 +56,17 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    @Test
-    public void addShouldThrowExceptionWhenPassedNegativeValues() {
-        Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add("-1"));
-        assertEquals("negatives not allowed: -1", exception.getMessage());
+    private static Stream<Arguments> stringWithNegativeNumbersAndExceptionMessage() {
+        return Stream.of(
+                arguments("-1", "negatives not allowed: -1"),
+                arguments("-1,-2", "negatives not allowed: -1,-2")
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithNegativeNumbersAndExceptionMessage")
+    public void addShouldThrowExceptionWhenPassedNegativeValues(String numbers, String expectedMessage) {
+        Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add(numbers));
+        assertEquals(expectedMessage, exception.getMessage());
     }
 }
