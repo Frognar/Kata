@@ -19,20 +19,18 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
-    private static final String escapedRegex = "\\Q%s\\E";
     private String replaceCustomDelimitersWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
-            for (var delimiter: allCustomDelimiters) {
-                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
-            }
+            numbers = replaceAllDelimitersWithComma(numbers, allCustomDelimiters);
             return customDelimiterPattern.split(numbers)[1];
         }
 
         return numbers;
     }
 
+    private static final String escapedRegex = "\\Q%s\\E";
     private static List<String> getAllCustomDelimiters(String delimitersGroup) {
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
@@ -41,6 +39,14 @@ public class StringCalculator {
                 .sorted(Comparator.comparingInt(String::length).reversed())
                 .toList();
     }
+
+    private static String replaceAllDelimitersWithComma(String numbers, List<String> delimiters) {
+        for (var delimiter : delimiters) {
+            numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+        }
+        return numbers;
+    }
+
 
     private static final String defaultDelimiters = "[,\n]";
     private List<Integer> splitAndConvertNumbers(String numbers) {
