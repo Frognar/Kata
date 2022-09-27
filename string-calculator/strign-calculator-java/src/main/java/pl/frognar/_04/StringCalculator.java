@@ -9,15 +9,21 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty()) {
             return 0;
         }
+        numbers = replaceCustomDelimitersWithComma(numbers);
+        var numberList = splitAndConvertNumbers(numbers);
+        assertDoesNotContainsNegativeValues(numberList);
+        return calculateSumOf(numberList);
+    }
+
+    private String replaceCustomDelimitersWithComma(String numbers) {
         if (numbers.startsWith("//")) {
             char customDelimiter = numbers.charAt(2);
             String delimiter = "%s".formatted(customDelimiter);
             numbers = numbers.replaceAll(delimiter, ",");
-            numbers = numbers.substring(4);
+            return numbers.substring(4);
         }
-        var numberList = splitAndConvertNumbers(numbers);
-        assertDoesNotContainsNegativeValues(numberList);
-        return calculateSumOf(numberList);
+
+        return numbers;
     }
 
     private static final String defaultDelimiters = "[,\n]";
