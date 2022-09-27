@@ -9,11 +9,15 @@ public class StringCalculator {
             return 0;
         }
         var numberList = splitAndConvertNumbers(numbers);
-        return numberList.stream().reduce(0, Integer::sum);
+        return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
     private List<Integer> splitAndConvertNumbers(String numbers) {
         return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
+    }
+
+    private int calculateSumOf(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
     }
 }
