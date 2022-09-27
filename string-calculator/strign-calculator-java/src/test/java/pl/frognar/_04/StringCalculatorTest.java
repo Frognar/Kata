@@ -70,8 +70,15 @@ public class StringCalculatorTest {
         assertEquals(expectedMessage, exception.getMessage());
     }
 
-    @Test
-    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter() {
-        assertEquals(6, calculator.add("//;\n1;2;3"));
+    private static Stream<Arguments> stringWithMultipleNumbersSeparatedByCustomDelimiter() {
+        return Stream.of(
+                arguments("//;\n1;2;3", 6)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("stringWithMultipleNumbersSeparatedByCustomDelimiter")
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
     }
 }
