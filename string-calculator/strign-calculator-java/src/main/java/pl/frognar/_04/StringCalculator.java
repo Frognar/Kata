@@ -17,11 +17,13 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final Pattern customDelimiterPattern = Pattern.compile("//\\[?([^]]+)]?\n");
+    private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
     private String replaceCustomDelimitersWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var customDelimiter = customDelimiterMatcher.group(1);
+            customDelimiter = customDelimiter.replaceAll("\\Q[\\E", "");
+            customDelimiter = customDelimiter.replaceAll("\\Q]\\E", "");
             numbers = numbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
             return customDelimiterPattern.split(numbers)[1];
         }
