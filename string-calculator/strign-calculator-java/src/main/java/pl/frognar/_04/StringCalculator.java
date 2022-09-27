@@ -9,16 +9,20 @@ public class StringCalculator {
             return 0;
         }
         var numberList = splitAndConvertNumbers(numbers);
-        var negatives = numberList.stream().filter(n -> n < 0).toList();
-        if (!negatives.isEmpty()) {
-            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
-        }
+        assertDoesNotContainsNegativeValues(numberList);
         return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
     private List<Integer> splitAndConvertNumbers(String numbers) {
         return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
+    }
+
+    private void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
+        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
     }
 
     private int calculateSumOf(List<Integer> numbers) {
