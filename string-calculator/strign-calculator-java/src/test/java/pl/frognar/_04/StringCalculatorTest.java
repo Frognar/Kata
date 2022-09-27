@@ -41,7 +41,7 @@ public class StringCalculatorTest {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
-    static Stream<Arguments> stringWithMultipleNumbersSeparatedByDefaultDelimiter() {
+    private static Stream<Arguments> stringWithMultipleNumbersSeparatedByDefaultDelimiter() {
         return Stream.of(
                 arguments("1,2", 3),
                 arguments("1,2,3", 6),
