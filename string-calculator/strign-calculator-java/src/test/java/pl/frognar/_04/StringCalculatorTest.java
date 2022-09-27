@@ -1,19 +1,25 @@
 package pl.frognar._04;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
+    StringCalculator calculator;
+
+    @BeforeEach
+    public void setUp() {
+        calculator = new StringCalculator();
+    }
+
     @Test
     public void addShouldReturnZeroForEmptyString() {
-        StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
 
     @Test
     public void addShouldReturnZeroForNull() {
-        StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(null));
     }
 }
