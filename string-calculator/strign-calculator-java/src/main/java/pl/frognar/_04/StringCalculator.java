@@ -1,14 +1,19 @@
 package pl.frognar._04;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class StringCalculator {
-    private static final String defaultDelimiters = "[,\n]";
     public int add(String numbers) {
         if (numbers == null || numbers.isEmpty()) {
             return 0;
         }
-        var numberList = numbers.split(defaultDelimiters);
-        return Arrays.stream(numberList).map(Integer::parseInt).reduce(0, Integer::sum);
+        var numberList = splitAndConvertNumbers(numbers);
+        return numberList.stream().reduce(0, Integer::sum);
+    }
+
+    private static final String defaultDelimiters = "[,\n]";
+    private List<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(defaultDelimiters)).map(Integer::parseInt).toList();
     }
 }
