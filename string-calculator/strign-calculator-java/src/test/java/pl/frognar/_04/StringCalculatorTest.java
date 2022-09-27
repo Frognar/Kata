@@ -88,7 +88,8 @@ public class StringCalculatorTest {
         return Stream.of(
                 arguments("//[;][+]\n1;2+3", 6),
                 arguments("//[;][++]\n1;2++3", 6),
-                arguments("//[+][++]\n1+2++3", 6)
+                arguments("//[+][++]\n1+2++3", 6),
+                arguments("//[*][**+]\n1**+2*3,4\n5", 15)
         );
     }
 
