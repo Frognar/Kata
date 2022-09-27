@@ -9,6 +9,10 @@ public class StringCalculator {
             return 0;
         }
         var numberList = splitAndConvertNumbers(numbers);
+        var negatives = numberList.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
         return calculateSumOf(numberList);
     }
 
