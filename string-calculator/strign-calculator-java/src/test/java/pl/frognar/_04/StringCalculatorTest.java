@@ -10,4 +10,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    public void addShouldReturnZeroForNull() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(0, calculator.add(null));
+    }
 }
