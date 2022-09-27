@@ -23,13 +23,7 @@ public class StringCalculator {
     private String replaceCustomDelimitersWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
-            var customDelimiter = customDelimiterMatcher.group(1);
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]["), " ");
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("["), "");
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]"), "");
-            var allCustomDelimiters = Arrays.stream(customDelimiter.split(" "))
-                    .sorted(Comparator.comparingInt(String::length).reversed())
-                    .toList();
+            var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
             for (var delimiter: allCustomDelimiters) {
                 numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
             }
@@ -37,6 +31,15 @@ public class StringCalculator {
         }
 
         return numbers;
+    }
+
+    private static List<String> getAllCustomDelimiters(String delimitersGroup) {
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
+        return Arrays.stream(delimitersGroup.split(" "))
+                .sorted(Comparator.comparingInt(String::length).reversed())
+                .toList();
     }
 
     private static final String defaultDelimiters = "[,\n]";
