@@ -23,9 +23,13 @@ public class StringCalculator {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var customDelimiter = customDelimiterMatcher.group(1);
+            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]["), " ");
             customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("["), "");
             customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]"), "");
-            numbers = numbers.replaceAll(escapedRegex.formatted(customDelimiter), ",");
+            var allCustomDelimiters = customDelimiter.split(" ");
+            for (var delimiter: allCustomDelimiters) {
+                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+            }
             return customDelimiterPattern.split(numbers)[1];
         }
 
