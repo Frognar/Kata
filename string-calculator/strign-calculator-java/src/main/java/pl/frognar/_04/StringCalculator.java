@@ -19,8 +19,11 @@ public class StringCalculator {
         if (numbers.startsWith("//")) {
             char customDelimiter = numbers.charAt(2);
             String delimiter = "%s".formatted(customDelimiter);
+            if (customDelimiter == '[') {
+                delimiter = numbers.substring(3, numbers.indexOf(']'));
+            }
             numbers = numbers.replaceAll(delimiter, ",");
-            return numbers.substring(4);
+            return numbers.substring(numbers.indexOf('\n') + 1);
         }
 
         return numbers;
