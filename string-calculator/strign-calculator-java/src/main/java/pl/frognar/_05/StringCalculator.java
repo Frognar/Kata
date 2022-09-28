@@ -11,12 +11,13 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private Stream<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(","))
+    private static final String delimiter = ",";
+    private static Stream<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(delimiter))
                 .map(Integer::parseInt);
     }
 
-    private int calculateSumOf(Stream<Integer> numbers) {
+    private static int calculateSumOf(Stream<Integer> numbers) {
         return numbers.reduce(0, Integer::sum);
     }
 }
