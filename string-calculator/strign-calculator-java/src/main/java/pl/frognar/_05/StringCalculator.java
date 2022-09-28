@@ -2,7 +2,6 @@ package pl.frognar._05;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -14,7 +13,7 @@ public class StringCalculator {
             throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
         }
 
-        return calculateSumOf(numberList.stream());
+        return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
@@ -24,7 +23,7 @@ public class StringCalculator {
                 .toList();
     }
 
-    private static int calculateSumOf(Stream<Integer> numbers) {
-        return numbers.reduce(0, Integer::sum);
+    private static int calculateSumOf(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
     }
 }
