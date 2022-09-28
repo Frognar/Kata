@@ -8,12 +8,15 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty())
             return 0;
         var numberList = splitAndConvertNumbers(numbers);
-        var negatives = numberList.stream().filter(n -> n < 0);
+        assertDoesNotContainsNegativeValues(numberList);
+        return calculateSumOf(numberList);
+    }
+
+    private static void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
+        var negatives = numbers.stream().filter(n -> n < 0);
         if (negatives.findAny().isPresent()) {
             throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
         }
-
-        return calculateSumOf(numberList);
     }
 
     private static final String defaultDelimiters = "[,\n]";
