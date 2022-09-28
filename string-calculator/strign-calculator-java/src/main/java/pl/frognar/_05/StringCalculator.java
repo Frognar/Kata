@@ -23,7 +23,7 @@ public class StringCalculator {
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
             String numbers = replaceAllCustomDelimitersWithComma(originalNumbers, allCustomDelimiters);
-            return numbers.substring(numbers.indexOf("\n") + 1);
+            return customDelimiterPattern.split(numbers)[1];
         }
 
         return originalNumbers;
