@@ -8,15 +8,21 @@ public class StringCalculator {
     public int add(String numbers) {
         if (numbers == null || numbers.isEmpty())
             return 0;
-        if (numbers.startsWith("//")) {
-            char customDelimiter = numbers.charAt(2);
-            String delimiter = "%s".formatted(customDelimiter);
-            numbers = numbers.replaceAll(delimiter, ",");
-            numbers = numbers.substring(4);
-        }
+        numbers = replaceCustomDelimiterWithComma(numbers);
         var numberList = splitAndConvertNumbers(numbers);
         assertDoesNotContainsNegativeValues(numberList);
         return calculateSumOf(numberList);
+    }
+
+    private static String replaceCustomDelimiterWithComma(String originalNumbers) {
+        if (originalNumbers.startsWith("//")) {
+            char customDelimiter = originalNumbers.charAt(2);
+            String delimiter = "%s".formatted(customDelimiter);
+            String numbers = originalNumbers.replaceAll(delimiter, ",");
+            return numbers.substring(4);
+        }
+
+        return originalNumbers;
     }
 
     private static void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
