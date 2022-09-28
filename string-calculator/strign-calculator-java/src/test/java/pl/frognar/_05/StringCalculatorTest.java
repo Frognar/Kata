@@ -10,4 +10,9 @@ public class StringCalculatorTest {
         var calculator = new StringCalculator();
         assertEquals(0, calculator.add(null));
     }
+    @Test
+    public void addShouldReturnZeroForEmptyString() {
+        var calculator = new StringCalculator();
+        assertEquals(0, calculator.add(""));
+    }
 }
