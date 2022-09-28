@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;//[+][++]\n1+2++3&quot; -&gt; 6">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,13 +258,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00101" summary="add &quot;//;\n1;2;3&quot; -&gt; 6">
-      <created>1664250734785</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1664250734785</updated>
     </task>
     <task id="LOCAL-00102" summary="refactor">
       <created>1664250777428</created>
@@ -602,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664338713921</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="refactor">
+      <created>1664338749642</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1664338749642</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -640,9 +640,9 @@
     <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[*]\n1*2*3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;][+]\n1;2+3&quot; -&gt; 6" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add &quot;//[+][++]\n1+2++3&quot; -&gt; 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;//[+][++]\n1+2++3&quot; -&gt; 6" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

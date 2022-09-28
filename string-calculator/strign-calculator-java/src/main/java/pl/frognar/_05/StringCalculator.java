@@ -45,6 +45,13 @@ public class StringCalculator {
         return numbers;
     }
 
+    private static final String defaultDelimiters = "[,\n]";
+    private static List<Integer> splitAndConvertNumbers(String numbers) {
+        return Arrays.stream(numbers.split(defaultDelimiters))
+                .map(Integer::parseInt)
+                .toList();
+    }
+
     private static void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
         var negatives = numbers.stream().filter(n -> n < 0).toList();
         if (!negatives.isEmpty()) {
@@ -54,13 +61,6 @@ public class StringCalculator {
             throw new NegativeNumbersNotAllowedException(
                     "negatives not allowed: %s".formatted(negativesString));
         }
-    }
-
-    private static final String defaultDelimiters = "[,\n]";
-    private static List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(defaultDelimiters))
-                .map(Integer::parseInt)
-                .toList();
     }
 
     private static int calculateSumOf(List<Integer> numbers) {
