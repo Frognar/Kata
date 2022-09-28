@@ -1,6 +1,7 @@
 package pl.frognar._05;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,7 +18,6 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
-    private static final String escapedRegex = "\\Q%s\\E";
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
@@ -29,11 +29,14 @@ public class StringCalculator {
         return originalNumbers;
     }
 
+    private static final String escapedRegex = "\\Q%s\\E";
     private static List<String> getAllCustomDelimiters(String delimitersGroup) {
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
-        return Arrays.stream(delimitersGroup.split(" ")).toList();
+        return Arrays.stream(delimitersGroup.split(" "))
+                .sorted(Comparator.comparingInt(String::length).reversed())
+                .toList();
     }
 
     private static String replaceAllCustomDelimitersWithComma(String numbers, List<String> customDelimiters) {
