@@ -11,9 +11,9 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final String delimiter = ",";
+    private static final String defaultDelimiters = "[,\n]";
     private static Stream<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(delimiter))
+        return Arrays.stream(numbers.split(defaultDelimiters))
                 .map(Integer::parseInt);
     }
 
