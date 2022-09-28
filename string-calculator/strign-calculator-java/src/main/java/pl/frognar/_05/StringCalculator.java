@@ -16,12 +16,19 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final Pattern customDelimiterPattern = Pattern.compile("//\\[?([^]]+)]?\n");
+    private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             String customDelimiter = customDelimiterMatcher.group(1);
-            String numbers = originalNumbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
+            customDelimiter = customDelimiter.replaceAll("\\Q%s\\E".formatted("]["), " ");
+            customDelimiter = customDelimiter.replaceAll("\\Q%s\\E".formatted("["), "");
+            customDelimiter = customDelimiter.replaceAll("\\Q%s\\E".formatted("]"), "");
+            var allCustomDelimiters = customDelimiter.split(" ");
+            String numbers = originalNumbers;
+            for (var delimiter: allCustomDelimiters) {
+                numbers = numbers.replaceAll("\\Q%s\\E".formatted(delimiter), ",");
+            }
             return numbers.substring(numbers.indexOf("\n") + 1);
         }
 
