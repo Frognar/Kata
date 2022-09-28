@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="refactor">
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;-1,-2&quot; throw exception with -1 and -2 in message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_05/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_05/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +161,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="StringCalculatorTest.addShouldThrowExceptionWhenPassedNegativeValues" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;pl.frognar._05.StringCalculatorTest.addShouldThrowExceptionWhenPassedNegativeValues&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="StringCalculatorTest.testMultiple" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,11 +239,13 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.strign-calculator-java [:test]" />
+      <item itemvalue="Gradle.StringCalculatorTest.addShouldThrowExceptionWhenPassedNegativeValues" />
       <item itemvalue="Gradle.StringCalculatorTest.addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter" />
       <item itemvalue="Gradle.StringCalculatorTest.testMultiple" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StringCalculatorTest.addShouldThrowExceptionWhenPassedNegativeValues" />
         <item itemvalue="Gradle.StringCalculatorTest.addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter" />
         <item itemvalue="Gradle.StringCalculatorTest.testMultiple" />
       </list>
@@ -234,27 +259,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00085" summary="add null -&gt; 0">
-      <created>1664250058221</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1664250058221</updated>
-    </task>
-    <task id="LOCAL-00086" summary="refactor">
-      <created>1664250077757</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1664250077757</updated>
-    </task>
-    <task id="LOCAL-00087" summary="add &quot;1&quot; -&gt; 1">
-      <created>1664250119883</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1664250119883</updated>
     </task>
     <task id="LOCAL-00088" summary="refactor">
       <created>1664250174117</created>
@@ -578,7 +582,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664337196180</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="refactor">
+      <created>1664337233794</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1664337233794</updated>
+    </task>
+    <task id="LOCAL-00135" summary="refactor">
+      <created>1664337297089</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1664337297089</updated>
+    </task>
+    <task id="LOCAL-00136" summary="add &quot;-1,-2&quot; throw exception with -1 and -2 in message">
+      <created>1664337455776</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1664337455776</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -600,7 +625,6 @@
     <MESSAGE value="replace custom delimiters tests" />
     <MESSAGE value="add &quot;//[+][++]\n1+2++3,4\n5&quot; -&gt; 15" />
     <MESSAGE value="add &quot;1,2\n3&quot; -&gt; 6" />
-    <MESSAGE value="add &quot;-1,-2&quot; throw exception with -1 and -2 in message" />
     <MESSAGE value="add &quot;//;\n1;2;3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//!\n1!2!3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6" />
@@ -618,7 +642,8 @@
     <MESSAGE value="add &quot;1\n2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;-1&quot; throw exception with -1 in message" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="add &quot;-1,-2&quot; throw exception with -1 and -2 in message" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;-1,-2&quot; throw exception with -1 and -2 in message" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
