@@ -16,13 +16,13 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final Pattern customDelimiterPattern = Pattern.compile("//(.)\n");
+    private static final Pattern customDelimiterPattern = Pattern.compile("//\\[?([^]]+)]?\n");
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             String customDelimiter = customDelimiterMatcher.group(1);
             String numbers = originalNumbers.replaceAll(customDelimiter, ",");
-            return numbers.substring(4);
+            return numbers.substring(numbers.indexOf("\n") + 1);
         }
 
         return originalNumbers;
