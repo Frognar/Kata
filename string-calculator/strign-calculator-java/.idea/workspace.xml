@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;1&quot; -&gt; 1">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/frognar/_05/StringCalculator.java" afterDir="false" />
+    <list default="true" id="078339e4-c2a9-4619-ba66-0ac8cb4937b0" name="Changes" comment="add &quot;2&quot; -&gt; 2">
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/frognar/_05/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/frognar/_05/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,27 +233,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664025869102</updated>
-    </task>
-    <task id="LOCAL-00072" summary="add &quot;//!\n1!2!3&quot; -&gt; 6">
-      <created>1664162826736</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1664162826736</updated>
-    </task>
-    <task id="LOCAL-00073" summary="add &quot;//[;!;]\n1;!;2;!;3&quot; -&gt; 6">
-      <created>1664162982881</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1664162982881</updated>
-    </task>
-    <task id="LOCAL-00074" summary="refactor">
-      <created>1664163411797</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1664163411797</updated>
     </task>
     <task id="LOCAL-00075" summary="refactor">
       <created>1664163697819</created>
@@ -577,7 +556,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664336192936</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="refactor">
+      <created>1664336204321</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1664336204322</updated>
+    </task>
+    <task id="LOCAL-00122" summary="refactor">
+      <created>1664336281179</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1664336281179</updated>
+    </task>
+    <task id="LOCAL-00123" summary="add &quot;2&quot; -&gt; 2">
+      <created>1664336292159</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1664336292159</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -599,7 +599,6 @@
     <MESSAGE value="add &quot;-1-2&quot; throws exception with -1 and -2 in message" />
     <MESSAGE value="replace custom delimiters tests" />
     <MESSAGE value="add &quot;//[+][++]\n1+2++3,4\n5&quot; -&gt; 15" />
-    <MESSAGE value="add &quot;2&quot; -&gt; 2" />
     <MESSAGE value="add &quot;1,2&quot; -&gt; 3" />
     <MESSAGE value="add &quot;1,2,3&quot; -&gt; 6" />
     <MESSAGE value="add &quot;1,2\n3&quot; -&gt; 6" />
@@ -615,9 +614,10 @@
     <MESSAGE value="init" />
     <MESSAGE value="add null -&gt; 0" />
     <MESSAGE value="add &quot;&quot; -&gt; 0" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add &quot;1&quot; -&gt; 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="add &quot;1&quot; -&gt; 1" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="add &quot;2&quot; -&gt; 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;2&quot; -&gt; 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
