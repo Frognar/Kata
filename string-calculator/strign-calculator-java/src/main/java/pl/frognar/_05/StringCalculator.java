@@ -2,6 +2,7 @@ package pl.frognar._05;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StringCalculator {
     public int add(String numbers) {
@@ -13,9 +14,13 @@ public class StringCalculator {
     }
 
     private static void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
-        var negatives = numbers.stream().filter(n -> n < 0);
-        if (negatives.findAny().isPresent()) {
-            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            String negativesString = negatives.stream()
+                    .map(String::valueOf)
+                    .collect(Collectors.joining(","));
+            throw new NegativeNumbersNotAllowedException(
+                    "negatives not allowed: %s".formatted(negativesString));
         }
     }
 
