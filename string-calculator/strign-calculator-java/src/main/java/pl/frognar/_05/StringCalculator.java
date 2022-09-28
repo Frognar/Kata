@@ -22,10 +22,7 @@ public class StringCalculator {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
-            String numbers = originalNumbers;
-            for (var delimiter: allCustomDelimiters) {
-                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
-            }
+            String numbers = replaceAllCustomDelimitersWithComma(originalNumbers, allCustomDelimiters);
             return numbers.substring(numbers.indexOf("\n") + 1);
         }
 
@@ -37,6 +34,12 @@ public class StringCalculator {
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
         return Arrays.stream(delimitersGroup.split(" ")).toList();
+    }
+
+    private static String replaceAllCustomDelimitersWithComma(String numbers, List<String> customDelimiters) {
+        for (var delimiter: customDelimiters)
+            numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+        return numbers;
     }
 
     private static void assertDoesNotContainsNegativeValues(List<Integer> numbers) {
