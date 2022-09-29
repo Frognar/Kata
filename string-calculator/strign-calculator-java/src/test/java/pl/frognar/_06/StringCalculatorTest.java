@@ -22,4 +22,9 @@ public class StringCalculatorTest {
     public void addShouldReturnZeroForEmptyString() {
         assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    public void addShouldReturnNumberForStringWithOneNumber() {
+        assertEquals(1, calculator.add("1"));
+    }
 }
