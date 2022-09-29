@@ -12,9 +12,9 @@ public class StringCalculator {
     }
 
 
-    private static final String delimiter = ",";
+    private static final String defaultDelimiters = "[,\n]";
     private List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(delimiter))
+        return Arrays.stream(numbers.split(defaultDelimiters))
                 .map(Integer::parseInt)
                 .toList();
     }
