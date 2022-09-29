@@ -84,4 +84,9 @@ public class StringCalculatorTest {
     public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersSeparatedByCustomDelimiter(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
+
+    @Test
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersSeparatedByMultipleCustomDelimiters() {
+        assertEquals(6, calculator.add("//[;][+]\n1;2+3"));
+    }
 }
