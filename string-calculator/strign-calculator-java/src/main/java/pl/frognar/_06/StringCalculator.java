@@ -2,6 +2,8 @@ package pl.frognar._06;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class StringCalculator {
@@ -14,12 +16,13 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
+    private static final Pattern customDelimiterPattern = Pattern.compile("//(.)\n");
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
-        if (originalNumbers.startsWith("//")) {
-            char customDelimiter = originalNumbers.charAt(2);
-            String delimiter = "%s".formatted(customDelimiter);
-            String numbers = originalNumbers.replaceAll(delimiter, ",");
-            return numbers.substring(4);
+        Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
+        if (customDelimiterMatcher.find()) {
+            String customDelimiter = customDelimiterMatcher.group(1);
+            String numbers = originalNumbers.replaceAll(customDelimiter, ",");
+            return customDelimiterPattern.split(numbers)[1];
         }
 
         return originalNumbers;
