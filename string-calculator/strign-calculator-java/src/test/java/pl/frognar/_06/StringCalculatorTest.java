@@ -2,11 +2,12 @@ package pl.frognar._06;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
     @Test
-    public void shouldFail() {
-        fail();
+    public void addShouldReturnZeroForNull() {
+        var calculator = new StringCalculator();
+        assertEquals(0, calculator.add(null));
     }
 }
