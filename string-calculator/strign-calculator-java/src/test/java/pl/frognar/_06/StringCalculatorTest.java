@@ -2,8 +2,14 @@ package pl.frognar._06;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class StringCalculatorTest {
     private StringCalculator calculator;
@@ -23,8 +29,15 @@ public class StringCalculatorTest {
         assertEquals(0, calculator.add(""));
     }
 
-    @Test
-    public void addShouldReturnNumberForStringWithOneNumber() {
-        assertEquals(1, calculator.add("1"));
+    private static Stream<Arguments> oneNumber() {
+        return Stream.of(
+                arguments("1", 1)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("oneNumber")
+    public void addShouldReturnNumberForStringWithOneNumber(String numbers, int expectedValue) {
+        assertEquals(expectedValue, calculator.add(numbers));
     }
 }
