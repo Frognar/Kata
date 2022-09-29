@@ -53,7 +53,7 @@ public class StringCalculatorTest {
 
     @ParameterizedTest
     @MethodSource("multipleNumbersSeparatedByDefaultDelimiter")
-    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByDefaultDelimiter(String numbers, int expectedValue) {
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersSeparatedByDefaultDelimiter(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 
@@ -81,7 +81,7 @@ public class StringCalculatorTest {
 
     @ParameterizedTest
     @MethodSource("numbersSeparatedByCustomDelimiter")
-    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersInStringSeparatedByCustomDelimiter(String numbers, int expectedValue) {
+    public void addShouldReturnSumOfNumbersForStringWithMultipleNumbersSeparatedByCustomDelimiter(String numbers, int expectedValue) {
         assertEquals(expectedValue, calculator.add(numbers));
     }
 }
