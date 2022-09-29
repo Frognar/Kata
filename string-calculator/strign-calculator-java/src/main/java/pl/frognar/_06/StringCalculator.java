@@ -16,7 +16,7 @@ public class StringCalculator {
         return calculateSumOf(numberList);
     }
 
-    private static final Pattern customDelimiterPattern = Pattern.compile("//(.)\n");
+    private static final Pattern customDelimiterPattern = Pattern.compile("//\\[?([^]]+)]?\n");
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
