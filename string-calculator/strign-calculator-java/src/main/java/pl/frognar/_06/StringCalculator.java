@@ -17,11 +17,12 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//\\[?([^]]+)]?\n");
+    private static final String escapedRegex = "\\Q%s\\E";
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             String customDelimiter = customDelimiterMatcher.group(1);
-            String numbers = originalNumbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
+            String numbers = originalNumbers.replaceAll(escapedRegex.formatted(customDelimiter), ",");
             return customDelimiterPattern.split(numbers)[1];
         }
 
