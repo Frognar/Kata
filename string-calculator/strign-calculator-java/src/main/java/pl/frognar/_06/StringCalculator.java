@@ -64,6 +64,6 @@ public class StringCalculator {
     }
 
     private int calculateSumOf(List<Integer> numbers) {
-        return numbers.stream().reduce(0, Integer::sum);
+        return numbers.stream().filter(n -> n < 1001).reduce(0, Integer::sum);
     }
 }
