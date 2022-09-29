@@ -21,11 +21,7 @@ public class StringCalculator {
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
-            String customDelimiter = customDelimiterMatcher.group(1);
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]["), " ");
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("["), "");
-            customDelimiter = customDelimiter.replaceAll(escapedRegex.formatted("]"), "");
-            var allCustomDelimiters = customDelimiter.split(" ");
+            var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
             String numbers = originalNumbers;
             for (var delimiter: allCustomDelimiters) {
                 numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
@@ -34,6 +30,13 @@ public class StringCalculator {
         }
 
         return originalNumbers;
+    }
+
+    private static List<String> getAllCustomDelimiters(String delimitersGroup) {
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
+        delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
+        return Arrays.stream(delimitersGroup.split(" ")).toList();
     }
 
     private static final String defaultDelimiters = "[,\n]";
