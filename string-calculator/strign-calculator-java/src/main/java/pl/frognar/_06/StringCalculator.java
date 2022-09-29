@@ -17,26 +17,29 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
-    private static final String escapedRegex = "\\Q%s\\E";
     private static String replaceCustomDelimiterWithComma(String originalNumbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
-            String numbers = originalNumbers;
-            for (var delimiter: allCustomDelimiters) {
-                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
-            }
+            String numbers = replaceAllCustomDelimitersWithComma(originalNumbers, allCustomDelimiters);
             return customDelimiterPattern.split(numbers)[1];
         }
 
         return originalNumbers;
     }
 
+    private static final String escapedRegex = "\\Q%s\\E";
     private static List<String> getAllCustomDelimiters(String delimitersGroup) {
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
         return Arrays.stream(delimitersGroup.split(" ")).toList();
+    }
+
+    private static String replaceAllCustomDelimitersWithComma(String numbers, List<String> customDelimiters) {
+        for (var delimiter: customDelimiters)
+            numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+        return numbers;
     }
 
     private static final String defaultDelimiters = "[,\n]";
