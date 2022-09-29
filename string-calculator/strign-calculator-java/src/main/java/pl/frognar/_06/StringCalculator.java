@@ -12,8 +12,9 @@ public class StringCalculator {
     }
 
 
+    private static final String delimiter = ",";
     private List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(","))
+        return Arrays.stream(numbers.split(delimiter))
                 .map(Integer::parseInt)
                 .toList();
     }
