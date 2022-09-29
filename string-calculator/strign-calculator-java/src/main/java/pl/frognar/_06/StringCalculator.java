@@ -21,7 +21,7 @@ public class StringCalculator {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(originalNumbers);
         if (customDelimiterMatcher.find()) {
             String customDelimiter = customDelimiterMatcher.group(1);
-            String numbers = originalNumbers.replaceAll(customDelimiter, ",");
+            String numbers = originalNumbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
             return customDelimiterPattern.split(numbers)[1];
         }
 
