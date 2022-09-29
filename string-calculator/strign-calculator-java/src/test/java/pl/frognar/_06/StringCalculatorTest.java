@@ -31,7 +31,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> oneNumber() {
         return Stream.of(
-                arguments("1", 1)
+                arguments("1", 1),
+                arguments("2", 2)
         );
     }
 
