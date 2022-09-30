@@ -41,4 +41,9 @@ public class StringCalculatorTest {
     public void addShouldReturnNumberForSingleNumberInString(String numbers, int expectedSum) {
         assertEquals(expectedSum, calculator.add(numbers));
     }
+
+    @Test
+    public void addShouldReturnSumOfNumbersSeparatedByCommaInString() {
+        assertEquals(6, calculator.add("2,4"));
+    }
 }
