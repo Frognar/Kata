@@ -8,10 +8,7 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty())
             return 0;
         var numbersList = splitAndConvertNumbers(numbers);
-        var negatives = numbersList.stream().filter(n -> n < 0).toList();
-        if (!negatives.isEmpty()) {
-            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
-        }
+        assertNotContainsNegativeNumbers(numbersList);
         return calculateSumOfNumbers(numbersList);
     }
 
@@ -19,6 +16,13 @@ public class StringCalculator {
     private static List<Integer> splitAndConvertNumbers(String numbers) {
         return Arrays.stream(numbers.split(defaultDelimiters))
                 .map(Integer::parseInt).toList();
+    }
+
+    private static void assertNotContainsNegativeNumbers(List<Integer> numbers) {
+        var negatives = numbers.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
     }
 
     private static int calculateSumOfNumbers(List<Integer> numbers) {
