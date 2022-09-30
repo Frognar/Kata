@@ -8,14 +8,20 @@ public class StringCalculator {
     public int add(String numbers) {
         if (numbers == null || numbers.isEmpty())
             return 0;
-        if (numbers.startsWith("//")) {
-            String customDelimiter = "%s".formatted(numbers.charAt(2));
-            numbers = numbers.substring(numbers.indexOf('\n') + 1);
-            numbers = numbers.replaceAll(customDelimiter, ",");
-        }
+        numbers = replaceCustomDelimiterWithComma(numbers);
         var numbersList = splitAndConvertNumbers(numbers);
         assertNotContainsNegativeNumbers(numbersList);
         return calculateSumOfNumbers(numbersList);
+    }
+
+    private static String replaceCustomDelimiterWithComma(String numbers) {
+        if (numbers.startsWith("//")) {
+            String customDelimiter = "%s".formatted(numbers.charAt(2));
+            numbers = numbers.substring(numbers.indexOf('\n') + 1);
+            return numbers.replaceAll(customDelimiter, ",");
+        }
+
+        return numbers;
     }
 
     private static final String defaultDelimiters = "[,\n]";
