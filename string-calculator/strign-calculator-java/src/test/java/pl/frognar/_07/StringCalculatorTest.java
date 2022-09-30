@@ -85,8 +85,15 @@ public class StringCalculatorTest {
         assertEquals(expectedSum, calculator.add(numbers));
     }
 
-    @Test
-    public void addShouldReturnSumOfNumbersSeparatedByMultipleCustomDelimitersInString() {
-        assertEquals(10, calculator.add("//[*][+]\n5+3*2"));
+    private static Stream<Arguments> numbersSeparatedByMultipleCustomDelimiters() {
+        return Stream.of(
+                arguments("//[*][+]\n5+3*2", 10)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("numbersSeparatedByMultipleCustomDelimiters")
+    public void addShouldReturnSumOfNumbersSeparatedByMultipleCustomDelimitersInString(String numbers, int expectedSum) {
+        assertEquals(expectedSum, calculator.add(numbers));
     }
 }
