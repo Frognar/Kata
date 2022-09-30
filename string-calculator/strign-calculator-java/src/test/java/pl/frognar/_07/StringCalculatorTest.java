@@ -31,7 +31,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> singleNumberInString() {
         return Stream.of(
-                arguments("1", 1)
+                arguments("1", 1),
+                arguments("5", 5)
         );
     }
 
