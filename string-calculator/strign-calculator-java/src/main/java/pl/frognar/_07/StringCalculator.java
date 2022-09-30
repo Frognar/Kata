@@ -8,6 +8,10 @@ public class StringCalculator {
         if (numbers == null || numbers.isEmpty())
             return 0;
         var numbersList = splitAndConvertNumbers(numbers);
+        var negatives = numbersList.stream().filter(n -> n < 0).toList();
+        if (!negatives.isEmpty()) {
+            throw new NegativeNumbersNotAllowedException("negatives not allowed: -1");
+        }
         return calculateSumOfNumbers(numbersList);
     }
 

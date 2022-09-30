@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class StringCalculatorTest {
@@ -54,5 +55,11 @@ public class StringCalculatorTest {
     @MethodSource("multipleNumbersSeparatedByDefaultDelimiter")
     public void addShouldReturnSumOfNumbersSeparatedByDefaultDelimiterInString(String numbers, int expectedSum) {
         assertEquals(expectedSum, calculator.add(numbers));
+    }
+
+    @Test
+    public void addShouldThrowExceptionForNegativeNumberInString() {
+        Exception exception = assertThrows(NegativeNumbersNotAllowedException.class, () -> calculator.add("-1"));
+        assertEquals("negatives not allowed: -1", exception.getMessage());
     }
 }
