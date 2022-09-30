@@ -44,7 +44,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> multipleNumbersSeparatedByComma() {
         return Stream.of(
-                arguments("2,4", 6)
+                arguments("2,4", 6),
+                arguments("2,4,6", 12)
         );
     }
 
