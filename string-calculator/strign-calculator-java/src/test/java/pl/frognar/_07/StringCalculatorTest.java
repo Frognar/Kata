@@ -87,7 +87,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> numbersSeparatedByMultipleCustomDelimiters() {
         return Stream.of(
-                arguments("//[*][+]\n5+3*2", 10)
+                arguments("//[*][+]\n5+3*2", 10),
+                arguments("//[+][+++]\n5+7+++2", 14)
         );
     }
 
