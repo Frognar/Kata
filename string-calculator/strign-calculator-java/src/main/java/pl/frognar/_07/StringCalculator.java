@@ -22,11 +22,10 @@ public class StringCalculator {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
-            numbers = customDelimiterPattern.split(numbers)[1];
             for (var delimiter : allCustomDelimiters) {
                 numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
             }
-            return numbers;
+            return customDelimiterPattern.split(numbers)[1];
         }
 
         return numbers;
