@@ -17,25 +17,28 @@ public class StringCalculator {
     }
 
     private static final Pattern customDelimiterPattern = Pattern.compile("//(\\[?.+]?)\n");
-    private static final String escapedRegex = "\\Q%s\\E";
     private static String replaceCustomDelimiterWithComma(String numbers) {
         Matcher customDelimiterMatcher = customDelimiterPattern.matcher(numbers);
         if (customDelimiterMatcher.find()) {
             var allCustomDelimiters = getAllCustomDelimiters(customDelimiterMatcher.group(1));
-            for (var delimiter : allCustomDelimiters) {
-                numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
-            }
+            numbers = replaceAllCustomDelimitersWithComma(numbers, allCustomDelimiters);
             return customDelimiterPattern.split(numbers)[1];
         }
-
         return numbers;
     }
 
+    private static final String escapedRegex = "\\Q%s\\E";
     private static List<String> getAllCustomDelimiters(String delimitersGroup) {
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]["), " ");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("["), "");
         delimitersGroup = delimitersGroup.replaceAll(escapedRegex.formatted("]"), "");
         return Arrays.stream(delimitersGroup.split(" ")).toList();
+    }
+
+    private static String replaceAllCustomDelimitersWithComma(String numbers, List<String> customDelimiters) {
+        for (var delimiter : customDelimiters)
+            numbers = numbers.replaceAll(escapedRegex.formatted(delimiter), ",");
+        return numbers;
     }
 
     private static final String defaultDelimiters = "[,\n]";
