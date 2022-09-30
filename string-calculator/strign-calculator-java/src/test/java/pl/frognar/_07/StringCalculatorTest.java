@@ -97,4 +97,9 @@ public class StringCalculatorTest {
     public void addShouldReturnSumOfNumbersSeparatedByMultipleCustomDelimitersInString(String numbers, int expectedSum) {
         assertEquals(expectedSum, calculator.add(numbers));
     }
+
+    @Test
+    public void addShouldIgnoreAllNumbersGreaterThanThousandInString() {
+        assertEquals(1004, calculator.add("1000,3,1,1001"));
+    }
 }
