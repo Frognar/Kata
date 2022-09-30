@@ -12,7 +12,7 @@ public class StringCalculator {
     }
 
     private static List<Integer> splitAndConvertNumbers(String numbers) {
-        return Arrays.stream(numbers.split(","))
+        return Arrays.stream(numbers.split("[,\n]"))
                 .map(Integer::parseInt).toList();
     }
 
