@@ -59,7 +59,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> negativeNumbersAndErrorMessage() {
         return Stream.of(
-                arguments("-1", "negatives not allowed: -1")
+                arguments("-1", "negatives not allowed: -1"),
+                arguments("-1,2\n-5,3", "negatives not allowed: -1,-5")
         );
     }
 
