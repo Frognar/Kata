@@ -22,7 +22,7 @@ public class StringCalculator {
         if (customDelimiterMatcher.find()) {
             String customDelimiter = customDelimiterMatcher.group(1);
             numbers = customDelimiterPattern.split(numbers)[1];
-            return numbers.replaceAll(customDelimiter, ",");
+            return numbers.replaceAll("\\Q%s\\E".formatted(customDelimiter), ",");
         }
 
         return numbers;

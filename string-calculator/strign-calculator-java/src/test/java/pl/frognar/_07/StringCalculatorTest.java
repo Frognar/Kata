@@ -73,7 +73,8 @@ public class StringCalculatorTest {
 
     private static Stream<Arguments> numbersSeparatedByCustomDelimiter() {
         return Stream.of(
-                arguments("//;\n5;4;1", 10)
+                arguments("//;\n5;4;1", 10),
+                arguments("//*\n5*4\n1", 10)
         );
     }
 
