@@ -8,6 +8,11 @@ public class StringCalculator {
     public int add(String numbers) {
         if (numbers == null || numbers.isEmpty())
             return 0;
+        if (numbers.startsWith("//")) {
+            String customDelimiter = "%s".formatted(numbers.charAt(2));
+            numbers = numbers.substring(numbers.indexOf('\n') + 1);
+            numbers = numbers.replaceAll(customDelimiter, ",");
+        }
         var numbersList = splitAndConvertNumbers(numbers);
         assertNotContainsNegativeNumbers(numbersList);
         return calculateSumOfNumbers(numbersList);
