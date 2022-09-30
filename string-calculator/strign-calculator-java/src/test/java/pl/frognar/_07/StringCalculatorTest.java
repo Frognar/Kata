@@ -16,4 +16,10 @@ public class StringCalculatorTest {
         var calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    public void addShouldReturnNumberForSingleNumberInString() {
+        var calculator = new StringCalculator();
+        assertEquals(1, calculator.add("1"));
+    }
 }
