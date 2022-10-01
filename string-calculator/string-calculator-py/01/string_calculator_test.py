@@ -14,7 +14,8 @@ class StringCalculatorTestCase(unittest.TestCase):
         self.assertEqual(0, self.calculator.add(''))
 
     @parameterized.expand([
-        ['2', 2]
+        ['2', 2],
+        ['4', 4],
     ])
     def test_add_one_number_in_string_should_return_this_number(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
