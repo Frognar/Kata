@@ -9,6 +9,8 @@ class StringCalculator:
         number_list = cls.split_and_convert_to_numbers(numbers)
         return sum(number_list)
 
+    default_delimiters = '[,\n]'
+
     @classmethod
     def split_and_convert_to_numbers(cls, numbers: str):
-        return [int(x) for x in split('[,\n]', numbers)]
+        return [int(x) for x in split(cls.default_delimiters, numbers)]
