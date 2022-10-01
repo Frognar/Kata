@@ -15,7 +15,7 @@ class StringCalculator:
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
         number_list = cls.split_and_convert_to_numbers(numbers)
         cls.assert_not_contains_negatives(number_list)
-        return sum(number_list)
+        return sum([n for n in number_list if n <= 1000])
 
     @classmethod
     def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
