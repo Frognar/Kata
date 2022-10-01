@@ -21,15 +21,18 @@ class StringCalculator:
     def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
         custom_delimiter_search = search('//(.+)\n', numbers)
         if custom_delimiter_search:
-            custom_delimiter_group = custom_delimiter_search.group(1).replace(' ', '')
-            custom_delimiter_group = custom_delimiter_group.replace('][', ' ')
-            custom_delimiter_group = custom_delimiter_group.replace('[', '')
-            custom_delimiter_group = custom_delimiter_group.replace(']', '')
-            all_custom_delimiters = custom_delimiter_group.split(' ')
+            all_custom_delimiters = cls.find_all_custom_delimiters(custom_delimiter_search.group(1))
             numbers = numbers[custom_delimiter_search.end():]
             for custom_delimiter in all_custom_delimiters:
                 numbers = numbers.replace(custom_delimiter, ',')
         return numbers
+
+    @classmethod
+    def find_all_custom_delimiters(cls, delimiters_group: str) -> List[str]:
+        delimiters_group = delimiters_group.replace('][', ' ')
+        delimiters_group = delimiters_group.replace('[', '')
+        delimiters_group = delimiters_group.replace(']', '')
+        return delimiters_group.split(' ')
 
     default_delimiters = '[,\n]'
 
