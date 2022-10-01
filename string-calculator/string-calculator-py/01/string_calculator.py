@@ -4,4 +4,4 @@ class StringCalculator:
     def add(cls, numbers: str) -> int:
         if not numbers:
             return 0
-        return 2
+        return int(numbers)
