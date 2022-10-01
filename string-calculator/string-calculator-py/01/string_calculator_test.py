@@ -39,7 +39,8 @@ class StringCalculatorTestCase(unittest.TestCase):
         self.assertTrue(ex_message in str(error.exception))
 
     @parameterized.expand([
-        ['//;\n5;2;6', 13]
+        ['//;\n5;2;6', 13],
+        ['//*\n5*2*6', 13]
     ])
     def test_add_multiple_numbers_separated_by_custom_delimiter_should_return_sum_of_that_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
