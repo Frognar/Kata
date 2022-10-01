@@ -22,9 +22,10 @@ class StringCalculatorTestCase(unittest.TestCase):
 
     @parameterized.expand([
         ['2,4', 6],
-        ['2,4,8', 14]
+        ['2,4,8', 14],
+        ['2,4\n8', 14]
     ])
-    def test_add_multiple_numbers_separated_by_comma_should_return_sum_of_that_numbers(self, numbers: str, expected_sum: int):
+    def test_add_multiple_numbers_separated_by_default_delimiter_should_return_sum_of_that_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
 
