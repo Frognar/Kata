@@ -20,6 +20,12 @@ class StringCalculatorTestCase(unittest.TestCase):
     def test_add_one_number_in_string_should_return_this_number(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
+    @parameterized.expand([
+        ['2,4', 6]
+    ])
+    def test_add_multiple_numbers_separated_by_comma_should_return_sum_of_that_numbers(self, numbers: str, expected_sum: int):
+        self.assertEqual(expected_sum, self.calculator.add(numbers))
+
 
 if __name__ == '__main__':
     unittest.main()
