@@ -53,6 +53,9 @@ class StringCalculatorTestCase(unittest.TestCase):
     def test_add_multiple_numbers_separated_by_multiple_custom_delimiter_should_return_sum_of_that_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
+    def test_add_numbers_should_sum_all_numbers_that_are_lower_than_thousand(self):
+        self.assertEqual(1014, self.calculator.add('1001,1000,6,8'))
+
 
 if __name__ == '__main__':
     unittest.main()
