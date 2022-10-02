@@ -1,4 +1,7 @@
 import unittest
+
+from parameterized import parameterized
+
 from string_calculator import StringCalculator
 
 
@@ -12,8 +15,11 @@ class StringCalculatorTestCase(unittest.TestCase):
     def test_add_empty_should_return_zero(self):
         self.assertEqual(0, self.calculator.add(''))
 
-    def test_add_one_number_in_string_should_return_this_number(self):
-        self.assertEqual(4, self.calculator.add('4'))
+    @parameterized.expand([
+        ['4', 4]
+    ])
+    def test_add_one_number_in_string_should_return_this_number(self, numbers: str, expected_sum: int):
+        self.assertEqual(expected_sum, self.calculator.add(numbers))
 
 
 if __name__ == '__main__':
