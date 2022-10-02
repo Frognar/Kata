@@ -1,4 +1,5 @@
 from re import split
+from typing import List
 
 
 class StringCalculator:
@@ -7,4 +8,8 @@ class StringCalculator:
         if not numbers:
             return 0
         number_list = [int(n) for n in split('[,\n]', numbers)]
-        return sum(number_list)
+        return cls.calculate_sum_of(number_list)
+
+    @staticmethod
+    def calculate_sum_of(numbers: List[int]) -> int:
+        return sum(numbers)
