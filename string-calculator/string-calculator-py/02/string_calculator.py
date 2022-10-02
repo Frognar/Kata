@@ -12,7 +12,8 @@ class StringCalculator:
 
     @staticmethod
     def split_and_convert_to_numbers(numbers):
-        return [int(n) for n in split('[,\n]', numbers)]
+        default_delimiters = '[,\n]'
+        return [int(n) for n in split(default_delimiters, numbers)]
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:
