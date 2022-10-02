@@ -7,8 +7,12 @@ class StringCalculator:
     def add(cls, numbers: str) -> int:
         if not numbers:
             return 0
-        number_list = [int(n) for n in split('[,\n]', numbers)]
+        number_list = cls.split_and_convert_to_numbers(numbers)
         return cls.calculate_sum_of(number_list)
+
+    @staticmethod
+    def split_and_convert_to_numbers(numbers):
+        return [int(n) for n in split('[,\n]', numbers)]
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:
