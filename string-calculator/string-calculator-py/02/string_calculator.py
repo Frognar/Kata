@@ -13,14 +13,18 @@ class StringCalculator:
         if not numbers:
             return 0
         number_list = cls.split_and_convert_to_numbers(numbers)
-        if any(n < 0 for n in number_list):
-            raise NegativesNotAllowedError('negatives not allowed: -4')
+        cls.assert_not_contains_negatives(number_list)
         return cls.calculate_sum_of(number_list)
 
     @staticmethod
-    def split_and_convert_to_numbers(numbers):
+    def split_and_convert_to_numbers(numbers: str) -> List[int]:
         default_delimiters = '[,\n]'
         return [int(n) for n in split(default_delimiters, numbers)]
+
+    @staticmethod
+    def assert_not_contains_negatives(numbers: List[int]) -> None:
+        if any(n < 0 for n in numbers):
+            raise NegativesNotAllowedError('negatives not allowed: -4')
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:
