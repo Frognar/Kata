@@ -45,7 +45,8 @@ class StringCalculatorTestCase(unittest.TestCase):
 
     @parameterized.expand([
         ['//;\n1;1\n0', 2],
-        ['//[;]\n1;2\n3', 6]
+        ['//[;]\n1;2\n3', 6],
+        ['//[++]\n1,2\n2++3', 8],
     ])
     def test_add_multiple_numbers_separated_by_custom_delimiter_should_return_sum_of_that_numbers(
             self,
