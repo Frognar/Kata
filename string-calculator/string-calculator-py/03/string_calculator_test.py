@@ -3,17 +3,17 @@ from string_calculator import StringCalculator
 
 
 class StringCalculatorTestCase(unittest.TestCase):
+    def setUp(self) -> None:
+        self.calculator = StringCalculator()
+
     def test_add_none_should_return_zero(self):
-        calculator = StringCalculator()
-        self.assertEqual(0, calculator.add(None))
+        self.assertEqual(0, self.calculator.add(None))
 
     def test_add_empty_should_return_zero(self):
-        calculator = StringCalculator()
-        self.assertEqual(0, calculator.add(''))
+        self.assertEqual(0, self.calculator.add(''))
 
     def test_add_single_number_should_return_this_number(self):
-        calculator = StringCalculator()
-        self.assertEqual(1, calculator.add('1'))
+        self.assertEqual(1, self.calculator.add('1'))
 
 
 if __name__ == '__main__':
