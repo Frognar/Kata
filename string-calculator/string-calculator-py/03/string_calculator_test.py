@@ -54,6 +54,15 @@ class StringCalculatorTestCase(unittest.TestCase):
             expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
+    @parameterized.expand([
+        ['//[^][_*_]\n1,2_*_3^4\n5', 15]
+    ])
+    def test_add_multiple_numbers_separated_by_multiple_custom_delimiter_should_return_sum_of_that_numbers(
+            self,
+            numbers: str,
+            expected_sum: int):
+        self.assertEqual(expected_sum, self.calculator.add(numbers))
+
 
 if __name__ == '__main__':
     unittest.main()
