@@ -11,6 +11,10 @@ class StringCalculatorTestCase(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(0, calculator.add(''))
 
+    def test_add_single_number_should_return_this_number(self):
+        calculator = StringCalculator()
+        self.assertEqual(1, calculator.add('1'))
+
 
 if __name__ == '__main__':
     unittest.main()
