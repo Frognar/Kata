@@ -31,7 +31,8 @@ class StringCalculatorTestCase(unittest.TestCase):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
     @parameterized.expand([
-        ['-1,2\n3', '-1']
+        ['-1,2\n3', '-1'],
+        ['-1,-2\n-3,4,5', '-1,-2,-3']
     ])
     def test_add_negatives_numbers_should_raise_error_with_those_numbers_in_message(
             self,
