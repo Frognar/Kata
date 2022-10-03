@@ -12,14 +12,20 @@ class StringCalculator:
     def add(cls, numbers: str) -> int:
         if not numbers:
             return 0
+        numbers = cls.replace_custom_delimiter_with_comma(numbers)
+        numbers = cls.split_and_convert(numbers)
+        cls.assert_not_contains_negatives(numbers)
+        return cls.calculate_sum_of(numbers)
+
+    @staticmethod
+    def replace_custom_delimiter_with_comma(numbers: str) -> str:
         custom_delimiter_search = search('//(.)\n', numbers)
         if custom_delimiter_search:
             custom_delimiter = custom_delimiter_search.group(1)
             numbers = numbers[custom_delimiter_search.end():]
             numbers = numbers.replace(custom_delimiter, ',')
-        numbers = cls.split_and_convert(numbers)
-        cls.assert_not_contains_negatives(numbers)
-        return cls.calculate_sum_of(numbers)
+        return numbers
+
 
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
