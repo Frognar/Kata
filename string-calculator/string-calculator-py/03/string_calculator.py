@@ -39,7 +39,6 @@ class StringCalculator:
             numbers = numbers.replace(custom_delimiter, ',')
         return numbers
 
-
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
         default_delimiter = '[,\n]'
@@ -54,4 +53,4 @@ class StringCalculator:
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:
-        return sum(numbers)
+        return sum([n for n in numbers if n <= 1000])

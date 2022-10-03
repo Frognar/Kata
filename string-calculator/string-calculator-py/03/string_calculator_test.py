@@ -64,6 +64,9 @@ class StringCalculatorTestCase(unittest.TestCase):
             expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
 
+    def test_add_numbers_should_sum_all_numbers_that_are_lower_than_thousand(self):
+        self.assertEqual(1999, self.calculator.add('1001,1002,1000,999'))
+
 
 if __name__ == '__main__':
     unittest.main()
