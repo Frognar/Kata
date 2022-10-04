@@ -19,9 +19,11 @@ class StringCalculator:
 
     @staticmethod
     def replace_custom_delimiter_with_comma(numbers: str) -> str:
-        custom_delimiter_search = search('//(.)\n', numbers)
+        custom_delimiter_search = search('//(.+)\n', numbers)
         if custom_delimiter_search:
             custom_delimiter = custom_delimiter_search.group(1)
+            custom_delimiter = custom_delimiter.replace('[', '')
+            custom_delimiter = custom_delimiter.replace(']', '')
             numbers = numbers[custom_delimiter_search.end():]
             numbers = numbers.replace(custom_delimiter, ',')
         return numbers
