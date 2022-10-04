@@ -17,19 +17,22 @@ class StringCalculator:
         cls.assert_not_contains_negatives(numbers)
         return cls.calculate_sum_of(numbers)
 
-    @staticmethod
-    def replace_custom_delimiter_with_comma(numbers: str) -> str:
+    @classmethod
+    def replace_custom_delimiter_with_comma(cls, numbers: str) -> str:
         custom_delimiter_search = search('//(.+)\n', numbers)
         if custom_delimiter_search:
-            custom_delimiters = custom_delimiter_search.group(1)
-            custom_delimiters = custom_delimiters.replace('][', ' ')
-            custom_delimiters = custom_delimiters.replace('[', '')
-            custom_delimiters = custom_delimiters.replace(']', '')
-            custom_delimiters = custom_delimiters.split(' ')
+            custom_delimiters = cls.find_all_custom_delimiters(custom_delimiter_search.group(1))
             numbers = numbers[custom_delimiter_search.end():]
             for delimiter in custom_delimiters:
                 numbers = numbers.replace(delimiter, ',')
         return numbers
+
+    @staticmethod
+    def find_all_custom_delimiters(delimiters_group: str) -> List[str]:
+        delimiters_group = delimiters_group.replace('][', ' ')
+        delimiters_group = delimiters_group.replace('[', '')
+        delimiters_group = delimiters_group.replace(']', '')
+        return delimiters_group.split(' ')
 
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
@@ -43,8 +46,6 @@ class StringCalculator:
             negatives_str = ','.join([str(n) for n in negatives])
             raise NegativesNotAllowedError(f'negatives not allowed: {negatives_str}')
 
-
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:
         return sum(numbers)
-
