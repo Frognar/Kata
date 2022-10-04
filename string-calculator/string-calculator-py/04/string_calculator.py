@@ -1,3 +1,4 @@
+from re import split
 from typing import List
 
 
@@ -11,7 +12,8 @@ class StringCalculator:
 
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
-        return [int(n) for n in numbers.split(',')]
+        default_delimiter = '[,\n]'
+        return [int(n) for n in split(default_delimiter, numbers)]
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]) -> int:

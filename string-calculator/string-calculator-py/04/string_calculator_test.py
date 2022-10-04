@@ -18,6 +18,7 @@ class StringCalculatorTestCase(unittest.TestCase):
     @parameterized.expand([
         ['1', 1],
         ['1,2', 3],
+        ['1\n2', 3]
     ])
     def test_add_should_return_sum_of_given_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
