@@ -22,6 +22,7 @@ class StringCalculatorTestCase(unittest.TestCase):
         ['//[;;]\n1;;2\n3', 6],
         ['//[;;][*]\n1;;2*3', 6],
         ['//[*][***]\n1***2*3', 6],
+        ['//[*]\n1001*200*999\n1000', 2199],
     ])
     def test_add_should_return_sum_of_given_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
