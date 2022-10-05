@@ -1,5 +1,5 @@
 from typing import Optional, List
-from re import split
+from re import split, search
 
 
 class StringCalculator:
@@ -13,9 +13,10 @@ class StringCalculator:
 
     @classmethod
     def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
-        if numbers.startswith('//'):
-            delimiter = numbers[2]
-            numbers = numbers[4:]
+        custom_delimiter_search = search('//(.)\n', numbers)
+        if custom_delimiter_search:
+            delimiter = custom_delimiter_search.group(1)
+            numbers = numbers[custom_delimiter_search.end():]
             numbers = numbers.replace(delimiter, ',')
         return numbers
 
