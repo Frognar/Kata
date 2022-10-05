@@ -1,4 +1,5 @@
 from typing import Optional, List
+from re import split
 
 
 class StringCalculator:
@@ -11,7 +12,7 @@ class StringCalculator:
 
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
-        return [int(n) for n in numbers.split(',')]
+        return [int(n) for n in split('[,\n]', numbers)]
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]):
