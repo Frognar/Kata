@@ -59,4 +59,4 @@ class StringCalculator:
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]):
-        return sum(numbers)
+        return sum([n for n in numbers if n <= 1000])
