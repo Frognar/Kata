@@ -1,9 +1,11 @@
 import unittest
+from string_calculator import StringCalculator
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+class StringCalculatorTestCase(unittest.TestCase):
+    def test_add_empty_should_return_zero(self):
+        calculator = StringCalculator()
+        self.assertEqual(0, calculator.add(''))
 
 
 if __name__ == '__main__':
