@@ -52,7 +52,8 @@ class StringCalculator:
 
     @staticmethod
     def assert_not_contains_negatives(numbers: List[int]) -> None:
-        if any(n < 0 for n in numbers):
+        negatives = [n for n in numbers if n < 0]
+        if negatives:
             raise NegativesNotAllowedError('negatives not allowed: -1')
 
     @staticmethod
