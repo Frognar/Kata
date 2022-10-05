@@ -7,6 +7,10 @@ class StringCalculator:
     def add(cls, numbers: Optional[str]) -> int:
         if not numbers:
             return 0
+        if numbers.startswith('//'):
+            delimiter = numbers[2]
+            numbers = numbers[4:]
+            numbers = numbers.replace(delimiter, ',')
         numbers = cls.split_and_convert(numbers)
         return cls.calculate_sum_of(numbers)
 
