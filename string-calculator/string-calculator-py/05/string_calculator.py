@@ -14,8 +14,7 @@ class StringCalculator:
             return 0
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
         numbers = cls.split_and_convert(numbers)
-        if any(n < 0 for n in numbers):
-            raise NegativesNotAllowedError('negatives not allowed: -1')
+        cls.assert_not_contains_negatives(numbers)
         return cls.calculate_sum_of(numbers)
 
     single_delimiter_pattern = '//(.)\n'
@@ -50,6 +49,11 @@ class StringCalculator:
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
         return [int(n) for n in split('[,\n]', numbers)]
+
+    @staticmethod
+    def assert_not_contains_negatives(numbers: List[int]) -> None:
+        if any(n < 0 for n in numbers):
+            raise NegativesNotAllowedError('negatives not allowed: -1')
 
     @staticmethod
     def calculate_sum_of(numbers: List[int]):
