@@ -28,6 +28,7 @@ class StringCalculatorTestCase(unittest.TestCase):
 
     @parameterized.expand([
         ['-1,2\n3,4', '-1'],
+        ['//[l][p]\n-1l-2\n3p-4', '-1,-2,-4'],
     ])
     def test_add_negatives_numbers_should_raise_error_with_those_numbers_in_message(
             self,
