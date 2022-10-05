@@ -11,11 +11,12 @@ class StringCalculator:
         numbers = cls.split_and_convert(numbers)
         return cls.calculate_sum_of(numbers)
 
+    single_delimiter_pattern = '//(.)\n'
+    multiple_delimiter_pattern = '//\\[(.+)]\n'
+
     @classmethod
     def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
-        single_delimiter_pattern = '//(.)\n'
-        multiple_delimiter_pattern = '//\\[(.+)]\n'
-        custom_delimiter_search = search(f'{single_delimiter_pattern}|{multiple_delimiter_pattern}', numbers)
+        custom_delimiter_search = search(f'{cls.single_delimiter_pattern}|{cls.multiple_delimiter_pattern}', numbers)
         if custom_delimiter_search:
             numbers = numbers[custom_delimiter_search.end():]
             if not custom_delimiter_search.group(1):
