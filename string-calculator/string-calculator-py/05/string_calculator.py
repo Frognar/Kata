@@ -19,12 +19,12 @@ class StringCalculator:
         custom_delimiter_search = search(f'{cls.single_delimiter_pattern}|{cls.multiple_delimiter_pattern}', numbers)
         if custom_delimiter_search:
             numbers = numbers[custom_delimiter_search.end():]
-            if not custom_delimiter_search.group(1):
-                delimiters = cls.get_all_custom_delimiters(custom_delimiter_search.group(2))
-                numbers = cls.replace_all_custom_delimiters_with_comma(numbers, delimiters)
-            else:
+            if custom_delimiter_search.group(1):
                 delimiter = custom_delimiter_search.group(1)
                 numbers = numbers.replace(delimiter, ',')
+            else:
+                delimiters = cls.get_all_custom_delimiters(custom_delimiter_search.group(2))
+                numbers = cls.replace_all_custom_delimiters_with_comma(numbers, delimiters)
         return numbers
 
     @staticmethod
