@@ -20,16 +20,19 @@ class StringCalculator:
             numbers = numbers[custom_delimiter_search.end():]
             delimiter = custom_delimiter_search.group(1)
             if not delimiter:
-                delimiters = custom_delimiter_search.group(2)
-                delimiters = delimiters.replace('][', ' ')
-                delimiters = delimiters.replace('[', '')
-                delimiters = delimiters.replace(']', '')
-                delimiters = delimiters.split(' ')
+                delimiters = cls.get_all_custom_delimiters(custom_delimiter_search.group(2))
                 for delimiter in delimiters:
                     numbers = numbers.replace(delimiter, ',')
             else:
                 numbers = numbers.replace(delimiter, ',')
         return numbers
+
+    @staticmethod
+    def get_all_custom_delimiters(delimiters_group: str) -> List[str]:
+        delimiters = delimiters_group.replace('][', ' ')
+        delimiters = delimiters.replace('[', '')
+        delimiters = delimiters.replace(']', '')
+        return delimiters.split(' ')
 
     @staticmethod
     def split_and_convert(numbers: str) -> List[int]:
