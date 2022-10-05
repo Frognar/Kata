@@ -2,6 +2,11 @@ from typing import Optional, List
 from re import split, search
 
 
+class NegativesNotAllowedError(RuntimeError):
+    def __int__(self, message):
+        super.__init__(message)
+
+
 class StringCalculator:
     @classmethod
     def add(cls, numbers: Optional[str]) -> int:
@@ -9,6 +14,8 @@ class StringCalculator:
             return 0
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
         numbers = cls.split_and_convert(numbers)
+        if any(n < 0 for n in numbers):
+            raise NegativesNotAllowedError('negatives not allowed: -1')
         return cls.calculate_sum_of(numbers)
 
     single_delimiter_pattern = '//(.)\n'
