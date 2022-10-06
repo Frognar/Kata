@@ -14,7 +14,7 @@ class StringCalculator:
     @staticmethod
     def replace_custom_delimiters_with_comma(numbers: str) -> str:
         single_delimiter_pattern = '//(.)\n'
-        multiple_delimiter_pattern = '//\\[(.)]\n'
+        multiple_delimiter_pattern = '//\\[(.+)]\n'
         custom_delimiter_search = search(f'{single_delimiter_pattern}|{multiple_delimiter_pattern}', numbers)
         if custom_delimiter_search:
             delimiter = custom_delimiter_search.group(1)
