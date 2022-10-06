@@ -6,4 +6,4 @@ class StringCalculator:
     def add(cls, numbers: Optional[str]) -> int:
         if not numbers:
             return 0
-        return 11
+        return int(numbers)
