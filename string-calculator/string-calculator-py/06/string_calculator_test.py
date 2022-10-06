@@ -18,6 +18,7 @@ class StringCalculatorTestCase(unittest.TestCase):
         ['121', 121],
         ['12,21', 33],
         ['12,21\n3', 36],
+        ['//p\n12,21\n3p3', 39],
     ])
     def test_add_should_return_sum_of_given_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
