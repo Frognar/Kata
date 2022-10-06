@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 
 class StringCalculator:
@@ -7,8 +7,12 @@ class StringCalculator:
         if not numbers:
             return 0
         numbers = cls.split_and_convert(numbers)
-        return sum(numbers)
+        return cls.calculate_sum_of(numbers)
 
     @staticmethod
     def split_and_convert(numbers: str):
         return [int(n) for n in numbers.split(',')]
+
+    @staticmethod
+    def calculate_sum_of(numbers: List[int]):
+        return sum(numbers)
