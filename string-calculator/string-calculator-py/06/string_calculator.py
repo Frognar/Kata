@@ -1,4 +1,7 @@
+from typing import Optional
+
+
 class StringCalculator:
     @classmethod
-    def add(cls, numbers: str) -> int:
+    def add(cls, numbers: Optional[str]) -> int:
         return 0
