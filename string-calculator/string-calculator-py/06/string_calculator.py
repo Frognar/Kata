@@ -31,7 +31,7 @@ class StringCalculator:
         delimiters = delimiters_group.replace('][', ' ')
         delimiters = delimiters.replace('[', '')
         delimiters = delimiters.replace(']', '')
-        return delimiters.split(' ')
+        return sorted(delimiters.split(' '), key=len, reverse=True)
 
     @staticmethod
     def replace_all_custom_delimiters_with_comma(numbers: str, delimiters: List[str]):
