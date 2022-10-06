@@ -23,6 +23,7 @@ class StringCalculatorTestCase(unittest.TestCase):
         ['//[ppp]\n12,21\n3ppp3', 39],
         ['//[f][ppp]\n12,21\n3ppp3f9', 48],
         ['//[p][ppp]\n12,21\n3ppp3p9', 48],
+        ['//[p][ppp]\n12,21\n3ppp3p9,999,1000,1001', 2047],
     ])
     def test_add_should_return_sum_of_given_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
