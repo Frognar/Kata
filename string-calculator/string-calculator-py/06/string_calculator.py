@@ -57,6 +57,10 @@ class StringCalculator:
             negatives_str = ','.join([str(n) for n in negatives])
             raise NegativesNotAllowedError(f'negatives not allowed: {negatives_str}')
 
+    @classmethod
+    def calculate_sum_of(cls, numbers: List[int]):
+        return sum(cls.get_less_than_or_equal_thousand(numbers))
+
     @staticmethod
-    def calculate_sum_of(numbers: List[int]):
-        return sum([n for n in numbers if n <= 1000])
+    def get_less_than_or_equal_thousand(numbers: List[int]) -> List[int]:
+        return [n for n in numbers if n <= 1000]
