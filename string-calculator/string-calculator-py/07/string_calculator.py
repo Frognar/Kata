@@ -1,5 +1,5 @@
 from re import split, search
-from typing import Optional
+from typing import Optional, List
 
 
 class StringCalculator:
@@ -10,8 +10,8 @@ class StringCalculator:
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
         return sum(cls.split_and_convert(numbers))
 
-    @staticmethod
-    def replace_custom_delimiters_with_comma(numbers: str) -> str:
+    @classmethod
+    def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
         custom_delimiter_search = search('//(.)\n|//\\[(.+)]\n', numbers)
         if custom_delimiter_search:
             numbers = numbers[custom_delimiter_search.end():]
@@ -19,14 +19,17 @@ class StringCalculator:
             if delimiter:
                 numbers = numbers.replace(delimiter, ',')
             else:
-                delimiters = custom_delimiter_search.group(2)
-                delimiters = delimiters.replace('][', ' ')
-                delimiters = delimiters.replace('[', '')
-                delimiters = delimiters.replace(']', '')
-                delimiters = delimiters.split(' ')
+                delimiters = cls.get_all_custom_delimiters(custom_delimiter_search.group(2))
                 for delimiter in delimiters:
                     numbers = numbers.replace(delimiter, ',')
         return numbers
+
+    @staticmethod
+    def get_all_custom_delimiters(delimiters_group: str) -> List[str]:
+        delimiters = delimiters_group.replace('][', ' ')
+        delimiters = delimiters.replace('[', '')
+        delimiters = delimiters.replace(']', '')
+        return delimiters.split(' ')
 
     @staticmethod
     def split_and_convert(numbers: str):
