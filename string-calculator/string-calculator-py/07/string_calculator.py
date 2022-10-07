@@ -47,7 +47,8 @@ class StringCalculator:
     def assert_not_contains_negatives(numbers: List[int]) -> None:
         negatives = [n for n in numbers if n < 0]
         if negatives:
-            raise NegativesNotAllowedError('negatives not allowed: -24')
+            negatives_str = ','.join([str(n) for n in negatives])
+            raise NegativesNotAllowedError(f'negatives not allowed: {negatives_str}')
 
     @staticmethod
     def split_and_convert(numbers: str):
