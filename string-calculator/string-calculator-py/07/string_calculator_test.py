@@ -21,6 +21,7 @@ class StringCalculatorTestCase(unittest.TestCase):
         ['//!\n8,9!10', 27],
         ['//[_]\n11\n12_13', 36],
         ['//[:)]\n14:)15,16', 45],
+        ['//[:)][:(]\n17:)18:(19', 54],
     ])
     def test_add_should_return_sum_of_given_numbers(self, numbers: str, expected_sum: int):
         self.assertEqual(expected_sum, self.calculator.add(numbers))
