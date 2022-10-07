@@ -7,6 +7,10 @@ class StringCalculatorTestCase(unittest.TestCase):
         calculator = StringCalculator()
         self.assertEqual(0, calculator.add(''))
 
+    def test_add_None_should_return_zero(self):
+        calculator = StringCalculator()
+        self.assertEqual(0, calculator.add(None))
+
 
 if __name__ == '__main__':
     unittest.main()
