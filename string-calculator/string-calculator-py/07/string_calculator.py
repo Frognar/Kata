@@ -20,8 +20,7 @@ class StringCalculator:
                 numbers = numbers.replace(delimiter, ',')
             else:
                 delimiters = cls.get_all_custom_delimiters(custom_delimiter_search.group(2))
-                for delimiter in delimiters:
-                    numbers = numbers.replace(delimiter, ',')
+                numbers = cls.replace_all_custom_delimiters_with_comma(numbers, delimiters)
         return numbers
 
     @staticmethod
@@ -30,6 +29,12 @@ class StringCalculator:
         delimiters = delimiters.replace('[', '')
         delimiters = delimiters.replace(']', '')
         return delimiters.split(' ')
+
+    @staticmethod
+    def replace_all_custom_delimiters_with_comma(numbers: str, delimiters: List[str]):
+        for delimiter in delimiters:
+            numbers = numbers.replace(delimiter, ',')
+        return numbers
 
     @staticmethod
     def split_and_convert(numbers: str):
