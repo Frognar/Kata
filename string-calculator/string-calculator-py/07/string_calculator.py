@@ -2,13 +2,21 @@ from re import split, search
 from typing import Optional, List
 
 
+class NegativesNotAllowedError(RuntimeError):
+    def __int__(self, message):
+        super.__init__(message)
+
+
 class StringCalculator:
     @classmethod
     def add(cls, numbers: Optional[str]) -> int:
         if not numbers:
             return 0
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
-        return sum(cls.split_and_convert(numbers))
+        numbers = cls.split_and_convert(numbers)
+        if any(n < 0 for n in numbers):
+            raise NegativesNotAllowedError('negatives not allowed: -24')
+        return sum(numbers)
 
     @classmethod
     def replace_custom_delimiters_with_comma(cls, numbers: str) -> str:
