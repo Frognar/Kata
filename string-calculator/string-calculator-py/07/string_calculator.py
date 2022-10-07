@@ -14,8 +14,7 @@ class StringCalculator:
             return 0
         numbers = cls.replace_custom_delimiters_with_comma(numbers)
         numbers = cls.split_and_convert(numbers)
-        if any(n < 0 for n in numbers):
-            raise NegativesNotAllowedError('negatives not allowed: -24')
+        cls.assert_not_contains_negatives(numbers)
         return sum(numbers)
 
     @classmethod
@@ -43,6 +42,11 @@ class StringCalculator:
         for delimiter in delimiters:
             numbers = numbers.replace(delimiter, ',')
         return numbers
+
+    @staticmethod
+    def assert_not_contains_negatives(numbers: List[int]) -> None:
+        if any(n < 0 for n in numbers):
+            raise NegativesNotAllowedError('negatives not allowed: -24')
 
     @staticmethod
     def split_and_convert(numbers: str):
