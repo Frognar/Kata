@@ -18,7 +18,7 @@
             numbers (subs numbers (count (first match)))
             custom_delimiter (if
                                (nil? (second match))
-                               (re-pattern (str/replace (nth match 2) #"\Q][\E" "|"))
+                               (re-pattern (str/join #"|" (str/split (nth match 2) #"\Q][\E")))
                                (second match))]
         (str/replace numbers custom_delimiter comma)
         ))))
