@@ -15,6 +15,8 @@
               (should= 3 (add "1,2")))
           (it "'1\n2' -> 3"
               (should= 3 (add "1\n2")))
+          (it "'1\n2,3' -> 6"
+              (should= 6 (add "1\n2,3")))
           )
 
 (run-specs)
