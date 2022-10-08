@@ -6,7 +6,8 @@
     (map #(Integer/parseInt %) number_list)))
 
 (defn sum-of [numbers]
-  (reduce + (filter #(< % 1001) numbers)))
+  (let [less-than-or-equal-to-thousand (filter #(< % 1001) numbers)]
+    (reduce + less-than-or-equal-to-thousand)))
 
 (defn get-all-custom-delimiters [match]
   (if (nil? (second match))
