@@ -29,6 +29,8 @@
               (should= 6 (add "//[>][>>]\n1>2>>3")))
           (it "'//[>][>>]\n999>1000>1001' -> 1999"
               (should= 1999 (add "//[>][>>]\n999>1000>1001")))
+          (it "'-1' -> throw exception"
+              (should-throw (add "-1")))
           )
 
 (run-specs)

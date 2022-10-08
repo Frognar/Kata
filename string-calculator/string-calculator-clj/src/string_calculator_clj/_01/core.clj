@@ -29,4 +29,7 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (split-and-convert (replace-custom-delimiter-with-comma numbers)))))
+    (let [numbers (split-and-convert (replace-custom-delimiter-with-comma numbers))]
+      (if (some #(< % 0) numbers)
+        (throw (new IllegalArgumentException "Negative values not allowed")))
+      (sum-of numbers))))
