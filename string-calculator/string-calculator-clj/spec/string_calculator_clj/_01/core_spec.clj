@@ -19,6 +19,8 @@
               (should= 6 (add "1\n2,3")))
           (it "'//>\n1>3' -> 4"
               (should= 4 (add "//>\n1>3")))
+          (it "'//[>]\n1>3' -> 4"
+              (should= 4 (add "//[>]\n1>3")))
           )
 
 (run-specs)

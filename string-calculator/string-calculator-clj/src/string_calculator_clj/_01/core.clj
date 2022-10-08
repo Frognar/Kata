@@ -11,8 +11,11 @@
 (defn replace-custom-delimiter-with-comma [numbers]
   (if (str/starts-with? numbers "//")
     (let [comma ","
-          delimiter (second (re-find #"//(.)\n", numbers))
-          rest_numbers (subs numbers 4)]
+          matcher (re-matcher #"//(.)\n|//\[(.+)]\n" numbers)
+          match (re-find matcher)
+          delimiter (if (nil? (second match)) (nth match 2) (second match))
+          rest_numbers (subs numbers (count (first match)))]
+      (print delimiter)
       (str/replace rest_numbers delimiter comma))
     numbers))
 
