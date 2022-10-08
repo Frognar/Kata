@@ -11,5 +11,8 @@
 (defn add [numbers]
   (if (or (nil? numbers) (empty? numbers))
     0
-    (sum-of (split-and-convert numbers)))
+    (let [n (if (str/starts-with? numbers "//")
+              (str/replace (subs numbers 4 (count numbers)) (str (nth numbers 2)) ",")
+              numbers)]
+      (sum-of (split-and-convert n))))
   )
