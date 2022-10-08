@@ -24,7 +24,7 @@
         ))))
 
 (defn add [numbers]
-  (if (or (nil? numbers) (empty? numbers))
+  (if (empty? numbers)
     0
     (sum-of (split-and-convert (replace-custom-delimiter-with-comma numbers))))
   )
