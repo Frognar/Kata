@@ -9,15 +9,16 @@
   (reduce + numbers))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (if (str/starts-with? numbers "//")
-    (let [comma ","
-          matcher (re-matcher #"//(.)\n|//\[(.+)]\n" numbers)
-          match (re-find matcher)
-          delimiter (if (nil? (second match)) (nth match 2) (second match))
-          rest_numbers (subs numbers (count (first match)))]
-      (print delimiter)
-      (str/replace rest_numbers delimiter comma))
-    numbers))
+  (let [custom-delimiter-pattern #"//(.)\n|//\[(.+)]\n"
+        matcher (re-matcher custom-delimiter-pattern numbers)
+        match (re-find matcher)]
+    (if (nil? match)
+      numbers
+      (let [comma ","
+            numbers (subs numbers (count (first match)))
+            custom_delimiter (if (nil? (second match)) (nth match 2) (second match))]
+        (str/replace numbers custom_delimiter comma)
+        ))))
 
 (defn add [numbers]
   (if (or (nil? numbers) (empty? numbers))
