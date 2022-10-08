@@ -8,19 +8,19 @@
 (defn sum-of [numbers]
   (reduce + numbers))
 
+(defn get-all-custom-delimiters [match]
+  (if (nil? (second match))
+    (re-pattern (str/join #"|" (sort-by count #(compare %2 %1) (str/split (nth match 2) #"\Q][\E"))))
+    (second match)))
+
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [custom-delimiter-pattern #"//(.)\n|//\[(.+)]\n"
         matcher (re-matcher custom-delimiter-pattern numbers)
         match (re-find matcher)]
     (if (nil? match)
       numbers
-      (let [comma ","
-            numbers (subs numbers (count (first match)))
-            custom_delimiter (if
-                               (nil? (second match))
-                               (re-pattern (str/join #"|" (sort-by count #(compare %2 %1) (str/split (nth match 2) #"\Q][\E"))))
-                               (second match))]
-        (str/replace numbers custom_delimiter comma)
+      (let [[numbers custom_delimiter] [(subs numbers (count (first match))) (get-all-custom-delimiters match)]]
+        (str/replace numbers custom_delimiter ",")
         ))))
 
 (defn add [numbers]
