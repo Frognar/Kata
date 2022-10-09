@@ -23,7 +23,8 @@
     (map #(Integer/parseInt %) (str/split numbers default-delimiters))))
 
 (defn sum-of [numbers]
-  (reduce + (filter #(<= % 1000) numbers)))
+  (let [less-than-or-equal-to-thousand (filter #(<= % 1000) numbers)]
+    (reduce + less-than-or-equal-to-thousand)))
 
 (defn add [numbers]
   (if (empty? numbers)
