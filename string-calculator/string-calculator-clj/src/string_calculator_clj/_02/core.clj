@@ -2,11 +2,11 @@
   (:require [clojure.string :as str]))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [matcher (re-matcher #"//(.)\n" numbers)
+  (let [matcher (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers)
         match (re-find matcher)]
     (if (nil? match)
       numbers
-      (let [delimiter (second match)
+      (let [delimiter (if (nil? (second match)) (nth match 2) (second match))
             numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
 
