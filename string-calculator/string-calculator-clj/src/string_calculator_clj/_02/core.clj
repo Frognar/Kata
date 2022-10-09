@@ -3,7 +3,9 @@
 
 (defn replace-custom-delimiter-with-comma [numbers]
   (if (str/starts-with? numbers "//")
-    (str/replace (subs numbers 4 (count numbers)) (str (nth numbers 2)), ",")
+    (let [delimiter (str (nth numbers 2))
+          numbers (subs numbers 4)]
+      (str/replace numbers delimiter ","))
     numbers))
 
 (defn split-and-convert [numbers]
