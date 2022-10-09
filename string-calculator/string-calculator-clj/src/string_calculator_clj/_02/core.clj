@@ -1,12 +1,17 @@
 (ns string-calculator-clj._02.core
   (:require [clojure.string :as str]))
 
+(defn find-delimiter [match]
+  (if (nil? (second match))
+    (nth match 2)
+    (second match)))
+
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [matcher (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers)
         match (re-find matcher)]
     (if (nil? match)
       numbers
-      (let [delimiter (if (nil? (second match)) (nth match 2) (second match))
+      (let [delimiter (find-delimiter match)
             numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
 
