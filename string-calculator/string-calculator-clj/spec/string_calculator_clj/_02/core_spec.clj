@@ -13,6 +13,8 @@
               (should= 5 (add "2,3")))
           (it "'4\n5' -> 9"
               (should= 9 (add "4\n5")))
+          (it "'//@\n6@7' -> 13"
+              (should= 13 (add "//@\n6@7")))
           )
 
 (run-specs)
