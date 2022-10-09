@@ -1,6 +1,18 @@
 (ns string-calculator-clj._02.core
   (:require [clojure.string :as str]))
 
+(defn sum-of [numbers]
+  (let [less-than-or-equal-to-thousand (filter #(<= % 1000) numbers)]
+    (reduce + less-than-or-equal-to-thousand)))
+
+(defn assert-none-negative-values [numbers]
+  (if (some #(< % 0) numbers)
+    (throw (new IllegalArgumentException "Negative values not allowed"))))
+
+(defn split-and-convert [numbers]
+  (let [default-delimiters #"[,\n]"]
+    (map #(Integer/parseInt %) (str/split numbers default-delimiters))))
+
 (defn get-list-of-sorted-delimiters [delimiters-group]
   (sort-by count #(compare %2 %1) (str/split delimiters-group #"\Q][\E")))
 
@@ -17,18 +29,6 @@
       (let [delimiter (find-all-delimiters match)
             numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
-
-(defn split-and-convert [numbers]
-  (let [default-delimiters #"[,\n]"]
-    (map #(Integer/parseInt %) (str/split numbers default-delimiters))))
-
-(defn sum-of [numbers]
-  (let [less-than-or-equal-to-thousand (filter #(<= % 1000) numbers)]
-    (reduce + less-than-or-equal-to-thousand)))
-
-(defn assert-none-negative-values [numbers]
-  (if (some #(< % 0) numbers)
-    (throw (new IllegalArgumentException "Negative values not allowed"))))
 
 (defn add [numbers]
   (if (empty? numbers)
