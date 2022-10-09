@@ -2,7 +2,8 @@
   (:require [clojure.string :as str]))
 
 (defn split-and-convert [numbers]
-  (map #(Integer/parseInt %) (str/split numbers #"[,\n]")))
+  (let [default-delimiters #"[,\n]"]
+    (map #(Integer/parseInt %) (str/split numbers default-delimiters))))
 
 (defn sum-of [numbers]
   (reduce + numbers))
