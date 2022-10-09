@@ -1,9 +1,12 @@
 (ns string-calculator-clj._02.core
   (:require [clojure.string :as str]))
 
+(defn get-list-of-sorted-delimiters [delimiters-group]
+  (sort-by count #(compare %2 %1) (str/split delimiters-group #"\Q][\E")))
+
 (defn find-all-delimiters [match]
   (if (nil? (second match))
-    (re-pattern (str/join "|" (sort-by count #(compare %2 %1) (str/split (nth match 2) #"\Q][\E"))))
+    (re-pattern (str/join "|" (get-list-of-sorted-delimiters (nth match 2))))
     (second match)))
 
 (defn replace-custom-delimiter-with-comma [numbers]
