@@ -26,11 +26,14 @@
   (let [less-than-or-equal-to-thousand (filter #(<= % 1000) numbers)]
     (reduce + less-than-or-equal-to-thousand)))
 
+(defn assert-none-negative-values [numbers]
+  (if (some #(< % 0) numbers)
+    (throw (new IllegalArgumentException "Negative values not allowed"))))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
     (let [numbers-separated-by-comma (replace-custom-delimiter-with-comma numbers)
           numbers (split-and-convert numbers-separated-by-comma)]
-      (if (some #(< % 0) numbers)
-        (throw (new IllegalArgumentException "Negative values not allowed")))
+      (assert-none-negative-values numbers)
       (sum-of numbers))))
