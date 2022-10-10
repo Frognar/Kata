@@ -8,12 +8,12 @@
   (let [numbers (str/split numbers #"[,\n]")]
     (map #(Integer/parseInt %) numbers)))
 
-(defn get-list-of-sorted-delimiters [match]
-  (reverse (sort-by count (str/split (nth match 2) #"]\Q[\E"))))
+(defn get-list-of-sorted-delimiters [delimiter-group]
+  (reverse (sort-by count (str/split delimiter-group #"]\Q[\E"))))
 
 (defn find-all-delimiters [match]
   (if (nil? (second match))
-    (re-pattern (str/join "|" (get-list-of-sorted-delimiters match)))
+    (re-pattern (str/join "|" (get-list-of-sorted-delimiters (nth match 2))))
     (second match)))
 
 (defn replace-custom-delimiter-with-comma [numbers]
