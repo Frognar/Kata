@@ -9,6 +9,8 @@
               (should= 0 (add "")))
           (it "'10' -> 10"
               (should= 10 (add "10")))
+          (it "'11,12' -> 23"
+              (should= 23 (add "11,12")))
           )
 
 (run-specs)
