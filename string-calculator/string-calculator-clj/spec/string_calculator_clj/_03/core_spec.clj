@@ -11,6 +11,8 @@
               (should= 10 (add "10")))
           (it "'11,12' -> 23"
               (should= 23 (add "11,12")))
+          (it "'13\n14' -> 27"
+              (should= 27 (add "13\n14")))
           )
 
 (run-specs)

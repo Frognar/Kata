@@ -5,7 +5,7 @@
   (reduce + numbers))
 
 (defn split-and-convert [numbers]
-  (let [numbers (str/split numbers #",")]
+  (let [numbers (str/split numbers #"[,\n]")]
     (map #(Integer/parseInt %) numbers)))
 
 (defn add [numbers]
