@@ -8,17 +8,17 @@
   (let [numbers (str/split numbers #"[,\n]")]
     (map #(Integer/parseInt %) numbers)))
 
-(defn find-delimiter [match]
+(defn find-all-delimiters [match]
   (if (nil? (second match))
-    (nth match 2)
+    (re-pattern (str/join "|" (str/split (nth match 2) #"]\Q[\E")))
     (second match)))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [matcher (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers)
+  (let [matcher (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers)
         match (re-find matcher)]
     (if (nil? match)
       numbers
-      (let [delimiter (find-delimiter match)
+      (let [delimiter (find-all-delimiters match)
             numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
 
