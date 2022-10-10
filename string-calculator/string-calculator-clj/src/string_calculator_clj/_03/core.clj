@@ -26,10 +26,13 @@
             numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
 
+(defn assert-none-negative-values [numbers]
+  (if (some #(< % 0) numbers)
+    (throw (new IllegalArgumentException "Negative values not allowed"))))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
     (let [numbers (split-and-convert (replace-custom-delimiter-with-comma numbers))]
-      (if (some #(< % 0) numbers)
-        (throw (new IllegalArgumentException "Negative values not allowed")))
+      (assert-none-negative-values numbers)
       (sum-of numbers))))
