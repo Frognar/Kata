@@ -7,6 +7,8 @@
               (should= 0 (add nil)))
           (it "'' -> 0"
               (should= 0 (add "")))
+          (it "'10' -> 10"
+              (should= 10 (add "10")))
           )
 
 (run-specs)
