@@ -2,7 +2,7 @@
   (:require [clojure.string :as str]))
 
 (defn sum-of [numbers]
-  (reduce + numbers))
+  (reduce + (filter #(<= % 1000) numbers)))
 
 (defn split-and-convert [numbers]
   (let [numbers (str/split numbers #"[,\n]")]
