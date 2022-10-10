@@ -3,4 +3,4 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    10))
+    (Integer/parseInt numbers)))
