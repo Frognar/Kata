@@ -30,4 +30,6 @@
   (if (empty? numbers)
     0
     (let [numbers (split-and-convert (replace-custom-delimiter-with-comma numbers))]
+      (if (some #(< % 0) numbers)
+        (throw (new IllegalArgumentException "Negative values not allowed")))
       (sum-of numbers))))
