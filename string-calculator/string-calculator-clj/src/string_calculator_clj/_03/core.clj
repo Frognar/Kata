@@ -13,7 +13,7 @@
         match (re-find matcher)]
     (if (nil? match)
       numbers
-      (let [delimiter (str (nth numbers 2))
+      (let [delimiter (second match)
             numbers (subs numbers 4)]
         (str/replace numbers delimiter ",")))))
 
