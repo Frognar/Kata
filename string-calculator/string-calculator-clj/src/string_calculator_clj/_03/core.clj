@@ -7,4 +7,5 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (map #(Integer/parseInt %) (str/split numbers #",")))))
+    (let [numbers (str/split numbers #",")]
+      (sum-of (map #(Integer/parseInt %) numbers)))))
