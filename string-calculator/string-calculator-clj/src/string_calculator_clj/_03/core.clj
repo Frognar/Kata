@@ -11,11 +11,11 @@
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [matcher (re-matcher #"//(.)\n" numbers)
         match (re-find matcher)]
-    (if (not (nil? match))
+    (if (nil? match)
+      numbers
       (let [delimiter (str (nth numbers 2))
             numbers (subs numbers 4)]
-        (str/replace numbers delimiter ","))
-      numbers)))
+        (str/replace numbers delimiter ",")))))
 
 (defn add [numbers]
   (if (empty? numbers)
