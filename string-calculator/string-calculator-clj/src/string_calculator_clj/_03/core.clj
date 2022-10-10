@@ -14,7 +14,7 @@
     (if (nil? match)
       numbers
       (let [delimiter (second match)
-            numbers (subs numbers 4)]
+            numbers (subs numbers (count (first match)))]
         (str/replace numbers delimiter ",")))))
 
 (defn add [numbers]
