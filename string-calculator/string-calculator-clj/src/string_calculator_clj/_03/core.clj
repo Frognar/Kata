@@ -9,7 +9,7 @@
     (map #(Integer/parseInt %) numbers)))
 
 (defn get-list-of-sorted-delimiters [match]
-  (sort-by count #(compare %2 %1) (str/split (nth match 2) #"]\Q[\E")))
+  (reverse (sort-by count (str/split (nth match 2) #"]\Q[\E"))))
 
 (defn find-all-delimiters [match]
   (if (nil? (second match))
