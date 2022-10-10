@@ -9,11 +9,13 @@
     (map #(Integer/parseInt %) numbers)))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (if (str/starts-with? numbers "//")
-    (let [delimiter (str (nth numbers 2))
-          numbers (subs numbers 4)]
-      (str/replace numbers delimiter ","))
-    numbers))
+  (let [matcher (re-matcher #"//(.)\n" numbers)
+        match (re-find matcher)]
+    (if (not (nil? match))
+      (let [delimiter (str (nth numbers 2))
+            numbers (subs numbers 4)]
+        (str/replace numbers delimiter ","))
+      numbers)))
 
 (defn add [numbers]
   (if (empty? numbers)
