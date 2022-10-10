@@ -10,7 +10,7 @@
 
 (defn find-all-delimiters [match]
   (if (nil? (second match))
-    (re-pattern (str/join "|" (str/split (nth match 2) #"]\Q[\E")))
+    (re-pattern (str/join "|" (sort-by count #(compare %2 %1) (str/split (nth match 2) #"]\Q[\E"))))
     (second match)))
 
 (defn replace-custom-delimiter-with-comma [numbers]
