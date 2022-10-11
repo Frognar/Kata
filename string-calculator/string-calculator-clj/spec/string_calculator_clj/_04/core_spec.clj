@@ -13,6 +13,8 @@
               (should= 5 (add "2,3")))
           (it "'4\n5' -> 9"
               (should= 9 (add "4\n5")))
+          (it "'-6' -> throw exception"
+              (should-throw (add "-6")))
           )
 
 (run-specs)
