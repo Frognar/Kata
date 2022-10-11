@@ -11,9 +11,12 @@
 (defn split-and-convert [numbers]
   (map #(Integer/parseInt %) (str/split numbers #"[,\n]")))
 
+(defn get-delimiters [delimiter-group]
+  (str/split (nth delimiter-group 2) #"]\Q[\E"))
+
 (defn find-custom-delimiters [delimiter-group]
   (if (nil? (second delimiter-group))
-    (re-pattern (str/join "|" (str/split (nth delimiter-group 2) #"]\Q[\E")))
+    (re-pattern (str/join "|" (get-delimiters delimiter-group)))
     (second delimiter-group)))
 
 (defn replace-custom-delimiters-with-comma [numbers]
