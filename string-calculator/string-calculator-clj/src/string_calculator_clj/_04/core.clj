@@ -12,10 +12,10 @@
   (map #(Integer/parseInt %) (str/split numbers #"[,\n]")))
 
 (defn replace-custom-delimiters-with-comma [numbers]
-  (let [match (re-find (re-matcher #"//(.)\n" numbers))]
+  (let [match (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))]
     (if (nil? match)
       numbers
-      (let [delimiter (second match)
+      (let [delimiter (if (nil? (second match)) (nth match 2) (second match))
             only-numbers (subs numbers (count (first match)))]
         (str/replace only-numbers delimiter ",")))))
 
