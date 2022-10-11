@@ -19,7 +19,6 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (let [numbers (replace-custom-delimiters-with-comma numbers)]
-      (let [numbers (split-and-convert numbers)]
-        (assert-none-negative-values numbers)
-        (sum-of numbers)))))
+    (let [numbers (split-and-convert (replace-custom-delimiters-with-comma numbers))]
+      (assert-none-negative-values numbers)
+      (sum-of numbers))))
