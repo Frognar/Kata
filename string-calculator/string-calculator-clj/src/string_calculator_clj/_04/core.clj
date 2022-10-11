@@ -3,6 +3,9 @@
 
 (defn sum-of [numbers] (reduce + numbers))
 
+(defn filter-less-than-or-equal-to-thousand [numbers]
+  (filter #(<= % 1000) numbers))
+
 (defn contains-negative? [numbers] (some #(< % 0) numbers))
 
 (defn assert-none-negative-values [numbers]
@@ -32,4 +35,4 @@
     0
     (let [numbers (split-and-convert (replace-custom-delimiters-with-comma numbers))]
       (assert-none-negative-values numbers)
-      (sum-of (filter #(<= % 1000) numbers)))))
+      (sum-of (filter-less-than-or-equal-to-thousand numbers)))))
