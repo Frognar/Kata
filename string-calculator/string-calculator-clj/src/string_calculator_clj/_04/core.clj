@@ -9,4 +9,5 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (split-and-convert numbers))))
+    (let [numbers (split-and-convert numbers)]
+      (sum-of numbers))))
