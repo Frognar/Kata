@@ -32,4 +32,4 @@
     0
     (let [numbers (split-and-convert (replace-custom-delimiters-with-comma numbers))]
       (assert-none-negative-values numbers)
-      (sum-of numbers))))
+      (sum-of (filter #(<= % 1000) numbers)))))
