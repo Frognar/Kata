@@ -15,7 +15,7 @@
   (let [match (re-find (re-matcher #"//(.)\n" numbers))]
     (if (nil? match)
       numbers
-      (str/replace (subs numbers 4) (second match) ","))))
+      (str/replace (subs numbers (count (first match))) (second match) ","))))
 
 (defn add [numbers]
   (if (empty? numbers)
