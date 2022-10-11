@@ -11,21 +11,21 @@
 (defn split-and-convert [numbers]
   (map #(Integer/parseInt %) (str/split numbers #"[,\n]")))
 
-(defn get-delimiters [delimiter-group]
-  (str/split (nth delimiter-group 2) #"]\Q[\E"))
+(defn get-sorted-delimiters [delimiter-group]
+  (reverse (sort-by count (str/split (nth delimiter-group 2) #"]\Q[\E"))))
 
 (defn find-custom-delimiters [delimiter-group]
   (if (nil? (second delimiter-group))
-    (re-pattern (str/join "|" (get-delimiters delimiter-group)))
+    (re-pattern (str/join "|" (get-sorted-delimiters delimiter-group)))
     (second delimiter-group)))
 
 (defn replace-custom-delimiters-with-comma [numbers]
   (let [match (re-find (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers))]
     (if (nil? match)
       numbers
-      (let [delimiter (find-custom-delimiters match)
+      (let [delimiters (find-custom-delimiters match)
             only-numbers (subs numbers (count (first match)))]
-        (str/replace only-numbers delimiter ",")))))
+        (str/replace only-numbers delimiters ",")))))
 
 (defn add [numbers]
   (if (empty? numbers)

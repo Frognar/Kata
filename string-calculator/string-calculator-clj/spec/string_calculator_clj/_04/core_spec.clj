@@ -21,6 +21,8 @@
               (should= 19 (add "//[o]\n9o10")))
           (it "'//[o][q]\n11o12q13' -> 36"
               (should= 36 (add "//[o][q]\n11o12q13")))
+          (it "'//[o][oo]\n14o15oo16' -> 45"
+              (should= 45 (add "//[o][oo]\n14o15oo16")))
           )
 
 (run-specs)
