@@ -1,7 +1,10 @@
 (ns string-calculator-clj._04.core
   (:require [clojure.string :as str]))
 
+(defn split-and-convert [numbers]
+  (map #(Integer/parseInt %) (str/split numbers #",")))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (reduce + (map #(Integer/parseInt %) (str/split numbers #",")))))
+    (reduce + (split-and-convert numbers))))
