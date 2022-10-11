@@ -13,11 +13,11 @@
 
 (defn find-custom-delimiters [delimiter-group]
   (if (nil? (second delimiter-group))
-    (nth delimiter-group 2)
+    (re-pattern (str/join "|" (str/split (nth delimiter-group 2) #"]\Q[\E")))
     (second delimiter-group)))
 
 (defn replace-custom-delimiters-with-comma [numbers]
-  (let [match (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))]
+  (let [match (re-find (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers))]
     (if (nil? match)
       numbers
       (let [delimiter (find-custom-delimiters match)
