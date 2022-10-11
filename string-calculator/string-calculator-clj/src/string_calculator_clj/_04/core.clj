@@ -11,12 +11,15 @@
 (defn split-and-convert [numbers]
   (map #(Integer/parseInt %) (str/split numbers #"[,\n]")))
 
+(defn replace-custom-delimiters-with-comma [numbers]
+  (if (str/starts-with? numbers "//")
+    (str/replace (subs numbers 4) (str (nth numbers 2)) ",")
+    numbers))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (let [numbers (if (str/starts-with? numbers "//")
-                    (str/replace (subs numbers 4) (str (nth numbers 2)) ",")
-                    numbers)]
+    (let [numbers (replace-custom-delimiters-with-comma numbers)]
       (let [numbers (split-and-convert numbers)]
         (assert-none-negative-values numbers)
         (sum-of numbers)))))
