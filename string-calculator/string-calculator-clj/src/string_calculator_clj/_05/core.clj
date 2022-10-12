@@ -4,7 +4,7 @@
 (defn sum-of [numbers] (reduce + numbers))
 
 (defn split-and-convert [numbers]
-  (let [delimiters #","]
+  (let [delimiters #"[,\n]"]
     (map #(Integer/parseInt %) (str/split numbers delimiters))))
 
 (defn add [numbers]
