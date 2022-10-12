@@ -7,10 +7,13 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
+(defn replace-custom-delimiter-with-comma [numbers]
+  (if (not (str/starts-with? numbers "//"))
+    numbers
+    (str/replace (subs numbers 4) (str (nth numbers 2)) ",")))
+
 (defn split-and-convert [numbers]
-  (let [numbers (if (not (str/starts-with? numbers "//"))
-                  numbers
-                  (str/replace (subs numbers 4) (str (nth numbers 2)) ","))
+  (let [numbers (replace-custom-delimiter-with-comma numbers)
         delimiters #"[,\n]"]
     (map #(Integer/parseInt %) (str/split numbers delimiters))))
 
