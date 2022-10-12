@@ -9,10 +9,11 @@
 
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n" numbers))
-        size-of-prefix (count delimiter-prefix)]
+        size-of-prefix (count delimiter-prefix)
+        delimiter (first match)]
     (if (nil? match)
       numbers
-      (str/replace (subs numbers size-of-prefix) (first match) ","))))
+      (str/replace (subs numbers size-of-prefix) delimiter ","))))
 
 (defn split-and-convert [numbers]
   (let [numbers (replace-custom-delimiter-with-comma numbers)
