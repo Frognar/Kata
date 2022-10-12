@@ -3,6 +3,9 @@
 
 (defn sum-of [numbers] (reduce + numbers))
 
+(defn filter-less-than-or-equal-to-thousand [numbers]
+  (filter #(<= % 1000) numbers))
+
 (defn assert-none-negative-values [numbers]
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
@@ -34,4 +37,4 @@
     0
     (let [numbers (split-and-convert numbers)]
       (assert-none-negative-values numbers)
-      (sum-of (filter #(<= % 1000) numbers)))))
+      (sum-of (filter-less-than-or-equal-to-thousand numbers)))))
