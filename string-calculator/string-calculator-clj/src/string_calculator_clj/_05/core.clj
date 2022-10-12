@@ -11,4 +11,5 @@
   (if (empty? numbers)
     0
     (let [numbers (split-and-convert numbers)]
+      (if (some #(< % 0) numbers) (throw IllegalArgumentException))
       (sum-of numbers))))
