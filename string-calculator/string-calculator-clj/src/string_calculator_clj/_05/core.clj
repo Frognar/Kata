@@ -7,10 +7,10 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
-(defn find-delimiter [match]
-  (if (nil? (first match))
-    (second match)
-    (first match)))
+(defn find-delimiter [[single-delimiter-match & match]]
+  (if (nil? single-delimiter-match)
+    (first match)
+    single-delimiter-match))
 
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))
