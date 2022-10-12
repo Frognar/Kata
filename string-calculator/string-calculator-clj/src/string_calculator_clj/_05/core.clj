@@ -7,12 +7,12 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
-(defn get-delimiters-form [multi-delimiter-match]
-  (str/split multi-delimiter-match #"]\Q[\E"))
+(defn get-sorted-delimiters-form [multi-delimiter-match]
+  (reverse (sort-by count (str/split multi-delimiter-match #"]\Q[\E"))))
 
 (defn find-delimiters [[single-delimiter-match multi-delimiter-match & _]]
   (if (nil? single-delimiter-match)
-    (re-pattern (str/join "|" (get-delimiters-form multi-delimiter-match)))
+    (re-pattern (str/join "|" (get-sorted-delimiters-form multi-delimiter-match)))
     single-delimiter-match))
 
 (defn replace-custom-delimiter-with-comma [numbers]
