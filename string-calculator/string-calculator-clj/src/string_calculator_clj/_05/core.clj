@@ -1,4 +1,6 @@
 (ns string-calculator-clj._05.core)
 
 (defn add [numbers]
-  0)
+  (if (empty? numbers)
+    0
+    1))
