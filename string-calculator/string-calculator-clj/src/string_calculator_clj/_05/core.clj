@@ -8,7 +8,10 @@
     (if contains-negative? (throw IllegalArgumentException))))
 
 (defn split-and-convert [numbers]
-  (let [delimiters #"[,\n]"]
+  (let [numbers (if (not (str/starts-with? numbers "//"))
+                  numbers
+                  (str/replace (subs numbers 4) (str (nth numbers 2)) ","))
+        delimiters #"[,\n]"]
     (map #(Integer/parseInt %) (str/split numbers delimiters))))
 
 (defn add [numbers]
