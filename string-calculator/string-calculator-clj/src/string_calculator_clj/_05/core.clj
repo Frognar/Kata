@@ -7,19 +7,19 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
-(defn find-delimiter [[single-delimiter-match multi-delimiter-match & _]]
+(defn find-delimiters [[single-delimiter-match multi-delimiter-match & _]]
   (if (nil? single-delimiter-match)
-    multi-delimiter-match
+    (re-pattern (str/join "|" (str/split multi-delimiter-match #"]\Q[\E")))
     single-delimiter-match))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))
-        size-of-prefix (count delimiter-prefix)
-        numbers-without-prefix (subs numbers size-of-prefix)
-        delimiter (find-delimiter match)]
+  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers))]
     (if (nil? match)
       numbers
-      (str/replace numbers-without-prefix delimiter ","))))
+      (let [size-of-prefix (count delimiter-prefix)
+            numbers-without-prefix (subs numbers size-of-prefix)
+            delimiter (find-delimiters match)]
+        (str/replace numbers-without-prefix delimiter ",")))))
 
 (defn split-and-convert [numbers]
   (let [numbers (replace-custom-delimiter-with-comma numbers)
