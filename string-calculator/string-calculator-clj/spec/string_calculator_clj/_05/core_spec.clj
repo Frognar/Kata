@@ -17,6 +17,8 @@
               (should-throw (add "-6")))
           (it "'//;\n7;8' -> 15"
               (should= 15 (add "//;\n7;8")))
+          (it "'//[;]\n9;10' -> 19"
+              (should= 19 (add "//[;]\n9;10")))
           )
 
 (run-specs)
