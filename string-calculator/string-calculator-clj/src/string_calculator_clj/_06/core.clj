@@ -5,7 +5,8 @@
   (reduce + numbers))
 
 (defn assert-none-negative-values-in [numbers]
-  (if (some #(< % 0) numbers) (throw IllegalArgumentException)))
+  (let [contains-negative? (some #(< % 0) numbers)]
+    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn split-and-convert-to-integers [numbers]
   (let [default-delimiters #"[,\n]"]
