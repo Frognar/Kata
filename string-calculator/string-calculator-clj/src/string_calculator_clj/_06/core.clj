@@ -4,7 +4,10 @@
 (defn sum-of [numbers]
   (reduce + numbers))
 
+(defn split-numbers-separated-by-comma [numbers]
+  (str/split numbers #","))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (map #(Integer/parseInt %) (str/split numbers #",")))))
+    (sum-of (map #(Integer/parseInt %) (split-numbers-separated-by-comma numbers)))))
