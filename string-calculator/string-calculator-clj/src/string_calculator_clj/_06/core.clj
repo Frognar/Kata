@@ -8,13 +8,18 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
+(defn find-delimiters [match]
+  (if (nil? (first match))
+    (second match)
+    (first match)))
+
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))]
     (if (nil? match)
       numbers
       (let [size-of-prefix (count delimiter-prefix)
             numbers-without-prefix (subs numbers size-of-prefix)
-            delimiter (if (nil? (first match)) (second match) (first match))]
+            delimiter (find-delimiters match)]
         (str/replace numbers-without-prefix delimiter ",")))))
 
 (defn split-and-convert-to-integers [numbers]
