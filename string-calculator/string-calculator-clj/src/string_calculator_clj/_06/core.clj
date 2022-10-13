@@ -8,9 +8,9 @@
   (let [contains-negative? (some #(< % 0) numbers)]
     (if contains-negative? (throw IllegalArgumentException))))
 
-(defn find-delimiters [[single-delimiter-match & match]]
+(defn find-delimiters [[single-delimiter-match multi-delimiter-match & _]]
   (if (nil? single-delimiter-match)
-    (first match)
+    multi-delimiter-match
     single-delimiter-match))
 
 (defn replace-custom-delimiter-with-comma [numbers]
