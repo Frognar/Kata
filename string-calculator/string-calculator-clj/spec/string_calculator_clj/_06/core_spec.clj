@@ -3,7 +3,7 @@
             [string-calculator-clj._06.core :refer :all]))
 
 (describe "String Calculator"
-          (it "fails"
-              (should= 0 1)))
+          (it "nil -> 0"
+              (should= 0 (add nil))))
 
 (run-specs)
