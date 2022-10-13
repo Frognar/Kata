@@ -10,7 +10,10 @@
 (defn split-numbers-separated-by-comma [numbers]
   (str/split numbers #","))
 
+(defn split-and-convert-to-integers [numbers]
+  (convert-to-integers (split-numbers-separated-by-comma numbers)))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (convert-to-integers (split-numbers-separated-by-comma numbers)))))
+    (sum-of (split-and-convert-to-integers numbers))))
