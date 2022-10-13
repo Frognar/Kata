@@ -12,7 +12,8 @@
   (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n" numbers))]
     (if (nil? match)
       numbers
-      (str/replace (subs numbers (count delimiter-prefix)) (first match) ","))))
+      (let [size-of-prefix (count delimiter-prefix)]
+        (str/replace (subs numbers size-of-prefix) (first match) ",")))))
 
 (defn split-and-convert-to-integers [numbers]
   (let [default-delimiters #"[,\n]"
