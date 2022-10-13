@@ -5,9 +5,10 @@
   (reduce + numbers))
 
 (defn split-and-convert-to-integers [numbers]
-  (letfn [(split-on-default-delimiter [numbers] (str/split numbers #"[,\n]"))
-          (convert-to-integers [numbers] (map #(Integer/parseInt %) numbers))]
-    (convert-to-integers (split-on-default-delimiter numbers))))
+  (let [default-delimiters #"[,\n]"]
+    (letfn [(split-on-default-delimiter [numbers] (str/split numbers default-delimiters))
+            (convert-to-integers [numbers] (map #(Integer/parseInt %) numbers))]
+      (convert-to-integers (split-on-default-delimiter numbers)))))
 
 (defn add [numbers]
   (if (empty? numbers)
