@@ -10,11 +10,11 @@
 
 (defn find-delimiters [[single-delimiter-match multi-delimiter-match & _]]
   (if (nil? single-delimiter-match)
-    multi-delimiter-match
+    (re-pattern (str/join "|" (str/split multi-delimiter-match #"]\Q[\E")))
     single-delimiter-match))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))]
+  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers))]
     (if (nil? match)
       numbers
       (let [size-of-prefix (count delimiter-prefix)
