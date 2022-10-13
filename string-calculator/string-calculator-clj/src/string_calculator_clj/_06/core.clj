@@ -7,11 +7,9 @@
 (defn convert-to-integers [numbers]
   (map #(Integer/parseInt %) numbers))
 
-(defn split-numbers-separated-by-comma [numbers]
-  (str/split numbers #","))
-
 (defn split-and-convert-to-integers [numbers]
-  (convert-to-integers (split-numbers-separated-by-comma numbers)))
+  (letfn [(split-on-comma [numbers] (str/split numbers #","))]
+        (convert-to-integers (split-on-comma numbers))))
 
 (defn add [numbers]
   (if (empty? numbers)
