@@ -15,6 +15,8 @@
               (should= 22 (add "6\n16")))
           (it "'-32' -> throw exception"
               (should-throw (add "-32")))
+          (it "'//>\n64>128' -> 192"
+              (should= 192 (add "//>\n64>128")))
           )
 
 (run-specs)
