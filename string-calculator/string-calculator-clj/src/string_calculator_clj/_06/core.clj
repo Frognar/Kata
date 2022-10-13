@@ -4,10 +4,13 @@
 (defn sum-of [numbers]
   (reduce + numbers))
 
+(defn convert-to-integers [numbers]
+  (map #(Integer/parseInt %) numbers))
+
 (defn split-numbers-separated-by-comma [numbers]
   (str/split numbers #","))
 
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (map #(Integer/parseInt %) (split-numbers-separated-by-comma numbers)))))
+    (sum-of (convert-to-integers (split-numbers-separated-by-comma numbers)))))
