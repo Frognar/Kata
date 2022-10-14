@@ -10,10 +10,13 @@
   (let [contains-negative? (some #(< % 0) numbers)]
    (if contains-negative? (throw IllegalArgumentException))))
 
+(defn replace-custom-delimiter-with-comma [numbers]
+  (if (not (str/starts-with? numbers "//"))
+    numbers
+    (str/replace (subs numbers 4) (str (nth numbers 2)) ",")))
+
 (defn split-and-convert-to-integers [numbers]
-  (let [numbers (if (not (str/starts-with? numbers "//"))
-                  numbers
-                  (str/replace (subs numbers 4) (str (nth numbers 2)) ","))]
+  (let [numbers (replace-custom-delimiter-with-comma numbers)]
     (letfn [(split-on-default-delimiter [n] (str/split n #"[,\n]"))
             (convert-to-integer [n] (Integer/parseInt n))]
       (map #(convert-to-integer %) (split-on-default-delimiter numbers)))))
