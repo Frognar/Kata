@@ -14,7 +14,7 @@
   (let [match (re-find (re-matcher #"//(.)\n" numbers))]
     (if (nil? match)
       numbers
-      (str/replace (subs numbers 4) (second match) ","))))
+      (str/replace (subs numbers (count (first match))) (second match) ","))))
 
 (defn split-and-convert-to-integers [numbers]
   (let [numbers (replace-custom-delimiter-with-comma numbers)]
