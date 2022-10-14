@@ -9,6 +9,8 @@
               (should= 0 (add "")))
           (it "'1' -> 1"
               (should= 1 (add "1")))
+          (it "'3,5' -> 8"
+              (should= 8 (add "3,5")))
           )
 
 (run-specs)
