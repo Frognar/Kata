@@ -10,15 +10,17 @@
   (let [contains-negative? (some #(< % 0) numbers)]
    (if contains-negative? (throw IllegalArgumentException))))
 
-(defn find-delimiters [[single-delimiter delimiter-in-brackets & _]]
-  (if (nil? single-delimiter) delimiter-in-brackets single-delimiter))
+(defn find-delimiters [[single-delimiter multi-delimiters & _]]
+  (if (nil? single-delimiter)
+    (re-pattern (str/join "|" (str/split multi-delimiters #"]\Q[\E")))
+    single-delimiter))
 
 (defn replace-delimiters-with-comma [delimiter-group numbers]
   (let [delimiter (find-delimiters delimiter-group)]
     (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [[delimiter-prefix & delimiters-group] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))
+  (let [[delimiter-prefix & delimiters-group] (re-find (re-matcher #"//(.)\n|//\Q[\E(.+)]\n" numbers))
         numbers-without-prefix (subs numbers (count delimiter-prefix))]
     (if (nil? delimiters-group)
       numbers
