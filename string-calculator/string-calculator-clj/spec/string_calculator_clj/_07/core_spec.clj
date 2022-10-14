@@ -15,6 +15,8 @@
               (should= 16 (add "7\n9")))
           (it "'-11' -> throw exception"
               (should-throw (add "-11")))
+          (it "'999,1000,1001' -> 1999"
+              (should= 1999 (add "999,1000,1001")))
           )
 
 (run-specs)

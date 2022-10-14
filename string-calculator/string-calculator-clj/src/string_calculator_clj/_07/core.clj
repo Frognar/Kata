@@ -17,4 +17,4 @@
     0
     (let [numbers (split-and-convert-to-integers numbers)]
       (assert-none-negative-values numbers)
-      (sum-of numbers))))
+      (sum-of (filter #(<= % 1000) numbers)))))
