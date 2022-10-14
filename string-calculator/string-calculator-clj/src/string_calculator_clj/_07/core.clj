@@ -15,10 +15,11 @@
     (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n" numbers))]
-    (if (nil? match)
+  (let [[delimiter-prefix & delimiters-group] (re-find (re-matcher #"//(.)\n" numbers))
+        numbers-without-prefix (subs numbers (count delimiter-prefix))]
+    (if (nil? delimiters-group)
       numbers
-      (replace-delimiters-with-comma match (subs numbers (count delimiter-prefix))))))
+      (replace-delimiters-with-comma delimiters-group numbers-without-prefix))))
 
 (defn split-and-convert-to-integers [numbers]
   (let [numbers (replace-custom-delimiter-with-comma numbers)]
