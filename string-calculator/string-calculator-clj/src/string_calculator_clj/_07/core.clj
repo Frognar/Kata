@@ -10,8 +10,11 @@
   (let [contains-negative? (some #(< % 0) numbers)]
    (if contains-negative? (throw IllegalArgumentException))))
 
-(defn replace-delimiters-with-comma [[single-delimiter delimiter-in-brackets & _] numbers]
-  (let [delimiter (if (nil? single-delimiter) delimiter-in-brackets single-delimiter)]
+(defn find-delimiters [[single-delimiter delimiter-in-brackets & _]]
+  (if (nil? single-delimiter) delimiter-in-brackets single-delimiter))
+
+(defn replace-delimiters-with-comma [delimiter-group numbers]
+  (let [delimiter (find-delimiters delimiter-group)]
     (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
