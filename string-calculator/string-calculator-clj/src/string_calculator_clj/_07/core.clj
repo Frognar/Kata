@@ -11,7 +11,7 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn get-delimiters-from [multi-delimiters]
-  (str/split multi-delimiters #"]\Q[\E"))
+  (reverse (sort-by count (str/split multi-delimiters #"]\Q[\E"))))
 
 (defn find-delimiters [[single-delimiter multi-delimiters & _]]
   (if (nil? single-delimiter)
