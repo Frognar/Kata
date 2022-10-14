@@ -7,7 +7,10 @@
 
 (defn split-on-comma [numbers] (str/split numbers #","))
 
+(defn split-and-convert-to-integers [numbers]
+  (map #(convert-to-integer %) (split-on-comma numbers)))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (map #(convert-to-integer %) (split-on-comma numbers)))))
+    (sum-of (split-and-convert-to-integers numbers))))
