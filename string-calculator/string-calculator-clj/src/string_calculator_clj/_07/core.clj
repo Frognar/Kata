@@ -11,10 +11,10 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [match (re-find (re-matcher #"//(.)\n" numbers))]
+  (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n" numbers))]
     (if (nil? match)
       numbers
-      (str/replace (subs numbers (count (first match))) (second match) ","))))
+      (str/replace (subs numbers (count delimiter-prefix)) (first match) ","))))
 
 (defn split-and-convert-to-integers [numbers]
   (let [numbers (replace-custom-delimiter-with-comma numbers)]
