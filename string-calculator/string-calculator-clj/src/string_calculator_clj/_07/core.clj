@@ -10,9 +10,12 @@
   (let [contains-negative? (some #(< % 0) numbers)]
    (if contains-negative? (throw IllegalArgumentException))))
 
+(defn get-delimiters-from [multi-delimiters]
+  (str/split multi-delimiters #"]\Q[\E"))
+
 (defn find-delimiters [[single-delimiter multi-delimiters & _]]
   (if (nil? single-delimiter)
-    (re-pattern (str/join "|" (str/split multi-delimiters #"]\Q[\E")))
+    (re-pattern (str/join "|" (get-delimiters-from multi-delimiters)))
     single-delimiter))
 
 (defn replace-delimiters-with-comma [delimiter-group numbers]
