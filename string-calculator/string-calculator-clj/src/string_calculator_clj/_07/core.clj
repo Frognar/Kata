@@ -11,7 +11,8 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn replace-delimiters-with-comma [delimiters-group numbers]
-  (str/replace numbers (first delimiters-group) ","))
+  (let [delimiter (first delimiters-group)]
+    (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
   (let [[delimiter-prefix & match] (re-find (re-matcher #"//(.)\n" numbers))]
