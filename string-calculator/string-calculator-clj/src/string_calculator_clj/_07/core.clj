@@ -10,8 +10,8 @@
   (let [contains-negative? (some #(< % 0) numbers)]
    (if contains-negative? (throw IllegalArgumentException))))
 
-(defn replace-delimiters-with-comma [delimiters-group numbers]
-  (let [delimiter (if (nil? (first delimiters-group)) (second delimiters-group) (first delimiters-group))]
+(defn replace-delimiters-with-comma [[single-delimiter & delimiters-group] numbers]
+  (let [delimiter (if (nil? single-delimiter) (first delimiters-group) single-delimiter)]
     (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
