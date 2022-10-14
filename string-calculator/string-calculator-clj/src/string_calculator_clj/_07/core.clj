@@ -11,12 +11,13 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn split-and-convert-to-integers [numbers]
-  (letfn [(split-on-default-delimiter [n] (str/split n #"[,\n]"))
-          (convert-to-integer [n] (Integer/parseInt n))]
-    (map #(convert-to-integer %) (split-on-default-delimiter
-                                   (if (not (str/starts-with? numbers "//"))
-                                     numbers
-                                     (str/replace (subs numbers 4) (str (nth numbers 2)) ","))))))
+  (let [numbers (if (not (str/starts-with? numbers "//"))
+                  numbers
+                  (str/replace (subs numbers 4) (str (nth numbers 2)) ","))]
+    (letfn [(split-on-default-delimiter [n] (str/split n #"[,\n]"))
+            (convert-to-integer [n] (Integer/parseInt n))]
+      (map #(convert-to-integer %) (split-on-default-delimiter numbers)))))
+
 (defn add [numbers]
   (if (empty? numbers)
     0
