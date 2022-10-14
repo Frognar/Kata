@@ -11,11 +11,11 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn replace-delimiters-with-comma [delimiters-group numbers]
-  (let [delimiter (first delimiters-group)]
+  (let [delimiter (if (nil? (first delimiters-group)) (second delimiters-group) (first delimiters-group))]
     (str/replace numbers delimiter ",")))
 
 (defn replace-custom-delimiter-with-comma [numbers]
-  (let [[delimiter-prefix & delimiters-group] (re-find (re-matcher #"//(.)\n" numbers))
+  (let [[delimiter-prefix & delimiters-group] (re-find (re-matcher #"//(.)\n|//\Q[\E(.)]\n" numbers))
         numbers-without-prefix (subs numbers (count delimiter-prefix))]
     (if (nil? delimiters-group)
       numbers
