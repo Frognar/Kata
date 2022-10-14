@@ -3,6 +3,9 @@
 
 (defn sum-of [numbers] (reduce + numbers))
 
+(defn assert-none-negative-values [numbers]
+  (if (some #(< % 0) numbers) (throw IllegalArgumentException)))
+
 (defn split-and-convert-to-integers [numbers]
   (letfn [(split-on-default-delimiter [n] (str/split n #"[,\n]"))
           (convert-to-integer [n] (Integer/parseInt n))]
@@ -12,5 +15,5 @@
   (if (empty? numbers)
     0
     (let [numbers (split-and-convert-to-integers numbers)]
-      (if (some #(< % 0) numbers) (throw IllegalArgumentException))
+      (assert-none-negative-values numbers)
       (sum-of numbers))))
