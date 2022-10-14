@@ -3,10 +3,9 @@
 
 (defn sum-of [numbers] (reduce + numbers))
 
-(defn convert-to-integer [number] (Integer/parseInt number))
-
 (defn split-and-convert-to-integers [numbers]
-  (letfn [(split-on-comma [n] (str/split n #","))]
+  (letfn [(split-on-comma [n] (str/split n #","))
+          (convert-to-integer [n] (Integer/parseInt n))]
     (map #(convert-to-integer %) (split-on-comma numbers))))
 
 (defn add [numbers]
