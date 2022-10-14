@@ -11,4 +11,5 @@
 (defn add [numbers]
   (if (empty? numbers)
     0
-    (sum-of (split-and-convert-to-integers numbers))))
+    (let [numbers (split-and-convert-to-integers numbers)]
+      (sum-of numbers))))
