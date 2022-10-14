@@ -1,5 +1,6 @@
 (ns string-calculator-clj._07.core
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str])
+  (:import (java.util.regex Pattern)))
 
 (defn sum-of [numbers] (reduce + numbers))
 
@@ -11,7 +12,7 @@
    (if contains-negative? (throw IllegalArgumentException))))
 
 (defn get-delimiters-from [multi-delimiters]
-  (reverse (sort-by count (str/split multi-delimiters #"]\Q[\E"))))
+  (reverse (map #(Pattern/quote %) (sort-by count (str/split multi-delimiters #"]\Q[\E")))))
 
 (defn find-delimiters [[single-delimiter multi-delimiters & _]]
   (if (nil? single-delimiter)
