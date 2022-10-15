@@ -5,7 +5,8 @@ public class Sequence {
         var result = "";
         var count = 1;
         for (var index = 0; index < input.length() - 1; index++) {
-            if (input.charAt(index) == input.charAt(index + 1)) {
+            var currentDigit = input.charAt(index);
+            if (currentDigit == input.charAt(index + 1)) {
                 count++;
             }
             else {
