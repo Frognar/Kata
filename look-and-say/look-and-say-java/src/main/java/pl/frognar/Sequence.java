@@ -11,6 +11,7 @@ public class Sequence {
             else {
                 var count = 1;
                 result += "%s%s".formatted(count, input.charAt(0));
+                count = 1;
                 result += "%s%s".formatted(count, input.charAt(1));
             }
         }
