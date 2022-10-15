@@ -13,7 +13,7 @@ public class Sequence {
                 count = 1;
             }
 
-            result += "%s%s".formatted(count, input.charAt(1));
+            result += "%s%s".formatted(count, input.charAt(input.length() - 1));
         }
         else {
             result += "%s%s".formatted(count, input.charAt(0));
