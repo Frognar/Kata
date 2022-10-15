@@ -5,7 +5,7 @@ public class Sequence {
         var result = "";
         var count = 1;
         var index = 0;
-        if (input.length() == 2) {
+        if (input.length() > 1) {
             if (input.charAt(index) == input.charAt(index + 1)) {
                 count++;
             }
