@@ -1,5 +1,6 @@
 package pl.frognar;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -11,5 +12,10 @@ public class LookAndSayTests {
                 "2,12"})
     void oneDigit(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
+    }
+
+    @Test
+    void twoDifferentDigits() {
+        assertEquals("1112", Sequence.lookAndSay("12"));
     }
 }
