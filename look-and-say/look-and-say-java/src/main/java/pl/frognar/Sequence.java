@@ -13,7 +13,8 @@ public class Sequence {
             }
         }
         else {
-            result += "1%s".formatted(input.charAt(0));
+            var count = 1;
+            result += "%s%s".formatted(count, input.charAt(0));
         }
 
         return result;
