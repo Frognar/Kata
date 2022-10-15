@@ -16,7 +16,7 @@ public class Sequence {
             }
         }
 
-        result += "%s%s".formatted(count, input.charAt(input.length() - 1));
+        result += say(count, input.charAt(input.length() - 1));
         return result;
     }
 
