@@ -12,13 +12,9 @@ public class Sequence {
                 result += "%s%s".formatted(count, input.charAt(0));
                 count = 1;
             }
-
-            result += "%s%s".formatted(count, input.charAt(input.length() - 1));
-        }
-        else {
-            result += "%s%s".formatted(count, input.charAt(input.length() - 1));
         }
 
+        result += "%s%s".formatted(count, input.charAt(input.length() - 1));
         return result;
     }
 }
