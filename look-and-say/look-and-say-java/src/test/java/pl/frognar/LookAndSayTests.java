@@ -1,5 +1,6 @@
 package pl.frognar;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -43,5 +44,10 @@ public class LookAndSayTests {
     @CsvSource({"1121,211211"})
     void twoIdenticalDigitsAtDifferentLocations(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
+    }
+
+    @Test
+    void depthOfOne() {
+        assertEquals("11", Sequence.lookAndSay("1", 1));
     }
 }
