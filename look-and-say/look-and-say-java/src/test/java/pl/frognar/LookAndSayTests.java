@@ -50,4 +50,9 @@ public class LookAndSayTests {
     void depthOfOne() {
         assertEquals("11", Sequence.lookAndSay("1", 1));
     }
+
+    @Test
+    void depthOfTwo() {
+        assertEquals("11 21", Sequence.lookAndSay("1", 2));
+    }
 }
