@@ -26,4 +26,10 @@ public class LookAndSayTests {
     void twoIdenticalDigits(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
+
+    @ParameterizedTest
+    @CsvSource({"123,111213"})
+    void threeDifferentDigits(String input, String expected) {
+        assertEquals(expected, Sequence.lookAndSay(input));
+    }
 }
