@@ -11,7 +11,7 @@ public class Sequence {
                 count++;
             }
             else {
-                result += "%s%s".formatted(count, input.charAt(index));
+                result += "%s%s".formatted(count, currentDigit);
                 count = 1;
             }
         }
