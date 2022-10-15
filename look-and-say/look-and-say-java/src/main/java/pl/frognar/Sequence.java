@@ -11,12 +11,16 @@ public class Sequence {
                 count++;
             }
             else {
-                result += "%s%s".formatted(count, currentDigit);
+                result += say(count, currentDigit);
                 count = 1;
             }
         }
 
         result += "%s%s".formatted(count, input.charAt(input.length() - 1));
         return result;
+    }
+
+    private static String say(int count, char currentDigit) {
+        return "%s%s".formatted(count, currentDigit);
     }
 }
