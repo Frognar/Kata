@@ -38,4 +38,10 @@ public class LookAndSayTests {
     void twoConsecutiveIdenticalDigitsWithinThree(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
+
+    @ParameterizedTest
+    @CsvSource({"1121,211211"})
+    void twoIdenticalDigitsAtDifferentLocations(String input, String expected) {
+        assertEquals(expected, Sequence.lookAndSay(input));
+    }
 }
