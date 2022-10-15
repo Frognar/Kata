@@ -16,7 +16,8 @@ public class Sequence {
             }
         }
 
-        result += say(count, input.charAt(input.length() - 1));
+        var lastDigit = input.charAt(input.length() - 1);
+        result += say(count, lastDigit);
         return result;
     }
 
