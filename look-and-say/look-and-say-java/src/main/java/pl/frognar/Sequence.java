@@ -16,7 +16,9 @@ public class Sequence {
             }
         }
         else {
-            return "1%s".formatted(input.charAt(0));
+            var result = "";
+            result += "1%s".formatted(input.charAt(0));
+            return result;
         }
     }
 }
