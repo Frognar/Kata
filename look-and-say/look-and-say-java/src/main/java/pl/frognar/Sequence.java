@@ -4,12 +4,13 @@ public class Sequence {
     public static String lookAndSay(String input) {
         var result = "";
         var count = 1;
+        var index = 0;
         if (input.length() == 2) {
-            if (input.charAt(0) == input.charAt(1)) {
+            if (input.charAt(index) == input.charAt(1)) {
                 count++;
             }
             else {
-                result += "%s%s".formatted(count, input.charAt(0));
+                result += "%s%s".formatted(count, input.charAt(index));
                 count = 1;
             }
         }
