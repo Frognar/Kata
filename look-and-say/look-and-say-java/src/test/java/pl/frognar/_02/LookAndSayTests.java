@@ -8,7 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LookAndSayTests {
     @ParameterizedTest
     @CsvSource({"1,11",
-                "2,12"})
+                "2,12",
+                "11,21"})
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
