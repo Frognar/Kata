@@ -16,7 +16,8 @@ public class Sequence {
         }
         else {
             result += "1%s".formatted(input.charAt(0));
-            return result;
         }
+
+        return result;
     }
 }
