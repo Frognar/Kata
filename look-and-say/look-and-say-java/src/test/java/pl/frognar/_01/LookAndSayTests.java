@@ -1,4 +1,4 @@
-package pl.frognar;
+package pl.frognar._01;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

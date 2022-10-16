@@ -1,4 +1,4 @@
-package pl.frognar;
+package pl.frognar._01;
 
 public class Sequence {
     public static String lookAndSay(String input) {
