@@ -9,7 +9,10 @@ public class Sequence {
                 return result;
             }
             else {
-                return "1%s1%s".formatted(input.charAt(0), input.charAt(1));
+                String result = "";
+                result += "1%s".formatted(input.charAt(0));
+                result += "1%s".formatted(input.charAt(1));
+                return result;
             }
         }
         else {
