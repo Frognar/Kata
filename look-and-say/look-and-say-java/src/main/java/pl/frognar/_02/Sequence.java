@@ -24,4 +24,8 @@ public class Sequence {
     private static String say(int count, char currentDigit) {
         return "%s%s".formatted(count, currentDigit);
     }
+
+    public static String lookAndSay(String input, int depth) {
+        return lookAndSay(input);
+    }
 }
