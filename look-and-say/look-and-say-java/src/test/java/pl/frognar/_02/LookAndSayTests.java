@@ -12,7 +12,8 @@ public class LookAndSayTests {
                 "11,21",
                 "22,22",
                 "12,1112",
-                "112,2112"})
+                "112,2112",
+                "1233345,1112331415"})
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
