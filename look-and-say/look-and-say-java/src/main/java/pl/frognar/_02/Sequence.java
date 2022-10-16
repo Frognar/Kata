@@ -16,7 +16,8 @@ public class Sequence {
             }
         }
 
-        result += "%s%s".formatted(count, input.charAt(input.length() - 1));
+        char lastDigit = input.charAt(input.length() - 1);
+        result += "%s%s".formatted(count, lastDigit);
         return result;
     }
 }
