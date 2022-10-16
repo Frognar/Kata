@@ -10,7 +10,8 @@ public class LookAndSayTests {
     @CsvSource({"1,11",
                 "2,12",
                 "11,21",
-                "22,22"})
+                "22,22",
+                "12,1112"})
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
