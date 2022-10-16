@@ -16,7 +16,7 @@ public class Sequence {
             }
         }
         else {
-            result += "%s%s".formatted(count, input.charAt(0));
+            result += "%s%s".formatted(count, input.charAt(input.length() - 1));
         }
 
         return result;
