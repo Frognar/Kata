@@ -6,7 +6,7 @@ public class Sequence {
             if (input.charAt(0) == input.charAt(1))
                 return "2%s".formatted(input.charAt(0));
             else
-                return "1112";
+                return "1%s1%s".formatted(input.charAt(0), input.charAt(1));
         } else
             return "1%s".formatted(input);
     }
