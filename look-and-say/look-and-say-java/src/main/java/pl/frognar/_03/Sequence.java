@@ -11,7 +11,7 @@ public class Sequence {
                 return "1%s1%s".formatted(input.charAt(0), input.charAt(1));
             }
         } else {
-            return "1%s".formatted(input);
+            return "1%s".formatted(input.charAt(0));
         }
     }
 }
