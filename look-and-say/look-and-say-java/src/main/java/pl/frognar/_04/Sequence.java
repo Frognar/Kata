@@ -24,6 +24,8 @@ public class Sequence {
     }
 
     public static String lookAndSay(String input, int depth) {
-        return lookAndSay(input);
+        String result = "";
+        result += lookAndSay(input);
+        return result;
     }
 }
