@@ -23,7 +23,8 @@ public class LookAndSayTests {
 
     private static Stream<Arguments> depthInputAndExpected() {
         return Stream.of(
-                Arguments.of(1, "1", "11")
+                Arguments.of(1, "1", "11"),
+                Arguments.of(5, "1", "11 21 1211 111221 312211")
         );
     }
 
