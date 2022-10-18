@@ -11,6 +11,7 @@ public class LookAndSayTests {
             "1,11",
             "11,21",
             "21,1211",
+            "1211, 111221"
     })
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
