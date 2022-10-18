@@ -2,7 +2,7 @@ package pl.frognar._04;
 
 public class Sequence {
     public static String lookAndSay(String input) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int count = 1;
         for(int index = 0; index < input.length() - 1; index++) {
             char currentDigit = input.charAt(index);
@@ -10,13 +10,13 @@ public class Sequence {
             if (currentDigit == nextDigit) {
                 count++;
             } else {
-                result += say(count, currentDigit);
+                result.append(say(count, currentDigit));
             }
         }
 
         char lastDigit = input.charAt(input.length() - 1);
-        result += say(count, lastDigit);
-        return result;
+        result.append(say(count, lastDigit));
+        return result.toString();
     }
 
     private static String say(int count, char lastDigit) {
