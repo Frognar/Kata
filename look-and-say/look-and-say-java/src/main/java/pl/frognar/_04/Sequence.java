@@ -26,8 +26,11 @@ public class Sequence {
     public static String lookAndSay(String input, int depth) {
         String result = "";
         String currentDepth = input;
-        currentDepth = lookAndSay(input);
-        result += currentDepth + " ";
+        for (int i = 0; i < depth; i++) {
+            currentDepth = lookAndSay(input);
+            result += currentDepth + " ";
+        }
+
         return result.trim();
     }
 }
