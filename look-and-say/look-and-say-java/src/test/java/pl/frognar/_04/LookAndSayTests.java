@@ -9,6 +9,7 @@ public class LookAndSayTests {
     @ParameterizedTest
     @CsvSource({
             "1,11",
+            "11,21",
     })
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
