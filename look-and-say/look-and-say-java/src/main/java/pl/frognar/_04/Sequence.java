@@ -27,7 +27,7 @@ public class Sequence {
         String result = "";
         String currentDepth = input;
         for (int i = 0; i < depth; i++) {
-            currentDepth = lookAndSay(input);
+            currentDepth = lookAndSay(currentDepth);
             result += currentDepth + " ";
         }
 
