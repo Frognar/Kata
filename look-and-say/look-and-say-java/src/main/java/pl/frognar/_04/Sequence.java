@@ -24,13 +24,13 @@ public class Sequence {
     }
 
     public static String lookAndSay(String input, int depth) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         String currentDepth = input;
         for (int i = 0; i < depth; i++) {
             currentDepth = lookAndSay(currentDepth);
-            result += currentDepth + " ";
+            result.append(currentDepth).append(" ");
         }
 
-        return result.trim();
+        return result.toString().trim();
     }
 }
