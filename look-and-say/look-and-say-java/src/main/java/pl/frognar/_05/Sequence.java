@@ -5,7 +5,9 @@ public class Sequence {
         String result = "";
         if (input.length() == 2) {
             if (input.charAt(0) == input.charAt(1)) {
-                result += "2%s".formatted(input.charAt(0));
+                int count = 1;
+                count++;
+                result += "%s%s".formatted(count, input.charAt(0));
                 return result;
             }
             else {
