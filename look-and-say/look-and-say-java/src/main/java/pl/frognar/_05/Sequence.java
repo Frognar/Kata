@@ -11,8 +11,9 @@ public class Sequence {
                 return result;
             }
             else {
-                result += "1%s".formatted(input.charAt(0));
-                result += "1%s".formatted(input.charAt(1));
+                int count = 1;
+                result += "%s%s".formatted(count, input.charAt(0));
+                result += "%s%s".formatted(count, input.charAt(1));
                 return result;
             }
         }
