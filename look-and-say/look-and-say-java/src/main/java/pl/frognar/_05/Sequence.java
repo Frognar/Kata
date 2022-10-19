@@ -14,7 +14,7 @@ public class Sequence {
             }
         }
 
-        result += "1%s".formatted(input);
+        result += "1%s".formatted(input.charAt(input.length() - 1));
         return result;
     }
 }
