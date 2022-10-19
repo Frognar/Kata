@@ -7,13 +7,9 @@ public class Sequence {
         if (input.length() == 2) {
             if (input.charAt(0) == input.charAt(1)) {
                 count++;
-                result += "%s%s".formatted(count, input.charAt(0));
-                return result;
             }
             else {
                 result += "%s%s".formatted(count, input.charAt(0));
-                result += "%s%s".formatted(count, input.charAt(1));
-                return result;
             }
         }
 
