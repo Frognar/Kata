@@ -14,6 +14,9 @@ public class Sequence {
                 return result;
             }
         }
-        return "1%s".formatted(input);
+
+        String result = "";
+        result += "1%s".formatted(input);
+        return result;
     }
 }
