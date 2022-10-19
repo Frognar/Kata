@@ -26,7 +26,8 @@ public class LookAndSayTests {
         return Stream.of(
                 Arguments.of("1", 0, "1"),
                 Arguments.of("1", 1, "1 -> 11"),
-                Arguments.of("1", 2, "1 -> 11 -> 21")
+                Arguments.of("1", 2, "1 -> 11 -> 21"),
+                Arguments.of("1", 5, "1 -> 11 -> 21 -> 1211 -> 111221 -> 312211")
         );
     }
 
