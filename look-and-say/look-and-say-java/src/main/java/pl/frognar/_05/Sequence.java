@@ -5,7 +5,8 @@ public class Sequence {
         String result = "";
         int count = 1;
         if (input.length() == 2) {
-            char currentDigit = input.charAt(0);
+            int index = 0;
+            char currentDigit = input.charAt(index);
             char nextDigit = input.charAt(1);
             if (currentDigit == nextDigit) {
                 count++;
