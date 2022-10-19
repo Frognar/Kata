@@ -12,6 +12,7 @@ public class Sequence {
             }
             else {
                 result.append(say(count, currentDigit));
+                count = 1;
             }
         }
 
