@@ -4,10 +4,10 @@ public class Sequence {
     public static String lookAndSay(String input) {
         String result = "";
         int count = 1;
+        int index = 0;
         if (input.length() == 2) {
-            int index = 0;
             char currentDigit = input.charAt(index);
-            char nextDigit = input.charAt(1);
+            char nextDigit = input.charAt(index + 1);
             if (currentDigit == nextDigit) {
                 count++;
             }
