@@ -1,5 +1,6 @@
 package pl.frognar._05;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -16,5 +17,10 @@ public class LookAndSayTests {
     })
     void nextSequenceElementTest(String input, String expected) {
         assertEquals(expected, Sequence.lookAndSay(input));
+    }
+
+    @Test
+    void  withDepthOnN() {
+        assertEquals("1", Sequence.lookAndSay("1", 0));
     }
 }
