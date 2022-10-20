@@ -1,12 +1,17 @@
 package pl.frognar._06;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LookAndSayTests {
-    @Test
-    void shouldFail() {
-        fail();
+    @ParameterizedTest
+    @CsvSource({
+            "1,11"
+    })
+    void nextSequenceElementTest(String input, String expected) {
+        assertEquals(expected, Sequence.lookAndSay(input));
     }
+
 }
