@@ -13,6 +13,8 @@ public class Sequence {
             result += "1%s".formatted(input.charAt(1));
             return result;
         }
-        return "1%s".formatted(input.charAt(0));
+        String result = "";
+        result += "1%s".formatted(input.charAt(0));
+        return result;
     }
 }
