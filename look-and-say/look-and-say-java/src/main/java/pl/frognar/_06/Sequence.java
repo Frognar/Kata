@@ -10,7 +10,7 @@ public class Sequence {
                 count++;
             }
             else {
-                result += "%s%s".formatted(count, input.charAt(0));
+                result += "%s%s".formatted(count, currentDigit);
             }
         }
 
