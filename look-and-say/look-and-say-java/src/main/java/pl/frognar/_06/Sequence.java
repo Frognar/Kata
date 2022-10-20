@@ -7,7 +7,7 @@ public class Sequence {
         int index = 0;
         if (input.length() == 2) {
             char currentDigit = input.charAt(index);
-            char nextDigit = input.charAt(1);
+            char nextDigit = input.charAt(index + 1);
             if (currentDigit == nextDigit) {
                 count++;
             }
