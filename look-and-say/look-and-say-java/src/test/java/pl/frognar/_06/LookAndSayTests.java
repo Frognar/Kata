@@ -1,6 +1,5 @@
 package pl.frognar._06;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -27,7 +26,8 @@ public class LookAndSayTests {
         return Stream.of(
                 Arguments.of("1", 0, "1"),
                 Arguments.of("1", 1, "1 -> 11"),
-                Arguments.of("1", 2, "1 -> 11 -> 21")
+                Arguments.of("1", 2, "1 -> 11 -> 21"),
+                Arguments.of("1", 3, "1 -> 11 -> 21 -> 1211")
         );
     }
 
