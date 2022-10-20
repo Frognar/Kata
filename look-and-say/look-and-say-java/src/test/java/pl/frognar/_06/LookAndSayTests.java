@@ -2,7 +2,11 @@ package pl.frognar._06;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,8 +23,16 @@ public class LookAndSayTests {
         assertEquals(expected, Sequence.lookAndSay(input));
     }
 
-    @Test
-    void withDepthOnN() {
-        assertEquals("1", Sequence.lookAndSay("1", 0));
+    private static Stream<Arguments> depthInputAndExpected() {
+        return Stream.of(
+                Arguments.of("1", 0, "1"),
+                Arguments.of("1", 1, "1 -> 11")
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("depthInputAndExpected")
+    void withDepthOnN(String input, int depth, String expected) {
+        assertEquals(expected, pl.frognar._05.Sequence.lookAndSay(input, depth));
     }
 }
