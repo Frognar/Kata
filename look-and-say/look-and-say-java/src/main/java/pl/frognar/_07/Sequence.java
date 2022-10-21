@@ -25,7 +25,7 @@ public class Sequence {
     public static String lookAndSay(String input, int depth) {
         String result = input;
         String currentDepth = input;
-        if (depth > 0) {
+        while (depth-- > 0) {
             currentDepth = lookAndSay(currentDepth);
             result += " -> " + currentDepth;
         }
