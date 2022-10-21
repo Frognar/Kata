@@ -21,4 +21,8 @@ public class Sequence {
     private static String say(int count, char lastDigit) {
         return "%s%s".formatted(count, lastDigit);
     }
+
+    public static String lookAndSay(String input, int depth) {
+        return input;
+    }
 }
