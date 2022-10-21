@@ -24,8 +24,10 @@ public class Sequence {
 
     public static String lookAndSay(String input, int depth) {
         String result = input;
-        if (depth > 0)
-            result += " -> " + lookAndSay(input);
+        if (depth > 0) {
+            String currentDepth = lookAndSay(input);
+            result += " -> " + currentDepth;
+        }
         return result;
     }
 }
