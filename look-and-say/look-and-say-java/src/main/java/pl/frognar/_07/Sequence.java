@@ -11,6 +11,7 @@ public class Sequence {
                 count++;
             } else {
                 result.append(say(count, currentDigit));
+                count = 1;
             }
         }
         char lastDigit = input.charAt(input.length() - 1);
