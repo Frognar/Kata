@@ -34,6 +34,6 @@ public class LookAndSayTests {
     @ParameterizedTest
     @MethodSource("depthInputAndExpected")
     void withDepthOnN(String input, int depth, String expected) {
-        assertEquals(expected, pl.frognar._05.Sequence.lookAndSay(input, depth));
+        assertEquals(expected, Sequence.lookAndSay(input, depth));
     }
 }
