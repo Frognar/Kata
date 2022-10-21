@@ -15,7 +15,8 @@ public class Sequence {
             result += "%s%s".formatted(count, input.charAt(1));
             return result;
         }
-        result += "1%s".formatted(input);
+        int count = 1;
+        result += "%s%s".formatted(count, input);
         return result;
     }
 }
