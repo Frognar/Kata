@@ -9,7 +9,7 @@ public class Sequence {
             if (currentDigit == input.charAt(1)) {
                 count++;
             } else {
-                result += "%s%s".formatted(count, input.charAt(0));
+                result += "%s%s".formatted(count, currentDigit);
             }
         }
         result += "%s%s".formatted(count, input.charAt(input.length() - 1));
