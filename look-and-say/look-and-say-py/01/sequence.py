@@ -19,5 +19,8 @@ def say(count: int, digit: str):
 
 
 def look_and_say_sequence(start: str, depth: int) -> str:
-    return start
+    result = start
+    if depth > 0:
+        result += f' -> {look_and_say(start)}'
+    return result
 
