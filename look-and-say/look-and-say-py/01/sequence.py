@@ -7,7 +7,5 @@ def look_and_say(input_value: str) -> str:
             result += f"{count}{input_value[0]}"
             return result
         result += f"{count}{input_value[0]}"
-        result += f"{count}{input_value[1]}"
-        return result
     result += f"{count}{input_value[-1]}"
     return result
