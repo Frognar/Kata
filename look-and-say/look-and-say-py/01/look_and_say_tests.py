@@ -1,9 +1,10 @@
 import unittest
+from sequence import look_and_say
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+class LookAndSayTestCase(unittest.TestCase):
+    def test_look_and_say(self):
+        self.assertEqual("11", look_and_say("1"))
 
 
 if __name__ == '__main__':
