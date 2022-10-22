@@ -21,8 +21,9 @@ def say(count: int, digit: str):
 def look_and_say_sequence(start: str, depth: int) -> str:
     result = start
     current = start
-    if depth > 0:
+    while depth > 0:
         current = look_and_say(current)
         result += f' -> {current}'
+        depth -= 1
     return result
 
