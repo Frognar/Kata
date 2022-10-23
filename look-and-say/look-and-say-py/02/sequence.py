@@ -6,6 +6,5 @@ def look_and_say(input_value: str) -> str:
             return result
         result += f'1{input_value[0]}1{input_value[1]}'
         return result
-    result = ''
     result += f'1{input_value}'
     return result
