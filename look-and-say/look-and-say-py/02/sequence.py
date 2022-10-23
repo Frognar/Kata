@@ -3,4 +3,6 @@ def look_and_say(input_value: str) -> str:
         if input_value[0] == input_value[1]:
             return f'2{input_value[0]}'
         return f'1{input_value[0]}1{input_value[1]}'
-    return f'1{input_value}'
+    result = ''
+    result += f'1{input_value}'
+    return result
