@@ -8,6 +8,7 @@ def look_and_say(input_value: str) -> str:
             count += 1
         else:
             result += say(count, current_digit)
+            count = 1
     last_digit = input_value[-1]
     result += say(count, last_digit)
     return result
