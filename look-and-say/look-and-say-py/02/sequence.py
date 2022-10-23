@@ -4,7 +4,7 @@ def look_and_say(input_value: str) -> str:
     index = 0
     if len(input_value) > 1:
         current_digit = input_value[index]
-        next_digit = input_value[1]
+        next_digit = input_value[index + 1]
         if current_digit == next_digit:
             count += 1
         else:
