@@ -8,7 +8,11 @@ def look_and_say(input_value: str) -> str:
         if current_digit == next_digit:
             count += 1
         else:
-            result += f'{count}{current_digit}'
+            result += say(count, current_digit)
     last_digit = input_value[-1]
-    result += f'{count}{last_digit}'
+    result += say(count, last_digit)
     return result
+
+
+def say(count: int, digit: str) -> str:
+    return f'{count}{digit}'
