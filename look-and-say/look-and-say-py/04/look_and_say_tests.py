@@ -18,6 +18,7 @@ class LookAndSayTestCase(unittest.TestCase):
         ("1", 0, "1"),
         ("1", 1, "1 11"),
         ("1", 2, "1 11 21"),
+        ("1", 9, "1 11 21 1211 111221 312211 13112221 1113213211 31131211131221 13211311123113112211"),
     ])
     def test_look_and_say_sequence(self, start: str, depth: int, expected: str):
         self.assertEqual(expected, look_and_say_sequence(start, depth))
