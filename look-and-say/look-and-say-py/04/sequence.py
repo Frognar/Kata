@@ -7,7 +7,8 @@ def look_and_say(input_value: str) -> str:
         else:
             result += say(count, input_value[index])
             count = 1
-    result += say(count, input_value[-1])
+    last_digit = input_value[-1]
+    result += say(count, last_digit)
     return result
 
 
