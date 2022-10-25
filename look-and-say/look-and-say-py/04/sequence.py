@@ -7,7 +7,7 @@ def look_and_say(input_value: str) -> str:
         else:
             result += say(count, input_value[index])
             count = 1
-    result += f'{count}{input_value[-1]}'
+    result += say(count, input_value[-1])
     return result
 
 
