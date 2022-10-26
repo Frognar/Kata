@@ -16,3 +16,7 @@ def look_and_say(input_value: str) -> str:
 
 def say(count: int, digit: str) -> str:
     return f'{count}{digit}'
+
+
+def look_and_say_sequence(start: str, depth: int) -> str:
+    return '3'
