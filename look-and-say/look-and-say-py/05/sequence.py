@@ -4,5 +4,6 @@ def look_and_say(input_value: str) -> str:
         if input_value[0] == input_value[1]:
             count += 1
         else:
-            return f'{count}{input_value[0]}{count}{input_value[1]}'
+            result = f'{count}{input_value[0]}{count}{input_value[1]}'
+            return result
     return f'{count}{input_value[-1]}'
