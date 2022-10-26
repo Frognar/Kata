@@ -8,4 +8,5 @@ def look_and_say(input_value: str) -> str:
             result += f'{count}{input_value[0]}'
             result += f'{count}{input_value[1]}'
             return result
-    return f'{count}{input_value[-1]}'
+    result = f'{count}{input_value[-1]}'
+    return result
