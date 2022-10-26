@@ -9,6 +9,7 @@ class LookAndSayTestCase(unittest.TestCase):
         ('11', '21'),
         ('21', '1211'),
         ('1211', '111221'),
+        ('111221', '312211'),
     ])
     def test_look_and_say(self, current: str, expected: str):
         self.assertEqual(expected, look_and_say(current))
