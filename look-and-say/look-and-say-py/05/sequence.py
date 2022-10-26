@@ -20,7 +20,8 @@ def say(count: int, digit: str) -> str:
 
 def look_and_say_sequence(start: str, depth: int) -> str:
     result = start
+    current = start
     if depth > 0:
-        current = look_and_say(start)
+        current = look_and_say(current)
         result += f' {current}'
     return result
