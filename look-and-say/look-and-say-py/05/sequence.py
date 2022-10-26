@@ -19,4 +19,4 @@ def say(count: int, digit: str) -> str:
 
 
 def look_and_say_sequence(start: str, depth: int) -> str:
-    return '3'
+    return start
