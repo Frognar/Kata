@@ -8,5 +8,6 @@ def look_and_say(input_value: str) -> str:
             count += 1
         else:
             result += f'{count}{current_digit}'
-    result += f'{count}{input_value[-1]}'
+    last_digit = input_value[-1]
+    result += f'{count}{last_digit}'
     return result
