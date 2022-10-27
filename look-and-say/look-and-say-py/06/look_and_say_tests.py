@@ -18,6 +18,7 @@ class LookAndSayTestCase(unittest.TestCase):
         ('5', 0, '5'),
         ('5', 1, '5 15'),
         ('5', 2, '5 15 1115'),
+        ('5', 5, '5 15 1115 3115 132115 1113122115'),
     ])
     def test_look_and_say_sequence(self, start: str, depth: int, expected: str):
         self.assertEqual(expected, look_and_say_sequence(start, depth))
