@@ -1,2 +1,2 @@
 def look_and_say(input_value: str) -> str:
-    return '12'
+    return f'1{input_value}'
