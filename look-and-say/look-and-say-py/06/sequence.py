@@ -4,5 +4,5 @@ def look_and_say(input_value: str) -> str:
         result += f'1{input_value[0]}'
         result += f'1{input_value[1]}'
         return result
-    result += f'1{input_value}'
+    result += f'1{input_value[-1]}'
     return result
