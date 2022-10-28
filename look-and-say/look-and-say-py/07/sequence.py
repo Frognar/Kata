@@ -5,6 +5,10 @@ def look_and_say(input_value: str) -> str:
         if input_value[0] == input_value[1]:
             count += 1
         else:
-            result += f'{count}{input_value[0]}'
-    result += f'{count}{input_value[-1]}'
+            result += say(count, input_value[0])
+    result += say(count, input_value[-1])
     return result
+
+
+def say(count: int, digit: str) -> str:
+    return f'{count}{digit}'
