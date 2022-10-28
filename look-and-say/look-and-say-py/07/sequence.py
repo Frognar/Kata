@@ -6,7 +6,7 @@ def look_and_say(input_value: str) -> str:
         if current_digit == input_value[1]:
             count += 1
         else:
-            result += say(count, input_value[0])
+            result += say(count, current_digit)
     result += say(count, input_value[-1])
     return result
 
