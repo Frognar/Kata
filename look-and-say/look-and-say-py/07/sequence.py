@@ -1,7 +1,6 @@
 def look_and_say(input_value: str) -> str:
     result = ''
     if len(input_value) == 2:
-        result = ''
         count = 2
         result += f'{count}{input_value[0]}'
         return result
