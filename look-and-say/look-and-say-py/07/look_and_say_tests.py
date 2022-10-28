@@ -1,6 +1,6 @@
 import unittest
 from parameterized import parameterized
-from sequence import look_and_say
+from sequence import look_and_say, look_and_say_sequence
 
 
 class LookAndSayTestCase(unittest.TestCase):
@@ -13,6 +13,12 @@ class LookAndSayTestCase(unittest.TestCase):
     ])
     def test_look_and_say(self, current: str, expected: str):
         self.assertEqual(expected, look_and_say(current))
+
+    @parameterized.expand([
+        ('9', 0, '9'),
+    ])
+    def test_look_and_say_sequence(self, start: str, depth: int, expected: str):
+        self.assertEqual(expected, look_and_say_sequence(start, depth))
 
 
 if __name__ == '__main__':
