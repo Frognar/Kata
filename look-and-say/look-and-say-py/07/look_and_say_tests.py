@@ -7,6 +7,7 @@ class LookAndSayTestCase(unittest.TestCase):
     @parameterized.expand([
         ('1', '11'),
         ('11', '21'),
+        ('21', '1211'),
     ])
     def test_look_and_say(self, current: str, expected: str):
         self.assertEqual(expected, look_and_say(current))
