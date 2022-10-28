@@ -16,6 +16,7 @@ class LookAndSayTestCase(unittest.TestCase):
 
     @parameterized.expand([
         ('9', 0, '9'),
+        ('9', 1, '9:19'),
     ])
     def test_look_and_say_sequence(self, start: str, depth: int, expected: str):
         self.assertEqual(expected, look_and_say_sequence(start, depth))
