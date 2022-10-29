@@ -8,7 +8,7 @@
       (if (= (first input) (second input))
         (recur res (subs input 1) (inc dig_count))
         (recur (conj res (str dig_count (first input))) (subs input 1) 1))
-      (str (apply str res) dig_count input))))
+      (str (apply str res) dig_count (last input)))))
 
 (defn look-and-say-sequence [input depth]
   (loop [res [input]
