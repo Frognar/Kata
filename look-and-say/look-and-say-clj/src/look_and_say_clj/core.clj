@@ -7,5 +7,5 @@
     (if (> (count input) 1)
         (if (= (first input) (second input))
           (recur res (subs input 1) (inc dig_count))
-          (str dig_count (first input) dig_count (second input)))
-      (str dig_count input))))
+          (recur (conj res (str dig_count (first input))) (subs input 1) dig_count))
+      (str (apply str res) dig_count input))))
