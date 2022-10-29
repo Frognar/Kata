@@ -3,12 +3,12 @@
 (defn look-and-say [input]
   (loop [res []
          [current & input] input
-         dig_count 1]
+         count 1]
     (if (not (nil? input))
       (if (= current (first input))
-        (recur res input (inc dig_count))
-        (recur (conj res (str dig_count current)) input 1))
-      (str (apply str res) dig_count current))))
+        (recur res input (inc count))
+        (recur (conj res (str count current)) input 1))
+      (str (apply str res) count current))))
 
 (defn look-and-say-sequence [input depth]
   (loop [res [input]
