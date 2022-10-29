@@ -8,6 +8,6 @@
             current_digit (nth input index)
             next_digit (nth input (inc index))]
         (if (= current_digit next_digit)
-          (str (inc dig_count) current_digit)
+          (str (inc dig_count) (first input))
           (str dig_count current_digit dig_count next_digit)))
       (str dig_count input))))
