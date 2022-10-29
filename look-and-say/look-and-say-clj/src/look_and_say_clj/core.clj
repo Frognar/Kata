@@ -6,7 +6,7 @@
     (if (> (count input) 1)
       (let [index 0
             next_digit (nth input (inc index))]
-        (if (= (first input) next_digit)
+        (if (= (first input) (second input))
           (str (inc dig_count) (first input))
           (str dig_count (first input) dig_count (second input))))
       (str dig_count input))))
