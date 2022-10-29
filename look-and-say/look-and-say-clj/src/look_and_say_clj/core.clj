@@ -4,5 +4,5 @@
   (if (> (count input) 1)
     (if (= (nth input 0) (second input))
       (str 2 (nth input 0))
-      (str 1 (nth input 0) 1 (second input)))
+      (str 1 (nth input 0) 1 (nth input 1)))
     (str 1 input)))
