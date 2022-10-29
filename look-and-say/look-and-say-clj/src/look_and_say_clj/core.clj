@@ -5,6 +5,6 @@
          dig_count 1]
     (if (> (count input) 1)
         (if (= (first input) (second input))
-          (str (inc dig_count) (subs input 1))
+          (recur (subs input 1) (inc dig_count))
           (str dig_count (first input) dig_count (second input)))
       (str dig_count input))))
