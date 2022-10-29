@@ -1,6 +1,6 @@
-(ns look-and-say-clj.core-spec
+(ns look-and-say-clj._01.core-spec
   (:require [speclj.core :refer :all]
-            [look-and-say-clj.core :refer :all]))
+            [look-and-say-clj._01.core :refer :all]))
 
 (describe "Look and say"
           (it "'1' -> '11'"

@@ -1,4 +1,4 @@
-(ns look-and-say-clj.core
+(ns look-and-say-clj._01.core
   (:require [clojure.string :as str]))
 
 (defn say [count digit] (str count digit))
