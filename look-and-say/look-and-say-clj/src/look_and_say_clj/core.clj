@@ -16,4 +16,4 @@
          depth depth]
     (if (> depth 0)
       (str (apply str res) ":" (look-and-say current))
-      input)))
+      (str (apply str res)))))
