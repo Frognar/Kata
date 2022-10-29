@@ -2,7 +2,8 @@
 
 (defn look-and-say [input]
   (if (> (count input) 1)
-    (let [current_digit (nth input 0)
+    (let [index 0
+          current_digit (nth input index)
           next_digit (nth input 1)]
       (if (= current_digit next_digit)
         (str 2 current_digit)
