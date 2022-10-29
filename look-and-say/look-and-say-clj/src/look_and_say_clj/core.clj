@@ -11,7 +11,7 @@
       (if (= current (first input))
         (recur res input (inc count))
         (recur (conj res (say count current)) input 1))
-      (str (str/join res) (say count current)))))
+      (str/join (conj res (say count current))))))
 
 (defn look-and-say-sequence [input depth]
   (loop [res [input]
