@@ -1,6 +1,8 @@
 (ns look-and-say-clj.core
   (:require [clojure.string :as str]))
 
+(defn say [count digit] (str count digit))
+
 (defn look-and-say [input]
   (loop [res []
          [current & input] input
@@ -8,8 +10,8 @@
     (if (not (nil? input))
       (if (= current (first input))
         (recur res input (inc count))
-        (recur (conj res (str count current)) input 1))
-      (str (str/join res) count current))))
+        (recur (conj res (say count current)) input 1))
+      (str (str/join res) (say count current)))))
 
 (defn look-and-say-sequence [input depth]
   (loop [res [input]
