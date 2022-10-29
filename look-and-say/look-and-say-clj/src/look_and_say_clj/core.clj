@@ -3,9 +3,10 @@
 (defn look-and-say [input]
   (if (> (count input) 1)
     (let [index 0
+          count 1
           current_digit (nth input index)
           next_digit (nth input (inc index))]
       (if (= current_digit next_digit)
         (str 2 current_digit)
-        (str 1 current_digit 1 next_digit)))
+        (str count current_digit count next_digit)))
     (str 1 input)))
