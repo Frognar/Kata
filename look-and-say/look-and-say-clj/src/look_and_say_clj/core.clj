@@ -11,4 +11,6 @@
       (str (apply str res) dig_count input))))
 
 (defn look-and-say-sequence [input depth]
-  input)
+  (if (> depth 0)
+    (str input ":" (look-and-say input))
+    input))
