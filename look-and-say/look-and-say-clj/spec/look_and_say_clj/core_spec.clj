@@ -15,4 +15,8 @@
               (should= "312211" (look-and-say "111221")))
           )
 
+(describe "Look and say sequence"
+          (it "'1', 0 -> '1'"
+              (should= "1" (look-and-say-sequence "1" 0))))
+
 (run-specs)
