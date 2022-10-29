@@ -15,5 +15,5 @@
          current input
          depth depth]
     (if (> depth 0)
-      (str (apply str res) ":" (look-and-say current))
+      (recur (conj res (str ":" (look-and-say current))) (look-and-say current) (dec depth))
       (str (apply str res)))))
