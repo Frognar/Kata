@@ -1,9 +1,10 @@
-(ns look-and-say-clj.-02.core-spec
-  (:require [speclj.core :refer :all]))
+(ns look-and-say-clj._02.core-spec
+  (:require [speclj.core :refer :all]
+            [look-and-say-clj._02.core :refer :all]))
 
-(describe "test"
-          (it "should fail"
-              (should= 0 1))
+(describe "Look and say"
+          (it "'1' -> '11'"
+              (should= "11" (look-and-say "1")))
           )
 
 (run-specs)

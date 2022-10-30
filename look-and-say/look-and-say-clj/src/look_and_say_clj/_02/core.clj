@@ -1,1 +1,4 @@
-(ns look-and-say-clj.-02.core)
+(ns look-and-say-clj._02.core)
+
+(defn look-and-say [input]
+  "11")
