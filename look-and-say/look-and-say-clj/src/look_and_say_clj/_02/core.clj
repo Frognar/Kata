@@ -4,6 +4,6 @@
   (let [dig_count 1]
     (if (= (count input) 2)
       (if (= (first input) (second input))
-        (str 2 (first input))
-        (str dig_count (first input) 1 (second input)))
+        (str (inc dig_count) (first input))
+        (str dig_count (first input) dig_count (second input)))
       (str dig_count input))))
