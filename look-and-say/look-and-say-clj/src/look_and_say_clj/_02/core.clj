@@ -14,8 +14,9 @@
       (str/join (conj result (say count current))))))
 
 (defn look-and-say-sequence [input depth]
-  (let [result [input]
-        current input]
+  (loop [result [input]
+         current input
+         depth depth]
     (if (> depth 0)
-      (str/join ":" (conj result (look-and-say current)))
+      (recur (conj result (look-and-say current)) (look-and-say current) (dec depth))
       (str/join ":" result))))
