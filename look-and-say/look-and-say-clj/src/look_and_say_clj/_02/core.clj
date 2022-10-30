@@ -5,8 +5,8 @@
 
 (defn look-and-say [input]
   (loop [result []
-        [current & input] input
-        count 1]
+         [current & input] input
+         count 1]
     (if (not (nil? input))
       (if (= current (first input))
         (recur result input (inc count))
