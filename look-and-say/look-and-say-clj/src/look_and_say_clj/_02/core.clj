@@ -18,4 +18,4 @@
         current input]
     (if (> depth 0)
       (str/join ":" (conj result (look-and-say current)))
-      (str/join result))))
+      (str/join ":" result))))
