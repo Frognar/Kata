@@ -20,8 +20,10 @@
               (should= "1" (look-and-say-sequence "1" 0)))
           (it "'1', 1 -> '1:11'"
               (should= "1:11" (look-and-say-sequence "1" 1)))
-          (it "'1', 1 -> '1:11'"
+          (it "'1', 2 -> '1:11:21'"
               (should= "1:11:21" (look-and-say-sequence "1" 2)))
+          (it "'1', 6 -> '1:11:21:1211:111221:312211:13112221'"
+              (should= "1:11:21:1211:111221:312211:13112221" (look-and-say-sequence "1" 6)))
           )
 
 (run-specs)
