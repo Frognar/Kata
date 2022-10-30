@@ -2,7 +2,7 @@
   (:require [clojure.string :as str]))
 
 (defn look-and-say [input]
-  (let [result []
+  (loop [result []
         [current & input] input
         dig_count 1]
     (if (not (nil? input))
