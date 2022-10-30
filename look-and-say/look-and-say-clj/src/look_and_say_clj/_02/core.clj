@@ -3,9 +3,10 @@
 
 (defn look-and-say [input]
   (let [result []
+        [current & input] input
         dig_count 1]
-    (if (= (count input) 2)
-      (if (= (first input) (second input))
-        (str/join (conj result (str (inc dig_count) (first input))))
-        (str/join (conj result (str dig_count (first input) dig_count (second input)))))
-      (str/join (conj result (str dig_count input))))))
+    (if (not (nil? input))
+      (if (= current (first input))
+        (str/join (conj result (str (inc dig_count) current)))
+        (str/join (conj result (str dig_count current dig_count (first input)))))
+      (str/join (conj result (str dig_count current))))))
