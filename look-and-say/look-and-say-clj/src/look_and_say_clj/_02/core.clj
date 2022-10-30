@@ -1,9 +1,11 @@
-(ns look-and-say-clj._02.core)
+(ns look-and-say-clj._02.core
+  (:require [clojure.string :as str]))
 
 (defn look-and-say [input]
-  (let [dig_count 1]
+  (let [result []
+        dig_count 1]
     (if (= (count input) 2)
       (if (= (first input) (second input))
         (str (inc dig_count) (first input))
         (str dig_count (first input) dig_count (second input)))
-      (str dig_count input))))
+      (str/join (conj result (str dig_count input))))))
