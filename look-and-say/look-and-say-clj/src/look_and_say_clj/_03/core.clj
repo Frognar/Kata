@@ -7,6 +7,6 @@
         digit_count 1]
     (if (= (count input) 2)
       (if (= current (second input))
-        (str (inc digit_count) current)
+        (str/join (conj result (str (inc digit_count) current)))
         (str/join (conj result (str digit_count current digit_count (second input)))))
       (str/join (conj result (str digit_count input))))))
