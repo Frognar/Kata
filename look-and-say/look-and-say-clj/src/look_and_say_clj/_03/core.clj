@@ -12,3 +12,6 @@
         (recur result input (inc digit_count))
         (recur (conj result (say digit_count current)) input 1))
       (str/join (conj result (say digit_count current))))))
+
+(defn look-and-say-sequence [start depth]
+  "1")
