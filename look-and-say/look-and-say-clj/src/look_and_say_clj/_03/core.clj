@@ -15,7 +15,8 @@
 
 (defn look-and-say-sequence [start depth]
   (loop [result [start]
-        current start]
+         current start
+         depth depth]
     (if (> depth 0)
       (let [current (look-and-say current)]
         (str/join ":" (conj result current)))
