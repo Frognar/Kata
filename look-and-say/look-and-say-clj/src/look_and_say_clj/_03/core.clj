@@ -14,7 +14,7 @@
       (str/join (conj result (say digit_count current))))))
 
 (defn look-and-say-sequence [start depth]
-  (let [result [start]
+  (loop [result [start]
         current start]
     (if (> depth 0)
       (let [current (look-and-say current)]
