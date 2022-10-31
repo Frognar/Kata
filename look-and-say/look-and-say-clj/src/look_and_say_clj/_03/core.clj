@@ -5,7 +5,7 @@
   (let [result []
         current (first input)
         digit_count 1]
-    (if (= (count input) 2)
+    (if (not (nil? (second input)))
       (if (= current (second input))
         (str/join (conj result (str (inc digit_count) current)))
         (str/join (conj result (str digit_count current digit_count (second input)))))
