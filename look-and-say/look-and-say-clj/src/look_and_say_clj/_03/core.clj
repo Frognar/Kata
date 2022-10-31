@@ -5,6 +5,6 @@
         digit_count 1]
     (if (= (count input) 2)
       (if (= current (second input))
-        (str 2 current)
+        (str (inc digit_count) current)
         (str digit_count current digit_count (second input)))
       (str digit_count input))))
