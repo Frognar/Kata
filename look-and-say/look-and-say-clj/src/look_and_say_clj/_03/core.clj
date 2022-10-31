@@ -7,6 +7,6 @@
          digit_count 1]
     (if (not (nil? input))
       (if (= current (first input))
-        (str/join (conj result (str (inc digit_count) current)))
+        (recur result input (inc digit_count))
         (str/join (conj result (str digit_count current digit_count (first input)))))
       (str/join (conj result (str digit_count current))))))
