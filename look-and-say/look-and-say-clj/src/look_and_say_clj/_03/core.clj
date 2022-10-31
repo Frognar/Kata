@@ -3,10 +3,10 @@
 
 (defn look-and-say [input]
   (let [result []
-        current (first input)
+        [current & input] input
         digit_count 1]
-    (if (not (nil? (second input)))
-      (if (= current (second input))
+    (if (not (nil? input))
+      (if (= current (first input))
         (str/join (conj result (str (inc digit_count) current)))
-        (str/join (conj result (str digit_count current digit_count (second input)))))
+        (str/join (conj result (str digit_count current digit_count (first input)))))
       (str/join (conj result (str digit_count current))))))
