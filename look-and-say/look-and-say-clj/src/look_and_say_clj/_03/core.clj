@@ -17,4 +17,4 @@
   (let [result [start]]
     (if (= depth 1)
       (str/join ":" (conj result (look-and-say start)))
-      (str/join result))))
+      (str/join ":" result))))
