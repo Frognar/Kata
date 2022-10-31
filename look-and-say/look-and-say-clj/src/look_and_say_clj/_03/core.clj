@@ -8,5 +8,5 @@
     (if (= (count input) 2)
       (if (= current (second input))
         (str (inc digit_count) current)
-        (str digit_count current digit_count (second input)))
+        (str/join (conj result (str digit_count current digit_count (second input)))))
       (str/join (conj result (str digit_count input))))))
