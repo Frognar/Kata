@@ -6,7 +6,7 @@
 (defn look-and-say [input]
   (loop [result []
          [current & input] input
-          count 1]
+         count 1]
     (if (not (nil? input))
       (if (= current (first input))
         (recur result input (inc count))
@@ -14,8 +14,8 @@
       (str/join (conj result (say count current))))))
 
 (defn look-and-say-sequence [input depth]
-  (let [result [input]
-        current input]
+  (loop [result [input]
+         current input]
     (if (> depth 0)
       (let [current (look-and-say current)]
         (str/join "-" (conj result current)))
