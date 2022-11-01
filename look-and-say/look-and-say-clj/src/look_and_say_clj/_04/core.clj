@@ -17,4 +17,4 @@
   (let [result [input]]
     (if (> depth 0)
       (str/join "-" (conj result (look-and-say input)))
-      (str/join result))))
+      (str/join "-" result))))
