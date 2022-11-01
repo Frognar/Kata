@@ -6,5 +6,5 @@
     (if (not (nil? input))
       (if (= current (first input))
         (str 2 current)
-        (str count current 1 (first input)))
+        (str count current count (first input)))
       (str count current))))
