@@ -5,6 +5,6 @@
           count 1]
     (if (not (nil? input))
       (if (= current (first input))
-        (str (inc count) (first input))
+        (recur input (inc count))
         (str count current count (first input)))
       (str count current))))
