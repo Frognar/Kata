@@ -2,5 +2,7 @@
 
 (defn look-and-say [input]
   (if (= (count input) 2)
-    (str 2 (first input))
+    (if (= (first input) (second input))
+      (str 2 (first input))
+      (str 1 (first input) 1 (second input)))
     (str 1 (first input))))
