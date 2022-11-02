@@ -1,10 +1,10 @@
 (ns look-and-say-clj._05.core)
 
 (defn look-and-say [input]
-  (let [[current & input] input
-        count 1]
+  (let [count 1
+        [current & input] input]
     (if (not (nil? input))
       (if (= current (first input))
-        (str 2 current)
+        (str (inc count) current)
         (str count current count (first input)))
       (str count current))))
