@@ -15,4 +15,6 @@
 
 (defn look-and-say-sequence [input depth]
   (let [result [input]]
-    (str/join result)))
+    (if (= depth 1)
+      (str/join "," (conj result (look-and-say input)))
+      (str/join result))))
