@@ -9,6 +9,8 @@
               (should= "21" (look-and-say "11")))
           (it "'21' -> '1211'"
               (should= "1211" (look-and-say "21")))
+          (it "'1211' -> '111221'"
+              (should= "111221" (look-and-say "1211")))
           )
 
 (run-specs)
