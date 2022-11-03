@@ -8,5 +8,5 @@
     (if (not (nil? input))
       (if (= current (first input))
         (recur result (inc count) input)
-        (recur (conj result (str count current)) count input))
+        (recur (conj result (str count current)) 1 input))
       (str/join (conj result (str count current))))))
