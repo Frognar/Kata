@@ -18,6 +18,8 @@
 (describe "Look and say sequence"
           (it "'1', 0 -> '1'"
               (should= "1" (look-and-say-sequence "1" 0)))
+          (it "'1', 1 -> '1;11'"
+              (should= "1;11" (look-and-say-sequence "1" 1)))
           )
 
 (run-specs)
