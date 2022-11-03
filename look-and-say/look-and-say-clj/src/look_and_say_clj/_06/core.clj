@@ -19,5 +19,5 @@
          depth depth]
     (if (> depth 0)
       (let [current (look-and-say current)]
-        (str/join ";" (conj result current)))
+        (recur (conj result current) current (dec depth)))
       (str/join ";" result))))
