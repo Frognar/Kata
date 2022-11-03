@@ -4,4 +4,4 @@
   (let [current (first input)]
     (if (= (count input) 2)
       (str 2 current)
-      (str 1 (first input)))))
+      (str 1 current))))
