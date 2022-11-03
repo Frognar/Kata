@@ -16,5 +16,6 @@
 (defn look-and-say-sequence [start depth]
   (let [result [start]]
     (if (> depth 0)
-      (str/join ";" (conj result (look-and-say start)))
+      (let [current (look-and-say start)]
+        (str/join ";" (conj result current)))
       (str/join ";" result))))
