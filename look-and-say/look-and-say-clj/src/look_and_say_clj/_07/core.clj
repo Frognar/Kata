@@ -14,4 +14,4 @@
       (str/join (conj result (say count current))))))
 
 (defn look-and-say-sequence [start depth]
-  "1")
+  start)
