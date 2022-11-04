@@ -9,5 +9,5 @@
     (if (not (nil? (second input)))
       (if (= current (first rest-input))
         (say (inc count) current)
-        (str count current count (second input)))
+        (str count current count (first rest-input)))
       (say count current))))
