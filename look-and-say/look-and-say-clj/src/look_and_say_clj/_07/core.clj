@@ -7,5 +7,5 @@
     (if (not (nil? (second input)))
       (if (= (first input) (second input))
         (say 2 (first input))
-        (str 1 (first input) count (second input)))
+        (str count (first input) count (second input)))
       (say count (first input)))))
