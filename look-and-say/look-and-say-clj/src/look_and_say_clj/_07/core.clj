@@ -6,6 +6,6 @@
   (let [count 1]
     (if (not (nil? (second input)))
       (if (= (first input) (second input))
-        (say 2 (first input))
+        (say (inc count) (first input))
         (str count (first input) count (second input)))
       (say count (first input)))))
