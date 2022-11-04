@@ -10,5 +10,5 @@
     (if (not (nil? input))
       (if (= current (first input))
         (recur (inc count) input result)
-        (recur count input (conj result (say count current))))
+        (recur 1 input (conj result (say count current))))
       (str/join (conj result (say count current))))))
