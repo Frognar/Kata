@@ -3,9 +3,10 @@
 (defn say [count input] (str count input))
 
 (defn look-and-say [input]
-  (let [count 1]
+  (let [count 1
+        current (first input)]
     (if (not (nil? (second input)))
-      (if (= (first input) (second input))
+      (if (= current (second input))
         (say (inc count) (first input))
         (str count (first input) count (second input)))
       (say count (first input)))))
