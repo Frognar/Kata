@@ -4,8 +4,8 @@
 
 (defn look-and-say [input]
   (let [count 1
-        current (first input)
-        rest-input (rest input)]
+        [current & input] input
+        rest-input input]
     (if (not (nil? (first rest-input)))
       (if (= current (first rest-input))
         (say (inc count) current)
