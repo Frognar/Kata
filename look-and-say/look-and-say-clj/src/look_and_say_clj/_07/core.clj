@@ -6,7 +6,7 @@
   (let [count 1
         [current & input] input
         rest-input input]
-    (if (not (nil? (first rest-input)))
+    (if (not (nil? input))
       (if (= current (first rest-input))
         (say (inc count) current)
         (str count current count (first rest-input)))
