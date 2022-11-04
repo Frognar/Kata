@@ -7,7 +7,7 @@
         [current & input] input
         rest-input input]
     (if (not (nil? input))
-      (if (= current (first rest-input))
+      (if (= current (first input))
         (say (inc count) current)
         (str count current count (first rest-input)))
       (say count current))))
