@@ -17,5 +17,6 @@
   (let [result [start]
         current start]
     (if (> depth 0)
-      (str/join " -> " (conj result (look-and-say current)))
+      (let [current (look-and-say current)]
+        (str/join " -> " (conj result current)))
       (str/join " -> " result))))
