@@ -4,5 +4,7 @@
 
 (defn look-and-say [input]
   (if (not (nil? (second input)))
-    (say 2 (first input))
+    (if (= (first input) (second input))
+      (say 2 (first input))
+      (str 1 (first input) 1 (second input)))
     (say 1 (first input))))
