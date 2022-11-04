@@ -9,4 +9,4 @@
       (if (= current (second input))
         (say (inc count) current)
         (str count current count (second input)))
-      (say count (first input)))))
+      (say count current))))
