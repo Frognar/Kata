@@ -3,6 +3,6 @@
 (defn say [count input] (str count input))
 
 (defn look-and-say [input]
-  (if (= (count input) 2)
+  (if (not (nil? (second input)))
     (say 2 (first input))
     (say 1 (first input))))
