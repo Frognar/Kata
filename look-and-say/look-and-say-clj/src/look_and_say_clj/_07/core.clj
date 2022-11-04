@@ -9,6 +9,6 @@
          result []]
     (if (not (nil? input))
       (if (= current (first input))
-        (say (inc count) current)
+        (recur (inc count) input result)
         (str count current count (first input)))
       (str/join (conj result (say count current))))))
